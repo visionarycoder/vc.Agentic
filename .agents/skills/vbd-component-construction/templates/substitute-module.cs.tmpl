@@ -1,0 +1,39 @@
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Logging;
+
+using <IfxNamespace>.Services.Modules;
+using <RootNamespace>.<VaultType>.<Capability>.Contract;
+
+namespace <RootNamespace>.<VaultType>.<Capability>.<Substitute>;
+
+public sealed class <Capability><VaultType><Substitute>Module(
+    ILogger<<Capability><VaultType><Substitute>Module> logger)
+    : IModule
+{
+    public void Add(IServiceCollection services, IConfiguration configuration)
+    {
+        const string methodName = nameof(Add);
+        const string className = nameof(<Capability><VaultType><Substitute>Module);
+        var operation = "initializing";
+
+        try
+        {
+            ModuleLogging.LogModuleEntry(logger, className, methodName);
+
+            operation = "registering <Substitute> implementation";
+            services.TryAddScoped<I<Capability><VaultType>, <Capability><VaultType><Substitute>>();
+
+            ModuleLogging.LogModuleCompleted(logger, className, methodName);
+        }
+        catch (Exception ex)
+        {
+            ModuleLogging.LogModuleError(logger, ex, className, methodName, operation);
+        }
+        finally
+        {
+            ModuleLogging.LogModuleExit(logger, className, methodName);
+        }
+    }
+}

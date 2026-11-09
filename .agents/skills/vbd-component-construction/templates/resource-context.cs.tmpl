@@ -1,0 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+
+namespace <RootNamespace>.Access.<Capability>.Orm.<SymbolicResource>;
+
+public sealed class <SymbolicResource>Context(
+    DbContextOptions<<SymbolicResource>Context> options)
+    : DbContext(options)
+{
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
+    }
+}

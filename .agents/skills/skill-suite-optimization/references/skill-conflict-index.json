@@ -1,0 +1,374 @@
+{
+  "generated_at": "2026-08-15T08:44:18.872Z",
+  "suites": [
+    {
+      "suite": "global",
+      "router": "skill-intake-router",
+      "primary_execution": [
+        "create-skill",
+        "skill-suite-optimization",
+        "solution-markdown-sync",
+        "technology-selection"
+      ],
+      "mixed_entry_bundles": [],
+      "forbidden_overlaps": [
+        "Broad intake does not belong to execution skills.",
+        "Generic dotnet ownership does not override narrower suite ownership.",
+        "Mixed-entry bundles exist only when they reduce intake ambiguity."
+      ]
+    },
+    {
+      "suite": "documentation",
+      "router": "documentation-intake-router",
+      "primary_execution": [
+        "documentation-fixes",
+        "agent-instruction-governance",
+        "documentation-frontmatter",
+        "documentation-governance",
+        "documentation-link-repair",
+        "documentation-file-placement",
+        "documentation-maintenance",
+        "documentation-refactor-review",
+        "documentation-style-collaboration"
+      ],
+      "mixed_entry_bundles": [
+        "documentation-fixes-bundle"
+      ],
+      "forbidden_overlaps": [
+        "Broad intake does not belong to execution skills.",
+        "Generic dotnet ownership does not override narrower suite ownership.",
+        "Mixed-entry bundles exist only when they reduce intake ambiguity."
+      ]
+    },
+    {
+      "suite": "testing",
+      "router": "testing-intake-router",
+      "primary_execution": [
+        "test-anti-patterns",
+        "test-gap-analysis",
+        "assertion-quality",
+        "test-smell-detection",
+        "grade-tests",
+        "run-tests",
+        "code-testing-agent",
+        "code-testing-extensions",
+        "mstest-test-authoring",
+        "test-analysis-extensions",
+        "test-tagging",
+        "coverage-analysis",
+        "crap-score",
+        "find-untested-sources",
+        "exp-mock-usage-analysis",
+        "exp-test-maintainability",
+        "mstest-test-authoring",
+        "mstest-fixes-bundle",
+        "migrate-mstest-v1v2-to-v3",
+        "migrate-mstest-v3-to-v4",
+        "mtp-hot-reload"
+      ],
+      "mixed_entry_bundles": [
+        "test-fixes",
+        "test-fixes-bundle"
+      ],
+      "forbidden_overlaps": [
+        "Broad intake does not belong to execution skills.",
+        "Generic dotnet ownership does not override narrower suite ownership.",
+        "Mixed-entry bundles exist only when they reduce intake ambiguity."
+      ]
+    },
+    {
+      "suite": "security",
+      "router": "security-intake-router",
+      "primary_execution": [
+        "cwe-fixes",
+        "cwe-input-validation-fixes",
+        "cwe-authentication-authz-fixes",
+        "cwe-injection-attack-fixes",
+        "cwe-data-protection-fixes",
+        "cwe-resource-management-fixes",
+        "cwe-miscellaneous-security-fixes",
+        "cwe-format-external-fixes",
+        "webapi-authz-hardening",
+        "angular-security-hardening",
+        "webapp-frontend-security"
+      ],
+      "mixed_entry_bundles": [
+        "cwe-fixes-bundle"
+      ],
+      "forbidden_overlaps": [
+        "Broad intake does not belong to execution skills.",
+        "Generic dotnet ownership does not override narrower suite ownership.",
+        "Mixed-entry bundles exist only when they reduce intake ambiguity."
+      ]
+    },
+    {
+      "suite": "msbuild",
+      "router": "msbuild-intake-router",
+      "primary_execution": [
+        "msbuild-modernization",
+        "msbuild-antipatterns",
+        "msbuild-directory-build-organization",
+        "msbuild-parallelism",
+        "msbuild-performance-baseline",
+        "msbuild-performance-diagnostics",
+        "msbuild-binlog-failure-analysis",
+        "msbuild-binlog-generation",
+        "check-bin-obj-clash",
+        "msbuild-evaluation-performance",
+        "msbuild-extension-points",
+        "msbuild-generated-files",
+        "msbuild-incremental-build",
+        "msbuild-item-management",
+        "msbuild-server",
+        "msbuild-resolve-project-references",
+        "msbuild-target-authoring",
+        "msbuild-convert-to-cpm",
+        "platform-detection",
+        "msbuild-copy-to-output-directory"
+      ],
+      "mixed_entry_bundles": [],
+      "forbidden_overlaps": [
+        "Broad intake does not belong to execution skills.",
+        "Generic dotnet ownership does not override narrower suite ownership.",
+        "Mixed-entry bundles exist only when they reduce intake ambiguity."
+      ]
+    },
+    {
+      "suite": "azure",
+      "router": "azure-intake-router",
+      "primary_execution": [
+        "azure-functions",
+        "azure-ad-authentication",
+        "azure-app-configuration",
+        "azure-keyvault",
+        "azure-storage",
+        "aspnetcore-identity-setup",
+        "configuration-options-pattern"
+      ],
+      "mixed_entry_bundles": [],
+      "forbidden_overlaps": [
+        "Broad intake does not belong to execution skills.",
+        "Generic dotnet ownership does not override narrower suite ownership.",
+        "Mixed-entry bundles exist only when they reduce intake ambiguity."
+      ]
+    },
+    {
+      "suite": "efcore",
+      "router": "efcore-intake-router",
+      "primary_execution": [
+        "efcore-dbcontext-design",
+        "efcore-migrations",
+        "efcore-testing-patterns",
+        "optimizing-ef-core-queries"
+      ],
+      "mixed_entry_bundles": [],
+      "forbidden_overlaps": [
+        "Broad intake does not belong to execution skills.",
+        "Generic dotnet ownership does not override narrower suite ownership.",
+        "Mixed-entry bundles exist only when they reduce intake ambiguity."
+      ]
+    },
+    {
+      "suite": "frontend",
+      "router": "frontend-intake-router",
+      "primary_execution": [
+        "angular-modernization",
+        "angular-anti-patterns",
+        "angular-to-vue3-migration",
+        "angular-vue-migration-orchestrator",
+        "vue3-webapp-setup",
+        "vue3-pinia-state-management",
+        "vue3-e2e-testing-playwright",
+        "webapp-consolidation-strategy",
+        "webapp-cutover-strategy",
+        "wpf-project-setup",
+        "wpf-mvvm-implementation",
+        "frontend-module-consolidation",
+        "convert-blazor-server-to-webapp",
+        "openapi-typescript-client-generation"
+      ],
+      "mixed_entry_bundles": [],
+      "forbidden_overlaps": [
+        "Broad intake does not belong to execution skills.",
+        "Generic dotnet ownership does not override narrower suite ownership.",
+        "Mixed-entry bundles exist only when they reduce intake ambiguity."
+      ]
+    },
+    {
+      "suite": "roslyn",
+      "router": "roslyn-intake-router",
+      "primary_execution": [
+        "roslyn-analyzer-authoring",
+        "roslyn-codefix-authoring",
+        "roslyn-source-generator-authoring",
+        "roslyn-ca-code-quality-fixes",
+        "roslyn-ca-design-quality-fixes",
+        "roslyn-ca-perf-reliability-fixes",
+        "roslyn-cs8794-fix",
+        "mcp-csharp-create",
+        "mcp-csharp-debug",
+        "mcp-csharp-publish",
+        "mcp-csharp-test"
+      ],
+      "mixed_entry_bundles": [],
+      "forbidden_overlaps": [
+        "Broad intake does not belong to execution skills.",
+        "Generic dotnet ownership does not override narrower suite ownership.",
+        "Mixed-entry bundles exist only when they reduce intake ambiguity."
+      ]
+    },
+    {
+      "suite": "data",
+      "router": "data-intake-router",
+      "primary_execution": [
+        "fabric-kql-diagnostics",
+        "fabric-lakehouse-ingestion",
+        "fabric-pipeline-diagnostics",
+        "fabric-semantic-model-builder",
+        "data-contract-frontmatter",
+        "data-lineage",
+        "data-quality-reporting",
+        "data-window-validation",
+        "csv-ingestion-diagnostics",
+        "accounting-ledger-balance-anomaly",
+        "transaction-duplication-detection"
+      ],
+      "mixed_entry_bundles": [],
+      "forbidden_overlaps": [
+        "Broad intake does not belong to execution skills.",
+        "Generic dotnet ownership does not override narrower suite ownership.",
+        "Mixed-entry bundles exist only when they reduce intake ambiguity."
+      ]
+    },
+    {
+      "suite": "webapi",
+      "router": "webapi-intake-router",
+      "primary_execution": [
+        "dotnet-webapi",
+        "webapi-rest-route-standardization",
+        "webapi-input-validation",
+        "webapi-error-contract-hardening",
+        "webapi-compatibility-migration",
+        "minimal-api-file-upload",
+        "rfc-7807-compliance",
+        "rfc-8091-compliance",
+        "rfc-8259-compliance",
+        "rfc-8725-compliance",
+        "rfc-9457-compliance",
+        "rfc-fixes-bundle",
+        "aspnet-exception-handler",
+        "aspnet-rest-openapi-controller"
+      ],
+      "mixed_entry_bundles": [
+        "webapi-fixes-bundle"
+      ],
+      "forbidden_overlaps": [
+        "Broad intake does not belong to execution skills.",
+        "Generic dotnet ownership does not override narrower suite ownership.",
+        "Mixed-entry bundles exist only when they reduce intake ambiguity."
+      ]
+    },
+    {
+      "suite": "vbd",
+      "router": "vbd-intake-router",
+      "primary_execution": [
+        "vbd-system-design",
+        "vbd-component-construction",
+        "vbd-access-components",
+        "vbd-engine-components",
+        "vbd-manager-components",
+        "vbd-dto-authoring",
+        "vbd-boundary-contract-mapping",
+        "vbd-architecture-conformance",
+        "vbd-advanced-design",
+        "vbd-artifact-automation",
+        "vbd-candidate-estimation",
+        "vbd-change-simulation",
+        "vbd-contract-first-construction",
+        "vbd-cutover-migration",
+        "roslyn-vbd-drift-analyzer-design",
+        "vbd-evidence-quality",
+        "vbd-modernization-portfolio",
+        "vbd-operational-contracts",
+        "vbd-phased-modernization",
+        "vbd-symbolic-mapping",
+        "vbd-use-case-migration",
+        "vbd-use-case-reconstruction",
+        "refactor",
+        "post-implementation-cleanup",
+        "magic-strings",
+        "msbuild-property-patterns",
+        "detect-static-dependencies",
+        "generate-testability-wrappers",
+        "migrate-static-to-wrapper",
+        "ifx-component-communication"
+      ],
+      "mixed_entry_bundles": [],
+      "forbidden_overlaps": [
+        "Broad intake does not belong to execution skills.",
+        "Generic dotnet ownership does not override narrower suite ownership.",
+        "Mixed-entry bundles exist only when they reduce intake ambiguity."
+      ]
+    },
+    {
+      "suite": "dotnet",
+      "router": "dotnet-intake-router",
+      "primary_execution": [
+        "analyzing-dotnet-performance",
+        "azure-application-insights-dotnet",
+        "breaking-primitive-obsession",
+        "csharp-scripts",
+        "dependency-injection-patterns",
+        "dotnet-aot-compat",
+        "dotnet-api-client-generation",
+        "dotnet-api-client-resilience",
+        "dotnet-aspire-vbd-development",
+        "dotnet-async-await-standards",
+        "dotnet-cancellation-token-standards",
+        "dotnet-code-quality-standards",
+        "dotnet-code-review",
+        "dotnet-dependency-injection-standards",
+        "dotnet-dto-standards",
+        "dotnet-exception-handling-standards",
+        "dotnet-immutability-standards",
+        "dotnet-logging-best-practices",
+        "dotnet-logging-standards",
+        "dotnet-mapping-standards",
+        "dotnet-naming-standards",
+        "dotnet-namespace-standards",
+        "dotnet-performance-standards",
+        "dotnet-pinvoke",
+        "dotnet-resilience-standards",
+        "dotnet-telemetry-standards",
+        "dotnet-trace-collect",
+        "dotnet-validation-standards",
+        "dotnet-value-object-standards",
+        "dump-collect",
+        "env-provider-skill",
+        "global-error-log-library",
+        "global-exception-handling",
+        "jwt-authentication-dotnet",
+        "long-running-job-patterns",
+        "method-signature-conventions",
+        "microbenchmarking",
+        "migrate-dotnet8-to-dotnet9",
+        "migrate-dotnet9-to-dotnet10",
+        "migrate-dotnet10-to-dotnet11",
+        "migrate-nullable-references",
+        "naming-standards",
+        "nuget-trusted-publishing",
+        "structured-logging-serilog",
+        "subagent-orchestration",
+        "thread-abort-migration",
+        "dotnet-caching-patterns",
+        "dotnet-channels-patterns"
+      ],
+      "mixed_entry_bundles": [],
+      "forbidden_overlaps": [
+        "Broad intake does not belong to execution skills.",
+        "Generic dotnet ownership does not override narrower suite ownership.",
+        "Mixed-entry bundles exist only when they reduce intake ambiguity."
+      ]
+    }
+  ]
+}

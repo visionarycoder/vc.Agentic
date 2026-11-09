@@ -1,0 +1,4 @@
+# Skill documentation uses LF on every platform.
+*.md text eol=lf
+*.markdown text eol=lf
+*.csv text eol=lf

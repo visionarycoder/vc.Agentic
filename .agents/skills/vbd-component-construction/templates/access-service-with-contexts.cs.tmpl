@@ -1,0 +1,23 @@
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Logging;
+
+using <IfxNamespace>.Components;
+using <RootNamespace>.Access.<Capability>.Contract;
+using <ContextUsings>
+
+namespace <RootNamespace>.Access.<Capability>.Service;
+
+public sealed class <Capability>Access(
+    ILogger<<Capability>Access> logger,
+    <OrderedContextParameters>)
+    : ComponentBase<<Capability>Access>(logger),
+      I<Capability>Access,
+      IHealthCheck
+{
+    public Task<HealthCheckResult> CheckHealthAsync(
+        HealthCheckContext context,
+        CancellationToken cancellationToken = default)
+    {
+        return Task.FromResult(HealthCheckResult.Healthy());
+    }
+}

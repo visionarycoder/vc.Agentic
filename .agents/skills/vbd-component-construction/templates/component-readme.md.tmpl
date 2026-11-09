@@ -1,0 +1,57 @@
+---
+title: <Capability> <VaultType>
+doc_type: readme
+status: active
+last_updated: <YYYY-MM-DD>
+---
+
+# <Capability> <VaultType>
+
+## Mission
+
+<Mission statement>
+
+## Responsibilities
+
+- <Responsibility>
+
+## Out of Scope
+
+- <Non-responsibility>
+
+## Vault
+
+- Type: `<VaultType>`
+- Capability: `<Capability>`
+
+## Projects
+
+<List generated projects>
+
+## Dependencies
+
+<List downstream VBD Contract dependencies only>
+
+## Runtime Implementations
+
+- Service: production implementation and default
+- Simulator: optional controlled/artificial substitute
+- Emulator: optional consumer-compatible substitute
+
+## Health
+
+The real implementation and any substitutes implement `IHealthCheck`. The public VBD Contract does not expose health-check infrastructure.
+
+## Storage Resources
+
+<For Access components, list symbolic resources. If multiple resources exist, explain why they collectively belong to one external capability.>
+
+## Dependency Graph
+
+```text
+Contract
+   ^
+Service
+```
+
+<Extend for ORM, Host, Simulator, and Emulator when present.>

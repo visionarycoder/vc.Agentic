@@ -1,0 +1,13 @@
+using Microsoft.Extensions.Logging;
+
+namespace <IfxNamespace>.Components;
+
+public abstract class ComponentBase<T>(ILogger<T> componentLogger)
+{
+    protected internal readonly ILogger<T> logger =
+        componentLogger ?? throw new ArgumentNullException(nameof(componentLogger));
+
+    public Guid Instance { get; } = Guid.NewGuid();
+
+    public DateTime CreatedAt { get; } = DateTime.UtcNow;
+}

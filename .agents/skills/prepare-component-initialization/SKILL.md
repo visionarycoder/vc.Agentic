@@ -1,6 +1,14 @@
 ---
 name: "prepare-component-initialization"
 description: "Prepare component interface and implementation skeletons from an assigned design using the shared initialization samples."
+metadata:
+  metadata-version: "1.0.0"
+  title: "Prepare component initialization"
+  document-type: "skill"
+  repository: "vc.Agentic"
+  language: "Standard Technical English"
+  updated: "2026-11-08"
+  collection: "optional"
 ---
 
 # Prepare component initialization

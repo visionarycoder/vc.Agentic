@@ -1,7 +1,7 @@
 ---
 metadata-version: "1.0.0"
 title: "vc.Agentic"
-description: "Define the reusable agent working kit and its repository boundaries."
+description: "Reusable agent skills, templates, and component initialization examples."
 document-type: "index"
 repository: "vc.Agentic"
 language: "Standard Technical English"
@@ -10,40 +10,40 @@ updated: "2026-11-08"
 
 # vc.Agentic
 
-Agentic work pursues an assigned goal by selecting actions, using tools, checking results, and adjusting within authorized boundaries. An agent's ability to act does not grant decision or approval authority.
+vc.Agentic provides reusable instructions for agents that pursue an assigned goal through actions, tools, result checks, and adjustment within authorized boundaries. A skill supplies task guidance; it does not grant decision or approval authority.
 
-vc.Agentic provides reusable skills, supporting templates, component initialization samples, and skill verification guidance. It supports planning, design, construction, testing, and review. These resources assist work in consuming repositories; they do not define a competing governance framework.
+## Skills
+
+All skills live in [.agents/skills](.agents/README.md). Start with the [recommended core and optional collections](.agents/collections.md). Use the [catalog](.agents/README.md) or [inventory CSV](.agents/inventory.csv) to find a capability. Related skills use `accounting-`, `azure-`, `bio-`, `msbuild-`, `mstest-`, `roslyn-`, and `trading-` prefixes.
+
+Each package has one `SKILL.md` and may include supporting references, scripts, or assets. Read only the resources needed for the task. Client discovery and tool availability depend on the consuming environment; this repository does not imply global installation.
 
 ## Repository boundaries
 
 | Repository | Owns |
 | --- | --- |
-| vc.Governance | Method rules, role authority, lifecycle gates, required constraints, and authoritative artifact contracts and templates |
-| vc.Agentic | Shared task skills, supporting work templates, illustrative component skeletons, examples, and skill behavior checks |
-| vc.Ifx | Production libraries, generators, analyzers, code fixes, proxies, interception infrastructure, and their executable tests |
-| Consuming application | Application requirements, accepted designs, contracts, business code, project-specific instructions, and execution evidence |
+| vc.Agentic | Reusable skills, supporting task templates, illustrative initialization examples |
+| vc.Governance | Method rules, roles, required constraints, approval routes, lifecycle and artifact contracts |
+| vc.Ifx | Production libraries, generators, analyzers, code fixes, proxies, and their executable tests |
+| Consuming application | Its requirements, accepted design, implementation, tests, and operational evidence |
 
-The established Governance/Ifx boundary is documented in [repository ownership](../vc.Governance/docs/implementation/repository-ownership.md). This setup records the user's assignment for Agentic resources; it does not reassign existing Governance or Ifx responsibilities.
+Governance catalogs its own administrative and documentation skills. Governing specifications stay in their owning repository instead of being copied into skill instructions.
 
-Keep repository-specific skills beside their repository. Governance's documentation skills remain there. Put reusable skills here when they can serve multiple consuming repositories. Link governing rules instead of copying them. Production code generation belongs in Ifx; an illustrative code template used by an agent belongs here.
+## Templates and examples
 
-## Starting catalog
+- [Task and initialization templates](templates/README.md)
+- [Component initialization samples](samples/components/README.md)
+- [Package verification](.agents/verification.md)
+- [Project and host prerequisites](.agents/host-requirements.md)
 
-| Resource | Purpose |
-| --- | --- |
-| [Shared skills](.agents/README.md) | Select a focused task skill |
-| [Prepare component initialization](.agents/skills/prepare-component-initialization/SKILL.md) | Adapt the component skeleton to an assigned design |
-| [Prepare task handoff](.agents/skills/prepare-task-handoff/SKILL.md) | Summarize inputs, outputs, evidence, and unresolved work |
-| [Supporting templates](templates/README.md) | Task brief, handoff, and component initialization starting points |
-| [Component samples](samples/components/README.md) | Manager, Engine, and Access interface/class examples |
-| [Skill verification](verification/README.md) | Check behavior and boundaries using realistic scenarios |
+The component examples illustrate the requested ILoggerFactory constructor, separate interface and class files, and adaptation to the verified Ifx base API. They are starting structures, not production implementations or accepted component designs.
 
-## Use and contribution
+## License
 
-Read the consuming repository's instructions and current assignment before applying a resource. Skill discovery depends on the client; these files are not globally installed by their presence here. If discovery is unavailable, read the linked SKILL.md directly.
+Original repository material uses the [MIT License](LICENSE). Imported skills and other third-party material retain their existing licenses and notices. The repository license does not replace those terms or establish permission for imported material whose original terms are unverified.
 
-Keep each skill focused on one task. Store substantial references or assets beside the skill only when needed. Reuse catalog templates rather than maintaining copies. New skills should identify their inputs, output, applicable authority, and what to do when required information is missing.
+## Maintenance
 
-Update document metadata when editing. Skill entrypoints use name and description metadata; other Markdown uses the document header illustrated here. Verify relative links and skill metadata after changes. Skill behavior checks do not authenticate approvals or establish independent review.
+Every skill uses the [extended metadata profile](tools/README.md). Run `python tools/skills.py check` to validate the library and `python tools/skills.py refresh` after changes. The maintenance guide covers safe scaffolding, renaming, removal, normalization, and overlap review.
 
-Component samples are source illustrations, not a runnable application, generated proxy, approved detailed design, or delivered Ifx capability. No SDK, application technology baseline, or deployment is selected by this repository.
+See [third-party notices](THIRD_PARTY_NOTICES.md) for bundled license evidence.

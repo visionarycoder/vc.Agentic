@@ -1,12 +1,21 @@
 ---
 name: "prepare-task-handoff"
-description: "Prepare an evidence-based task handoff from an assignment, actual changes, verification results, and unresolved work."
+description: "Prepare a concise, evidence-backed handoff of assigned work, current state, verification, and the next actionable step."
+metadata:
+  metadata-version: "1.0.0"
+  title: "Prepare task handoff"
+  document-type: "skill"
+  repository: "vc.Agentic"
+  language: "Standard Technical English"
+  updated: "2026-11-08"
+  collection: "core"
 ---
 
 # Prepare task handoff
 
-Read the assignment and target repository's artifact and approval requirements. Use its authoritative handoff contract when one exists; otherwise use the [supporting handoff template](../../../templates/task-handoff.md).
-
-Identify the actual recipient, input revisions, output revisions, checks performed, failures, and remaining decisions. Report missing evidence explicitly. Separate observed facts, proposals, and recorded decisions. Include approval references only when supplied or verified; do not generate an approval or infer it from a role label.
-
-Identify the next action and responsible recipient without assigning work on the Project Manager's behalf. Preparing a handoff does not authorize sending it externally. Return the completed draft to the user unless delivery is separately authorized.
+1. Identify the assigned task, intended recipient, current repository/workspace state, and applicable handoff conventions.
+2. Record the objective, completed changes, relevant paths or revisions, checks actually performed, unresolved issues, and dependencies.
+3. Distinguish implemented, tested, reviewed, integrated, and accepted work using the consuming project's definitions. Do not infer acceptance from a commit or a passing local test alone.
+4. State the next actionable step and decisions that require an owner. Include only the context needed to continue; link supporting evidence instead of repeating long documents.
+5. Use the project's format when available, or a short structured note. Redact secrets and avoid claiming unperformed work.
+6. Return the handoff artifact. Creating it does not authorize sending a message, assigning work, or starting another agent.

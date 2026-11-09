@@ -1,0 +1,42 @@
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Logging;
+
+using <IfxNamespace>.Services.Modules;
+using <RootNamespace>.<VaultType>.<Capability>.Contract;
+
+namespace <RootNamespace>.<VaultType>.<Capability>.Service;
+
+public sealed class <Capability><VaultType>Module(
+    ILogger<<Capability><VaultType>Module> logger)
+    : IModule
+{
+    public void Add(IServiceCollection services, IConfiguration configuration)
+    {
+        const string methodName = nameof(Add);
+        const string className = nameof(<Capability><VaultType>Module);
+        var operation = "initializing";
+
+        try
+        {
+            ModuleLogging.LogModuleEntry(logger, className, methodName);
+
+            operation = "registering <Capability> <VaultType> service";
+            services.TryAddScoped<I<Capability><VaultType>, <Capability><VaultType>>();
+
+            // Runtime health-check registration follows the repository's existing health infrastructure.
+            // Provider/resource registration is intentionally deferred to implementation work.
+
+            ModuleLogging.LogModuleCompleted(logger, className, methodName);
+        }
+        catch (Exception ex)
+        {
+            ModuleLogging.LogModuleError(logger, ex, className, methodName, operation);
+        }
+        finally
+        {
+            ModuleLogging.LogModuleExit(logger, className, methodName);
+        }
+    }
+}

@@ -1,0 +1,21 @@
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Logging;
+
+using <IfxNamespace>.Components;
+using <RootNamespace>.<VaultType>.<Capability>.Contract;
+
+namespace <RootNamespace>.<VaultType>.<Capability>.<Substitute>;
+
+public sealed class <Capability><VaultType><Substitute>(
+    ILogger<<Capability><VaultType><Substitute>> logger)
+    : ComponentBase<<Capability><VaultType><Substitute>>(logger),
+      I<Capability><VaultType>,
+      IHealthCheck
+{
+    public Task<HealthCheckResult> CheckHealthAsync(
+        HealthCheckContext context,
+        CancellationToken cancellationToken = default)
+    {
+        return Task.FromResult(HealthCheckResult.Healthy());
+    }
+}
