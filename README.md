@@ -1,16 +1,20 @@
 ---
 metadata-version: "1.0.0"
 title: "vc.Agentic"
-description: "Reusable agent skills, templates, and component initialization examples."
+description: "Reusable agent skills, supporting resources, task templates, and illustrative component scaffolds."
 document-type: "index"
 repository: "vc.Agentic"
 language: "Standard Technical English"
-updated: "2026-11-08"
+updated: "2026-11-09"
 ---
 
 # vc.Agentic
 
-vc.Agentic provides reusable instructions for agents that pursue an assigned goal through actions, tools, result checks, and adjustment within authorized boundaries. A skill supplies task guidance; it does not grant decision or approval authority.
+vc.Agentic is a reusable library of agent skills, supporting references, scripts and assets, task templates, and illustrative component scaffolds. It helps agents carry out assigned work through discovery, planning, implementation, review, and verification within the consuming project's accepted requirements and designs.
+
+The library covers software engineering, volatility-based decomposition, .NET, Roslyn, Azure, and additional data and domain workflows. Its maintenance tools validate skill packaging and keep the catalogs and inventory aligned with the library.
+
+A skill supplies task guidance. It does not grant decision or approval authority, implement a production framework, or provide an agent orchestration runtime.
 
 ## Skills
 
@@ -27,7 +31,7 @@ Each package has one `SKILL.md` and may include supporting references, scripts, 
 | vc.Ifx | Production libraries, generators, analyzers, code fixes, proxies, and their executable tests |
 | Consuming application | Its requirements, accepted design, implementation, tests, and operational evidence |
 
-Governance catalogs its own administrative and documentation skills. Governing specifications stay in their owning repository instead of being copied into skill instructions.
+Governance catalogs its own administrative and documentation skills. Governing specifications stay in their owning repository instead of being copied into skill instructions. Consuming projects select applicable skills and reusable Ifx capabilities under their approved designs; collection membership does not select an application architecture or technology baseline.
 
 ## Templates and examples
 
