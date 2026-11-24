@@ -21,7 +21,6 @@ Agent ports Angular features to Vue 3 without feature drift.
 |---|---|
 | Team migrates an Angular feature to Vue 3 | Agent uses this skill |
 | Team needs full program planning across many features | Agent uses `angular-vue-migration-orchestrator` |
-| Team needs Vue foundation work before feature porting | Agent uses `vue3-webapp-setup` |
 | Team needs Angular cleanup before porting | Agent uses `angular-anti-patterns` |
 
 ## Concept Map

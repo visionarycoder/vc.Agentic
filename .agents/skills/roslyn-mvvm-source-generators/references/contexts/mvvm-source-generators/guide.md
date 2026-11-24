@@ -25,7 +25,7 @@ Agent authors MVVM-focused source generators with Roslyn incremental pipelines, 
 
 | Condition | Route |
 |---|---|
-| Agent consumes CommunityToolkit.Mvvm instead of authoring a new generator. | Agent uses `communitytoolkit-mvvm`. |
+| Agent consumes CommunityToolkit.Mvvm instead of authoring a new generator. | Agent uses the toolkit's built-in generators directly. |
 | Agent needs modular navigation, regions, or dialogs instead of source generation. | Agent uses `prism-framework-patterns`. |
 | Agent adds runtime reflection or dynamic proxy behavior. | Agent uses a runtime pattern, not a source generator. |
 | Agent works outside Roslyn-compatible project constraints. | Agent uses a non-generator implementation path. |

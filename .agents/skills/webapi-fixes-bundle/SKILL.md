@@ -45,7 +45,6 @@ Agent uses this bundle for one-prompt Web API hardening and modernization. Agent
 | Track | Specialized Skill Source | Bundle Reference | Agent Uses When |
 |---|---|---|
 | Input verification standardization | `.github/skills/webapi-input-validation/SKILL.md` | `references/input-validation-hardening.md` | Request verification behavior is in scope |
-| Authorization hardening | `.github/skills/webapi-authz-hardening/SKILL.md` | `references/authz-hardening.md` | Authorization posture is in scope |
 | Error contract hardening | `.github/skills/webapi-error-contract-hardening/SKILL.md` | `references/error-contract-hardening.md` | Error payload or status semantics are in scope |
 | Compatibility migration | `.github/skills/webapi-compatibility-migration/SKILL.md` | `references/compatibility-migration.md` | Legacy endpoint migration or deprecation is in scope |
 

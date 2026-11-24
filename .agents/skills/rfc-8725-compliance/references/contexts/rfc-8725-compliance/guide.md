@@ -76,4 +76,3 @@ Agent uses this skill for JWT issuance, validation, storage, and transport decis
 
 - Agent does not trust token headers to select keys without server-side constraints.
 
-- Agent keeps authorization policy work aligned with `webapi-authz-hardening`.

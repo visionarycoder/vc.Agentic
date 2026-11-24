@@ -28,8 +28,7 @@ Agent manages view-model creation, activation, navigation data, state preservati
 
 | Condition | Route |
 |---|---|
-| Work focuses on bindings, converters, or validation only | Use `databinding-patterns` or `validation-mvvm` |
-| Work focuses on command wiring only | Use `commands-behaviors-patterns` |
+| Work focuses on generated properties or command plumbing only | Use `roslyn-mvvm-source-generators` |
 | Work edits stateless views with no retained resources or navigation state | Use the platform UI skill |
 | Work targets server-side request lifecycles | Use the matching service or API skill |
 

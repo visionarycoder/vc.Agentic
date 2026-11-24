@@ -21,7 +21,6 @@ Agent removes Angular anti-patterns before modernization or Vue migration starts
 |---|---|
 | Angular code shows leaks, slow views, or large components | Agent uses this skill |
 | Angular migration needs cleanup before conversion | Agent uses this skill |
-| New Vue code needs setup guidance | Agent uses `vue3-webapp-setup` |
 | Backend API issues drive the defect | Agent uses a webapi skill |
 
 ## Detection Matrix

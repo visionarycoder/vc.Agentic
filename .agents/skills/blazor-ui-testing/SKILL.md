@@ -28,7 +28,7 @@ Agent tests Blazor user journeys in a real browser when component unit tests do 
 | Condition | Route |
 |---|---|
 | The test targets isolated component rendering | Use `blazor-unit-testing` |
-| The task tests a pure service or view model | Use `xunit-test-generation` |
+| The task tests a pure service or view model | Use `code-testing-agent` |
 
 ## Required Inputs
 

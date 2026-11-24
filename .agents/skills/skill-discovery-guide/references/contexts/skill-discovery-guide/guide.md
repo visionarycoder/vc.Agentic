@@ -56,8 +56,8 @@ Agent routes ambiguous prompts to the smallest skill set that covers the work.
 | Skill creation, review, optimization, or ecosystem audit | `skill-lifecycle-controller` | `skill-authoring` |
 | Markdown, links, front matter, guidance drift | `documentation-fixes` | `documentation-governance` |
 | Test failures, MSTest warnings, or test modernization | `mstest-modernization-controller` | `test-fixes` |
-| xUnit test creation or maintenance | `xunit-test-generation` | `code-testing-agent` |
-| Blazor component unit tests | `blazor-unit-testing` | `xunit-test-generation` |
+| xUnit test creation or maintenance | `code-testing-agent` | `mstest-test-authoring` |
+| Blazor component unit tests | `blazor-unit-testing` | `code-testing-agent` |
 | Blazor browser and UI journeys | `blazor-ui-testing` | None |
 | API contracts, routes, uploads, compatibility, or endpoint audit | `webapi-hardening-controller` | None |
 | Security, auth, injection, or CWE families | `security-controller` | `webapi-hardening-controller` |

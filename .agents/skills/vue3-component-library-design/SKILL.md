@@ -21,7 +21,6 @@ Agent builds reusable Vue 3 components with stable public contracts.
 |---|---|
 | Team needs shared UI across features | Agent uses this skill |
 | Team migrates duplicate Angular UI to one Vue library | Agent uses this skill |
-| One page needs route or state setup | Agent uses `vue3-webapp-setup` or `vue3-pinia-state-management` |
 
 ## Component Contract Matrix
 

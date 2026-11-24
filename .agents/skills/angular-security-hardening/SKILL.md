@@ -21,7 +21,6 @@ Agent removes frontend security defects before release or migration work starts.
 |---|---|
 | Angular application handles identity, forms, or user HTML | Agent uses this skill |
 | Audit lists XSS, CSRF, or token storage defects | Agent uses this skill |
-| API authorization fails on the server | Agent uses `webapi-authz-hardening` |
 | Infrastructure headers or secrets drive the risk | Agent uses an infrastructure or security skill |
 
 ## Control Matrix

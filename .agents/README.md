@@ -10,20 +10,20 @@ updated: "2026-11-24"
 
 # Skill catalog
 
-The library contains **602 skills**. All entrypoints are under `skills/<name>/SKILL.md`. [Inventory](inventory.csv) records current metadata and hashes. [Collections](collections.md) distinguish the recommended core from optional capabilities. [Maintenance](../tools/README.md) describes validation and safe changes.
+The library contains **583 skills**. All entrypoints are under `skills/<name>/SKILL.md`. [Inventory](inventory.csv) records current metadata and hashes. [Collections](collections.md) distinguish the recommended core from optional capabilities. [Maintenance](../tools/README.md) describes validation and safe changes.
 
 | Collection | Skills |
 | --- | --- |
 | Recommended development core | 16 |
-| .NET, C#, MSBuild, MSTest, and Roslyn | 93 |
+| .NET, C#, MSBuild, MSTest, and Roslyn | 92 |
 | Azure platform and service workflows | 38 |
 | Volatility-based decomposition architecture | 27 |
 | Security engineering and weakness remediation | 15 |
-| Data analysis and Microsoft Fabric | 13 |
+| Data analysis and Microsoft Fabric | 12 |
 | Biology and life-sciences research | 22 |
 | Accounting systems and controls | 10 |
 | Financial trading and investment research | 24 |
-| Additional workflows, integrations, and specialist utilities | 344 |
+| Additional workflows, integrations, and specialist utilities | 327 |
 
 | Skill | Collection | Purpose |
 | --- | --- | --- |
@@ -50,7 +50,7 @@ The library contains **602 skills**. All entrypoints are under `skills/<name>/SK
 | [angular-vue-migration-orchestrator](skills/angular-vue-migration-orchestrator/SKILL.md) | optional | Coordinate Angular cleanup, Vue foundation work, feature migration, validation, and cutover with one program-level workflow. |
 | [antipattern-detection-bundle](skills/antipattern-detection-bundle/SKILL.md) | optional | Route anti-pattern detection to specialized skills (performance, code smell, design smell, architectural debate) and consolidate findings. |
 | [api-gateway-patterns](skills/api-gateway-patterns/SKILL.md) | optional | Design and implement API gateway layers with YARP, Ocelot, Azure API Management, and resilient .NET traffic-control patterns. |
-| [api-infrastructure-bundle](skills/api-infrastructure-bundle/SKILL.md) | optional | Bundle routing skill for ASP.NET Core infrastructure concerns including health checks, rate limiting, CORS, versioning, and middleware. |
+| [api-infrastructure-bundle](skills/api-infrastructure-bundle/SKILL.md) | optional | Bundle routing skill for ASP.NET Core infrastructure concerns including health checks and middleware. |
 | [api-service-contracts](skills/api-service-contracts/SKILL.md) | optional | Generate API and service communication contracts with sequence diagram |
 | [appmod-hooks](skills/appmod-hooks/SKILL.md) | optional | Lifecycle hooks for the modernize-rearchitecture coordinator. Defines hook points, registered actions, and execution rules. |
 | [architectural-decision-debate](skills/architectural-decision-debate/SKILL.md) | optional | Debate architectural and design decisions by presenting three positions (adopt, reject, defer) with at least 3 options each, challenging assumptions and existing patterns. |
@@ -159,8 +159,6 @@ The library contains **602 skills**. All entrypoints are under `skills/<name>/SK
 | [code-testing-extensions](skills/code-testing-extensions/SKILL.md) | optional | Routes code-testing agents to the correct language extension and example reference files. |
 | [codex-expo-run-actions](skills/codex-expo-run-actions/SKILL.md) | optional | Wire Expo projects into the Codex app with project-local run scripts and .codex/environments/environment.toml actions. Use when the user wants the Codex app Run button, build/run actions, action bu... |
 | [collect-files-with-request](skills/collect-files-with-request/SKILL.md) | optional | Create, inspect, and manage Dropbox file requests for collecting uploads from other people. Use when the user asks to collect files, request uploads, create an upload portal, check a file request, ... |
-| [commands-behaviors-patterns](skills/commands-behaviors-patterns/SKILL.md) | optional | Implement command surfaces, async actions, and event-to-command behavior wiring when agent builds .NET MVVM interaction flows. |
-| [communitytoolkit-mvvm](skills/communitytoolkit-mvvm/SKILL.md) | optional | Apply CommunityToolkit.Mvvm attributes, messaging, validation, and DI patterns when .NET MVVM work needs generated observable state and commands. |
 | [computer-use](skills/computer-use/SKILL.md) | optional | Control Windows apps from ChatGPT |
 | [configuration-inventory](skills/configuration-inventory/SKILL.md) | optional | Generate comprehensive configuration and externalized settings inventory |
 | [configuration-options-pattern](skills/configuration-options-pattern/SKILL.md) | optional | Use the .NET options pattern for typed configuration binding, verification, named options, and reload-aware consumers. |
@@ -170,7 +168,6 @@ The library contains **602 skills**. All entrypoints are under `skills/<name>/SK
 | [connect-recommend](skills/connect-recommend/SKILL.md) | optional | Use this skill when the user asks about Stripe Connect configuration, charge patterns, Dashboard access, or how to get started with Connect, is building a marketplace, platform, multi-vendor store,... |
 | [conversation-intelligence](skills/conversation-intelligence/SKILL.md) | optional | Twilio Conversation Intelligence development guide. Use when building real-time or post-call conversation analysis, language operator pipelines, sentiment analysis, agent assist, cross-channel anal... |
 | [convert-blazor-server-to-webapp](skills/convert-blazor-server-to-webapp/SKILL.md) | optional | Migrate legacy Blazor Server hosting to the .NET Blazor Web App model while preserving interactive server behavior, auth flow, and startup correctness. |
-| [cors-configuration-aspnetcore](skills/cors-configuration-aspnetcore/SKILL.md) | optional | Configure ASP.NET Core CORS policies with explicit origins, preflight behavior, credentials handling, and secure wildcard avoidance. |
 | [crap-score](skills/crap-score/SKILL.md) | optional | Calculate targeted CRAP scores for a named .NET method, class, or file using coverage and complexity data. |
 | [create-blazor-project](skills/create-blazor-project/SKILL.md) | optional | If the user's request doesn't make the following clear, ask before scaffolding: |
 | [create-canvas](skills/create-canvas/SKILL.md) | optional | Create a Copilot extension canvas at user, workspace, or plugin scope. |
@@ -179,7 +176,6 @@ The library contains **602 skills**. All entrypoints are under `skills/<name>/SK
 | [create-test-baseline](skills/create-test-baseline/SKILL.md) | optional | Create a test baseline for the project to be modernized. The baseline will be used for later verification of modernization tasks. |
 | [creating-implementation-plan](skills/creating-implementation-plan/SKILL.md) | optional | Creates an implementation plan AND task breakdown from a feature spec by consuming design artifacts. Produces plan.md with implementation steps, inline task list with full REQ traceability, and a R... |
 | [critical-infrastructure-bundle](skills/critical-infrastructure-bundle/SKILL.md) | optional | Route critical infrastructure design and implementation requests to the correct platform skill and keep cross-technology decisions consistent. |
-| [cs-xml-doc-fixes](skills/cs-xml-doc-fixes/SKILL.md) | optional | Fix XML documentation warnings (CS0419, CS1570-CS1658) with correct syntax, resolved crefs, and matching param tags |
 | [csharp-scripts](skills/csharp-scripts/SKILL.md) | optional | Runs file-based C# apps with the .NET CLI for focused experiments without creating a project. |
 | [csharp-test-coverage-analyzer](skills/csharp-test-coverage-analyzer/SKILL.md) | optional | You analyze existing C# test suites to find gaps in code coverage, identify untested edge cases, spot missing security validations, and recommend improvements to achieve 80%+ coverage. You work wit... |
 | [csv-data-analysis](skills/csv-data-analysis/SKILL.md) | optional | Combined csv data analysis guidance with task/provider-specific modes. Verify delimited files before ingestion and fix parse defects in a new file. |
@@ -205,7 +201,6 @@ The library contains **602 skills**. All entrypoints are under `skills/<name>/SK
 | [dashboard-builder](skills/dashboard-builder/SKILL.md) | trading | Use when rendering, validating, or adapting standardized responsive Public Equity Investing HTML dashboards from structured analysis produced by visible Public Equity Investing skills. This capabil... |
 | [dashboard-expert](skills/dashboard-expert/SKILL.md) | optional | Full CRUD and analysis for Mixpanel dashboards. Use when the user asks to build, create, analyze, read, understand, explain, modify, update, enhance, or manage dashboards, or asks about dashboard l... |
 | [dashboards-and-real-time-visualization](skills/dashboards-and-real-time-visualization/SKILL.md) | optional | Design dashboards and live visualization systems. Use when the user needs monitoring views, streaming charts, coordinated interactions, downsampling, or performance-aware operational visualization. |
-| [data-analytics-routing](skills/data-analytics-routing/SKILL.md) | data | Route analytical questions to the smallest relevant data workflow using actual sources and available tools. |
 | [data-architecture](skills/data-architecture/SKILL.md) | optional | Generate data architecture and persistence layer documentation with data model diagram |
 | [data-contract-frontmatter](skills/data-contract-frontmatter/SKILL.md) | optional | Generate and verify compact data contract frontmatter for datasets, tables, and APIs. |
 | [data-intake-router](skills/data-intake-router/SKILL.md) | optional | Route data and Fabric requests to the minimum correct data skill by separating KQL diagnostics, ingestion, pipeline issues, semantic models, and data-quality concerns. |
@@ -214,7 +209,6 @@ The library contains **602 skills**. All entrypoints are under `skills/<name>/SK
 | [data-visualization](skills/data-visualization/SKILL.md) | optional | Route web data visualization work. Use when the user needs chart choice, visual critique, dashboards, maps or geospatial views, Gantt timelines, UML/software diagrams, scrollytelling, reports or ex... |
 | [data-window-validation](skills/data-window-validation/SKILL.md) | optional | Verify whether dated records fall inside approved time windows and fiscal periods. |
 | [database-design-standards](skills/database-design-standards/SKILL.md) | optional | Apply data modeling, naming, data type, dimensional model, data mart, and security rules when the developer layer is database. |
-| [databinding-patterns](skills/databinding-patterns/SKILL.md) | optional | Apply binding expressions, modes, converters, validation, and platform-specific binding optimizations when agent implements .NET UI data flow. |
 | [debug-live](skills/debug-live/SKILL.md) | optional | Drive an interactive VS Code debugger to investigate bugs, failing tests, wrong/null variable values, unexpected runtime behavior, and other "it doesn't work" reports. Use this skill whenever specu... |
 | [deep-security-scan](skills/deep-security-scan/SKILL.md) | optional | Use when the user asks for a deep, exhaustive, multi-pass, or variance-reducing repository-wide or scoped-path Codex Security scan. Run repeated complete independent Standard scans with the Codex S... |
 | [define-security-policy](skills/define-security-policy/SKILL.md) | optional | Define, review, or update SECURITY.md guidance for a repository or component. Use when the user wants to clarify what Codex Security should review, what is out of scope, which security properties m... |
@@ -309,11 +303,9 @@ The library contains **602 skills**. All entrypoints are under `skills/<name>/SK
 | [generate-dockerfile](skills/generate-dockerfile/SKILL.md) | optional | Generate or enhance a Dockerfile for a containerized application using curated base-image recommendations and security best practices. Use AFTER analyze-repo (or after the user has told you the lan... |
 | [generate-testability-wrappers](skills/generate-testability-wrappers/SKILL.md) | optional | Generate minimal abstractions and dependency injection registrations for hard-to-test static dependencies. |
 | [geospatial-and-cartographic-visualization](skills/geospatial-and-cartographic-visualization/SKILL.md) | optional | Design geospatial and cartographic visualizations. Use when the user needs help deciding whether to use a map, choosing projections or basemaps, building choropleths or symbol maps, or implementing... |
-| [github-agentic-workflows](skills/github-agentic-workflows/SKILL.md) | optional | Design, author, update, debug, and upgrade GitHub Agentic Workflows (gh-aw) automations; excludes general agent orchestration and Governance lifecycle design. |
 | [global-error-log-library](skills/global-error-log-library/SKILL.md) | optional | Design a shared .NET error catalog and recording pipeline with explicit classification, correlation, translation, and query behavior. |
 | [grade-tests](skills/grade-tests/SKILL.md) | optional | Grade a curated list of tests and generate a compact per-test score table with concise rationale. |
 | [grammar-of-graphics-and-declarative-visualization](skills/grammar-of-graphics-and-declarative-visualization/SKILL.md) | optional | Build data visualizations with declarative grammars. Use when the user needs Vega-Lite, Vega, Observable Plot, or grammar-of-graphics reasoning, especially for tabular charts that do not require be... |
-| [graphql-dotnet](skills/graphql-dotnet/SKILL.md) | optional | Design and implement GraphQL APIs in .NET with Hot Chocolate, optimized schema patterns, security controls, and client integration guidance. |
 | [grilling](skills/grilling/SKILL.md) | optional | Stress-test a plan or design through focused interview rounds, with optional ADR and glossary drafts when requested. |
 | [gsap](skills/gsap/SKILL.md) | optional | GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position parameter, labels, nesting, playback), and performance ... |
 | [handoff](skills/handoff/SKILL.md) | optional | Compact the current conversation into a handoff document for another agent to pick up. |
@@ -427,7 +419,6 @@ The library contains **602 skills**. All entrypoints are under `skills/<name>/SK
 | [repo-reconciliation](skills/repo-reconciliation/SKILL.md) | core | Audit and reconcile repository guidance across .agents, .github, docs, and workflows when architecture, project layout, release packaging, or canonical ownership changes. Use when project consolida... |
 | [reports-pdfs-and-slide-automation](skills/reports-pdfs-and-slide-automation/SKILL.md) | optional | Lay out and export data-rich reports and documents. Use when the user needs report structure, figure packaging, PDFs, PowerPoint or Google Slides automation, or programmatic insertion of visualizat... |
 | [resolving-merge-conflicts](skills/resolving-merge-conflicts/SKILL.md) | optional | Use when you need to resolve an in-progress git merge/rebase conflict. |
-| [rfc-7807-compliance](skills/rfc-7807-compliance/SKILL.md) | optional | Preserve legacy RFC 7807 Problem Details contracts while defaulting all new work to RFC 9457. |
 | [rfc-8091-compliance](skills/rfc-8091-compliance/SKILL.md) | optional | Enforce `application/json-seq` framing, producer behavior, and failure handling for streaming JSON text sequences. |
 | [rfc-8259-compliance](skills/rfc-8259-compliance/SKILL.md) | optional | Enforce interoperable JSON syntax, encoding, and serializer behavior for external contracts. |
 | [rfc-8725-compliance](skills/rfc-8725-compliance/SKILL.md) | optional | Enforce explicit JWT algorithm, key, claim, and validation rules for issuing and consuming bearer tokens. |
@@ -444,7 +435,6 @@ The library contains **602 skills**. All entrypoints are under `skills/<name>/SK
 | [roslyn-intake-router](skills/roslyn-intake-router/SKILL.md) | dotnet | Route Roslyn and Ifx requests to the minimum correct authoring skill by separating analyzers, code fixes, and source generators for C# 8-safe src/ifx work. |
 | [roslyn-layer-rules](skills/roslyn-layer-rules/SKILL.md) | dotnet | Define the layer-call diagnostics, platform limits, and Gate 2 design needs when the developer layer is roslyn. |
 | [roslyn-mvvm-source-generators](skills/roslyn-mvvm-source-generators/SKILL.md) | dotnet | Author C# 8-safe Roslyn incremental generators for MVVM properties, commands, validation, and diagnostics when repository work needs custom compile-time MVVM code generation. |
-| [roslyn-sidecar-patterns](skills/roslyn-sidecar-patterns/SKILL.md) | dotnet | Routes compile-time sidecar work to the correct Roslyn, proxy, resilience, and observability skills when a .NET service needs generated cross-service plumbing. |
 | [roslyn-source-generator-authoring](skills/roslyn-source-generator-authoring/SKILL.md) | dotnet | Author Roslyn source generators with deterministic emission, syntax-first discovery, C# 14 implementation within the netstandard2.0 runtime ceiling, and GeneratorDriver validation for src/ifx proje... |
 | [roslyn-vbd-drift-analyzer-design](skills/roslyn-vbd-drift-analyzer-design/SKILL.md) | dotnet | Design Roslyn analyzers, safe code fixes, and generators that prevent VBD architecture drift. |
 | [roslyn-vbd-generator-suite](skills/roslyn-vbd-generator-suite/SKILL.md) | dotnet | This skill helps you design and implement production-ready Roslyn source generators that enforce volatility-based decomposition (VBD) principles and automate enterprise architecture patterns. |
@@ -546,15 +536,12 @@ The library contains **602 skills**. All entrypoints are under `skills/<name>/SK
 | [typescript-update](skills/typescript-update/SKILL.md) | optional | Guidance for updating to the newer versions of TypeScript. Use this when you need to upgrade TypeScript or as part of a larger dependency update process. |
 | [ucp](skills/ucp/SKILL.md) | optional | Use when the user wants to use the UCP CLI to find, compare, buy, or track products from online merchants, or to set up and troubleshoot the local UCP profile required for merchant-scoped operation... |
 | [ui-acceptance-testing](skills/ui-acceptance-testing/SKILL.md) | optional | Verify approved user-visible acceptance criteria through browser or desktop UI scenarios with traceable evidence; excludes general service/API acceptance testing. |
-| [ui-accessibility-standards](skills/ui-accessibility-standards/SKILL.md) | optional | Enforce WCAG-aligned semantics, keyboard support, focus management, contrast, screen-reader support, and accessible naming when an agent builds or reviews UI. |
-| [ui-design-principles](skills/ui-design-principles/SKILL.md) | optional | Apply visual hierarchy, responsive layout, typography, color, feedback, and interaction-quality patterns when an agent designs or reviews user interfaces. |
 | [uml-and-software-architecture-visualization](skills/uml-and-software-architecture-visualization/SKILL.md) | optional | Design, critique, read, write, render, and implement UML and UML-like software diagrams. Use when the user mentions UML, sequence diagrams, class diagrams, activity diagrams, state machines, use ca... |
 | [unit-test-hardening](skills/unit-test-hardening/SKILL.md) | optional | Add and repair unit tests with Microsoft .NET best practices, deterministic assertions, and coverage-gated validation. Use this for unit-test alignment after refactors, generator/analyzer test hard... |
 | [use-js-interop](skills/use-js-interop/SKILL.md) | optional | Always use collocated `.razor.js` files with `export` — never global `window.*` functions or `(script)` tags. |
 | [use-winml-cli](skills/use-winml-cli/SKILL.md) | optional | Build, optimize, quantize, compile, and benchmark ONNX models for Windows ML using the `winml` CLI. Covers the Build-Your-Own-Model (BYOM) pipeline across NPU (Qualcomm QNN, Intel OpenVINO, AMD Vit... |
 | [validate-data](skills/validate-data/SKILL.md) | optional | Validate whether an analysis is accurate, well-supported, and ready to share or use for a decision. Use when reviewing methodology, calculations, comparisons, visuals, caveats, or conclusions. |
 | [validation](skills/validation/SKILL.md) | optional | Use when Codex is already in the validation phase of a security scan or the user explicitly asks to determine whether one or more candidate security findings are valid. Do not use as the primary tr... |
-| [validation-mvvm](skills/validation-mvvm/SKILL.md) | optional | Apply MVVM validation patterns for observable view models, async rules, UI error presentation, and .NET 10 validation flows in desktop applications. |
 | [vbd-access-components](skills/vbd-access-components/SKILL.md) | vbd | Create, evolve, and review VBD Access components using accepted contracts and design, with scoped authoring and review modes. |
 | [vbd-advanced-design](skills/vbd-advanced-design/SKILL.md) | vbd | Review split, merge, communication, proxy, compatibility, scaling, and ownership decisions after base VBD scope exists. |
 | [vbd-architecture-conformance](skills/vbd-architecture-conformance/SKILL.md) | vbd | Generate and run automated conformance checks for proxy-only calls, contract dependencies, vault isolation, provider behavior, and naming rules. |
@@ -591,15 +578,10 @@ The library contains **602 skills**. All entrypoints are under `skills/<name>/SK
 | [visualize-data](skills/visualize-data/SKILL.md) | data | Design, build, revise, or QA quantitative charts and figures. Use when an analytical answer needs visual judgment, whether for an inline answer, report, dashboard, notebook, or artifact. |
 | [volatility-based-decomposition-dotnet](skills/volatility-based-decomposition-dotnet/SKILL.md) | optional | Volatility-based decomposition (VBD) organizes systems by _where change occurs_, not by functional domains. Components encapsulate areas of volatility—aspects likely to change together or frequentl... |
 | [vue3-component-library-design](skills/vue3-component-library-design/SKILL.md) | optional | Build reusable Vue 3 components with typed contracts, accessibility, tests, and stable ownership boundaries. |
-| [vue3-e2e-testing-playwright](skills/vue3-e2e-testing-playwright/SKILL.md) | optional | Build deterministic Playwright suites for Vue 3 applications with auth, API mocking, parity checks, and CI diagnostics. |
-| [vue3-msal-authentication](skills/vue3-msal-authentication/SKILL.md) | optional | Configure Microsoft Entra ID authentication in Vue 3 with MSAL, router guards, token acquisition, and secure storage boundaries. |
-| [vue3-pinia-state-management](skills/vue3-pinia-state-management/SKILL.md) | optional | Design small typed Pinia stores with explicit actions, async state, persistence limits, and RxJS migration guidance. |
-| [vue3-webapp-setup](skills/vue3-webapp-setup/SKILL.md) | optional | Bootstrap Vue 3 web applications with Vite, TypeScript, routing, Pinia, testing, and enterprise folder boundaries. |
 | [vulnerability-writeup](skills/vulnerability-writeup/SKILL.md) | optional | Turn vulnerability notes, disclosure reports, PoCs, source code, or Codex Security findings into self-contained, sceptically validated, natural-sounding vulnerability reports. Use for one vulnerabi... |
 | [wait-what](skills/wait-what/SKILL.md) | optional | Stop. That last message did not land — re-pitch it. |
 | [wayfinder](skills/wayfinder/SKILL.md) | optional | Plan a huge chunk of work — more than one agent session can hold — as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear. |
 | [wcf-servicemodel-interceptors](skills/wcf-servicemodel-interceptors/SKILL.md) | optional | Enterprise WCF/CoreWCF services require deterministic, layered interceptor pipelines to handle cross-cutting concerns: observability, security, validation, and resilience. This skill defines the **... |
-| [webapi-authz-hardening](skills/webapi-authz-hardening/SKILL.md) | optional | Apply explicit least-privilege authorization policies to HTTP endpoints and supporting handlers. |
 | [webapi-compatibility-migration](skills/webapi-compatibility-migration/SKILL.md) | optional | Migrate legacy endpoints and contracts with explicit compatibility windows, adapters, and retirement steps. |
 | [webapi-error-contract-hardening](skills/webapi-error-contract-hardening/SKILL.md) | optional | Standardize HTTP error status codes and Problem Details payloads across changed API endpoints. |
 | [webapi-fixes-bundle](skills/webapi-fixes-bundle/SKILL.md) | optional | Bundled remediation workflow for Web API route design, input verification, authorization hardening, error contracts, and compatibility migration. |
@@ -627,5 +609,4 @@ The library contains **602 skills**. All entrypoints are under `skills/<name>/SK
 | [writing-shape](skills/writing-shape/SKILL.md) | optional | Writing, exploit — shape raw material into an article, paragraph by paragraph. |
 | [xml-documentation](skills/xml-documentation/SKILL.md) | optional | Add consistent XML documentation comments for public and protected APIs (enum, class, record, struct, interface, delegate, members, and type parameters). |
 | [xml-schema-inference](skills/xml-schema-inference/SKILL.md) | optional | Infer XML structure, namespace defects, and flat projection fields from XML files and report counted findings with row and path scope. |
-| [xunit-test-generation](skills/xunit-test-generation/SKILL.md) | optional | Create focused xUnit tests for .NET behavior while matching repository conventions and proving meaningful outcomes. |
 | [zip-batch-analysis](skills/zip-batch-analysis/SKILL.md) | optional | Inventory ZIP, GZIP, and TAR.GZ inputs, check archive integrity, identify nested or protected content, and prepare extraction and downstream analysis routes. |

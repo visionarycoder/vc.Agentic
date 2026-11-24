@@ -1,6 +1,6 @@
 ---
 name: "api-infrastructure-bundle"
-description: "Bundle routing skill for ASP.NET Core infrastructure concerns including health checks, rate limiting, CORS, versioning, and middleware."
+description: "Bundle routing skill for ASP.NET Core infrastructure concerns including health checks and middleware."
 metadata:
   metadata-version: "1.0.0"
   title: "API Infrastructure Bundle"
@@ -13,14 +13,13 @@ metadata:
 
 # API Infrastructure Bundle
 
-Agent uses this bundle for ASP.NET Core infrastructure setup including health checks, rate limiting, CORS, API versioning, and custom middleware.
+Agent uses this bundle for ASP.NET Core infrastructure setup including health checks and custom middleware.
 
 ## Activation
 
 | Prompt Scope | Use This Bundle | Route Detail |
 |---|---|---|
 | Configure health checks for Kubernetes | Yes | Agent uses health-checks-aspnetcore |
-| Configure CORS policies | Yes | Agent uses cors-configuration-aspnetcore |
 | Create custom middleware | Yes | Agent uses middleware-authoring-aspnetcore |
 | Implement business logic | No | Agent routes to appropriate domain skill |
 
@@ -29,7 +28,6 @@ Agent uses this bundle for ASP.NET Core infrastructure setup including health ch
 | Track | Specialist Skill | Agent Uses When |
 |---|---|---|
 | Health checks | `health-checks-aspnetcore` | Liveness/readiness probes, dependency checks in scope |
-| CORS | `cors-configuration-aspnetcore` | Cross-origin resource sharing in scope |
 | Middleware | `middleware-authoring-aspnetcore` | Custom request/response pipeline logic in scope |
 
 ## Decision Order
@@ -37,7 +35,7 @@ Agent uses this bundle for ASP.NET Core infrastructure setup including health ch
 | Decision | Agent Action |
 |---|---|
 | Multiple infrastructure concerns in one prompt | Agent applies all relevant specialist skills |
-| Health checks + CORS requested | Agent uses health-checks-aspnetcore and cors-configuration-aspnetcore |
+| Health checks + middleware requested | Agent uses health-checks-aspnetcore and middleware-authoring-aspnetcore |
 | Unclear which infrastructure component | Agent clarifies with user before proceeding |
 
 ## Workflow

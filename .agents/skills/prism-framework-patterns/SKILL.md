@@ -28,9 +28,9 @@ Agent implements Prism with modular composition, navigation services, dialogs, e
 
 | Condition | Route |
 |---|---|
-| Agent needs lightweight MVVM with generated properties and commands only. | Agent uses `communitytoolkit-mvvm`. |
+| Agent needs lightweight MVVM with generated properties and commands only. | Agent uses `roslyn-mvvm-source-generators`. |
 | Agent authors a custom MVVM generator or analyzer package. | Agent uses `roslyn-mvvm-source-generators`. |
-| Agent works on WinUI 3 without an established Prism stack. | Agent uses `winui3-patterns` or `communitytoolkit-mvvm`. |
+| Agent works on WinUI 3 without an established Prism stack. | Agent uses `winui3-patterns` or manual MVVM. |
 | Agent edits one small screen with no modular composition needs. | Agent uses the matching platform MVVM skill. |
 
 ## Required Inputs

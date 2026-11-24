@@ -95,7 +95,7 @@ public sealed class CustomerListViewModel : INotifyPropertyChanged
 
 | Pitfall | Agent Fix |
 |---|---|
-| Prism enters a small app with no module or region needs. | Agent routes to `communitytoolkit-mvvm` or the platform MVVM skill. |
+| Prism enters a small app with no module or region needs. | Agent routes to `roslyn-mvvm-source-generators` or the platform MVVM skill. |
 | Two DI containers appear in the same startup path. | Agent keeps one Prism container pipeline. |
 | Navigation parameters carry large mutable objects. | Agent passes compact identifiers or immutable request data. |
 | Region names drift between XAML and registration. | Agent centralizes region names and verifies exact matches. |

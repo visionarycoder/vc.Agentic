@@ -46,13 +46,11 @@ related_skills:
   - cwe-resource-management-fixes
   - cwe-miscellaneous-security-fixes
   - cwe-fixes
-  - webapi-authz-hardening
 
 # After (5 related skills)
 related_skills:
   - security-intake-router
   - cwe-fixes
-  - webapi-authz-hardening
   - cwe-injection-attack-fixes
 ```
 

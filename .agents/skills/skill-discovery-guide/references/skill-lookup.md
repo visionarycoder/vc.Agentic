@@ -11,7 +11,7 @@ tags:
 ---
 # Skill Discovery Lookup
 
-Lists all 602 skills under `.agents/skills`. Regenerate it from the skill directories whenever skills are added, renamed, or removed. Use [Inventory by Category](inventory-by-category.md) for the grouped view.
+Lists all 583 skills under `.agents/skills`. Regenerate it from the skill directories whenever skills are added, renamed, or removed. Use [Inventory by Category](inventory-by-category.md) for the grouped view.
 
 | Skill | Category | Purpose |
 |---|---|---|
@@ -38,7 +38,7 @@ Lists all 602 skills under `.agents/skills`. Regenerate it from the skill direct
 | `angular-vue-migration-orchestrator` | VBD & Modernization | Coordinate Angular cleanup, Vue foundation work, feature migration, validation, and cutover with one program-level workflow. |
 | `antipattern-detection-bundle` | Bundles, Routers & Controllers | Route anti-pattern detection to specialized skills (performance, code smell, design smell, architectural debate) and consolidate findings. |
 | `api-gateway-patterns` | Web API & ASP.NET Core | Design and implement API gateway layers with YARP, Ocelot, Azure API Management, and resilient .NET traffic-control patterns. |
-| `api-infrastructure-bundle` | Bundles, Routers & Controllers | Bundle routing skill for ASP.NET Core infrastructure concerns including health checks, rate limiting, CORS, versioning, and middleware. |
+| `api-infrastructure-bundle` | Bundles, Routers & Controllers | Bundle routing skill for ASP.NET Core infrastructure concerns including health checks and middleware. |
 | `api-service-contracts` | Web API & ASP.NET Core | Generate API and service communication contracts with sequence diagram |
 | `appmod-hooks` | Skill & Agent Management | Lifecycle hooks for the modernize-rearchitecture coordinator. Defines hook points, registered actions, and execution rules. |
 | `architectural-decision-debate` | Workflows & General Productivity | Debate architectural and design decisions by presenting three positions (adopt, reject, defer) with at least 3 options each, challenging assumptions and existing patterns. |
@@ -147,8 +147,6 @@ Lists all 602 skills under `.agents/skills`. Regenerate it from the skill direct
 | `code-testing-extensions` | Testing & Quality | Routes code-testing agents to the correct language extension and example reference files. |
 | `codex-expo-run-actions` | Workflows & General Productivity | Wire Expo projects into the Codex app with project-local run scripts and .codex/environments/environment.toml actions. Use when the user wants the Codex app Run button, build/run actions, action buttons, or a stable Expo start/run workfl... |
 | `collect-files-with-request` | Skill & Agent Management | Create, inspect, and manage Dropbox file requests for collecting uploads from other people. Use when the user asks to collect files, request uploads, create an upload portal, check a file request, or list existing file requests. |
-| `commands-behaviors-patterns` | Workflows & General Productivity | Implement command surfaces, async actions, and event-to-command behavior wiring when agent builds .NET MVVM interaction flows. |
-| `communitytoolkit-mvvm` | UI, Desktop & Frontend | Apply CommunityToolkit.Mvvm attributes, messaging, validation, and DI patterns when .NET MVVM work needs generated observable state and commands. |
 | `computer-use` | Workflows & General Productivity | Control Windows apps from ChatGPT |
 | `configuration-inventory` | .NET Engineering Standards | Generate comprehensive configuration and externalized settings inventory |
 | `configuration-options-pattern` | .NET Engineering Standards | Use the .NET options pattern for typed configuration binding, verification, named options, and reload-aware consumers. |
@@ -158,7 +156,6 @@ Lists all 602 skills under `.agents/skills`. Regenerate it from the skill direct
 | `connect-recommend` | Workflows & General Productivity | Use this skill when the user asks about Stripe Connect configuration, charge patterns, Dashboard access, or how to get started with Connect, is building a marketplace, platform, multi-vendor store, gig platform, or subscription platform,... |
 | `conversation-intelligence` | Workflows & General Productivity | Twilio Conversation Intelligence development guide. Use when building real-time or post-call conversation analysis, language operator pipelines, sentiment analysis, agent assist, cross-channel analytics, or querying aggregated conversati... |
 | `convert-blazor-server-to-webapp` | VBD & Modernization | Migrate legacy Blazor Server hosting to the .NET Blazor Web App model while preserving interactive server behavior, auth flow, and startup correctness. |
-| `cors-configuration-aspnetcore` | Web API & ASP.NET Core | Configure ASP.NET Core CORS policies with explicit origins, preflight behavior, credentials handling, and secure wildcard avoidance. |
 | `crap-score` | Testing & Quality | Calculate targeted CRAP scores for a named .NET method, class, or file using coverage and complexity data. |
 | `create-blazor-project` | UI, Desktop & Frontend | If the user's request doesn't make the following clear, ask before scaffolding: |
 | `create-canvas` | Workflows & General Productivity | Create a Copilot extension canvas at user, workspace, or plugin scope. |
@@ -167,7 +164,6 @@ Lists all 602 skills under `.agents/skills`. Regenerate it from the skill direct
 | `create-test-baseline` | Testing & Quality | Create a test baseline for the project to be modernized. The baseline will be used for later verification of modernization tasks. |
 | `creating-implementation-plan` | Workflows & General Productivity | Creates an implementation plan AND task breakdown from a feature spec by consuming design artifacts. Produces plan.md with implementation steps, inline task list with full REQ traceability, and a Requirement Mapping table. This is the si... |
 | `critical-infrastructure-bundle` | Bundles, Routers & Controllers | Route critical infrastructure design and implementation requests to the correct platform skill and keep cross-technology decisions consistent. |
-| `cs-xml-doc-fixes` | MSBuild, Tooling & Packaging | Fix XML documentation warnings (CS0419, CS1570-CS1658) with correct syntax, resolved crefs, and matching param tags |
 | `csharp-scripts` | MSBuild, Tooling & Packaging | Runs file-based C# apps with the .NET CLI for focused experiments without creating a project. |
 | `csharp-test-coverage-analyzer` | Testing & Quality | You analyze existing C# test suites to find gaps in code coverage, identify untested edge cases, spot missing security validations, and recommend improvements to achieve 80%+ coverage. You work with any .NET test framework (xUnit, nUnit,... |
 | `csv-data-analysis` | Data, Fabric & Semantic Systems | Combined csv data analysis guidance with task/provider-specific modes. Verify delimited files before ingestion and fix parse defects in a new file. |
@@ -193,7 +189,6 @@ Lists all 602 skills under `.agents/skills`. Regenerate it from the skill direct
 | `dashboard-builder` | Trading & Investment | Use when rendering, validating, or adapting standardized responsive Public Equity Investing HTML dashboards from structured analysis produced by visible Public Equity Investing skills. This capability owns the optional dashboard shell, m... |
 | `dashboard-expert` | Visualization & Reporting | Full CRUD and analysis for Mixpanel dashboards. Use when the user asks to build, create, analyze, read, understand, explain, modify, update, enhance, or manage dashboards, or asks about dashboard layout, text cards, or report arrangement... |
 | `dashboards-and-real-time-visualization` | Visualization & Reporting | Design dashboards and live visualization systems. Use when the user needs monitoring views, streaming charts, coordinated interactions, downsampling, or performance-aware operational visualization. |
-| `data-analytics-routing` | Data, Fabric & Semantic Systems | Route analytical questions to the smallest relevant data workflow using actual sources and available tools. |
 | `data-architecture` | Data, Fabric & Semantic Systems | Generate data architecture and persistence layer documentation with data model diagram |
 | `data-contract-frontmatter` | Data, Fabric & Semantic Systems | Generate and verify compact data contract frontmatter for datasets, tables, and APIs. |
 | `data-intake-router` | Bundles, Routers & Controllers | Route data and Fabric requests to the minimum correct data skill by separating KQL diagnostics, ingestion, pipeline issues, semantic models, and data-quality concerns. |
@@ -202,7 +197,6 @@ Lists all 602 skills under `.agents/skills`. Regenerate it from the skill direct
 | `data-visualization` | Visualization & Reporting | Route web data visualization work. Use when the user needs chart choice, visual critique, dashboards, maps or geospatial views, Gantt timelines, UML/software diagrams, scrollytelling, reports or exports, testing, accessibility, browser i... |
 | `data-window-validation` | Data, Fabric & Semantic Systems | Verify whether dated records fall inside approved time windows and fiscal periods. |
 | `database-design-standards` | Data, Fabric & Semantic Systems | Apply data modeling, naming, data type, dimensional model, data mart, and security rules when the developer layer is database. |
-| `databinding-patterns` | UI, Desktop & Frontend | Apply binding expressions, modes, converters, validation, and platform-specific binding optimizations when agent implements .NET UI data flow. |
 | `debug-live` | Workflows & General Productivity | Drive an interactive VS Code debugger to investigate bugs, failing tests, wrong/null variable values, unexpected runtime behavior, and other "it doesn't work" reports. Use this skill whenever speculation about runtime behavior would be c... |
 | `deep-security-scan` | Security & Compliance | Use when the user asks for a deep, exhaustive, multi-pass, or variance-reducing repository-wide or scoped-path Codex Security scan. Run repeated complete independent Standard scans with the Codex Security deep-scan tool, which aggregates... |
 | `define-security-policy` | Security & Compliance | Define, review, or update SECURITY.md guidance for a repository or component. Use when the user wants to clarify what Codex Security should review, what is out of scope, which security properties must hold, or whether existing guidance s... |
@@ -297,11 +291,9 @@ Lists all 602 skills under `.agents/skills`. Regenerate it from the skill direct
 | `generate-dockerfile` | Azure, Cloud & Observability | Generate or enhance a Dockerfile for a containerized application using curated base-image recommendations and security best practices. Use AFTER analyze-repo (or after the user has told you the language/framework). Triggers include "gene... |
 | `generate-testability-wrappers` | Testing & Quality | Generate minimal abstractions and dependency injection registrations for hard-to-test static dependencies. |
 | `geospatial-and-cartographic-visualization` | Visualization & Reporting | Design geospatial and cartographic visualizations. Use when the user needs help deciding whether to use a map, choosing projections or basemaps, building choropleths or symbol maps, or implementing thematic maps, slippy maps, or geospati... |
-| `github-agentic-workflows` | Skill & Agent Management | Design, author, update, debug, and upgrade GitHub Agentic Workflows (gh-aw) automations; excludes general agent orchestration and Governance lifecycle design. |
 | `global-error-log-library` | .NET Engineering Standards | Design a shared .NET error catalog and recording pipeline with explicit classification, correlation, translation, and query behavior. |
 | `grade-tests` | Testing & Quality | Grade a curated list of tests and generate a compact per-test score table with concise rationale. |
 | `grammar-of-graphics-and-declarative-visualization` | Visualization & Reporting | Build data visualizations with declarative grammars. Use when the user needs Vega-Lite, Vega, Observable Plot, or grammar-of-graphics reasoning, especially for tabular charts that do not require bespoke rendering. |
-| `graphql-dotnet` | Web API & ASP.NET Core | Design and implement GraphQL APIs in .NET with Hot Chocolate, optimized schema patterns, security controls, and client integration guidance. |
 | `grilling` | Workflows & General Productivity | Stress-test a plan or design through focused interview rounds, with optional ADR and glossary drafts when requested. |
 | `gsap` | UI, Desktop & Frontend | GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position parameter, labels, nesting, playback), and performance (transforms, will-change, quickTo). Use... |
 | `handoff` | Documentation & Writing | Compact the current conversation into a handoff document for another agent to pick up. |
@@ -415,7 +407,6 @@ Lists all 602 skills under `.agents/skills`. Regenerate it from the skill direct
 | `repo-reconciliation` | Workflows & General Productivity | Audit and reconcile repository guidance across .agents, .github, docs, and workflows when architecture, project layout, release packaging, or canonical ownership changes. Use when project consolidation creates doc drift, workflows refere... |
 | `reports-pdfs-and-slide-automation` | Visualization & Reporting | Lay out and export data-rich reports and documents. Use when the user needs report structure, figure packaging, PDFs, PowerPoint or Google Slides automation, or programmatic insertion of visualizations, UML-like diagrams, or architecture... |
 | `resolving-merge-conflicts` | Workflows & General Productivity | Use when you need to resolve an in-progress git merge/rebase conflict. |
-| `rfc-7807-compliance` | Web API & ASP.NET Core | Preserve legacy RFC 7807 Problem Details contracts while defaulting all new work to RFC 9457. |
 | `rfc-8091-compliance` | Web API & ASP.NET Core | Enforce `application/json-seq` framing, producer behavior, and failure handling for streaming JSON text sequences. |
 | `rfc-8259-compliance` | Web API & ASP.NET Core | Enforce interoperable JSON syntax, encoding, and serializer behavior for external contracts. |
 | `rfc-8725-compliance` | Security & Compliance | Enforce explicit JWT algorithm, key, claim, and validation rules for issuing and consuming bearer tokens. |
@@ -432,7 +423,6 @@ Lists all 602 skills under `.agents/skills`. Regenerate it from the skill direct
 | `roslyn-intake-router` | Bundles, Routers & Controllers | Route Roslyn and Ifx requests to the minimum correct authoring skill by separating analyzers, code fixes, and source generators for C# 8-safe src/ifx work. |
 | `roslyn-layer-rules` | Roslyn & Analyzers | Define the layer-call diagnostics, platform limits, and Gate 2 design needs when the developer layer is roslyn. |
 | `roslyn-mvvm-source-generators` | Roslyn & Analyzers | Author C# 8-safe Roslyn incremental generators for MVVM properties, commands, validation, and diagnostics when repository work needs custom compile-time MVVM code generation. |
-| `roslyn-sidecar-patterns` | Roslyn & Analyzers | Routes compile-time sidecar work to the correct Roslyn, proxy, resilience, and observability skills when a .NET service needs generated cross-service plumbing. |
 | `roslyn-source-generator-authoring` | Roslyn & Analyzers | Author Roslyn source generators with deterministic emission, syntax-first discovery, C# 14 implementation within the netstandard2.0 runtime ceiling, and GeneratorDriver validation for src/ifx projects. |
 | `roslyn-vbd-drift-analyzer-design` | Roslyn & Analyzers | Design Roslyn analyzers, safe code fixes, and generators that prevent VBD architecture drift. |
 | `roslyn-vbd-generator-suite` | Roslyn & Analyzers | This skill helps you design and implement production-ready Roslyn source generators that enforce volatility-based decomposition (VBD) principles and automate enterprise architecture patterns. |
@@ -534,15 +524,12 @@ Lists all 602 skills under `.agents/skills`. Regenerate it from the skill direct
 | `typescript-update` | MSBuild, Tooling & Packaging | Guidance for updating to the newer versions of TypeScript. Use this when you need to upgrade TypeScript or as part of a larger dependency update process. |
 | `ucp` | Web API & ASP.NET Core | Use when the user wants to use the UCP CLI to find, compare, buy, or track products from online merchants, or to set up and troubleshoot the local UCP profile required for merchant-scoped operations. Covers global catalog search ("find m... |
 | `ui-acceptance-testing` | Testing & Quality | Verify approved user-visible acceptance criteria through browser or desktop UI scenarios with traceable evidence; excludes general service/API acceptance testing. |
-| `ui-accessibility-standards` | UI, Desktop & Frontend | Enforce WCAG-aligned semantics, keyboard support, focus management, contrast, screen-reader support, and accessible naming when an agent builds or reviews UI. |
-| `ui-design-principles` | UI, Desktop & Frontend | Apply visual hierarchy, responsive layout, typography, color, feedback, and interaction-quality patterns when an agent designs or reviews user interfaces. |
 | `uml-and-software-architecture-visualization` | Visualization & Reporting | Design, critique, read, write, render, and implement UML and UML-like software diagrams. Use when the user mentions UML, sequence diagrams, class diagrams, activity diagrams, state machines, use case diagrams, component diagrams, deploym... |
 | `unit-test-hardening` | Testing & Quality | Add and repair unit tests with Microsoft .NET best practices, deterministic assertions, and coverage-gated validation. Use this for unit-test alignment after refactors, generator/analyzer test hardening, and enforcing 80% minimum coverag... |
 | `use-js-interop` | UI, Desktop & Frontend | Always use collocated `.razor.js` files with `export` — never global `window.*` functions or `(script)` tags. |
 | `use-winml-cli` | UI, Desktop & Frontend | Build, optimize, quantize, compile, and benchmark ONNX models for Windows ML using the `winml` CLI. Covers the Build-Your-Own-Model (BYOM) pipeline across NPU (Qualcomm QNN, Intel OpenVINO, AMD VitisAI), GPU, and CPU execution providers.... |
 | `validate-data` | Data, Fabric & Semantic Systems | Validate whether an analysis is accurate, well-supported, and ready to share or use for a decision. Use when reviewing methodology, calculations, comparisons, visuals, caveats, or conclusions. |
 | `validation` | Workflows & General Productivity | Use when Codex is already in the validation phase of a security scan or the user explicitly asks to determine whether one or more candidate security findings are valid. Do not use as the primary trigger for full PR, commit, branch, patch... |
-| `validation-mvvm` | Workflows & General Productivity | Apply MVVM validation patterns for observable view models, async rules, UI error presentation, and .NET 10 validation flows in desktop applications. |
 | `vbd-access-components` | VBD & Modernization | Create, evolve, and review VBD Access components using accepted contracts and design, with scoped authoring and review modes. |
 | `vbd-advanced-design` | VBD & Modernization | Review split, merge, communication, proxy, compatibility, scaling, and ownership decisions after base VBD scope exists. |
 | `vbd-architecture-conformance` | VBD & Modernization | Generate and run automated conformance checks for proxy-only calls, contract dependencies, vault isolation, provider behavior, and naming rules. |
@@ -579,15 +566,10 @@ Lists all 602 skills under `.agents/skills`. Regenerate it from the skill direct
 | `visualize-data` | Visualization & Reporting | Design, build, revise, or QA quantitative charts and figures. Use when an analytical answer needs visual judgment, whether for an inline answer, report, dashboard, notebook, or artifact. |
 | `volatility-based-decomposition-dotnet` | VBD & Modernization | Volatility-based decomposition (VBD) organizes systems by _where change occurs_, not by functional domains. Components encapsulate areas of volatility—aspects likely to change together or frequently—so changes remain contained rather tha... |
 | `vue3-component-library-design` | UI, Desktop & Frontend | Build reusable Vue 3 components with typed contracts, accessibility, tests, and stable ownership boundaries. |
-| `vue3-e2e-testing-playwright` | Testing & Quality | Build deterministic Playwright suites for Vue 3 applications with auth, API mocking, parity checks, and CI diagnostics. |
-| `vue3-msal-authentication` | UI, Desktop & Frontend | Configure Microsoft Entra ID authentication in Vue 3 with MSAL, router guards, token acquisition, and secure storage boundaries. |
-| `vue3-pinia-state-management` | UI, Desktop & Frontend | Design small typed Pinia stores with explicit actions, async state, persistence limits, and RxJS migration guidance. |
-| `vue3-webapp-setup` | UI, Desktop & Frontend | Bootstrap Vue 3 web applications with Vite, TypeScript, routing, Pinia, testing, and enterprise folder boundaries. |
 | `vulnerability-writeup` | Security & Compliance | Turn vulnerability notes, disclosure reports, PoCs, source code, or Codex Security findings into self-contained, sceptically validated, natural-sounding vulnerability reports. Use for one vulnerability or a disclosure campaign; a Codex S... |
 | `wait-what` | Workflows & General Productivity | Stop. That last message did not land — re-pitch it. |
 | `wayfinder` | Skill & Agent Management | Plan a huge chunk of work — more than one agent session can hold — as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear. |
 | `wcf-servicemodel-interceptors` | Workflows & General Productivity | Enterprise WCF/CoreWCF services require deterministic, layered interceptor pipelines to handle cross-cutting concerns: observability, security, validation, and resilience. This skill defines the **eight-layer interceptor stack** for prod... |
-| `webapi-authz-hardening` | Security & Compliance | Apply explicit least-privilege authorization policies to HTTP endpoints and supporting handlers. |
 | `webapi-compatibility-migration` | Web API & ASP.NET Core | Migrate legacy endpoints and contracts with explicit compatibility windows, adapters, and retirement steps. |
 | `webapi-error-contract-hardening` | Web API & ASP.NET Core | Standardize HTTP error status codes and Problem Details payloads across changed API endpoints. |
 | `webapi-fixes-bundle` | Bundles, Routers & Controllers | Bundled remediation workflow for Web API route design, input verification, authorization hardening, error contracts, and compatibility migration. |
@@ -615,5 +597,4 @@ Lists all 602 skills under `.agents/skills`. Regenerate it from the skill direct
 | `writing-shape` | Documentation & Writing | Writing, exploit — shape raw material into an article, paragraph by paragraph. |
 | `xml-documentation` | Documentation & Writing | Add consistent XML documentation comments for public and protected APIs (enum, class, record, struct, interface, delegate, members, and type parameters). |
 | `xml-schema-inference` | Data, Fabric & Semantic Systems | Infer XML structure, namespace defects, and flat projection fields from XML files and report counted findings with row and path scope. |
-| `xunit-test-generation` | Testing & Quality | Create focused xUnit tests for .NET behavior while matching repository conventions and proving meaningful outcomes. |
 | `zip-batch-analysis` | Workflows & General Productivity | Inventory ZIP, GZIP, and TAR.GZ inputs, check archive integrity, identify nested or protected content, and prepare extraction and downstream analysis routes. |

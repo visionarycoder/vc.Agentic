@@ -21,7 +21,6 @@ Agent coordinates large Angular to Vue programs through one verified plan.
 |---|---|
 | Many Angular features move to one Vue target | Agent uses this skill |
 | One component or one feature needs direct porting | Agent uses `angular-to-vue3-migration` |
-| Team needs only Vue setup | Agent uses `vue3-webapp-setup` |
 | Team needs only Angular cleanup | Agent uses `angular-anti-patterns` |
 
 ## Program Workflow

@@ -25,7 +25,6 @@ Agent standardizes request validation behavior for DTOs, route/query parameters,
 | User prompt | Route |
 |---|---|
 | Request is broader multi-concern WebAPI remediation | Use `webapi-fixes-bundle` |
-| Request is primarily auth or authorization hardening | Use `webapi-authz-hardening` |
 | Request is primarily route shaping or compatibility migration | Use the matching WebAPI specialist |
 
 ## Routing Rules
