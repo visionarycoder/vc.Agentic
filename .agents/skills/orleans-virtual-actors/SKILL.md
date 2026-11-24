@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -53,93 +53,15 @@ Implement Orleans virtual actor systems with explicit grain contracts, silo conf
 | 4 | Keep grain methods async, idempotent where replay matters, and free of blocking waits. | Changed Orleans code has no sync-over-async calls. |
 | 5 | Verify activation, persistence, and deactivation. | Build passes and lifecycle behavior matches the selected pattern. |
 
-## Grain Type Matrix
+## Grain Rules
 
-| Need | Preferred Pattern | Avoid |
-|---|---|---|
-| CPU-bound fan-out with no durable state | `StatelessWorker` grain | Persistent state on a stateless worker |
-| Entity or aggregate with isolated mutable state | Stateful grain with `IPersistentState<TState>` | Shared mutable singleton services |
-| Lightweight request coordination with no stored state | Regular stateless grain | External lock orchestration around grain calls |
-| Cross-grain orchestration boundary | Dedicated coordinator grain | Large multi-purpose grain classes |
-
-## Hosting and Clustering Matrix
-
-| Concern | Preferred Pattern | Notes |
-|---|---|---|
-| Local development | Localhost clustering | Fast validation path |
-| Azure-hosted cluster membership | Azure Storage clustering | Fits Azure-hosted Orleans deployments |
-| SQL-backed membership | ADO.NET clustering | Fits relational hosting environments |
-| Grain state in Azure | Azure Table, Blob, or Cosmos-backed provider used by the repo pattern | Keep provider choice explicit per grain state |
-| Grain state in SQL | ADO.NET grain storage | Align schema and connection management with existing data standards |
-
-## Grain Implementation Patterns
-
-```csharp
-public interface ICartGrain : IGrainWithStringKey
-{
-    Task<CartSnapshot> GetAsync();
-    Task AddItemAsync(string sku, int quantity);
-}
-
-public sealed class CartGrain([PersistentState("cart", "cartStore")] IPersistentState<CartState> state) : Grain, ICartGrain
-{
-    public Task<CartSnapshot> GetAsync() => Task.FromResult(new CartSnapshot(state.State.Items));
-    public async Task AddItemAsync(string sku, int quantity)
-    {
-        state.State.AddOrUpdate(sku, quantity);
-        await state.WriteStateAsync();
-    }
-}
-
-[StatelessWorker]
-public sealed class PricingGrain : Grain, IPricingGrain
-{
-    public Task<decimal> QuoteAsync(PriceRequest request) => Task.FromResult(request.Quantity * request.UnitPrice);
-}
-```
-
-| Pattern | Fit |
+| Topic | Rule |
 |---|---|
-| Grain contract | Stable actor-facing contract |
-| Stateful grain | Durable aggregate state |
-| Stateless worker | High-concurrency stateless work |
-| Activation hook | Initialization or metadata refresh that stays idempotent |
-
-## State Management and Persistence Patterns
-
-| Concern | Preferred Pattern | Example |
-|---|---|---|
-| Strongly typed grain state | `IPersistentState<TState>` injection | `public sealed class ProfileState { public string DisplayName { get; set; } = string.Empty; }` |
-| Azure persistence | Named storage provider | `silo.AddAzureTableGrainStorage("profileStore", options => ...);` |
-| ADO.NET persistence | Membership and storage providers with invariant plus connection string | `silo.AddAdoNetGrainStorage("profileStore", options => ...);` |
-| Terminal cleanup | `ClearStateAsync()` plus `DeactivateOnIdle()` | `await state.ClearStateAsync(); DeactivateOnIdle();` |
-
-## Activation and Deactivation Matrix
-
-| Concern | Preferred Pattern | Avoid |
-|---|---|---|
-| Cold start state load | Read persisted state during activation path | Manual caching that bypasses provider state |
-| Idle cleanup | `DeactivateOnIdle()` after terminal work | Long-lived in-grain timers for completed entities |
-| Rehydration safety | Keep activation logic idempotent | Side effects on every activation without guards |
-| External resources | Resolve through DI and dispose outside grain lifecycle when possible | Direct socket or client creation inside every grain call |
-
-## Verification Checklist
-
-| Check | Test | Pass |
-|---|---|---|
-| Grain contract and host registration | Build interfaces with implementations and review provider names. | Signatures match and every persistent grain resolves its storage provider. |
-| Persistence and lifecycle | Run existing Orleans tests or local host verification for read, write, clear, activate, and deactivate paths. | State and lifecycle behavior match the selected grain pattern. |
-| Async and concurrency safety | Inspect changed methods for blocking waits or shared mutable static state. | Orleans code stays async and isolated. |
-
-## Common Pitfalls
-
-| Pitfall | Agent Fix |
-|---|---|
-| Grain interface exposes transport or controller types | Replace with grain-specific contracts or DTOs |
-| Stateless worker stores mutable request-specific fields | Move state to method scope or convert to a regular grain |
-| Persistent grain writes state on every trivial read | Write only on state mutation paths |
-| Host registers grain storage with one name and grain requests another name | Align provider names in both locations |
-| Activation path emits duplicate side effects | Make initialization idempotent and state-aware |
+| Stateless worker | Use `[StatelessWorker]` for CPU-bound fan-out with no durable state; it must not hold persistent state or mutable request-specific fields (use method scope or a regular grain). |
+| Grain interfaces | Do not expose transport or controller types; use grain-specific contracts or DTOs. |
+| Grain methods | Stay async; no blocking sync-over-async waits. |
+| Persistence | Keep the `[PersistentState]` provider name equal to the name registered on the silo; write state only on mutation paths. |
+| Cleanup | `await state.ClearStateAsync(); DeactivateOnIdle();` for terminal cleanup. |
 
 ## Outputs List
 
