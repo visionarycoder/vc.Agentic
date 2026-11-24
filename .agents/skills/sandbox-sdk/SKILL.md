@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -68,116 +68,36 @@ export { Sandbox } from '@cloudflare/sandbox';  // Required export
 | Get sandbox | `getSandbox(env.Sandbox, 'user-123')` |
 | Run command | `await sandbox.exec('python script.py')` |
 | Run code (interpreter) | `await sandbox.runCode(code, { language: 'python' })` |
-| Write file | `await sandbox.writeFile('/workspace/app.py', content)` |
-| Read file | `await sandbox.readFile('/workspace/app.py')` |
-| Create directory | `await sandbox.mkdir('/workspace/src', { recursive: true })` |
-| List files | `await sandbox.listFiles('/workspace')` |
 | Expose port | `await sandbox.exposePort(8080)` |
 | Destroy | `await sandbox.destroy()` |
 
-## Core Patterns
-
-### Execute Commands
-
-```typescript
-const sandbox = getSandbox(env.Sandbox, 'user-123');
-const result = await sandbox.exec('python --version');
-// result: { stdout, stderr, exitCode, success }
-```
-
-### Code Interpreter (Recommended for AI)
-
-Use `runCode()` for executing LLM-generated code with rich outputs:
-
-```typescript
-const ctx = await sandbox.createCodeContext({ language: 'python' });
-
-await sandbox.runCode('import pandas as pd; data = [1,2,3]', { context: ctx });
-const result = await sandbox.runCode('sum(data)', { context: ctx });
-// result.results[0].text = "6"
-```
-
-**Languages**: `python`, `javascript`, `typescript`
-
-State persists within context. Create explicit contexts for production.
-
-### File Operations
-
-```typescript
-await sandbox.mkdir('/workspace/project', { recursive: true });
-await sandbox.writeFile('/workspace/project/main.py', code);
-const file = await sandbox.readFile('/workspace/project/main.py');
-const files = await sandbox.listFiles('/workspace/project');
-```
+Defaults: `exec` timeout is 60000 ms; `createCodeContext` defaults to language `python` and cwd `/workspace` with a 30000 ms request timeout. `runCode` reports failures in `result.error`; `exec` returns `{ stdout, stderr, exitCode, success }`.
 
 ## When to Use What
 
-| Need | Use | Why |
-|------|-----|-----|
-| Shell commands, scripts | `exec()` | Direct control, streaming |
-| LLM-generated code | `runCode()` | Rich outputs, state persistence |
-| Build/test pipelines | `exec()` | Exit codes, stderr capture |
-| Data analysis | `runCode()` | Charts, tables, pandas |
+Use `exec()` for shell commands, scripts, and build/test pipelines. Use `runCode()` for LLM-generated code and data analysis (rich outputs, state persistence). Create explicit contexts with `createCodeContext` for production; state persists within a context (languages: `python`, `javascript`, `typescript`).
 
 ## Extending the Dockerfile
 
-Base image (`docker.io/cloudflare/sandbox:0.7.0`) includes Python 3.11, Node.js 20, and common tools.
+Base image (`docker.io/cloudflare/sandbox:0.7.0`) includes Python 3.11, Node.js 20, and common tools. Extend it with `FROM docker.io/cloudflare/sandbox:0.7.0` plus `RUN` installs, and keep `EXPOSE 8080` for local port exposure. Keep images lean; size affects cold start.
 
-Add dependencies by extending the Dockerfile:
+## Preview URLs
 
-```dockerfile
-FROM docker.io/cloudflare/sandbox:0.7.0
-
-# Python packages
-RUN pip install requests beautifulsoup4
-
-# Node packages (global)
-RUN npm install -g typescript
-
-# System packages
-RUN apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
-
-EXPOSE 8080  # Required for local dev port exposure
-```
-
-Keep images lean - affects cold start time.
-
-## Preview URLs (Port Exposure)
-
-Expose HTTP services running in sandboxes:
-
-```typescript
-const { url } = await sandbox.exposePort(8080);
-// Returns preview URL for the service
-```
-
-**Production requirement**: Preview URLs need a custom domain with wildcard DNS (`*.yourdomain.com`). The `.workers.dev` domain does not support preview URL subdomains.
-
-See: https://developers.cloudflare.com/sandbox/guides/expose-services/
+Preview URLs from `exposePort()` need a custom domain with wildcard DNS (`*.yourdomain.com`); `.workers.dev` does not support them. See https://developers.cloudflare.com/sandbox/guides/expose-services/
 
 ## OpenAI Agents SDK Integration
 
-The SDK provides helpers for OpenAI Agents at `@cloudflare/sandbox/openai`:
+Helpers live at `@cloudflare/sandbox/openai` (`Shell`, `Editor`); see `examples/openai-agents`.
 
-```typescript
-import { Shell, Editor } from '@cloudflare/sandbox/openai';
-```
+## Lifecycle
 
-See `examples/openai-agents` for complete integration pattern.
-
-## Sandbox Lifecycle
-
-- `getSandbox()` returns immediately - container starts lazily on first operation
-- Containers sleep after 10 minutes of inactivity (configurable via `sleepAfter`)
-- Use `destroy()` to immediately free resources
-- Same `sandboxId` always returns same sandbox instance
+Containers sleep after 10 minutes of inactivity (`sleepAfter`; `keepAlive: true` prevents it). `getSandbox()` returns immediately and the container starts lazily.
 
 ## Anti-Patterns
 
-- **Don't use internal clients** (`CommandClient`, `FileClient`) - use `sandbox.*` methods
-- **Don't skip the Sandbox export** - Worker won't deploy without `export { Sandbox }`
-- **Don't hardcode sandbox IDs for multi-user** - use user/session identifiers
-- **Don't forget cleanup** - call `destroy()` for temporary sandboxes
+- Don't use internal clients (`CommandClient`, `FileClient`); use `sandbox.*` methods.
+- Don't hardcode sandbox IDs for multi-user; use user or session identifiers.
+- Call `destroy()` for temporary sandboxes.
 
 ## Detailed References
 

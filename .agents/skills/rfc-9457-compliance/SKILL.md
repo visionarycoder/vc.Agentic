@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -37,56 +37,11 @@ Agent uses this skill for HTTP error contracts, centralized handlers, and valida
 | Request belongs to a narrower specialist than this skill | Use that narrower specialist |
 | Request is outside this skill's suite or concern | Use the correct suite router or execution skill |
 
-## Workflow
+## Contract
 
-| Step | Agent Action | Test | Pass |
-
-|---|---|---|---|
-
-| 1. Map error categories | Agent identifies validation, authorization, not-found, conflict, and server-failure paths in scope. | Agent lists changed error categories or endpoints. | Every changed error path appears once. |
-
-| 2. Normalize contract | Agent applies canonical fields, media type, and stable type URIs. | Inspect changed payloads or API tests. | Changed responses use one Problem Details contract shape. |
-
-| 3. Centralize handling | Agent keeps formatting in shared handlers instead of ad hoc controller code. | Review changed files for repeated per-action payload construction. | Zero new ad hoc Problem Details builders appear in changed scope. |
-
-| 4. Verify outcomes | Agent runs existing API tests for changed paths. | Run existing build and API test commands in scope. | Zero build errors and zero failing tests. |
-
-## Core Rules
-
-| Rule | Agent Verifies | Fix |
-
-|---|---|---|
-
-| RFC9457-001 | Error media type is `application/problem+json` | Set content type explicitly |
-
-| RFC9457-002 | Payload includes `type`, `title`, and `status` | Add canonical fields |
-
-| RFC9457-003 | `detail` stays safe for clients | Remove stack traces, SQL text, and secrets |
-
-| RFC9457-004 | `instance` or trace field supports diagnostics when useful | Add stable request identifier mapping |
-
-| RFC9457-005 | Problem type URIs stay consistent by error category | Centralize type mapping |
-
-| RFC9457-006 | Validation finishes before streaming starts | Return Problem Details before first stream byte |
-
-| RFC9457-007 | Error formatting stays centralized | Use shared middleware, filter, or exception handler |
-
-## Verification Matrix
-
-| Test | Run | Pass |
-
-|---|---|---|
-
-| Contract verification | Run existing API tests that hit changed error paths. | Error responses use `application/problem+json` and canonical fields. |
-
-| Safety verification | Inspect changed `detail` and extension fields. | Zero sensitive diagnostics appear in client payloads. |
-
-| Streaming verification | Trigger one pre-stream validation failure when streaming path is touched. | Service returns Problem Details before stream start. |
-
-## Guardrails
-
-- Agent uses RFC 9457 as the default Problem Details contract.
-
-- Agent records compatibility reasons when RFC 7807 behavior stays in place.
-
-- Agent keeps stable machine-readable extensions when clients already depend on them.
+- Error responses use media type `application/problem+json` with `type`, `title`, and `status` present.
+- Keep formatting in shared middleware, a filter, or a central exception handler, with type URIs mapped centrally per error category.
+- `detail` must not contain stack traces, SQL text, or secrets.
+- Return validation Problem Details before the first stream byte; later failures need `rfc-8091-compliance` handling.
+- Keep stable machine-readable extensions that clients already depend on; record compatibility reasons when RFC 7807 behavior stays.
+- Verify by running existing build and API tests for changed error paths.
