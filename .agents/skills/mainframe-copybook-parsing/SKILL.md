@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -43,48 +43,14 @@ Agent parses COBOL copybooks into hierarchical field models with offsets, length
 | Validation strictness | No | Record fail-fast or warning-first behavior. |
 | Downstream target | No | Record C# generation, Fabric ingestion, EF Core staging, or diagnostics. |
 
-## Pattern Matrix
-
-| Concern | Preferred Pattern | Guardrail | Pass Target |
-|---|---|---|---|
-| Source normalization | Strip comments, continuation markers, and sequence-area noise into one normalized stream | Preserve source locations | Every data definition line maps to one normalized statement |
-| Hierarchy | Build the tree from level numbers | Avoid indentation-only parsing | Each item has one valid parent except the root |
-| Clause parsing | Parse PIC, USAGE, SIGN, OCCURS, REDEFINES, VALUE, and FILLER into explicit metadata | Flag unsupported dialect constructs | Each supported clause lands in the model with source location |
-| Storage model | Compute offsets, lengths, overlay scope, and record length | Keep `REDEFINES` as shared storage, not duplicate storage | Offsets and overlay spans reconcile |
-| Strategy selection | Choose custom parser, third-party adapter, or staged preprocessor plus parser | Match strategy to dialect breadth and delivery needs | One parser strategy fits the workload |
-| Output contract | Emit hierarchy, offsets, types, and findings for downstream consumers | Keep parse and conversion concerns separate | Output model is ready for generation or ingestion |
-
-## Workflow
-
-| Step | Agent Action | Test | Pass |
-|---|---|---|---|
-| 1 | Agent normalizes source lines, comments, continuation markers, and sequence areas. | Read the normalized token stream. | Every statement is parse-ready. |
-| 2 | Agent builds the level-number hierarchy and distinguishes group from elementary items. | Inspect parent-child relationships. | Each item has the intended parent and level. |
-| 3 | Agent parses PIC, USAGE, SIGN, OCCURS, REDEFINES, VALUE, and FILLER clauses. | Compare parsed clauses to source lines. | Supported clauses appear in the field model. |
-| 4 | Agent computes storage length, relative offset, and overlay scope. | Inspect offset and length totals. | Record length and overlay boundaries are internally consistent. |
-| 5 | Agent validates clause combinations, level jumps, duplicate names, and unsupported dialect features. | Run validation rules. | Findings list every error or warning with line scope. |
-| 6 | Agent emits the structural model for downstream generation or ingestion. | Review the output model. | Output includes hierarchy, offsets, types, and findings. |
-
 ## Rules
 
 | Topic | Rule |
 |---|---|
-| Hierarchy | Build parentage from numeric level semantics. |
-| `REDEFINES` | Keep shared offsets and overlay references instead of duplicate storage. |
-| `FILLER` | Preserve filler spans so downstream offsets remain correct. |
-| Numeric metadata | Carry digit count, scale, sign, usage, and binary-width facts forward. |
-| Dialect handling | Record unresolved dialect-dependent width or syntax as a validation finding. |
+| Strategy selection | Choose a custom parser, a third-party adapter, or a staged preprocessor plus parser; match the choice to dialect breadth and delivery needs. |
+| Dialect handling | Record unresolved dialect-dependent width or syntax as a validation finding with line scope instead of guessing; flag unsupported dialect constructs. |
 | Separation of concerns | Keep parsing distinct from EBCDIC decoding and .NET type emission. |
-
-## Verification Checklist
-
-| Check | Test | Pass |
-|---|---|---|
-| Hierarchy accuracy | Compare the tree to copybook levels. | Every item has the intended parent and level. |
-| Storage accuracy | Sum spans and overlay spans. | Record length and offsets reconcile. |
-| Clause coverage | Inspect metadata for PIC, USAGE, OCCURS, REDEFINES, and SIGN. | Every clause in scope appears in output. |
-| Validation output | Review errors and warnings. | Unsupported constructs and structural defects stay explicit. |
-| Integration readiness | Compare the model to the downstream contract. | Output contains names, offsets, lengths, and validation facts. |
+| Validation | Report clause combinations, level jumps, duplicate names, and unsupported features as errors or warnings with line scope. |
 
 ## Outputs
 
