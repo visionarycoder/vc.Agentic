@@ -52,6 +52,6 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm objective, facts versus assumptions, source gaps, ranked questions, evidence requests, pushbacks, and follow-ups are visible.
 - Confirm circulation-sensitive content is labeled or removed for external-facing prep.

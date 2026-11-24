@@ -7,13 +7,13 @@ rendering, style application, and sector context without expanding the selectabl
 
 ## Internal Capability Registry
 
-These capabilities are packaged with this plugin but are not registered `SKILL.md` entrypoints:
+These capabilities are packaged with this plugin. The first three are standalone skills with their own `SKILL.md`; the rest remain internal playbooks without a `SKILL.md` entrypoint:
 
 | Capability label | Internal playbook | Plugin-specific obligation |
 | --- | --- | --- |
-| `dashboard-builder` | `internal-support/dashboard-builder/INTERNAL.md` | Render optional standardized dashboards with citation visibility and readiness posture. |
-| `financial-source-of-truth` | `internal-support/financial-source-of-truth/INTERNAL.md` | Apply public-company source hierarchy, market-data freshness, and evidence labels. |
-| `excel-data-cleaner` | `internal-support/excel-data-cleaner/INTERNAL.md` | Preserve ticker, period, unit, timestamp, and equity-workflow identifiers. |
+| `dashboard-builder` | `../../dashboard-builder/SKILL.md` | Render optional standardized dashboards with citation visibility and readiness posture. |
+| `financial-source-of-truth` | `../../financial-source-of-truth/SKILL.md` | Apply public-company source hierarchy, market-data freshness, and evidence labels. |
+| `excel-data-cleaner` | `../../excel-data-cleaner/SKILL.md` | Preserve ticker, period, unit, timestamp, and equity-workflow identifiers. |
 | `style-guide-adapter` | `internal-support/style-guide-adapter/INTERNAL.md` | Restyle without changing facts, formulas, citations, or investment conclusions. |
 | `sector-context-overlay` | `internal-support/sector-context-overlay/INTERNAL.md` | Supply sector lens only under an owning listed-equity workflow. |
 | `daloopa-provider-guide` | `internal-support/daloopa-provider-guide/INTERNAL.md` | Shape bounded, explicit-period Daloopa calls and preserve provider citations. |

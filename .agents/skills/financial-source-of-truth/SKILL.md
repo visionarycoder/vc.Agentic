@@ -1,11 +1,19 @@
 ---
-name: financial-source-of-truth
-description: Use when enforcing Public Equity Investing source discipline. Do not use as the primary memo, model, earnings, or pitch owner.
+name: "financial-source-of-truth"
+description: "Use when enforcing Public Equity Investing source discipline. Do not use as the primary memo, model, earnings, or pitch owner."
+metadata:
+  metadata-version: "1.0.0"
+  title: "Financial Source Of Truth"
+  document-type: "skill"
+  repository: "vc.Agentic"
+  language: "Standard Technical English"
+  updated: "2026-11-23"
+  collection: "trading"
 ---
 
 # Financial Source Of Truth
 
-> Internal support playbook. Load through `internal-support/policy.md`; this evidence-control capability is bundled with the visible router rather than exposed as a skill entrypoint.
+> Support skill for the `trading-*` workflows. See `../trading-public-equity-investing/internal-support/policy.md` for the support-lane rules.
 
 ## Deliverable Intake
 

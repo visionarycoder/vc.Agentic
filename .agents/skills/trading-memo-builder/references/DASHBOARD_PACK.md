@@ -51,7 +51,7 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm thesis, counterarguments, source confidence, risks, catalysts, and unresolved evidence are visible.
 - Confirm citation rendering remains readable and does not fragment ticker symbols, price or EPS ranges, multiples, percentages, or dates.
 - Confirm memo substance remains owned by `trading-memo-builder`.

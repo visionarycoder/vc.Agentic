@@ -1,11 +1,19 @@
 ---
-name: dashboard-builder
-description: Use when rendering, validating, or adapting standardized responsive Public Equity Investing HTML dashboards from structured analysis produced by visible Public Equity Investing skills. This capability owns the optional dashboard shell, module schema, and HTML export; it does not own underlying investment analysis or bespoke HTML design.
+name: "dashboard-builder"
+description: "Use when rendering, validating, or adapting standardized responsive Public Equity Investing HTML dashboards from structured analysis produced by visible Public Equity Investing skills. This capability owns the optional dashboard shell, module schema, and HTML export; it does not own underlying investment analysis or bespoke HTML design."
+metadata:
+  metadata-version: "1.0.0"
+  title: "Dashboard Builder"
+  document-type: "skill"
+  repository: "vc.Agentic"
+  language: "Standard Technical English"
+  updated: "2026-11-23"
+  collection: "trading"
 ---
 
 # Dashboard Builder
 
-> Internal support playbook. Load through `internal-support/policy.md`; this renderer is bundled with the visible router rather than exposed as a skill entrypoint.
+> Support skill for the `trading-*` workflows. See `../trading-public-equity-investing/internal-support/policy.md` for the support-lane rules.
 
 ## Deliverable Intake
 
@@ -35,13 +43,13 @@ Build standardized, responsive, source-visible Public Equity Investing dashboard
 5. Validate the payload:
 
 ```bash
-python .agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py payload.json --profile production
+python .agents/skills/dashboard-builder/scripts/validate_payload.py payload.json --profile production
 ```
 
 6. Render a standalone HTML dashboard:
 
 ```bash
-python .agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/render_dashboard.py payload.json output/index.html --profile production
+python .agents/skills/dashboard-builder/scripts/render_dashboard.py payload.json output/index.html --profile production
 ```
 
 7. Run a structural smoke pass: no unresolved placeholders, valid tab ids, supported modules only, source ledger present, and mobile-safe tables.

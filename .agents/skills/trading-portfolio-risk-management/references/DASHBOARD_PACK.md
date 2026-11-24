@@ -57,4 +57,4 @@ The source tab is normally generated from top-level `sources`.
 - Confirm an absolute loss cap on a short uses priced share-for-share call protection or concludes `do not initiate`.
 - Confirm citation rendering remains readable and does not fragment tickers, dates, percentages, basis-point amounts, instrument terms, or scenario labels.
 - Confirm support JSON, Markdown, CSV, and logs remain behind the dashboard or decision summary unless explicitly requested.
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.

@@ -52,7 +52,7 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm fact pattern, scenario math, timing, market pricing, trade caveats, and missing evidence are visible.
 - Confirm material legal/regulatory uncertainty is labeled.
 - Confirm the decision posture and hero headline do not imply more actionability than the evidence supports.

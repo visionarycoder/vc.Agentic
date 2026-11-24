@@ -10,7 +10,7 @@ updated: "2026-11-23"
 
 # Skill catalog
 
-The library contains **638 skills**. All entrypoints are under `skills/<name>/SKILL.md`. [Inventory](inventory.csv) records current metadata and hashes. [Collections](collections.md) distinguish the recommended core from optional capabilities. [Maintenance](../tools/README.md) describes validation and safe changes.
+The library contains **641 skills**. All entrypoints are under `skills/<name>/SKILL.md`. [Inventory](inventory.csv) records current metadata and hashes. [Collections](collections.md) distinguish the recommended core from optional capabilities. [Maintenance](../tools/README.md) describes validation and safe changes.
 
 | Collection | Skills |
 | --- | --- |
@@ -22,7 +22,7 @@ The library contains **638 skills**. All entrypoints are under `skills/<name>/SK
 | Data analysis and Microsoft Fabric | 14 |
 | Biology and life-sciences research | 26 |
 | Accounting systems and controls | 11 |
-| Financial trading and investment research | 21 |
+| Financial trading and investment research | 24 |
 | Additional workflows, integrations, and specialist utilities | 365 |
 
 | Skill | Collection | Purpose |
@@ -216,6 +216,7 @@ The library contains **638 skills**. All entrypoints are under `skills/<name>/SK
 | [cyclomatic-complexity-limit](skills/cyclomatic-complexity-limit/SKILL.md) | optional | Limit new and edited methods to a cyclomatic complexity (CC) of 10 or less, per Thomas J. McCabe's original complexity measure. |
 | [d3-data-visualization](skills/d3-data-visualization/SKILL.md) | optional | Build custom data visualizations with D3. Use when the user needs SVG or DOM-based charts, rich annotation, domain-native contextual backgrounds, data joins, custom scales or interactions, scroll-d... |
 | [dag-generation](skills/dag-generation/SKILL.md) | optional | Generate task DAGs for modernization projects — select fragments from task catalog, produce initial DAG (Stage 1), and execute/validate DAG from plan artifacts (Stage 2). |
+| [dashboard-builder](skills/dashboard-builder/SKILL.md) | trading | Use when rendering, validating, or adapting standardized responsive Public Equity Investing HTML dashboards from structured analysis produced by visible Public Equity Investing skills. This capabil... |
 | [dashboard-expert](skills/dashboard-expert/SKILL.md) | optional | Full CRUD and analysis for Mixpanel dashboards. Use when the user asks to build, create, analyze, read, understand, explain, modify, update, enhance, or manage dashboards, or asks about dashboard l... |
 | [dashboards-and-real-time-visualization](skills/dashboards-and-real-time-visualization/SKILL.md) | optional | Design dashboards and live visualization systems. Use when the user needs monitoring views, streaming charts, coordinated interactions, downsampling, or performance-aware operational visualization. |
 | [data-analytics-routing](skills/data-analytics-routing/SKILL.md) | data | Route analytical questions to the smallest relevant data workflow using actual sources and available tools. |
@@ -293,6 +294,7 @@ The library contains **638 skills**. All entrypoints are under `skills/<name>/SK
 | [evaluate-plugin](skills/evaluate-plugin/SKILL.md) | optional | Evaluate a local Codex plugin in engineer-friendly language. Use when the user says "evaluate this plugin", "audit this plugin", "why did this score that way", "what should I fix first", "help me b... |
 | [evaluate-skill](skills/evaluate-skill/SKILL.md) | optional | Evaluate a local Codex skill in engineer-friendly terms. Use when the user says "evaluate this skill", "give me an analysis of the game dev skill", "audit this skill", "why did this score that way"... |
 | [event-sourcing-patterns](skills/event-sourcing-patterns/SKILL.md) | optional | Design .NET event-sourced systems when the task needs durable event history, replay, projections, and explicit consistency boundaries. |
+| [excel-data-cleaner](skills/excel-data-cleaner/SKILL.md) | trading | Use when cleaning messy trading-public-equity-investing tables for CSV/XLSX/model inputs. Do not use for unrelated corporate cleanup. |
 | [executing-plans](skills/executing-plans/SKILL.md) | core | Implement an assigned plan in bounded steps with dependency checks, verification, and progress reporting. |
 | [exp-simd-vectorization](skills/exp-simd-vectorization/SKILL.md) | optional | Experimental optimization workflow for .NET SIMD and TensorPrimitives changes that stay benchmark-gated. |
 | [exp-test-maintainability](skills/exp-test-maintainability/SKILL.md) | optional | Analyze .NET test suites for repeated setup, copy-paste structure, and maintainability refactors without editing code. |
@@ -308,6 +310,7 @@ The library contains **638 skills**. All entrypoints are under `skills/<name>/SK
 | [feature-inventory](skills/feature-inventory/SKILL.md) | optional | Catalogs existing features from a codebase (API endpoints, user flows, UI screens, observable behaviors) and generates structured feature specs with REQ-XXX IDs, user scenarios, and success criteri... |
 | [fetch-and-send-data](skills/fetch-and-send-data/SKILL.md) | optional | Call APIs, load data into components, and handle the async lifecycle in Blazor. USE FOR fetching data from a backend, submitting data to an API, displaying loading/error states, registering HttpCli... |
 | [filter-syntax](skills/filter-syntax/SKILL.md) | optional | Provides canonical test-filter syntax for VSTest and Microsoft.Testing.Platform runners. |
+| [financial-source-of-truth](skills/financial-source-of-truth/SKILL.md) | trading | Use when enforcing Public Equity Investing source discipline. Do not use as the primary memo, model, earnings, or pitch owner. |
 | [find-dropbox-content](skills/find-dropbox-content/SKILL.md) | optional | Find Dropbox files and folders relevant to a user request. Use when the user asks to search Dropbox, find a document, locate recent files, browse a folder, identify likely source files, or narrow d... |
 | [find-untested-sources](skills/find-untested-sources/SKILL.md) | dotnet | Pair source files to tests with static heuristics and emit a prioritized worklist of likely untested files. |
 | [finding-discovery](skills/finding-discovery/SKILL.md) | optional | Use when Codex is already in the finding-discovery phase of a security scan or the user explicitly asks to discover candidate security findings in a repository or code change. Do not use as the pri... |

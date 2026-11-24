@@ -21,9 +21,9 @@ Use this before finalizing a dashboard or changing shared layout assets.
 ## Smoke Commands
 
 ```bash
-python .agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py payload.json --profile production
-python .agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/render_dashboard.py payload.json output/index.html --profile production
-python -m py_compile shared/dashboard/*.py .agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/*.py
+python .agents/skills/dashboard-builder/scripts/validate_payload.py payload.json --profile production
+python .agents/skills/dashboard-builder/scripts/render_dashboard.py payload.json output/index.html --profile production
+python -m py_compile .agents/skills/dashboard-builder/scripts/*.py .agents/skills/dashboard-builder/scripts/dashboard/*.py
 ```
 
 Then scan the rendered HTML for unresolved authoring text:

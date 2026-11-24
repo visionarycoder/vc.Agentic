@@ -58,6 +58,6 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm the dashboard has a clear transmission map, issuer/sector exposure table, earnings/valuation/positioning read-through, scenarios, and freshness labels.
 - Confirm unsupported exposures appear in `missing_evidence`, not hidden in narrative.

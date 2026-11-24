@@ -54,7 +54,7 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm the dashboard contains a real thesis, valuation method, catalysts, risks, source confidence, and open evidence requests.
 - Confirm model/workbook outputs are clearly labeled when they are support artifacts rather than native dashboard calculations.
 - Confirm citation rendering remains readable and does not fragment tickers, fiscal periods, dates, prices, ranges, multiples, or metric names.

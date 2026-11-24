@@ -288,8 +288,11 @@ Start with the recommended core and select optional capabilities for the actual 
 - [accounting-systems-bundle](skills/accounting-systems-bundle/SKILL.md)
 - [accounting-tax-patterns](skills/accounting-tax-patterns/SKILL.md)
 
-## Financial trading and investment research (21)
+## Financial trading and investment research (24)
 
+- [dashboard-builder](skills/dashboard-builder/SKILL.md)
+- [excel-data-cleaner](skills/excel-data-cleaner/SKILL.md)
+- [financial-source-of-truth](skills/financial-source-of-truth/SKILL.md)
 - [trading-catalyst-calendar](skills/trading-catalyst-calendar/SKILL.md)
 - [trading-company-tearsheet](skills/trading-company-tearsheet/SKILL.md)
 - [trading-comps-valuation](skills/trading-comps-valuation/SKILL.md)

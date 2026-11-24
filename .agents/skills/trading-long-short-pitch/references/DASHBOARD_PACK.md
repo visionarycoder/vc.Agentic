@@ -53,7 +53,7 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm variant perception, trade expression, scenario skew, catalysts, disconfirmers, and monitoring rules are visible.
 - Confirm output sounds like PM judgment rather than a generic template.
 - Confirm shorts surface implementation gates near the recommendation and assumption-driven scenarios are identified as illustrative rather than actionable.

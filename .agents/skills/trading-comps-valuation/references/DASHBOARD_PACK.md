@@ -51,7 +51,7 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm source ledger, peer-set rationale, selected multiple/range, and missing evidence are visible.
 - Confirm all modules are supported by `dashboard-builder` and no chart shell is empty.
 - Confirm citation rendering remains readable and action language is supported by the requested decision context.

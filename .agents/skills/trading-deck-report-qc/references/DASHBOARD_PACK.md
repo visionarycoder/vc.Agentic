@@ -49,7 +49,7 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm severity ordering, repeated-number tie-out, source coverage, chart/narrative findings, and remediation sequence are visible.
 - Confirm uncertainty is labeled rather than hidden.
 

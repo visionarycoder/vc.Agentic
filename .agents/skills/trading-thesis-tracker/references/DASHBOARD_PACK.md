@@ -54,7 +54,7 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm company-thesis status, security-thesis readiness, evidence changes, KPI/catalyst monitor, decision log, threshold origin/approval status, and open questions are visible.
 - Confirm tracker support files stay behind the dashboard or workbook hero artifact.
 

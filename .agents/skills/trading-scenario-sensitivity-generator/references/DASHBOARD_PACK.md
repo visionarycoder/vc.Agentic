@@ -60,7 +60,7 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm the dashboard states current price, base-case source, expected return versus hurdle, downside/upside ratio, break-even probability, skew label, and action thresholds where applicable.
 - Confirm every chart has enough complete, source-backed rows; otherwise omit the chart and add `missing_evidence`.
 - Confirm analyst probabilities, hurdle rates, break-value capture, and derived calculations are visibly distinguished from sourced facts.

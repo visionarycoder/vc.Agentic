@@ -52,7 +52,7 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm the candidate funnel, beneficiary pathways where relevant, exposure proof, expectations-risk posture, false-positive risks, next workflow routing, and missing evidence are visible.
 - Confirm verified positioning is distinguished from inferred crowding risk and citations remain readable.
 - Confirm the dashboard preserves user-provided screens/watchlists without overwriting them.

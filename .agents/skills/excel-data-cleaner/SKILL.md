@@ -1,11 +1,19 @@
 ---
-name: excel-data-cleaner
-description: Use when cleaning messy trading-public-equity-investing tables for CSV/XLSX/model inputs. Do not use for unrelated corporate cleanup.
+name: "excel-data-cleaner"
+description: "Use when cleaning messy trading-public-equity-investing tables for CSV/XLSX/model inputs. Do not use for unrelated corporate cleanup."
+metadata:
+  metadata-version: "1.0.0"
+  title: "Excel Data Cleaner"
+  document-type: "skill"
+  repository: "vc.Agentic"
+  language: "Standard Technical English"
+  updated: "2026-11-23"
+  collection: "trading"
 ---
 
 # Excel Data Cleaner
 
-> Internal support playbook. Load through `internal-support/policy.md`; this data-cleaning capability is bundled with the visible router rather than exposed as a skill entrypoint.
+> Support skill for the `trading-*` workflows. See `../trading-public-equity-investing/internal-support/policy.md` for the support-lane rules.
 
 ## Deliverable Intake
 

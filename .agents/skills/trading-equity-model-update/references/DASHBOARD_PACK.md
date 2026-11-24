@@ -53,7 +53,7 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm model implication, primary workbook artifact, changed lines, applied/blocked cells, source map, stale/missing data, and workbook handoff are visible.
 - Confirm workbook citations point to changed or blocked cells rather than only CSV rows.
 - Confirm workbook/formula integrity, recalc/cache, external-link, formula-overwrite, and stale calculation-state issues route to the appropriate model/audit skill.

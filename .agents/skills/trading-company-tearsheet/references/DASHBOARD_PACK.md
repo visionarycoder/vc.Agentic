@@ -51,7 +51,7 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm identity, periods, units, currency, source confidence, stale/conflicting data, and missing evidence are visible.
 - Confirm the issuer baseline and core earnings drivers remain primary, missing fields are proportionate, and citation rendering remains readable.
 - Confirm every next-step handoff points to the correct owning skill.

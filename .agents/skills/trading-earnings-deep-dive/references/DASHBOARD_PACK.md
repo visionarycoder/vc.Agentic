@@ -83,7 +83,7 @@ The source tab is normally generated from top-level `sources`.
 
 ## QA Checks
 
-- Validate with `.agents/skills/trading-public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py`.
+- Validate with `.agents/skills/dashboard-builder/scripts/validate_payload.py`.
 - Confirm the verdict, beat/miss, EPS quality, guide bridge, source ledger, and missing evidence are visible; confirm transcript maps, read-throughs, and market events only when populated and source-supported.
 - Confirm no chart shell renders without complete, comparable source-backed data.
 - Confirm no blank scenario card or empty optional module renders and cited market events display their source.

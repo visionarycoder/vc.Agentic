@@ -11,7 +11,7 @@ tags:
 ---
 # Skill Discovery Lookup
 
-Lists all 638 skills under `.agents/skills`. Regenerate it from the skill directories whenever skills are added, renamed, or removed. Use [Inventory by Category](inventory-by-category.md) for the grouped view.
+Lists all 641 skills under `.agents/skills`. Regenerate it from the skill directories whenever skills are added, renamed, or removed. Use [Inventory by Category](inventory-by-category.md) for the grouped view.
 
 | Skill | Category | Purpose |
 |---|---|---|
@@ -204,6 +204,7 @@ Lists all 638 skills under `.agents/skills`. Regenerate it from the skill direct
 | `cyclomatic-complexity-limit` | .NET Engineering Standards | Limit new and edited methods to a cyclomatic complexity (CC) of 10 or less, per Thomas J. McCabe's original complexity measure. |
 | `d3-data-visualization` | Visualization & Reporting | Build custom data visualizations with D3. Use when the user needs SVG or DOM-based charts, rich annotation, domain-native contextual backgrounds, data joins, custom scales or interactions, scroll-driven SVG scene states, or precise contr... |
 | `dag-generation` | Data, Fabric & Semantic Systems | Generate task DAGs for modernization projects — select fragments from task catalog, produce initial DAG (Stage 1), and execute/validate DAG from plan artifacts (Stage 2). |
+| `dashboard-builder` | Trading & Investment | Use when rendering, validating, or adapting standardized responsive Public Equity Investing HTML dashboards from structured analysis produced by visible Public Equity Investing skills. This capability owns the optional dashboard shell, m... |
 | `dashboard-expert` | Visualization & Reporting | Full CRUD and analysis for Mixpanel dashboards. Use when the user asks to build, create, analyze, read, understand, explain, modify, update, enhance, or manage dashboards, or asks about dashboard layout, text cards, or report arrangement... |
 | `dashboards-and-real-time-visualization` | Visualization & Reporting | Design dashboards and live visualization systems. Use when the user needs monitoring views, streaming charts, coordinated interactions, downsampling, or performance-aware operational visualization. |
 | `data-analytics-routing` | Data, Fabric & Semantic Systems | Route analytical questions to the smallest relevant data workflow using actual sources and available tools. |
@@ -281,6 +282,7 @@ Lists all 638 skills under `.agents/skills`. Regenerate it from the skill direct
 | `evaluate-plugin` | Skill & Agent Management | Evaluate a local Codex plugin in engineer-friendly language. Use when the user says "evaluate this plugin", "audit this plugin", "why did this score that way", "what should I fix first", "help me benchmark this plugin", or asks for a plu... |
 | `evaluate-skill` | Skill & Agent Management | Evaluate a local Codex skill in engineer-friendly terms. Use when the user says "evaluate this skill", "give me an analysis of the game dev skill", "audit this skill", "why did this score that way", "what should I fix first", or asks for... |
 | `event-sourcing-patterns` | Messaging, Scheduling & Distributed Systems | Design .NET event-sourced systems when the task needs durable event history, replay, projections, and explicit consistency boundaries. |
+| `excel-data-cleaner` | Trading & Investment | Use when cleaning messy trading-public-equity-investing tables for CSV/XLSX/model inputs. Do not use for unrelated corporate cleanup. |
 | `executing-plans` | Workflows & General Productivity | Implement an assigned plan in bounded steps with dependency checks, verification, and progress reporting. |
 | `exp-simd-vectorization` | Workflows & General Productivity | Experimental optimization workflow for .NET SIMD and TensorPrimitives changes that stay benchmark-gated. |
 | `exp-test-maintainability` | Testing & Quality | Analyze .NET test suites for repeated setup, copy-paste structure, and maintainability refactors without editing code. |
@@ -296,6 +298,7 @@ Lists all 638 skills under `.agents/skills`. Regenerate it from the skill direct
 | `feature-inventory` | Workflows & General Productivity | Catalogs existing features from a codebase (API endpoints, user flows, UI screens, observable behaviors) and generates structured feature specs with REQ-XXX IDs, user scenarios, and success criteria. Triggers: "inventory features", "cata... |
 | `fetch-and-send-data` | Workflows & General Productivity | Call APIs, load data into components, and handle the async lifecycle in Blazor. USE FOR fetching data from a backend, submitting data to an API, displaying loading/error states, registering HttpClient, building service abstractions for A... |
 | `filter-syntax` | Workflows & General Productivity | Provides canonical test-filter syntax for VSTest and Microsoft.Testing.Platform runners. |
+| `financial-source-of-truth` | Trading & Investment | Use when enforcing Public Equity Investing source discipline. Do not use as the primary memo, model, earnings, or pitch owner. |
 | `find-dropbox-content` | Workflows & General Productivity | Find Dropbox files and folders relevant to a user request. Use when the user asks to search Dropbox, find a document, locate recent files, browse a folder, identify likely source files, or narrow down where content lives before reading,... |
 | `find-untested-sources` | Testing & Quality | Pair source files to tests with static heuristics and emit a prioritized worklist of likely untested files. |
 | `finding-discovery` | Workflows & General Productivity | Use when Codex is already in the finding-discovery phase of a security scan or the user explicitly asks to discover candidate security findings in a repository or code change. Do not use as the primary trigger for full PR, commit, branch... |
