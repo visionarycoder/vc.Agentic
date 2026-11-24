@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -55,37 +55,15 @@ Agent converts raw mainframe bytes into validated .NET values by combining copyb
 
 ## COBOL Data Type Mapping
 
-| Storage form | Conversion target | Rule | Notes |
-|---|---|---|---|
-| `PIC X(n)` | `string` | Decode bytes with chosen code page | Trim and null policy stays explicit |
-| Display numeric `PIC 9(n)` | `int`, `long`, or `decimal` | Parse digits after sign normalization | Blank handling stays caller-defined |
-| Implied decimal `PIC 9(n)V9(m)` | `decimal` | Insert decimal scale after digit parse | Scale equals `m` |
-| Packed decimal `COMP-3` | `decimal` | Decode nibbles and final sign nibble | `C` and `F` sign nibbles map positive; `D` maps negative |
-| Zoned decimal | `decimal` or integer type | Decode overpunch or zoned sign from last byte | Trailing overpunch appears often in financial feeds |
-| Binary `COMP` | `short`, `int`, or `long` | Read endian-safe bytes by dialect width | Width comes from usage metadata |
-| `COMP-1` | `float` | IEEE or dialect-specific single precision path | Rare in flat files |
-| `COMP-2` | `double` | IEEE or dialect-specific double precision path | Rare in flat files |
-
-## Mainframe Pattern Matrix
-
-| Pattern | Rule | Diagnostic focus |
+| Storage form | Conversion target | Notes |
 |---|---|---|
-| EBCDIC text | Decode with an explicit code page such as 037 or 1047. | Wrong code page shows punctuation or currency drift. |
-| `COMP-3` | Read packed digits plus the final sign nibble. | Invalid nibble or scale mismatch. |
-| Zoned decimal | Decode the overpunch or zone bits from the last byte. | Non-numeric zone or sign conflict. |
-| Binary `COMP` | Read by dialect-specific width and signedness. | Overflow or wrong-width mapping. |
-| Fixed-width layout | Slice by copybook offset and length. | Record-length drift. |
-| `OCCURS` and `REDEFINES` | Iterate repeated spans and decode overlays from shared bytes. | Element-length or overlay mismatch. |
-| Null, sign, and date fields | Apply explicit blank, sign, and calendar rules. | Silent trimming or rollover defects. |
-
-## Performance Matrix
-
-| Condition | Pattern | Result |
-|---|---|---|
-| In-memory batch is enough | Buffered record batches | Simple implementation |
-| Multi-GB file | Sequential streaming over `Stream` and `Memory<byte>` | Bounded memory |
-| CPU-heavy packed or date parsing | Span-based parsing and pooled buffers | Lower allocation rate |
-| Fabric landing next | One-pass raw-to-typed row streaming | Traceable ingest with reject counts |
+| `PIC X(n)` | `string` | Trim and null policy stays explicit |
+| Display numeric, implied decimal | `int`, `long`, or `decimal` | Blank handling stays caller-defined |
+| Packed decimal `COMP-3` | `decimal` | Stored size is `ceil((digits + 1) / 2)` bytes; `PIC S9(5)V99 COMP-3` is 4 bytes |
+| Zoned decimal | `decimal` or integer type | Sign from last byte overpunch |
+| Binary `COMP` | `short`, `int`, or `long` | Endian-safe read; width from usage metadata and dialect |
+| `COMP-1`, `COMP-2` | `float`, `double` | Rare; IEEE or dialect-specific |
+| `OCCURS`, `REDEFINES` | Arrays, overlay views | Iterate repeated spans; decode overlays from shared bytes |
 
 ## Integration Hooks
 
@@ -109,24 +87,6 @@ public static PaymentRec Parse(ReadOnlySpan<byte> record, Encoding ebcdic) => ne
     PackedDecimalConverter.ReadDecimal(record.Slice(10, 4), scale: 2),
     JulianDateConverter.ReadDate(record.Slice(14, 7)));
 ```
-
-## Verification Checklist
-
-| Check | Test | Pass |
-|---|---|---|
-| Front matter and STE wording | Run `npm run frontmatter:validate` and the modal-verb scan. | Front matter validates and banned modal verbs do not appear. |
-| Encoding, numeric, and record accuracy | Decode known text, `COMP-3`, zoned, binary, and fixed-length samples. | Characters, sign, scale, range, and slice boundaries all match the trusted input. |
-| Streaming bounds and reject traceability | Review large-file buffering and inspect reject output. | Memory stays bounded and reject rows include offset, field, and reason. |
-
-## Common Pitfalls
-
-| Pitfall | Agent Fix |
-|---|---|
-| Agent treats EBCDIC input as UTF-8 | Select an explicit EBCDIC code page before text decoding. |
-| Decode packed decimals by string conversion only | Read nibbles directly from bytes to preserve performance and diagnostics. |
-| Agent ignores overpunch signs in zoned decimals | Decode zoned sign rules from the last byte. |
-| Agent allocates a new string or buffer per field on multi-GB files | Use spans, pooled buffers, and sequential streaming. |
-| Agent drops raw-row lineage during projection | Agent preserves record index, offset, or raw-span references for audit and replay. |
 
 ## Outputs
 
