@@ -41,4 +41,4 @@ The user requested an ILoggerFactory constructor. The inspected Ifx.Component.Co
 
 The empty interface is an initialization skeleton. Add only reviewed contract operations and service metadata required by the consuming design. These samples do not choose transport or hosting.
 
-See the [concrete samples](../../samples/components/README.md). Caller-facing resolution must preserve Governance's [component proxy policy](../../../vc.Governance/docs/patterns/component-proxies.md). An empty skeleton provides no proxy chain or production registration.
+See the [concrete samples](../../samples/components/README.md). Caller-facing resolution must preserve Governance's [component proxy policy](https://github.com/visionarycoder/vc.Governance/blob/vc-governance-backup/docs/patterns/component-proxies.md). An empty skeleton provides no proxy chain or production registration.

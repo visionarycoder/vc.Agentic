@@ -5,7 +5,7 @@ description: "Locate agent-neutral skills by capability and collection."
 document-type: "index"
 repository: "vc.Agentic"
 language: "Standard Technical English"
-updated: "2026-11-23"
+updated: "2026-11-24"
 ---
 
 # Skill catalog
