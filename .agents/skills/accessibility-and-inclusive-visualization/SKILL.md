@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -34,15 +34,12 @@ Default assumption: every important visualization should have a non-visual path 
 ## Output Expectations
 
 - Name the accessibility risks specific to the chart, not just generic WCAG items.
-- Provide fallback strategies for screen readers, PDFs, and static exports.
-- Explain what to keep visible without relying on hover or color alone.
 - Explain which active filters, selections, caveats, and summary values remain visible when configuration or drill-down panels are collapsed.
-- For color guidance, name the semantic color roles, contrast risks, redundant encodings, and grayscale or color-deficiency review path.
+- For color guidance, keep a color-role ledger so one hue never means several unrelated things across a dashboard; pair color-dependent states with direct labels, symbols, dash, stroke weight, ordering, position, or small multiples. Spend high contrast on key data, selected state, thresholds, and annotations; lower it for gridlines, basemaps, inactive series, and background structure. Name the grayscale or color-deficiency review path.
+- For streaming or remote dashboards, expose live, stale, offline, partial, and reconnecting states to assistive technology.
 - For image-supported visual stories, provide alt text or long descriptions that cover the scene, the data layer, the main takeaway, and the caveat without overstating generated imagery.
 - For concepted visualizations, make sure the user approval record exists and the long description, reduced-motion path, static export, and source/caveat text preserve the approved semantic design contract and locked concept elements, not just the final rendered pixels.
 - For mobile visualizations, make sure the main evidence is not pushed below settings, touch targets and hit areas are large enough, drag has alternatives, hover has tap/focus equivalents, keyboard-open states remain operable, stale/offline states are named, and sensor/camera/notification features have non-permission fallbacks.
-- For animation, specify reduced-motion behavior and key-frame or final-state fallback.
-- For scrollytelling or parallax, preserve native scroll and keyboard behavior, specify static key frames or stacked fallback, and make sure motion can be disabled without losing the evidence.
 - For WebGL or particle effects, describe the data meaning in text, expose keyboard-accessible focus or selection paths for important marks, and provide a non-animated fallback that preserves flow, direction, focus, and uncertainty.
 - For interactive diagrams, make search, selection, details panels, reset, export, expand/collapse, and drill-down reachable without pointer-only interaction.
 - For shareable visualizations, make copy-link, saved-view, reset, expanded/collapsed panels, and restored URL state reachable and understandable by keyboard and screen-reader users.

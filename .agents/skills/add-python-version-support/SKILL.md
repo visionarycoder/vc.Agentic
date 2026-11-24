@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -17,11 +17,7 @@ Use this skill to extend the upper end of a project's tested Python support rang
 
 ## Core Principle
 
-Adding a newer Python version above the current tested ceiling raises that ceiling, not the compatibility floor. The project generally cannot adopt syntax or APIs introduced by the added version while earlier versions remain supported.
-
-The main source-code work is to find and resolve porting issues, removals, and deprecations exposed by the added version. Keeping warnings clean across the supported range reduces future migration work.
-
-If the project supports exactly one Python version and replaces it with another, the change both adds and drops support. Follow this workflow and `drop-python-version-support`.
+Adding a newer Python version raises the tested ceiling, not the floor: do not adopt syntax or APIs from the added version while earlier versions remain supported. If the project supports exactly one version and replaces it, follow this workflow and `drop-python-version-support`.
 
 ## Workflow
 
@@ -40,76 +36,34 @@ This workflow assumes the target is newer than the project's highest tested vers
 
 ### 2. Inventory Support Declarations
 
-Inspect the files the project actually uses, including:
+Inspect the files the project actually uses: `requires-python` or `python_requires` (pyproject, setup.cfg, setup.py, inline script metadata), package-manager constraints, Trove classifiers, CI/tox/nox matrices, tool target versions, dependency markers, and support docs.
 
--   `[project].requires-python` in `pyproject.toml`;
--   legacy `python_requires` declarations in `setup.cfg` or statically readable `setup.py`;
--   `requires-python` in inline script metadata;
--   package-manager-specific Python constraints;
--   Python Trove classifiers;
--   CI matrices and tox, nox, or equivalent test environments;
--   Pyright, Ruff, mypy, formatter, and other tool target versions;
--   dependency constraints and environment markers;
--   support tables, badges, installation instructions, and release documentation.
-
-The selected development interpreter and deployment default are separate choices. Do not change them merely because the project is adding another tested version.
-
-Keep type-checker, linter, and formatter compatibility targets at the existing minimum when those settings represent the project's runtime floor. Do not raise Pyright `pythonVersion`, mypy `python_version`, Ruff `target-version`, or equivalent settings to the newly added ceiling; doing so can hide or introduce code that breaks the minimum.
+Keep Pyright `pythonVersion`, mypy `python_version`, Ruff `target-version`, and similar settings at the existing minimum. The development interpreter and deployment default are separate choices; do not change them.
 
 ### 3. Review Compatibility Guidance
 
-Read the official **What's New** document for every Python feature release between the previous tested ceiling (exclusive) and the target version (inclusive):
-
-```text
-https://docs.python.org/{version}/whatsnew/{version}.html
-```
-
-Prioritize:
-
--   the porting section;
--   deprecated APIs and behavior;
--   removed APIs, modules, and behavior;
--   changes to warnings, exceptions, imports, typing, and runtime semantics;
--   build, packaging, and C-extension compatibility when relevant.
-
-Use official documentation rather than relying on model memory. If it is unavailable, state that limitation instead of inventing release details.
+Read the official What's New (`https://docs.python.org/{version}/whatsnew/{version}.html`) for every release after the previous tested ceiling through the target, focusing on porting, deprecations, and removals. If it is unavailable, say so rather than inventing details.
 
 ### 4. Add and Test the Target Version
 
-1. Add the target version to the project's CI and test matrices using existing project conventions. Quote Python versions in YAML (for example, `"3.10"`) so they are not parsed as numbers such as `3.1`.
-2. If the target skips intermediate Python releases, follow the project's stated test policy: add and validate intermediate versions when the project claims they are tested, or report them explicitly as supported-but-untested or unsupported. Do not invent classifiers for unvalidated versions.
-3. Confirm that the test runner, build backend, dependencies, and development tools support the target version.
-4. Run the existing test suite on the target interpreter.
-5. Surface deprecation warnings according to the project's existing warning policy. If no policy exists, prefer a targeted run that makes `DeprecationWarning` visible; do not turn every warning into an error without understanding the project's baseline.
-6. Fix relevant deprecations, removals, and compatibility failures.
-7. Choose fixes that remain valid on the existing minimum. If no suitable replacement works across the supported range, report the issue and ask before introducing a new compatibility layer.
-8. Re-run the test suite on the existing minimum after source or dependency changes.
-9. Run configured type checking, linting, formatting, and package-build validation.
+1. Add the target to CI and test matrices using project conventions; quote versions in YAML.
+2. If the target skips intermediate releases, follow the project's test policy: validate them or report them as supported-but-untested or unsupported. Do not invent classifiers for unvalidated versions.
+3. Run the existing suite on the target. Surface `DeprecationWarning` per the project's warning policy, or with a targeted run if none exists.
+4. Fix deprecations, removals, and failures with changes that remain valid on the existing minimum; if none exists, report and ask before adding a compatibility layer.
+5. Re-run tests on the existing minimum after any change, then run configured type checking, linting, and package-build validation.
 
-Do not guess dependency versions. When a dependency blocks the target interpreter, identify the evidence and make the narrowest change consistent with the project's dependency policy, or report the blocker.
+Do not guess dependency versions. When a dependency blocks the target, cite the evidence and make the narrowest change allowed by dependency policy, or report the blocker.
 
 ### 5. Update Support Metadata
 
 1. Keep the lower bound of `Requires-Python` unchanged.
-2. Python packaging guidance discourages `Requires-Python` upper bounds. If an existing upper bound excludes the target, remove or widen it only after validation and without changing unrelated exclusions.
-3. Add the target version's Trove classifier only after validation demonstrates support and the classifier exists.
-4. Update support documentation to distinguish declared compatibility from versions actually tested.
-5. Regenerate tool-owned lockfiles when dependency inputs change; do not hand-edit generated artifacts.
+2. If an existing upper bound excludes the target, remove or widen it only after validation, without changing unrelated exclusions.
+3. Add the Trove classifier only after validation shows support and the classifier exists.
+4. Update docs to distinguish declared from tested versions. Regenerate tool-owned lockfiles; do not hand-edit them.
 
-Adding support for Python 3.15 while retaining Python 3.11, for example, does not mean changing `requires-python` to `>=3.15`.
+### 6. Final Check
 
-### 6. Final Compatibility Check
-
-Confirm that:
-
--   the target version is included in repeatable test configuration;
--   relevant porting issues, removals, and deprecations are resolved or explicitly reported;
--   source syntax and APIs remain valid on the minimum;
--   dependency and build-tool compatibility is established;
--   metadata, classifiers, test matrices, and documentation agree;
--   no target-version-only feature was introduced into code that must run on earlier versions.
-
-For a prerelease interpreter, report support as provisional and avoid presenting it as equivalent to validation on the final release.
+Confirm that the target is in repeatable test configuration, no target-only syntax or API entered code that must run on the minimum, and metadata, classifiers, matrices, and docs agree. Report prerelease results as provisional.
 
 ## Completion Report
 
