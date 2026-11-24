@@ -18,6 +18,8 @@ Governance owns Method rules, lifecycle and approval contracts, and its reposito
 
 Keep one accurate name and description per entrypoint. Use the extended frontmatter profile documented in `tools/README.md` and context-specific references instead of duplicate discoverable aliases. Maintain UTF-8 LF Markdown with at most one empty line and update maintenance dates when changing instructions. Preserve third-party attribution and license files.
 
+In knowledge skills, write the specifics a model cannot already know (limits, names, paths, local conventions, exceptions) and omit restated general concepts; use `skill-novelty-audit` to review. Process and steering skills are exempt.
+
 Keep scripts and assets that a skill actually needs. Exclude collection snapshots, migration ledgers, merge evidence, interpreter caches, and one-time consolidation tooling. Do not execute bundled cloud helpers simply to inspect package structure.
 
 For changes, run `python tools/validate_frontmatter.py`, `python tools/skills.py check`, and the maintenance unit tests when tooling changes. Refresh the catalog and inventory with `python tools/skills.py refresh`. Check required resources and semantic usefulness separately. Update renamed references and remove links to deleted files. Treat code examples as examples, not repository-relative navigation.

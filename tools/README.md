@@ -107,3 +107,17 @@ The audit reports exact normalized-body duplicates and description-similarity
 candidates. Similarity is a review aid, not permission to merge. Distinct provider,
 framework, domain, authoring, and review modes can have similar descriptions.
 Keep executable fixtures under `tests`, outside the discoverable skill directory.
+
+## Measure skill novelty
+
+```text
+python .agents/skills/skill-novelty-audit/scripts/novelty.py scan .agents/skills
+python .agents/skills/skill-novelty-audit/scripts/novelty.py items .agents/skills/<name>/SKILL.md --out items.jsonl
+python .agents/skills/skill-novelty-audit/scripts/novelty.py score results.jsonl
+```
+
+`scan` ranks skills by generic-prose share as a review aid for knowledge skills;
+it over-flags process skills. `items` and `score` support a two-arm
+(with/without skill) evaluation graded outside this repository. The script makes
+no model or network calls. See the `skill-novelty-audit` skill for the method.
+Keep generated item and result files outside skill directories.

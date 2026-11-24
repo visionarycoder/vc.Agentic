@@ -5,14 +5,14 @@ description: "Select a small development core and optional stacks or domains."
 document-type: "index"
 repository: "vc.Agentic"
 language: "Standard Technical English"
-updated: "2026-11-11"
+updated: "2026-11-23"
 ---
 
 # Skill collections
 
 Start with the recommended core and select optional capabilities for the actual task. Collection labels are catalog metadata; they do not activate or disable installed skills. Every skill remains in the single canonical skills directory.
 
-## Recommended development core (18)
+## Recommended development core (19)
 
 - [adr](skills/adr/SKILL.md)
 - [api-documentation](skills/api-documentation/SKILL.md)
@@ -24,6 +24,7 @@ Start with the recommended core and select optional capabilities for the actual 
 - [prepare-task-handoff](skills/prepare-task-handoff/SKILL.md)
 - [repo-reconciliation](skills/repo-reconciliation/SKILL.md)
 - [skill-authoring](skills/skill-authoring/SKILL.md)
+- [skill-novelty-audit](skills/skill-novelty-audit/SKILL.md)
 - [skill-selection](skills/skill-selection/SKILL.md)
 - [solid-principles](skills/solid-principles/SKILL.md)
 - [systematic-debugging](skills/systematic-debugging/SKILL.md)

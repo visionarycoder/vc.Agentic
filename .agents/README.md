@@ -5,16 +5,16 @@ description: "Locate agent-neutral skills by capability and collection."
 document-type: "index"
 repository: "vc.Agentic"
 language: "Standard Technical English"
-updated: "2026-11-11"
+updated: "2026-11-23"
 ---
 
 # Skill catalog
 
-The library contains **750 skills**. All entrypoints are under `skills/<name>/SKILL.md`. [Inventory](inventory.csv) records current metadata and hashes. [Collections](collections.md) distinguish the recommended core from optional capabilities. [Maintenance](../tools/README.md) describes validation and safe changes.
+The library contains **751 skills**. All entrypoints are under `skills/<name>/SKILL.md`. [Inventory](inventory.csv) records current metadata and hashes. [Collections](collections.md) distinguish the recommended core from optional capabilities. [Maintenance](../tools/README.md) describes validation and safe changes.
 
 | Collection | Skills |
 | --- | --- |
-| Recommended development core | 18 |
+| Recommended development core | 19 |
 | .NET, C#, MSBuild, MSTest, and Roslyn | 119 |
 | Azure platform and service workflows | 42 |
 | Volatility-based decomposition architecture | 28 |
@@ -604,6 +604,7 @@ The library contains **750 skills**. All entrypoints are under `skills/<name>/SK
 | [skill-discovery-guide](skills/skill-discovery-guide/SKILL.md) | optional | Route agents to the correct skill, bundle, or learning path when the entry point is unclear. |
 | [skill-intake-router](skills/skill-intake-router/SKILL.md) | optional | Route repository requests to the minimum correct domain router and execution skill set to reduce token burn, avoid conflicting instructions, and keep AI activation deterministic. |
 | [skill-lifecycle-controller](skills/skill-lifecycle-controller/SKILL.md) | optional | Manages skill lifecycle with modes for create, review, optimize, audit, migrate, and deprecate. Executes workflows directly with technology drift detection and routing conflict analysis. - ste-agen... |
+| [skill-novelty-audit](skills/skill-novelty-audit/SKILL.md) | core | Measure which parts of a skill a model already knows, and trim redundant content while keeping specifics. Use when authoring, reviewing, or pruning knowledge skills, or when a newer model may have ... |
 | [skill-selection](skills/skill-selection/SKILL.md) | core | Select the smallest relevant skill set for an assigned task using actual repository guidance and available capabilities. |
 | [skill-suite-optimization](skills/skill-suite-optimization/SKILL.md) | optional | Optimize skills, prompts, instructions, and policy indexes for lower token cost, clearer routing, and STE-compliant wording. |
 | [social-media-repurposer](skills/social-media-repurposer/SKILL.md) | optional | Turns one idea, article, or transcript into platform-native posts for X/Twitter, LinkedIn, and Instagram, matching each platform's tone, length, and format. Use when the user wants to repurpose con... |
