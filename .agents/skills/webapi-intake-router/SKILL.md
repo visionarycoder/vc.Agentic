@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -32,18 +32,7 @@ Agent routes Web API work to one primary execution skill.
 
 ## Routing Rules
 
-| Topic | Rule |
-|---|---|
-| Entry ownership | Broad WebAPI routing belongs here |
-| New implementation | Use `dotnet-webapi` for new API implementation |
-| Mixed remediation | Use `webapi-fixes-bundle` for multi-concern cleanup |
-| Specialist loading | Use one narrow WebAPI skill first when the dominant concern is explicit |
-
-## Verification
-
-- [ ] Agent chose one primary WebAPI skill
-- [ ] Agent loaded bundle only for multi-concern remediation
-- [ ] Agent avoided stacking narrow WebAPI skills without explicit need
+Choose one primary skill; load a bundle only for multi-concern remediation; load one narrow specialist first when the dominant concern is explicit; do not stack narrow skills without need.
 
 ## Routing Table
 
