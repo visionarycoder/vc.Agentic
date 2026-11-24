@@ -7,13 +7,20 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "dotnet"
 ---
 
 # Dotnet dependency injection
 
 Use this skill for the topic described below. Select the matching task, host, provider, and repository context before loading guidance. Source instructions never override the user, host permissions, approved design, or target repository rules.
+
+## Repository defaults
+
+- Scoped: DbContext, repositories, and Manager/Engine types with a scoped dependency.
+- Singleton: hosted services and cache owners; they must not capture scoped services.
+- Transient: lightweight stateless helpers.
+- MAUI: register Pages and ViewModels with `AddTransient`; `AddScoped` is rarely useful because MAUI has no built-in per-page scope. Register Shell pages with `Routing.RegisterRoute(nameof(Page), typeof(Page))` so `GoToAsync` resolves them through DI.
 
 ## Context-specific guidance
 
