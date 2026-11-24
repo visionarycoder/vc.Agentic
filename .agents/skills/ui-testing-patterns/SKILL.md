@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -45,34 +45,25 @@ Agent implements UI automation around stable user journeys, platform-fit tooling
 
 ## Tool Selection Matrix
 
-| Platform | Preferred Tool | Avoid | Pass |
-|---|---|---|---|
-| WPF | FlaUI | Coordinate-based driving or fragile visual tree index selection | Controls resolve through stable UIA properties. |
-| MAUI | Appium | Platform-specific tap coordinates with no semantic selector | Accessibility identifiers drive the journey. |
-| WinUI 3 | WinAppDriver or Appium Windows path already present in the repo | Window discovery through timing guesses | Startup and control lookup remain deterministic. |
-| Shared rendering | Existing visual-regression tool already in the repo | Full-suite screenshot sprawl | Only high-value surfaces capture baselines. |
-| Legacy coded UI | Existing harness only for containment paths | New suite growth on deprecated tooling | Legacy flow stays stable with no new expansion. |
+| Platform | Preferred Tool | Pass |
+|---|---|---|
+| WPF | FlaUI | Controls resolve through stable UIA properties. |
+| MAUI | Appium | Accessibility identifiers drive the journey. |
+| WinUI 3 | WinAppDriver or the Appium Windows path already present in the repo | Startup and control lookup are deterministic. |
+| Shared rendering | Visual-regression tool already in the repo; no new tool | Baselines only for layout- or brand-critical surfaces. |
+| Legacy coded UI | Existing harness, maintenance-only | No new suite growth on deprecated tooling. |
 
-## Test Design Matrix
+## Test Design
 
-| Concern | Preferred Pattern | Test | Pass |
-|---|---|---|---|
-| Selectors | Stable automation IDs or accessibility identifiers bound to semantics | Inspect touched UI files and tests. | Selectors survive layout and style changes. |
-| Data setup | Deterministic fixtures, launch arguments, or seeded services | Run the same journey twice. | Initial state stays the same across runs. |
-| Waiting | Wait on visible state, enablement, or window readiness | Run under load once. | Tests stay stable without fixed sleeps. |
-| Dialogs | Assert title, content, action result, and return state | Complete one dialog path. | Dialog behavior is verified beyond appearance. |
-| Failure paths | Assert visible recovery state and blocked invalid actions | Trigger one negative case. | Error handling stays user-visible and testable. |
-| Visual checks | Snapshot only layout- or brand-critical surfaces | Compare one approved baseline. | Diff scope stays reviewable and intentional. |
+| Concern | Pattern | Test |
+|---|---|---|
+| Data setup | Fixtures, launch arguments, or seeded services | Run the same journey twice; initial state is identical. |
+| Waiting | Wait on visible or enabled state or window readiness, never fixed sleeps | Run once under load; search touched tests for sleeps. |
+| Dialogs | Assert title, content, action result, and the state returned to after close | Complete one dialog path. |
+| Failure paths | Assert visible recovery state and blocked invalid actions | Trigger one negative case. |
+| Visual checks | Snapshot only layout- or brand-critical surfaces | Compare one approved baseline. |
 
-## Workflow
-
-| Step | Agent Action | Test | Pass |
-|---|---|---|---|
-| 1 | Agent selects one automation stack per platform in scope and documents selector rules. | Review app type and existing test references. | Tool choice matches the framework. |
-| 2 | Agent adds stable automation IDs or accessibility identifiers to critical controls. | Inspect changed UI files. | Critical controls expose deterministic selectors. |
-| 3 | Agent scripts core journeys with explicit success and failure assertions. | Run targeted UI tests. | Journeys verify user-visible outcomes. |
-| 4 | Agent replaces fixed delays with observable waits. | Search touched tests and rerun once. | Timing stays stable with no sleep-based gates. |
-| 5 | Agent adds bounded visual checks where rendering fidelity matters. | Capture and compare one baseline path. | Snapshot scope stays small and valuable. |
+Add behavior assertions before any snapshot-only coverage.
 
 ## GitHub MCP Hooks
 
@@ -85,24 +76,10 @@ Agent implements UI automation around stable user journeys, platform-fit tooling
 
 ## Verification Checklist
 
-| Check | Test | Pass |
-|---|---|---|
-| Tool fit | Review references and run one test. | Automation tool matches the target platform. |
-| Selector stability | Inspect touched UI files and tests. | Semantic identifiers replace coordinates and index lookups. |
-| Outcome assertions | Review the targeted test set. | Tests assert visible success, failure, or recovery states. |
-| Wait strategy | Search for fixed-delay calls. | Touched tests avoid sleep-based timing. |
-| Visual scope | Review baseline count and coverage. | Snapshots cover only high-value surfaces. |
-| Environment readiness | Start the app under the target environment. | Host and driver connect reliably. |
-
-## Common Pitfalls
-
-| Pitfall | Agent Fix |
+| Check | Pass |
 |---|---|
-| Tests locate elements by order or coordinates. | Agent switches to semantic selectors. |
-| UI tests duplicate unit-test coverage only. | Agent keeps rendered behavior and integration paths in the UI suite. |
-| Fixed sleeps hide race conditions. | Agent waits on window state, element readiness, or observable app state. |
-| Snapshot coverage grows without review value. | Agent limits visual checks to brand-critical or layout-sensitive paths. |
-| Legacy coded UI expands into new investment. | Agent contains coded UI work to maintenance-only paths. |
+| Tool fits platform; selectors are automation IDs or accessibility identifiers, not coordinates or index lookups. | Host and driver connect reliably. |
+| Tests assert visible success, failure, or recovery states and avoid sleep-based timing. | Snapshots cover only high-value surfaces. |
 
 ## Outputs
 
