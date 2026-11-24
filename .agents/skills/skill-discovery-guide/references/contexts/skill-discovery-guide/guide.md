@@ -72,6 +72,7 @@ Agent routes ambiguous prompts to the smallest skill set that covers the work.
 | Need | Pattern | Reference |
 |---|---|---|
 | Full inventory by category | Use the category catalog instead of expanding this file. | `references/inventory-by-category.md` |
+| Find any skill by name or purpose | Use the complete lookup. | `references/skill-lookup.md` |
 | Bundle lookup | Use the router index. | `references/bundle-router-index.md` |
 | Complexity sizing | Use the complexity index. | `references/complexity-index.md` |
 | Cross-stack combinations | Use the dependency and problem matrices. | `references/cross-reference-matrix.md` |
