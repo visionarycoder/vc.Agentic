@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "biology"
 ---
 
@@ -17,8 +17,6 @@ metadata:
 - Use `scripts/rest_request.py` for all BioStudies and ArrayExpress calls.
 - Use `base_url=https://www.ebi.ac.uk/biostudies/api/v1`.
 - Search pages are better with `pageSize=10` and `max_items=10`; accession lookups usually do not need `max_items`.
-- Re-run requests in long conversations instead of relying on older tool output.
-- Treat displayed `...` in tool previews as UI truncation, not literal request content.
 
 ## Execution behavior
 - Return concise markdown summaries from the script JSON by default.
@@ -38,11 +36,6 @@ metadata:
 - Success returns `ok`, `source`, `path`, `method`, `status_code`, `warnings`, and either compact `records` or a compact `summary`.
 - Use `raw_output_path` when `save_raw=true`.
 - Failure returns `ok=false` with `error.code` and `error.message`.
-
-## Execution
-```bash
-echo '{"base_url":"https://www.ebi.ac.uk/biostudies/api/v1","path":"search","params":{"query":"rna","page":1,"pageSize":10},"record_path":"hits","max_items":10}' | python scripts/rest_request.py
-```
 
 ## References
 - No additional runtime references are required; keep the import package limited to this file and `scripts/rest_request.py`.

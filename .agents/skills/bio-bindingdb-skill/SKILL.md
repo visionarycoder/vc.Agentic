@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "biology"
 ---
 
@@ -18,8 +18,6 @@ metadata:
 - Use `base_url=https://bindingdb.org`.
 - Add `response=application/json` in `params` when you want structured output; some empty-result cases may still return an empty body.
 - For broad lookup endpoints, start around `max_items=10`; similarity-style queries are better with `5-10`.
-- Re-run requests in long conversations instead of relying on older tool output.
-- Treat displayed `...` in tool previews as UI truncation, not literal request content.
 
 ## Execution behavior
 - Return concise markdown summaries from the script JSON by default.
@@ -38,11 +36,6 @@ metadata:
 - Success returns `ok`, `source`, `path`, `method`, `status_code`, `warnings`, and either compact `records`, a compact `summary`, or `text_head`.
 - Use `raw_output_path` when `save_raw=true`.
 - Failure returns `ok=false` with `error.code` and `error.message`.
-
-## Execution
-```bash
-echo '{"base_url":"https://bindingdb.org","path":"rest/getLigandsByPDBs","params":{"pdb":"1Q0L","cutoff":100,"identity":92,"response":"application/json"},"max_items":10}' | python scripts/rest_request.py
-```
 
 ## References
 - No additional runtime references are required; keep the import package limited to this file and `scripts/rest_request.py`.
