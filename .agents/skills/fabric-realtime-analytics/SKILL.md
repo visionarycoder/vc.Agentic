@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "data"
 ---
 
@@ -17,60 +17,24 @@ Agent designs Fabric real-time analytics flows for data in motion. Agent combine
 
 ## When to Use
 
-| User prompt | Use |
-
-|---|---|
-
-| User asks for streaming ingestion in Fabric | Use this skill |
-
-| User asks for KQL databases or Eventhouse design | Use this skill |
-
-| User asks for event-driven dashboards | Use this skill |
-
-| User asks for Eventstream routing in Fabric | Use this skill |
+Use for streaming ingestion, KQL database or Eventhouse design, event-driven dashboards, and Eventstream routing in Fabric.
 
 ## When Not to Use
 
-| User prompt | Route |
-
-|---|---|
-
-| User asks for batch ETL only | Use `fabric-data-factory-patterns` |
-
-| User asks for alerting or trigger rules only | Use `fabric-data-activator` |
-
-| User asks for long-cycle warehouse modeling only | Use lakehouse or warehouse guidance |
+- Batch ETL only: use `fabric-data-factory-patterns`.
+- Alerting or trigger rules only: use `fabric-data-activator`.
+- Long-cycle warehouse modeling only: use lakehouse or warehouse guidance.
 
 ## Required Inputs
 
-| Input | Required | Description |
+Gather before designing: event source, latency target, query pattern, destination. Retention scope (hot data window and archival path) is recommended.
 
-|---|---|---|
+## Design Choices
 
-| Event source | Yes | State IoT, application logs, database CDC, or message broker source. |
-
-| Latency target | Yes | State seconds, minutes, or dashboard refresh boundary. |
-
-| Query pattern | Yes | State time-series, anomaly scan, aggregation, or join pattern. |
-
-| Destination | Yes | State KQL database, Activator, Power BI, or mixed sinks. |
-
-| Retention scope | Recommended | State hot data window and archival path. |
-
-## Decision Matrix
-
-| Condition | Preferred choice | Reason |
-
-|---|---|---|
-
-| Low-latency event routing drives ingestion | Eventstream | Eventstream fits continuous input, routing, and simple transformations. |
-
-| KQL exploration and time-series queries drive storage | KQL database or Eventhouse | KQL storage and query patterns fit high-volume telemetry and log data. |
-
-| Real-time detection drives the outcome | Real-Time Analytics plus `fabric-data-activator` | KQL plus Activator aligns analytics with downstream actions. |
-
-| Raw data lands once and serves many consumers | OneLake-connected real-time pattern | Unified storage and shared access reduce duplicate pipelines. |
-
+- Eventstream for continuous input, routing, and simple transformations; KQL database or Eventhouse for time-series and log storage.
+- Real-time detection that drives actions: Real-Time Analytics plus `fabric-data-activator`.
+- Raw data landing once and serving many consumers: prefer the OneLake-connected real-time pattern, because unified storage and shared access reduce duplicate pipelines.
+- Add explicit field management and validation checkpoints for schema drift.
 ## Workflow
 
 | Step | Agent action | Test | Pass |
@@ -89,28 +53,4 @@ Agent designs Fabric real-time analytics flows for data in motion. Agent combine
 
 | 6 | Agent validates throughput, failure visibility, and freshness. | Monitor ingest lag and query response. | Ingestion, query, and output paths meet the stated target. |
 
-## Verification Checklist
-
-- [ ] Agent matched Eventstream and KQL components to the latency target.
-
-- [ ] Agent defined table mappings and retention expectations.
-
-- [ ] Agent validated at least one live KQL query against ingested data.
-
-- [ ] Agent wired a downstream dashboard, report, or action path.
-
-- [ ] Agent checked ingest lag or freshness against the requirement.
-
-## Common Pitfalls
-
-| Pitfall | Agent fix |
-
-|---|---|
-
-| Batch ingestion tools handle event-driven workloads | Agent routes low-latency scenarios to Eventstream and KQL components. |
-
-| Schema drift reaches queries without handling | Agent adds explicit field management and validation checkpoints. |
-
-| Retention settings ignore cost and query windows | Agent matches hot data retention to operational query needs. |
-
-| Real-time dashboards read from stale export paths | Agent keeps the visualization on the live query surface. |
+Pass: Ingestion, query, and output paths meet the stated latency target; at least one live KQL query ran against ingested data.

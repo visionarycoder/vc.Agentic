@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "security"
 ---
 
@@ -52,25 +52,6 @@ Agent uses this bundle for channel-layer spoofing, replay, downgrade, proxy, int
 | 3. Fix | Agent adds replay protection, trusted proxy rules, endpoint validation, integrity checks, and secure negotiation settings. | Run targeted build for the touched project. | Build passes with zero new errors. |
 | 4. Run tests | Agent runs existing transport, webhook, integration, or configuration tests for touched scope. | Run existing tests for touched scope. | All targeted tests pass. |
 | 5. Re-scan | Agent runs grep and config checks again. | Re-run inventory commands. | Zero unexplained targeted hits remain in touched files. |
-
-## Decision Matrix
-
-| Condition | Use |
-|---|---|
-| Access decision depends on network origin | Use authenticated principal or trusted proxy boundary, not raw peer data |
-| Request can be captured and replayed | Use nonce, timestamp, expiry, and replay cache |
-| Service accepts privileged callback or webhook | Use signature or HMAC verification before processing |
-| Service forwards caller intent to downstream target | Use explicit target allow-list and delegated authorization checks |
-| Service negotiates transport algorithms | Use minimum secure protocol and approved cipher set |
-
-## ASP.NET Core Patterns
-
-| Area | Agent Uses | Agent Avoids |
-|---|---|---|
-| Forwarded headers | Known proxies, known networks, and explicit header processing | Trusting arbitrary forwarding headers from the public internet |
-| Client identity | `HttpContext.User`, validated certificates, or signed message identity | IP or DNS identity as the sole authorization source |
-| Replay defense | Nonce store, timestamp window, idempotency key, or one-time token | Long-lived reusable signed requests |
-| TLS settings | Explicit minimum TLS version and hardened server defaults | Legacy protocol fallback and weak suites |
 
 ## Verification Checklist
 

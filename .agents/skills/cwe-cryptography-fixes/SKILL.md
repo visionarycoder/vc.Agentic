@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "security"
 ---
 
@@ -54,24 +54,6 @@ Agent uses this bundle for algorithm, key, hash, IV, nonce, signature, and rando
 | 3. Fix | Agent replaces risky primitives, externalizes keys, randomizes IVs and nonces, hardens signature checks, and upgrades password hashing. | Run targeted build. | Build passes with zero new errors. |
 | 4. Run tests | Agent runs unit tests and analyzer jobs already in the repo for touched scope. | Run existing tests and analyzer commands. | All targeted tests pass. |
 | 5. Re-scan | Agent runs inventory commands again after the patch. | Re-run grep and analyzers. | Zero unexplained weak-crypto and weak-randomness hits remain in touched files. |
-
-## Decision Matrix
-
-| Condition | Use |
-|---|---|
-| Code encrypts new sensitive payloads | Use `AesGcm` with per-operation random nonce |
-| Code hashes or verifies passwords | Use ASP.NET Core Identity `PasswordHasher<T>` or approved PBKDF or Argon2 |
-| Code needs signing or signature verification | Use framework verify APIs and constant-time byte comparison for trust decisions |
-| Code stores or loads cryptographic keys | Use Azure Key Vault backed configuration, not literals |
-| Code generates tokens, salts, IVs, or session ids | Use `RandomNumberGenerator`, not `System.Random` |
-
-## Repo Notes
-
-| Area | Agent Uses | Agent Avoids |
-|---|---|---|
-| Key storage | Azure Key Vault and typed options | Source literals and checked-in secrets |
-| Password hashing | ASP.NET Core Identity `PasswordHasher<T>` or approved KDF wrapper | Raw `SHA256`, `SHA512`, and home-grown salt logic |
-| Randomness and encryption | `RandomNumberGenerator` and `AesGcm` | `System.Random`, GUID slicing, static IV arrays, and predictable CBC IVs |
 
 ## Verification Checklist
 

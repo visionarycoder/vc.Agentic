@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "vbd"
 ---
 
@@ -39,25 +39,8 @@ Do not use when the prompt is only hypothetical impact analysis. Use `vbd-change
 | 5. Rehearse rollback | Agent routes traffic back to the old path and verifies data authority. | Rollback report | Agent reads rollback report. | Old path resumes service and reconciliation rules pass. |
 | 6. Monitor drift | Agent keeps comparison and operational telemetry active through the observation window. | Drift report | Agent reads trend report. | Diff rate, latency, and error thresholds stay inside policy for the full window. |
 
-## Verification
-
-- [ ] Agent keeps routing as configuration, not business logic.
-- [ ] Agent keeps old path authoritative during shadow mode.
-- [ ] Agent writes per-field tolerance rules.
-- [ ] Agent runs replay and rollback drills.
-- [ ] Agent keeps drift monitoring active for the full observation window.
-
 Test: Run the harness verification suite for the selected wave.
 Pass: Diff rate stays at or below policy threshold. Rollback drill passes. Observation window closes with zero unresolved drift.
-
-## Common Pitfalls
-
-| Pitfall | Fix |
-|---|---|
-| Shadow mode becomes dual-write | Agent discards new-path side effects before cutover |
-| One global threshold hides material diffs | Agent writes per-field rules |
-| Rollback exists on paper only | Agent runs a real rollback drill |
-| Drift monitoring stops at cutover | Agent keeps monitoring through the full window |
 
 ## Inputs
 
@@ -68,15 +51,7 @@ Pass: Diff rate stays at or below policy threshold. Rollback drill passes. Obser
 | Tolerance policy | Yes | Exact, normalized, ignore, and numeric-band rules |
 | Observation window | Yes | Time and threshold rules for post-cutover drift |
 
-## Tolerance Rules
-
-| Field class | Rule |
-|---|---|
-| Business-critical value | Exact match |
-| Generated identifier or timestamp | Normalize or ignore |
-| Numeric result | Use stated absolute or relative band |
-| Ordering-insensitive collection | Compare as set |
-| Undocumented new field | Flag as diff |
+Tolerance rules: business-critical values match exactly; generated identifiers and timestamps are normalized or ignored; numeric results use the stated band; ordering-insensitive collections compare as sets; undocumented new fields are flagged as diffs. Discard new-path side effects before cutover so shadow mode never becomes dual-write.
 
 ## Output Contract
 

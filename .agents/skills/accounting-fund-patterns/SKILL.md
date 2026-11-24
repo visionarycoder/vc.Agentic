@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "accounting"
 ---
 
@@ -17,13 +17,7 @@ Agent structures governmental, proprietary, and fiduciary funds with explicit fu
 
 ## When to Use
 
-| Condition | Use |
-|---|---|
-| Prompt needs fund type design or classification logic | Use this skill |
-| Ledger or API design needs fund-level isolation | Use this skill |
-| Work item needs interfund transfers, loans, or service billing patterns | Use this skill |
-| Reporting model needs fund balance classification | Use this skill |
-| .NET solution needs multi-tenant fund isolation with public sector controls | Use this skill |
+Use for fund type design or classification, fund-level isolation, interfund transfers, loans or service billing, and fund balance classification.
 
 ## When Not to Use
 
@@ -60,15 +54,7 @@ Agent structures governmental, proprietary, and fiduciary funds with explicit fu
 | Proprietary | Activity operates on a fee-supported or internal-service full-accrual basis. | `references/state-and-balance-reference.md#detailed-fund-type-reference` |
 | Fiduciary | Activity holds assets for participants, beneficiaries, or external parties. | `references/state-and-balance-reference.md#detailed-fund-type-reference` |
 
-## Interfund Decision Matrix
-
-| Transaction Type | Use | Accounting Shape |
-|---|---|---|
-| Interfund transfer | Nonreciprocal movement between funds | Transfer out and transfer in |
-| Interfund loan | Temporary financing between funds | Due from and due to |
-| Shared service charge | Reciprocal cost recovery | Revenue and expenditure or expense pair |
-| Reimbursement | One fund repays another for eligible cost | Expense or expenditure reclassification |
-| Residual equity transfer | Structural reorganization of resources | Equity movement outside routine operations |
+Interfund shapes: transfer = transfer out/in; loan = due from/due to; shared service = revenue and expenditure pair; reimbursement = expense reclassification; residual equity transfer = equity movement outside routine operations.
 
 ## Reference Files
 

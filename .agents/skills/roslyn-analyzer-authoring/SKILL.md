@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "dotnet"
 ---
 
@@ -15,13 +15,7 @@ metadata:
 
 Agent authors analyzers for `src/ifx` packages. Agent keeps analyzer logic deterministic, narrow, and written in C# 14 for `netstandard2.0` Roslyn projects (`<LangVersion>14.0</LangVersion>` plus `PolySharp`).
 
-## When to Use
-
-| User prompt | Use |
-|---|---|
-| User asks for a new diagnostic rule | Use this skill |
-| User asks to enforce architecture or API patterns at compile time | Use this skill |
-| User asks for analyzer tests or packaging updates | Use this skill |
+Use for new diagnostic rules, compile-time architecture or API enforcement, and analyzer tests or packaging updates.
 
 ## When Not to Use
 
@@ -47,11 +41,9 @@ Agent authors analyzers for `src/ifx` packages. Agent keeps analyzer logic deter
 |---|---|
 | Target framework | Agent confirms `netstandard2.0` before using Roslyn project patterns. |
 | Language level | Agent confirms `<LangVersion>14.0</LangVersion>` and the `PolySharp` reference, then uses C# 14 syntax (primary constructors, collection expressions, file-scoped namespaces, records) inside `src/ifx`. Agent avoids runtime-dependent features (default interface members, static abstract interface members) and BCL APIs absent from `netstandard2.0`. |
-| Generated code | Agent calls `ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None)` unless the rule needs generated files. |
-| Concurrency | Agent calls `EnableConcurrentExecution()`. |
-| Registration scope | Agent picks the cheapest action that answers the rule. |
-| Locations | Agent reports diagnostics on stable member or syntax locations. |
-| Tests | Agent adds positive and negative MSTest cases. |
+| Initialize | Agent calls `ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None)` unless the rule needs generated files, and `EnableConcurrentExecution()`. |
+| Locations | Agent uses `Diagnostic.Create(rule, syntax.GetLocation(), args)` or a member location. |
+| Tests | Agent adds positive, negative, boundary, and location MSTest cases. |
 
 ## Workflow
 
@@ -65,35 +57,6 @@ Agent authors analyzers for `src/ifx` packages. Agent keeps analyzer logic deter
 | 6 | Agent validates hot-path cost. | Review allocations and cached lookups. | No repeated expensive lookups appear in per-node paths. |
 | 7 | Agent adds MSTest coverage. | Run analyzer test project. | Positive and negative tests pass. |
 | 8 | Agent verifies package loading. | Inspect `.csproj` and package assets. | Analyzer output lands under `analyzers/dotnet/cs` when packing applies. |
-
-## Analysis Pattern Matrix
-
-| Need | Preferred pattern |
-|---|---|
-| Cheap shape check | `RegisterSyntaxNodeAction` plus syntax filtering |
-| Member contract rule | `RegisterSymbolAction` on the exact symbol kind |
-| Semantic expression rule | `RegisterOperationAction` on the exact operation kind |
-| Shared type lookup | `RegisterCompilationStartAction` plus cached symbol lookup |
-| Stable report site | `Diagnostic.Create(rule, syntax.GetLocation(), args)` or member location |
-
-## Test Matrix
-
-| Test | Agent verifies |
-|---|---|
-| Positive case | Invalid code raises the expected diagnostic ID and message. |
-| Negative case | Valid code stays silent. |
-| Boundary case | Exclusion paths stay silent. |
-| Location case | Diagnostic lands on the intended span. |
-| Framework case | `netstandard2.0` analyzer code compiles with C# 14 syntax and netstandard2.0 BCL APIs only. |
-
-## Validation Checklist
-
-- [ ] Agent kept Roslyn project code compatible with the `netstandard2.0` runtime ceiling and used C# 14 features without boilerplate.
-- [ ] Agent used the narrowest possible registration surface.
-- [ ] Agent filtered candidates before expensive semantic work.
-- [ ] Agent reported diagnostics at stable, developer-facing locations.
-- [ ] Agent added MSTest positive and negative coverage.
-- [ ] Agent verified packaging or project wiring when the scope included distribution.
 
 ## References
 
