@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -85,28 +85,11 @@ protected override void OnInitialized()
 
 ## Submit Handlers
 
-| Handler | Fires when | Use when |
-|---------|-----------|----------|
-| `OnValidSubmit` | Validation passes | Standard forms with `DataAnnotationsValidator` |
-| `OnInvalidSubmit` | Validation fails | Need custom handling for invalid state |
-| `OnSubmit` | Always — validation is manual | Using `EditContext.Validate()` yourself |
-
-`OnSubmit` cannot combine with `OnValidSubmit`/`OnInvalidSubmit`.
+`OnValidSubmit`/`OnInvalidSubmit` fire after validation; `OnSubmit` always fires and validation is manual (`EditContext.Validate()`). `OnSubmit` cannot combine with the other two.
 
 ## Built-in Input Components
 
-| Component | Binds to | Notes |
-|-----------|----------|-------|
-| `InputText` | `string` | Renders `<input type="text">` |
-| `InputTextArea` | `string` | Renders `<textarea>` |
-| `InputNumber<T>` | `int`, `double`, `decimal` | Renders `<input type="number">` |
-| `InputDate<T>` | `DateTime`, `DateOnly`, `DateTimeOffset` | Renders `<input type="date">` |
-| `InputCheckbox` | `bool` | Renders `<input type="checkbox">` |
-| `InputSelect<T>` | `string`, enums, numeric types | Renders `<select>` |
-| `InputRadioGroup<T>` | `string`, enums, numeric types | Wraps `InputRadio<T>` children |
-| `InputFile` | `IBrowserFile` | File upload — interactive modes only |
-
-All input components use `@bind-Value` for binding. Always wrap text in a `<label>` or use `id`/`for` attributes for accessibility.
+`InputText`, `InputTextArea`, `InputNumber<T>`, `InputDate<T>`, `InputCheckbox`, `InputSelect<T>`, `InputRadioGroup<T>` (with `InputRadio<T>`), and `InputFile` (interactive modes only) all use `@bind-Value`. Wrap text in a `<label>` or use `id`/`for`.
 
 ### InputSelect with enum values
 
@@ -156,7 +139,7 @@ public class EmployeeModel
 }
 ```
 
-Add `<DataAnnotationsValidator />` inside `EditForm` — without it, annotation attributes are silently ignored.
+Add `<DataAnnotationsValidator />` inside `EditForm`.
 
 Display errors with:
 - `<ValidationSummary />` — all errors in a list
@@ -423,11 +406,6 @@ protected override void OnInitialized()
 
 ## Don'ts
 
-- Don't use `@bind` or `@oninput` in Static SSR forms — they require interactivity. Use `[SupplyParameterFromForm]` and `FormName`.
+- Don't use `@bind` or `@oninput` in Static SSR forms — they require interactivity.
 - Don't forget `Model ??= new()` in `OnInitialized` — the model is null on GET, populated on POST.
-- Don't use `OnSubmit` together with `OnValidSubmit`/`OnInvalidSubmit` — they're mutually exclusive.
-- Don't omit `<DataAnnotationsValidator />` — validation attributes are silently ignored without it.
 - Don't omit `FormName` in SSR when a page has multiple forms — both forms will fire on any submission.
-- Don't use `InputFile` in Static SSR — it requires an interactive render mode.
-- Don't use both `Model` and `EditContext` on an `EditForm` — pick one.
-- Don't forget `<AntiforgeryToken />` in plain `<form>` elements — the server rejects the POST without it.
