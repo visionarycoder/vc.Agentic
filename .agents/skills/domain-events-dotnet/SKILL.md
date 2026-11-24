@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -58,11 +58,8 @@ Model domain events as explicit business facts with owned boundaries and hand-ro
 
 | Concern | Agent Action |
 |---|---|
-| Event ownership | Agent places each event beside the aggregate or engine that owns the fact. |
 | Boundary crossing | Use events where downstream policy changes independently from the source aggregate. |
-| Stable vocabulary | Name events from domain language that remains stable across caller churn. |
 | Consistency boundary | Keep in-transaction handlers local and post-commit handlers explicit. |
-| Event payload | Keep payloads minimal, version-tolerant, and owned by the source boundary. |
 
 ## Implementation Patterns
 
@@ -96,20 +93,11 @@ public interface IDomainEventPublisher
 }
 ```
 
-```csharp
-var aggregates = dbContext.ChangeTracker.Entries<AggregateRoot>()
-    .Select(x => x.Entity)
-    .Where(x => x.DomainEvents.Count > 0)
-    .ToArray();
-```
-
 ## Rules
 
 | Rule | Agent Action |
 |---|---|
-| Event name | Use business fact names such as `InvoiceApproved` and `PayrollScheduled`. |
 | MediatR | Agent avoids notification abstractions from MediatR. |
-| Event payload | Keep only data required for downstream reaction. |
 | Consistency | Agent documents whether handlers run before commit, after commit, or through an outbox. |
 | Handler scope | Keep one reason to change per handler. |
 | Mapping | Use hand-written transformations only. |
@@ -127,11 +115,7 @@ var aggregates = dbContext.ChangeTracker.Entries<AggregateRoot>()
 
 | Pitfall | Agent Fix |
 |---|---|
-| Event name mirrors a technical method such as `StatusUpdated` | Agent renames the event to the business fact. |
-| Handler reaches back into the source aggregate for extra mutation | Agent moves that mutation into the original command flow or source aggregate. |
-| Event payload carries an entire entity graph | Agent trims payload to identifiers and stable business values. |
 | Publication occurs before failed persistence | Agent moves publication to the correct consistency boundary. |
-| One handler owns unrelated side effects | Agent splits the handler by owned reaction. |
 
 ## MCP Hooks
 
