@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "biology"
 ---
 
@@ -16,14 +16,10 @@ metadata:
 ## Operating rules
 - Use `scripts/rest_request.py` for all EVA calls.
 - Use `base_url=https://www.ebi.ac.uk/eva/webservices/rest/v1`.
-- Prefer metadata and targeted variant lookups over broad genomic window pulls.
-- Keep region queries narrow by species, assembly, or small coordinate windows when possible.
-- Re-run requests in long conversations instead of relying on older tool output.
+- Prefer metadata and targeted variant lookups; keep region queries narrow.
 
 ## Execution behavior
 - Return concise markdown summaries from the script JSON by default.
-- Return raw JSON only if the user explicitly asks for machine-readable output.
-- Prefer these paths: `meta/species/list` and targeted variant or region routes from the EVA REST API.
 
 ## Input
 - Read one JSON object from stdin.
