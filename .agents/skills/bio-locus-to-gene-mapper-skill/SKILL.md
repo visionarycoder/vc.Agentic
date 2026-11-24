@@ -122,25 +122,22 @@ Do not ask the user to run python manually unless execution is actually blocked.
 
 Use these skills in order. Skip only when an earlier step is not needed by provided inputs.
 
-1. `bio-efo-ontology-skill`
-   - Resolve `trait_query` to canonical EFO term and synonyms.
-   - Expand descendants when `show_child_traits=true`.
-2. `bio-gwas-catalog-skill`
-   - Discover anchor variants for the trait/EFO scope.
+1. `bio-gwas-catalog-skill`
+   - Discover anchor variants for the trait scope.
    - Pull association/study metadata for locus context.
-3. Built-in NCBI RefSNP coordinate resolution
+2. Built-in NCBI RefSNP coordinate resolution
    - Normalize each anchor rsID to GRCh37/GRCh38 top-level chromosome placements.
-4. `bio-opentargets-skill`
+3. `bio-opentargets-skill`
    - Retrieve credible set context, L2G predictions, and colocalisation evidence per locus.
-5. `bio-gtex-eqtl-skill`
+4. `bio-gtex-eqtl-skill`
    - Retrieve single-tissue eQTL support for anchor variants.
-6. `bio-genebass-gene-burden-skill`
+5. `bio-genebass-gene-burden-skill`
    - Retrieve rare-variant burden support for candidate genes.
-7. `bio-clinvar-variation-skill` (when `include_clinvar=true`)
+6. `bio-clinvar-variation-skill` (when `include_clinvar=true`)
    - Add variant clinical/coding annotations.
-8. `bio-gnomad-graphql-skill` (when `include_gnomad_context=true`)
+7. `bio-gnomad-graphql-skill` (when `include_gnomad_context=true`)
    - Add frequency and gene-level constraint context.
-9. `bio-human-protein-atlas-skill` (when `include_hpa_tissue_context=true`)
+8. `bio-human-protein-atlas-skill` (when `include_hpa_tissue_context=true`)
    - Add tissue plausibility context for top genes.
 
 Never perform additional retrieval after final candidate-gene scoring starts.

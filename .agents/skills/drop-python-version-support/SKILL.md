@@ -21,8 +21,6 @@ Dropping the oldest supported version raises the project's compatibility floor. 
 
 Deprecation cleanup is primarily part of adding support for each Python release. Do not make deprecations the sole focus here. The main opportunity is to adopt useful features that the new minimum guarantees while preserving behavior on every remaining supported version.
 
-If the requested minimum is not already in the project's tested support range, also follow the `add-python-version-support` workflow before claiming support.
-
 ## Workflow
 
 ### 1. Establish Scope and Policy

@@ -13,7 +13,7 @@ metadata:
 
 # Integration Testing in .NET
 
-Load this skill when `integration-tester` writes tests in `tests/integration/**`. Also load `mstest-test-authoring` and `efcore-testing-patterns`.
+Load this skill when `integration-tester` writes tests in `tests/integration/**`. Also load `efcore-testing-patterns`.
 
 ## When to use
 

@@ -27,7 +27,6 @@ metadata:
 | Telemetry export | Local dev | Aspire CLI | `aspire export [resource]` |
 | Standalone dashboard | Any (no AppHost) | Aspire CLI | `aspire dashboard run` (foreground/blocking — see below) |
 | Browser console / network / screenshots | Local dev (frontend) | Aspire dashboard | Surfaced via `Aspire.Hosting.Browsers` + `WithBrowserLogs()` |
-| AppHost / deployment definition | Authoring | aspire-deployment skill | → `aspire-deployment` skill |
 | AKS workload (pod logs, pod state) | Deployed AKS | kubectl + Container Insights | `kubectl logs <pod>`, `kubectl describe pod <pod>`, Container Insights in Azure Monitor |
 | Azure resource health (App Insights, Front Door, NSP, private endpoint) | Deployed Azure | azure-diagnostics | → `azure-diagnostics` skill |
 | App Service / Container Apps logs | Deployed Azure | azure-diagnostics | → `azure-diagnostics` skill |
@@ -35,7 +34,7 @@ metadata:
 
 **Decision tree:**
 
-1. Is this about **AppHost code or deployment definition**? → `aspire-deployment` skill.
+1. Is this about **AppHost code**? → `aspireify` skill.
 2. Is the app **running locally** via `aspire start`? → Aspire CLI.
 3. Is it deployed to **AKS**? → kubectl + Container Insights for workload; `azure-diagnostics` for the cluster's Azure resources.
 4. Is it deployed to **other Azure** (App Service, Container Apps)? → `azure-diagnostics`.
@@ -172,7 +171,6 @@ The Aspire CLI talks to a *running AppHost* through a local backchannel socket a
 | Scenario | Route To |
 |----------|----------|
 | Start/stop/wait/rebuild lifecycle | → `aspire-orchestration` skill |
-| Deploy, publish, pipeline steps, AppHost compute environment binding | → `aspire-deployment` skill |
 | AppHost code changes (`WithBrowserLogs()`, custom commands, `WithHttpCommand`) | → `aspireify` skill |
 | Deployed Azure resource health (App Insights, Front Door, NSP, private endpoint, ACA, App Service) | → `azure-diagnostics` skill (azure-skills) |
 | AKS workload diagnostics (pod logs, pod state, Container Insights) | → `kubectl` + Azure Monitor Container Insights |

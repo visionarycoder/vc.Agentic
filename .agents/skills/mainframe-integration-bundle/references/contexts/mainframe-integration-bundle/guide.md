@@ -25,9 +25,7 @@ Agent uses this bundle for legacy mainframe file integration spanning copybook s
 
 | Prompt Pattern | Agent Route |
 |---|---|
-| Field layout extraction only | `mainframe-copybook-parsing` |
 | C# type generation only | `copybook-to-dotnet` |
-| EBCDIC, packed decimal, or zoned decimal conversion only | `copybook-data-conversion` |
 
 ## Required Inputs
 
@@ -42,37 +40,20 @@ Agent uses this bundle for legacy mainframe file integration spanning copybook s
 
 | Request Signal | Use Bundle | Route Detail |
 |---|---|---|
-| Parse PIC clauses, OCCURS, REDEFINES, or level hierarchy | Yes | Agent routes to `mainframe-copybook-parsing` |
 | Generate C# classes, enums, or typed readers | Yes | Agent routes to `copybook-to-dotnet` |
-| Decode EBCDIC, COMP-3, binary, signed, or date formats | Yes | Agent routes to `copybook-data-conversion` |
 
 ## Coverage Matrix
 
 | Track | Specialist Skill | Primary Outcome |
 |---|---|---|
-| Structural parse | `mainframe-copybook-parsing` | Deterministic record layout and field metadata |
 | Model generation | `copybook-to-dotnet` | C# types aligned to field shape and nullability |
-| Value conversion | `copybook-data-conversion` | Accurate byte-to-value translation for legacy encodings |
 
 ## Decision Matrix: Parse Copybooks vs Manual Mapping
 
 | Condition | Preferred Path | Decision Signal |
 |---|---|---|
-| Stable copybook exists and record count is large | `mainframe-copybook-parsing` | Layout authority already exists |
-| REDEFINES, OCCURS, and signed fields drive parsing logic | `mainframe-copybook-parsing` + `copybook-data-conversion` | Structural metadata drives conversion |
 | One-off file with short lifespan and few fields | Manual mapping | Parse investment outweighs reuse value |
-| Target domain model differs from physical record | `mainframe-copybook-parsing` then manual projection | Physical parse stays separate from business model |
-| C# ingestion pipeline is the output | `copybook-to-dotnet` after parsing | Typed model generation reduces drift |
-
-## Data Format Conversion Decision Table
-
-| Source Format | Route | Conversion Focus |
-|---|---|---|
-| EBCDIC text | `copybook-data-conversion` | Code page decode and trimming rules |
-| COMP-3 packed decimal | `copybook-data-conversion` | Nibble unpack, sign handling, scale placement |
-| COMP or binary fields | `copybook-data-conversion` | Endianness, signed range, field width |
-| Zoned decimal | `copybook-data-conversion` | Sign nibble, display precision, validation |
-| Julian or packed date fields | `copybook-data-conversion` | Epoch rule, century handling, invalid-date rejection |
+| C# ingestion pipeline is the output | `copybook-to-dotnet` | Typed model generation reduces drift |
 
 ## Performance Considerations for Large Mainframe Files
 
@@ -97,9 +78,7 @@ Agent uses this bundle for legacy mainframe file integration spanning copybook s
 
 | Decision | Agent Action |
 |---|---|
-| Copybook exists | Agent routes first to `mainframe-copybook-parsing`. |
-| Generated .NET types are the target | Agent routes next to `copybook-to-dotnet`. |
-| Legacy encodings or numeric compression appear | Agent routes to `copybook-data-conversion` before validation logic. |
+| Generated .NET types are the target | Agent routes to `copybook-to-dotnet`. |
 | Manual mapping remains simpler | Agent records manual mapping rationale and skips generation. |
 | Large-file throughput risk appears | Agent applies streaming and metadata-caching patterns before implementation. |
 
@@ -128,7 +107,6 @@ Agent uses this bundle for legacy mainframe file integration spanning copybook s
 | Pitfall | Agent Fix |
 |---|---|
 | Business model generation starts before physical layout is stable | Agent parses copybook first. |
-| Packed decimal logic treats bytes as text | Agent routes numeric decode through `copybook-data-conversion`. |
 | Generated classes leak mainframe field names into domain code | Agent keeps generated transport types at the integration boundary. |
 | Large file import loads entire file into memory | Agent uses streaming readers and batch persistence. |
 | REDEFINES branches lack discriminator logic | Agent records branch-selection rules during parsing. |

@@ -24,7 +24,6 @@ Agent authors source generators for `src/ifx` packages. Agent keeps discovery ch
 
 | User prompt | Route |
 |---|---|
-| User asks for diagnostics only | Use `roslyn-analyzer-authoring` |
 | User asks for IDE edits instead of generated files | Use `roslyn-codefix-authoring` |
 | User asks for runtime code generation or external service data | Use a build or runtime workflow |
 

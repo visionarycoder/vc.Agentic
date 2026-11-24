@@ -43,7 +43,6 @@ related_skills:
   - security-intake-router
   - cwe-input-validation-fixes
   - cwe-injection-attack-fixes
-  - cwe-data-protection-fixes
   - cwe-resource-management-fixes
   - cwe-miscellaneous-security-fixes
   - cwe-fixes
@@ -55,7 +54,6 @@ related_skills:
   - cwe-fixes
   - webapi-authz-hardening
   - cwe-injection-attack-fixes
-  - cwe-data-protection-fixes
 ```
 
 ## Near-Limit Extraction Pattern
@@ -137,7 +135,6 @@ The following skills were actively used during the 2026-08-22 optimization cycle
 | `dotnet-intake-router` | Classify .NET-specific skills |
 | `testing-intake-router` | Classify testing-related skills |
 | `security-intake-router` | Classify security/CWE skills |
-| `webapi-intake-router` | Classify Web API skills |
 | `vbd-intake-router` | Classify VBD architecture skills |
 | `azure-intake-router` | Classify Azure-specific skills |
 

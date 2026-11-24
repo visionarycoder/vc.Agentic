@@ -13,7 +13,7 @@ metadata:
 
 # Performance and Load Testing
 
-Load this skill when `chaos-tester` writes tests in `tests/performance/**`. Load `microbenchmarking` for hot-path benchmarks and `dotnet-performance-standards` for code-level guidance.
+Load this skill when `chaos-tester` writes tests in `tests/performance/**`. Load `dotnet-performance-standards` for code-level guidance.
 
 ## When to use
 

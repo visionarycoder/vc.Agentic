@@ -19,36 +19,23 @@ Agent uses this bundle for Microsoft Fabric requests that span data movement, On
 
 | Need | Route |
 |---|---|
-| Copy, orchestration, ETL, or pipeline authoring | `fabric-data-factory-patterns` or `fabric-pipeline-diagnostics` |
-| Lakehouse landing, open-table storage, or ingestion flow | `fabric-lakehouses` or `fabric-lakehouse-ingestion` |
-| Warehouse SQL serving, semantic objects, or report models | `fabric-synapse-analytics`, `fabric-semantic-model-builder`, or `semantic-layer-fabric` |
-| Streaming, KQL, alerting, or incident diagnosis | `fabric-realtime-analytics`, `fabric-kql-diagnostics`, or `fabric-data-activator` |
-| OneLake layout, shortcuts, mirroring, workspaces, or promotion | `fabric-onelake-patterns`, `fabric-shortcuts-mirroring`, or `fabric-workspaces-governance` |
-| Data science, notebooks, Power BI, Copilot, or IQ-style ontology alignment | `fabric-data-science`, `fabric-notebooks-spark`, `fabric-powerbi-integration`, `fabric-copilot-studio`, `semantic-layer-fabric`, or `ontology-design-patterns` |
+| Copy, orchestration, ETL, or pipeline authoring | `fabric-pipeline-diagnostics` |
+| Lakehouse landing, open-table storage, or ingestion flow | `fabric-lakehouse-ingestion` |
+| Warehouse SQL serving, semantic objects, or report models | `fabric-semantic-model-builder` or `semantic-layer-fabric` |
+| Streaming, KQL, alerting, or incident diagnosis | `fabric-realtime-analytics` or `fabric-kql-diagnostics` |
+| Data science, notebooks, Power BI, Copilot, or IQ-style ontology alignment | `fabric-powerbi-integration` or `semantic-layer-fabric` |
 
 ## Coverage Matrix
 
 | Skill | Coverage |
 |---|---|
 | `fabric-powerbi-integration` | Dashboards, metrics, report consumption |
-| `fabric-data-factory-patterns` | Copy, ETL, orchestration, scheduled movement |
-| `fabric-synapse-analytics` | Warehouse SQL serving and star-schema delivery |
-| `fabric-copilot-studio` | Conversational experience over Fabric assets |
-| `fabric-lakehouses` | Open tables, parquet, and lakehouse storage |
 | `fabric-lakehouse-ingestion` | Landing, bronze intake, and ingestion reliability |
-| `fabric-notebooks-spark` | Spark notebooks and engineering workflows |
 | `fabric-realtime-analytics` | Event streams, KQL, and low-latency analytics |
 | `fabric-kql-diagnostics` | KQL issue diagnosis and investigation |
-| `fabric-data-activator` | Triggered actions from data signals |
-| `fabric-onelake-patterns` | OneLake storage topology and item layout |
-| `fabric-data-science` | Experiments, features, and model workflows |
-| `fabric-workspaces-governance` | Workspace boundaries, promotion, and access |
-| `fabric-shortcuts-mirroring` | Virtual access and replicated source access |
-| `fabric-medallion-architecture` | Bronze, Silver, Gold design |
 | `fabric-pipeline-diagnostics` | Pipeline failure triage and correction |
 | `fabric-semantic-model-builder` | Model assembly and semantic-object authoring |
 | `semantic-layer-fabric` | Curated semantic layer, measures, and RLS |
-| `ontology-design-patterns` | IQ-style ontology and governed concept alignment |
 
 ## Decision Order
 

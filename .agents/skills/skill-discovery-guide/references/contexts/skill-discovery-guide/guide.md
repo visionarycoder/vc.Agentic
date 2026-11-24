@@ -58,8 +58,8 @@ Agent routes ambiguous prompts to the smallest skill set that covers the work.
 | Test failures, MSTest warnings, or test modernization | `mstest-modernization-controller` | `test-fixes` |
 | xUnit test creation or maintenance | `xunit-test-generation` | `code-testing-agent` |
 | Blazor component unit tests | `blazor-unit-testing` | `xunit-test-generation` |
-| Blazor browser and UI journeys | `blazor-ui-testing` | `ui-testing-patterns` |
-| API contracts, routes, uploads, compatibility, or endpoint audit | `webapi-hardening-controller` | `dotnet-webapi` |
+| Blazor browser and UI journeys | `blazor-ui-testing` | None |
+| API contracts, routes, uploads, compatibility, or endpoint audit | `webapi-hardening-controller` | None |
 | Security, auth, injection, or CWE families | `security-controller` | `webapi-hardening-controller` |
 | Problem Details, JSON, JWT, or JSON-seq | `rfc-fixes-bundle` | Self-contained; see bundle references |
 | Cross-stack platform or architecture choice | `technology-selection` | `critical-infrastructure-bundle` |

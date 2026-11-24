@@ -29,7 +29,7 @@ Agent uses this bundle for MVVM requests that require routing across manual MVVM
 | Prompt Pattern | Agent Route |
 |---|---|
 | Only WPF Fluent UI composition or styling | `wpf-fluent-ui` |
-| Only platform shell, deployment, or native UI structure | `maui-patterns`, `winui3-patterns`, or `uwp-patterns` |
+| Only platform shell, deployment, or native UI structure | `winui3-patterns` |
 | Only one MVVM testing task | `mstest-mvvm-testing-patterns` |
 
 ## Required Inputs
@@ -45,7 +45,6 @@ Agent uses this bundle for MVVM requests that require routing across manual MVVM
 
 | Request Signal | Use Bundle | Route Detail |
 |---|---|---|
-| View-model structure, state, and separation of concerns | Yes | `mvvm-patterns-dotnet` |
 | Bindings, converters, templates, or update timing | Yes | `databinding-patterns` |
 | Commands, behaviors, gesture handling, or async actions | Yes | `commands-behaviors-patterns` |
 | Activation, navigation, disposal, or message cleanup | Yes | `viewmodel-lifecycle` |
@@ -72,7 +71,6 @@ Agent uses this bundle for MVVM requests that require routing across manual MVVM
 | Repeated property notification and command plumbing | Yes | `communitytoolkit-mvvm` |
 | Team needs standard MVVM patterns with low custom infrastructure | Yes | `communitytoolkit-mvvm` |
 | Project needs custom generated attributes, wrappers, or diagnostics | Yes | `roslyn-mvvm-source-generators` |
-| Project has a small view-model count and explicit handwritten code aids maintenance | No | `mvvm-patterns-dotnet` |
 | Roslyn complexity outweighs boilerplate savings | No | `communitytoolkit-mvvm` or manual MVVM |
 
 ## Decision Matrix: Platform Selection
@@ -83,13 +81,13 @@ Agent uses this bundle for MVVM requests that require routing across manual MVVM
 | Cross-platform mobile and desktop target | Weak fit | Best fit | Weak fit | Weak fit |
 | Native current WindowsAppSDK desktop experience | Partial fit | Partial fit | Best fit | Weak fit |
 | Existing shipped legacy Windows Store app | Weak fit | Partial fit | Migration target | Best fit |
-| Route skill | `wpf-fluent-ui` | `maui-patterns` | `winui3-patterns` | `uwp-patterns` |
+| Route skill | `wpf-fluent-ui` | None | `winui3-patterns` | None |
 
 ## Decision Order
 
 | Decision | Agent Action |
 |---|---|
-| Platform selection | Agent selects `wpf-fluent-ui`, `maui-patterns`, `winui3-patterns`, or `uwp-patterns` first. |
+| Platform selection | Agent selects `wpf-fluent-ui` or `winui3-patterns` first when a matching skill exists. |
 | Framework selection | Agent chooses manual MVVM, CommunityToolkit, or Prism from app size, shell complexity, and boilerplate targets. |
 | Implementation approach | Agent adds binding, commands, lifecycle, validation, and testing skills after framework selection. |
 | Generator choice | Agent applies `communitytoolkit-mvvm` before `roslyn-mvvm-source-generators` unless custom generation requirements exist. |

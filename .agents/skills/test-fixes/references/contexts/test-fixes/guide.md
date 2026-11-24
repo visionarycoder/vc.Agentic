@@ -28,7 +28,6 @@ Agent acts as the primary mixed-concern testing skill after `testing-intake-rout
 |---|---|
 | User asks only for assertion analysis | Use `assertion-quality` |
 | User asks only for test smells | Use `test-smell-detection` |
-| User asks only for gap analysis | Use `test-gap-analysis` |
 | User asks to create or execute tests | Use test authoring or run-test tooling directly |
 
 ## Routing Rules
@@ -50,8 +49,6 @@ Agent acts as the primary mixed-concern testing skill after `testing-intake-rout
 
 | Area | Specialized skill source | Router reference |
 |---|---|---|
-| Pragmatic anti-pattern audit | `.github/skills/test-anti-patterns/SKILL.md` | `references/test-analysis-routing-table.md` |
-| Mutation-style gap analysis | `.github/skills/test-gap-analysis/SKILL.md` | `references/test-analysis-routing-table.md` |
 | Academic 19-smell catalog review | `.github/skills/test-smell-detection/SKILL.md` | `references/test-analysis-routing-table.md` |
 | Assertion depth/diversity audit | `.github/skills/assertion-quality/SKILL.md` | `references/test-analysis-routing-table.md` |
 
@@ -59,8 +56,6 @@ Agent acts as the primary mixed-concern testing skill after `testing-intake-rout
 
 | User Request Contains | Route To | Reason |
 |---|---|---|
-| "pragmatic" / "clean code" | `test-anti-patterns` | Practical pattern audit |
-| "mutation" / "escaped defect" | `test-gap-analysis` | Coverage gap detection |
 | "test smell" / "academic" | `test-smell-detection` | 19-smell catalog |
 | "assertion depth" / "assertion diversity" | `assertion-quality` | Assertion analysis |
 
@@ -91,5 +86,5 @@ Agent performs:
 
 - This bundle does not generate new tests directly
 - This bundle does not run test frameworks by itself
-- For writing tests use `code-testing-agent` or `mstest-test-authoring`
+- For writing tests use `code-testing-agent`
 - For executing tests use run-tests tooling.

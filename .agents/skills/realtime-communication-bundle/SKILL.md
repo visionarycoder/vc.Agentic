@@ -28,7 +28,6 @@ Agent uses this bundle for real-time bidirectional communication using SignalR o
 
 | Track | Specialist Skill | Agent Uses When |
 |---|---|---|
-| SignalR | `signalr-patterns` | Hubs, connection lifecycle, groups, scaling in scope |
 
 ## Workflow
 

@@ -26,7 +26,6 @@ Agent designs knowledge-graph structures, graph-store choices, and traversal que
 
 | Condition | Route |
 |---|---|
-| Prompt needs taxonomy depth and semantic axioms more than traversal patterns | Use `ontology-design-patterns` |
 | Prompt needs star-schema reporting and additive measures | Use `semantic-modeling-standards` |
 | Prompt needs naming cleanup only | Use `terminology-normalization` |
 | Prompt needs one-hop CRUD tables with no graph question | Use relational modeling patterns |

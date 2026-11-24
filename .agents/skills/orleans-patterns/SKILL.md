@@ -28,7 +28,6 @@ Apply Orleans collaboration patterns with explicit grain messaging, stream topol
 
 | Condition | Route |
 |---|---|
-| Work focuses on base grain persistence or silo membership only | Use `orleans-virtual-actors` |
 | Work uses broker consumers outside Orleans runtime collaboration | Use broker or messaging guidance |
 | Work uses ASP.NET request scoping with no Orleans actor interaction | Use web app or Web API guidance |
 | Work targets workflow schedulers driven by cron semantics | Use Quartz skills |

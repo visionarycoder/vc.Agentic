@@ -22,13 +22,10 @@ Agent uses this skill for endpoints or tools that stream multiple JSON texts ove
 
 | Endpoint returns one JSON document only | Use `rfc-8259-compliance` |
 
-| Error contract changes before stream start | Pair with `rfc-9457-compliance` |
-
 ## When Not to Use
 
 | User prompt | Route |
 |---|---|
-| Request is broader than this skill and suite routing is still unclear | Use `webapi-intake-router` first |
 | Request belongs to a narrower specialist than this skill | Use that narrower specialist |
 | Request is outside this skill's suite or concern | Use the correct suite router or execution skill |
 

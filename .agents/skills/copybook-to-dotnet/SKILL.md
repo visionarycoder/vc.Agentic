@@ -28,8 +28,6 @@ Agent generates deterministic C# models, metadata, and tests from COBOL copybook
 
 | Condition | Route |
 |---|---|
-| Work needs copybook parsing or validation only | Use `mainframe-copybook-parsing` |
-| Work needs byte-to-value conversion for raw mainframe files | Use `copybook-data-conversion` |
 | Work needs handwritten domain models with no generation path | Use direct C# authoring |
 | Work targets non-.NET consumers only | Use platform-specific generation |
 

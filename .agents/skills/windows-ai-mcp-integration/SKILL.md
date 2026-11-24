@@ -30,7 +30,6 @@ Agent integrates Windows AI connectors through Windows ODR discovery, user-appro
 |---|---|
 | Work only creates a general MCP server or client | Use `mcp-integration-patterns` |
 | Work only scaffolds a C# MCP server | Use `mcp-csharp-create` |
-| Work focuses on Foundry Local prompt loops or local model catalog usage | Use `windows-ai-foundry-local` |
 | Work does not target Windows ODR or Windows-local inference | Use a platform-neutral MCP or AI integration skill |
 
 ## Required Inputs

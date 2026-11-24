@@ -56,7 +56,6 @@ Agent chooses the smallest correct routing surface before loading execution skil
 | Request shape | Domain router | Primary concern |
 |---|---|---|
 | Decomposition, Manager, Engine, Access, component boundaries | `vbd-intake-router` | VBD architecture and authoring |
-| Controllers, endpoints, authorization, request/response API behavior | `webapi-intake-router` | Web API design and remediation |
 | Markdown, instructions, prompts, skills, links, front matter | `documentation-intake-router` | Documentation governance and remediation |
 | Test quality, coverage, assertions, gaps, smells | `testing-intake-router` | Test analysis and remediation |
 | Broad hardening, CWE families, multi-theme vulnerability cleanup | `security-intake-router` | Security routing and remediation |

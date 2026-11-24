@@ -26,7 +26,6 @@ Agent structures glossary, catalog, and data-dictionary assets with explicit own
 
 | Condition | Route |
 |---|---|
-| Prompt needs formal classes, axioms, or RDF or OWL semantics | Use `ontology-design-patterns` |
 | Prompt needs synonym cleanup and canonical naming only | Use `terminology-normalization` |
 | Prompt needs DAX, calculation groups, or Fabric storage design | Use `semantic-layer-fabric` |
 | Prompt needs fact and dimension schema design | Use `semantic-modeling-standards` |

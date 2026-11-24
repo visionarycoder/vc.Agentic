@@ -31,7 +31,6 @@ Agent uses this skill for external JSON payloads, serializers, parsers, examples
 
 | User prompt | Route |
 |---|---|
-| Request is broader than this skill and suite routing is still unclear | Use `webapi-intake-router` first |
 | Request belongs to a narrower specialist than this skill | Use that narrower specialist |
 | Request is outside this skill's suite or concern | Use the correct suite router or execution skill |
 

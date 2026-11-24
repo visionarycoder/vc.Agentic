@@ -28,10 +28,7 @@ Agent implements WinUI 3 desktop features with Windows App SDK, native Fluent co
 
 | Condition | Route |
 |---|---|
-| Agent maintains legacy UWP code. | Agent uses `uwp-patterns`. |
-| Agent builds cross-platform mobile or desktop UI. | Agent uses `maui-patterns`. |
 | Agent updates WPF views or templates. | Agent uses `wpf-fluent-ui`. |
-| Agent focuses on automation coverage only. | Agent uses `ui-testing-patterns`. |
 
 ## Required Inputs
 

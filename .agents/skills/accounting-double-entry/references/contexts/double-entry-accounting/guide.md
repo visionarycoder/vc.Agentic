@@ -26,7 +26,6 @@ Agent applies foundational double-entry rules, ledger structure, and posting con
 | Prompt or Code Shape | Route |
 |---|---|
 | Work item covers approval states or posting workflow only | Agent uses `accounting-journal-entry-patterns` |
-| Work item covers reconciliation investigation only | Agent uses `accounting-reconciliation-patterns` |
 | Work item covers period close orchestration only | Agent uses `accounting-closing-cycle-patterns` |
 | Work item covers audit evidence or segregation controls only | Agent uses `audit-trail-compliance` |
 

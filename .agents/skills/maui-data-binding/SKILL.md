@@ -31,7 +31,6 @@ and treat binding warnings as build errors.
 ## When Not to Use
 
 - **CollectionView layouts / templates** — use the `maui-collectionview` skill
-- **Shell navigation parameters** — use the `maui-shell-navigation` skill
 - **Service registration / DI** — use the `maui-dependency-injection` skill
 - **Property-change-triggered animations** — use built-in [.NET MAUI animation APIs](https://learn.microsoft.com/dotnet/maui/user-interface/animation/basic)
 

@@ -31,7 +31,6 @@ Agent composes reusable business rules and query predicates with hand-rolled spe
 | One short predicate appears once in one method | Keep the local lambda |
 | Rule logic mutates state instead of filtering or asserting | Use domain methods or handlers instead |
 | Query needs only projection tuning or include strategy | Use `optimizing-ef-core-queries` |
-| Work item asks only for repository and transaction pattern | Use `repository-unitofwork-efcore` |
 
 ## Required Inputs
 

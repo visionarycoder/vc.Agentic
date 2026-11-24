@@ -51,11 +51,11 @@ Agent routes generic .NET work to one primary implementation skill after domain 
 |---|---|---|
 | Dependency injection or lifetime design | `dotnet-dependency-injection-standards` | none |
 | Validation flow or validators | `dotnet-validation-standards` | `dotnet-exception-handling-standards` |
-| Structured logging or log design | `dotnet-logging-standards` | `dotnet-telemetry-standards` |
+| Structured logging or log design | `dotnet-logging-standards` | none |
 | Performance-sensitive implementation | `dotnet-performance-standards` | `dotnet-analyzing-performance` |
 | Generic DTO design outside VBD scope | `dotnet-dto-standards` | `dotnet-mapping-standards` |
 | Mapping design | `dotnet-mapping-standards` | `dotnet-dto-standards` |
-| Resilience and retries | `dotnet-resilience-standards` | `dotnet-api-client-resilience` |
+| Resilience and retries | `dotnet-api-client-resilience` | none |
 | Caching design | `dotnet-caching-patterns` | none |
 | Channel-based concurrency | `dotnet-channels-patterns` | `dotnet-cancellation-token-standards` |
 | Source-generated regex (.NET 7+) | `dotnet-source-generated-regex` | none |

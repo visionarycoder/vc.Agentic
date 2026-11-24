@@ -29,7 +29,6 @@ Agent designs Blazor applications with explicit hosting choices, component bound
 | Condition | Route |
 |---|---|
 | UI stack is Angular, Vue, or React | Use the matching frontend skill |
-| Task focuses on server API contracts only | Use `dotnet-webapi` |
 | App needs extensive offline-first browser logic as the primary architecture driver | Use a dedicated SPA pattern review |
 | Task concerns WPF desktop composition | Use the matching WPF skill |
 

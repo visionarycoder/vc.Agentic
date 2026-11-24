@@ -106,7 +106,6 @@ including what `aspire.config.json` contains and what to do if `aspire init` fai
 | Skeleton dropped, resources need wiring | → `aspireify` skill (in-plugin or project-local) |
 | Skeleton dropped, validate it starts | → `aspire-orchestration` (run `aspire start`) |
 | New project from template, ready to run | → `aspire-orchestration` |
-| User asks to deploy after init | → `aspire-deployment` |
 | User asks for logs/traces after init | → `aspire-monitoring` |
 | Existing AppHost detected — do NOT run init | → `aspireify` (re-wire) or `aspire-orchestration` (lifecycle) |
 

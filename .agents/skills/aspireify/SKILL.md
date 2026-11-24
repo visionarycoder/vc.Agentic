@@ -127,7 +127,7 @@ declared beyond the stub):
 | Existing repo with services + new AppHost | Repo has `.csproj`/`package.json` projects but AppHost references none | High |
 
 If the AppHost already has wired resources and the user wants to **start/stop**
-the app → `aspire-orchestration`. If the user wants to **deploy** → `aspire-deployment`.
+the app → `aspire-orchestration`.
 
 ## Language Support
 
@@ -292,7 +292,6 @@ Full flow in [references/validation.md](references/validation.md).
 |----------|----------|
 | AppHost skeleton not yet dropped | → `aspire-init` skill |
 | Day-to-day start/stop/wait/restart | → `aspire-orchestration` skill |
-| Publish, deploy, destroy, pipeline steps | → `aspire-deployment` skill |
 | Logs, traces, metrics, dashboard, browser log inspection | → `aspire-monitoring` skill |
 | Deployed (Azure/AKS) app diagnostics | → `azure-diagnostics` skill (azure-skills) |
 

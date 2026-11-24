@@ -111,7 +111,6 @@ public sealed class CustomerEditorViewModel : INotifyPropertyChanged
 | Platform | Hook | Route |
 |---|---|---|
 | WPF | Bind toolkit view models into standard WPF bindings and validation flows. | `wpf-mvvm-implementation` |
-| .NET MAUI | Pair toolkit view models with Shell navigation and handler customization. | `maui-patterns` |
 | WinUI 3 | Pair toolkit view models with `x:Bind`, `NavigationView`, and WindowsAppSDK app structure. | `winui3-patterns` |
 
 ## MCP Hooks

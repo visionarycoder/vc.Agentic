@@ -22,7 +22,6 @@ they only fill gaps and never override a value the user set explicitly.
 
 ## When Not to Use
 
-- User wants to actually create the project — route to `template-instantiation`
 - User wants to find or compare templates — route to `template-discovery` or `template-comparison`
 - User wants to author or validate a custom template — route to `template-authoring` or `template-validation`
 

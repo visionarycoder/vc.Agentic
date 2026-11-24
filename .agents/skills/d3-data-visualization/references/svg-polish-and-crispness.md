@@ -160,7 +160,6 @@ Before calling an SVG visualization finished, check:
 
 - `../SKILL.md`
 - `../../visualization-strategy-and-critique/SKILL.md`
-- `../../accessibility-and-inclusive-visualization/SKILL.md`
 - `../../testing-data-visualizations/SKILL.md`
 
 ## Source Links

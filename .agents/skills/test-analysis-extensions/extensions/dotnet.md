@@ -18,7 +18,7 @@ tags:
 ---
 # .NET Test Frameworks Reference (MSTest, xUnit, NUnit, TUnit)
 
-Reference data for analyzing .NET test code. Used by the polyglot test analysis skills (`assertion-quality`, `test-anti-patterns`, `test-gap-analysis`, `test-smell-detection`, `test-tagging`).
+Reference data for analyzing .NET test code. Used by the polyglot test analysis skills (`assertion-quality`, `test-smell-detection`, `test-tagging`).
 
 ## Capability tags
 

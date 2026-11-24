@@ -37,7 +37,6 @@ Agent treats 10 as the default ceiling, not an arbitrary style preference.
 |---|---|
 | Method is long but has low branching (e.g., a long sequential data mapping) | Use `code-smell-detection` (Long Method) instead |
 | Complexity comes from class-level or architectural coupling, not one method | Use `design-smell-detection` |
-| Diagnostic already reported as CA1502 by a code-quality gate | Use `roslyn-ca-code-quality-fixes` |
 
 ## Computing CC
 
@@ -79,7 +78,6 @@ Agent relies on the in-repo analyzer for automated enforcement (agent should not
 - `CQ104` (`src/ifx/Ifx.Analyzers/CodeQuality/Cq104TooHighCyclomaticComplexity.cs`) — reports a **warning** when CC is greater than `cq104_warning_threshold` (default 10) and at or below `cq105_error_threshold` (default 15).
 - `CQ105` (same file) — reports an **error** when CC exceeds `cq105_error_threshold` (default 15).
 - Both thresholds are configurable per project via `.editorconfig` (`cq104_warning_threshold`, `cq105_error_threshold`).
-- For the well-known equivalent legacy rule name, see `roslyn-ca-code-quality-fixes` (CA1502 — Avoid excessive complexity).
 
 ## Verification Checklist
 

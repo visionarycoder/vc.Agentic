@@ -63,7 +63,7 @@ Agent uses this bundle for AI and ML specific weaknesses in .NET services that c
 | CWE-116 | Not yet covered | Prompt and output normalization gaps leave hostile control tokens intact. |
 | CWE-250 | Not yet covered | AI agent actions run with broader privileges than the caller or task policy. |
 | CWE-434 | `cwe-miscellaneous-security-fixes` | Model, prompt-template, or embedding artifact upload accepts hostile file types or content. |
-| CWE-502 | `cwe-data-protection-fixes` | Serialized or pickled model artifacts deserialize from untrusted sources. |
+| CWE-502 | Not yet covered | Serialized or pickled model artifacts deserialize from untrusted sources. |
 | CWE-862 | `cwe-authentication-authz-fixes` | Tool invocation or agent action lacks per-action authorization. |
 | CWE-918 | `cwe-miscellaneous-security-fixes` | Agentic fetch, browse, or connector features let the model reach internal URLs. |
 | CWE-1336 | Not yet covered | Prompt-construction mistakes create template or expression injection in transformation logic. |

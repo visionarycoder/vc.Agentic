@@ -30,7 +30,6 @@ Use this skill to design, implement, or refactor GraphQL APIs in .NET with expli
 |---|---|
 | User exposes only fixed CRUD endpoints with simple filtering and no client-driven shape. | Use REST guidance first. |
 | User needs document-store query language design outside HTTP API scope. | Use the data-access skill that matches the store. |
-| User asks for SignalR hub design with no GraphQL contract. | Use `signalr-patterns`. |
 | User needs OpenAPI-only documentation or controller route cleanup. | Use Web API skills. |
 
 ## Required Inputs

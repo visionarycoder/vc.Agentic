@@ -13,7 +13,7 @@ metadata:
 
 # Roslyn Layer Rules
 
-Load this skill when the `developer` agent works in layer `roslyn` (write scope `src/ifx/**`). Also load `roslyn-analyzer-authoring`, `roslyn-codefix-authoring`, and `roslyn-source-generator-authoring`.
+Load this skill when the `developer` agent works in layer `roslyn` (write scope `src/ifx/**`). Also load `roslyn-codefix-authoring` and `roslyn-source-generator-authoring`.
 
 The Roslyn developer builds the guardrails: analyzers that turn the layer call rules and manager logic limits into compile errors, plus code fixes and generators the team needs.
 

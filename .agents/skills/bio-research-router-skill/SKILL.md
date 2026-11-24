@@ -63,12 +63,11 @@ Normalize the key entities before deep retrieval.
 
 Common patterns:
 
-- gene or protein: `bio-ncbi-clinicaltables-skill`, `bio-ensembl-skill`, `bio-uniprot-skill`
-- disease or phenotype: `bio-efo-ontology-skill`, `bio-opentargets-skill`
-- variant: `bio-clinvar-variation-skill`, `bio-ensembl-skill`, cohort-specific PheWAS skills
-- compound or metabolite: `bio-chembl-skill`, `bio-pubchem-pug-skill`, `bio-chebi-skill`, `bio-hmdb-skill`
-- pathway or function: `bio-reactome-skill`, `bio-quickgo-skill`, `bio-string-skill`
-- accession or dataset identifier: `bio-ncbi-datasets-skill`, `bio-biostudies-arrayexpress-skill`, `bio-pride-skill`, `bio-metabolights-skill`
+- gene or protein: `bio-ncbi-clinicaltables-skill`, `bio-uniprot-skill`
+- disease or phenotype: `bio-opentargets-skill`
+- variant: `bio-clinvar-variation-skill`, cohort-specific PheWAS skills
+- compound or metabolite: `bio-chebi-skill`, `bio-hmdb-skill`
+- pathway or function: `bio-string-skill`
 
 Do not start broad evidence collection until the important entities are stable enough to route correctly.
 
@@ -81,17 +80,15 @@ Examples:
 - target or disease evidence review:
   `bio-opentargets-skill`, `bio-gwas-catalog-skill`, `bio-gtex-eqtl-skill`, `bio-human-protein-atlas-skill`
 - variant interpretation:
-  `bio-clinvar-variation-skill`, `bio-gnomad-graphql-skill`, `bio-ensembl-skill`, one or more cohort PheWAS skills
+  `bio-clinvar-variation-skill`, `bio-gnomad-graphql-skill`, one or more cohort PheWAS skills
 - locus-to-gene mapping:
   `bio-locus-to-gene-mapper-skill`, or its component genetics skills when the user wants a custom workflow
 - structure and mechanism:
-  `bio-alphafold-skill`, `bio-rcsb-pdb-skill`, `bio-uniprot-skill`, `bio-reactome-skill`
-- chemistry and pharmacology:
-  `bio-chembl-skill`, `bio-bindingdb-skill`, `bio-pubchem-pug-skill`, `bio-pharmgkb-skill`
+  `bio-rcsb-pdb-skill`, `bio-uniprot-skill`
 - clinical and translational:
-  `bio-clinicaltrials-skill`, `bio-cbioportal-skill`, `bio-civic-skill`
+  `bio-clinicaltrials-skill`, `bio-civic-skill`
 - literature and dataset discovery:
-  `bio-ncbi-entrez-skill`, `bio-ncbi-pmc-skill`, `bio-biorxiv-skill`, `bio-biostudies-arrayexpress-skill`, `bio-ncbi-datasets-skill`
+  `bio-ncbi-entrez-skill`, `bio-biorxiv-skill`
 
 Prefer direct lookups before expensive multi-step chains.
 

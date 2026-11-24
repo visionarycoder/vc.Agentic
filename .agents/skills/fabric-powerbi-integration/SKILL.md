@@ -35,10 +35,6 @@ Agent connects Fabric data items to Power BI semantic and reporting experiences.
 
 |---|---|
 
-| User asks for raw ingestion or ETL design | Use `fabric-data-factory-patterns` |
-
-| User asks for lakehouse storage design only | Use `fabric-lakehouses` |
-
 | User asks for real-time event routing only | Use `fabric-realtime-analytics` |
 
 ## Required Inputs

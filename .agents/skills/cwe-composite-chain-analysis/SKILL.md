@@ -33,7 +33,7 @@ Agent uses this skill to decompose composites, where all component weaknesses ex
 
 | Scope | CWE | MITRE Title | Verified Components | Route Skills |
 |---|---:|---|---|---|
-| Composite | 689 | Permission Race Condition During Resource Copy | 362 Concurrent Execution using Shared Resource with Improper Synchronization; 732 Incorrect Permission Assignment for Critical Resource | `cwe-concurrency-fixes` + `cwe-resource-management-fixes` |
+| Composite | 689 | Permission Race Condition During Resource Copy | 362 Concurrent Execution using Shared Resource with Improper Synchronization; 732 Incorrect Permission Assignment for Critical Resource | `cwe-resource-management-fixes` |
 | Composite | 352 | Cross-Site Request Forgery (CSRF) | 346 Origin Validation Error; 441 Unintended Proxy or Intermediary; 613 Insufficient Session Expiration; 642 External Control of Critical State Data | `cwe-channel-fixes` + `cwe-authentication-authz-fixes` + `cwe-input-validation-fixes` |
 | Composite | 384 | Session Fixation | 346 Origin Validation Error; 441 Unintended Proxy or Intermediary; 472 External Control of Assumed-Immutable Web Parameter | `cwe-channel-fixes` + `cwe-authentication-authz-fixes` + `cwe-input-validation-fixes` |
 | Chain | 680 | Integer Overflow to Buffer Overflow | 190 Integer Overflow or Wraparound → 119 Improper Restriction of Operations within the Bounds of a Memory Buffer | `cwe-resource-management-fixes` + `cwe-memory-safety-fixes` |

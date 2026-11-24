@@ -25,7 +25,6 @@ Use this when the screen needs coordinated views, drill-down, focus-plus-context
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../accessibility-and-inclusive-visualization/SKILL.md`
 - `../../../references/foundations/mobile-first-responsive-visualization.md`
 
 ## Source Links

@@ -76,7 +76,6 @@ Agent uses this controller for broad security workflows that need scanning, prio
 | Input validation | Bounds, overflow, model validation, trust-boundary validation gaps | Medium | `cwe-input-validation-fixes` |
 | Authentication and authorization | CSRF, access control, auth bypass, missing authorization, IDOR | Critical or High | `cwe-authentication-authz-fixes` |
 | Injection attacks | SQL injection, command injection, XSS, code execution, unsafe HTML sinks | Critical | `cwe-injection-attack-fixes` |
-| Data protection | Secrets exposure, unsafe deserialization, information disclosure, credential storage | Critical or High | `cwe-data-protection-fixes` |
 | Resource management | DoS, allocation limits, logging injection, concurrency exhaustion, lifecycle misuse | Medium or Low | `cwe-resource-management-fixes` |
 | Miscellaneous security | Path traversal, SSRF, open redirect, null dereference, upload control gaps | High or Medium | `cwe-miscellaneous-security-fixes` |
 | Format and external control | Search-path control, DLL hijacking, format-string or external resolution flaws | High or Medium | `cwe-format-external-fixes` |
@@ -97,7 +96,6 @@ Agent uses this controller for broad security workflows that need scanning, prio
 | "validation" / "bounds" / "buffer" / "overflow" | `cwe-input-validation-fixes` | Validation, bounds, memory-safety style input issues |
 | "authentication" / "authorization" / "CSRF" / "access control" | `cwe-authentication-authz-fixes` | Authentication, authorization, CSRF, access-control issues |
 | "injection" / "SQL" / "command" / "XSS" / "code execution" | `cwe-injection-attack-fixes` | Command, code, HTML, SQL, related injection issues |
-| "disclosure" / "deserialization" / "secret" / "leak" | `cwe-data-protection-fixes` | Information disclosure, deserialization, secret handling, ownership leaks |
 | "logging injection" / "DoS" / "resource" / "privilege" | `cwe-resource-management-fixes` | Logging injection, integer/resource misuse, privilege, DoS, lifecycle issues |
 | "path traversal" / "upload" / "redirect" / "SSRF" / "null pointer" | `cwe-miscellaneous-security-fixes` | Path traversal, upload, null-deref, open redirect, SSRF, filesystem permission issues |
 | "search path" / "DLL hijacking" / "format string" | `cwe-format-external-fixes` | External search-path and format-specific issues |

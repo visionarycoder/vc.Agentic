@@ -27,7 +27,6 @@ Agent designs dimensional analytics models with explicit grain, conformed dimens
 | Condition | Route |
 |---|---|
 | Prompt needs DAX, RLS, or Fabric storage-mode design | Use `semantic-layer-fabric` |
-| Prompt needs ontology, RDF, or linked-data semantics | Use `ontology-design-patterns` |
 | Prompt needs business stewardship and glossary governance only | Use `business-glossary-metadata` |
 | Prompt needs operational third-normal-form transaction design | Use relational application modeling patterns |
 

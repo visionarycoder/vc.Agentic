@@ -49,6 +49,5 @@ Agent routes Roslyn work to one primary authoring skill.
 
 | Intent | Primary skill |
 |---|---|
-| Diagnostic rule authoring | `roslyn-analyzer-authoring` |
 | Automated source edit or fix provider | `roslyn-codefix-authoring` |
 | Generated code from compile-time inputs | `roslyn-source-generator-authoring` |

@@ -144,7 +144,6 @@ The same rule applies to any "file in use", "cannot access the file", or
 | Custom resource commands (`WithCommand`, `ExecuteCommandResult`, `HttpCommandResultMode`) | → `aspireify` skill |
 | Lifecycle hooks (`SubscribeBeforeStart`, `SubscribeAfterResourcesCreated`, BeforeStart pipeline phase) | → `aspireify` skill |
 | Endpoint authoring (`WithEndpoint` updates, `ExcludeReferenceEndpoint` flag) | → `aspireify` skill |
-| Deploy, publish, pipeline steps, `aspire destroy` | → `aspire-deployment` skill |
 | Logs, traces, metrics, dashboard, `aspire dashboard run` | → `aspire-monitoring` skill |
 | Deployed app diagnostics | → `azure-diagnostics` skill (azure-skills) |
 

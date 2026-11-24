@@ -27,7 +27,6 @@ Agent uses this bundle for RFC-focused contract, payload, streaming, and JWT fix
 
 | User prompt | Route |
 |---|---|
-| Request is broader than this skill and suite routing is still unclear | Use `webapi-intake-router` first |
 | Request belongs to a narrower specialist than this skill | Use that narrower specialist |
 | Request is outside this skill's suite or concern | Use the correct suite router or execution skill |
 

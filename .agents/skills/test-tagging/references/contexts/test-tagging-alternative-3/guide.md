@@ -23,7 +23,7 @@ Analyze an existing test suite in any supported language and apply a standardize
 
 ## When Not to Use
 
-- Writing new tests from scratch (use `code-testing-agent` for any language, or `mstest-test-authoring` for MSTest)
+- Writing new tests from scratch (use `code-testing-agent` for any language)
 - Running or filtering tests (use `run-tests` for .NET; equivalent native runners elsewhere)
 - Migrating between test frameworks
 

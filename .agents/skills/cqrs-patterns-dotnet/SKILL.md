@@ -15,13 +15,6 @@ metadata:
 
 Agent separates write behavior from read behavior with hand-rolled contracts and VBD-owned boundaries.
 
-## Routing
-
-| Condition | Route |
-|---|---|
-| Work asks only for EF Core repository design | Use `repository-unitofwork-efcore` |
-| Work asks only for result modeling | Use `result-types-dotnet` |
-
 Skip this skill for trivial, stable CRUD.
 
 ## Workflow

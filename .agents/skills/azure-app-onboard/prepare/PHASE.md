@@ -23,7 +23,6 @@ Invoked by the `azure-app-onboard` orchestrator at Phase 2 when `prereq-output.j
 | IaC generation from a completed plan | `azure-app-onboard` Step 7 (scaffold) |
 | Deploying resources to Azure | `azure-app-onboard` Step 9 (deploy) |
 | Optimizing existing Azure spend | `cost-optimization` from the optional `azure-cost` plugin |
-| Estimating VM-specific costs | `azure-compute` |
 | Enterprise landing zone architecture | `azure-enterprise-infra-planner` |
 
 If `cost-optimization` is unavailable, explain that it is provided by the

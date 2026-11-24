@@ -68,7 +68,6 @@ Pass: Zero new build errors. Zero test failures.
 | "validation" / "bounds" / "buffer" / "overflow" | `cwe-input-validation-fixes` | Validation, bounds, memory-safety style input issues |
 | "authentication" / "authorization" / "CSRF" / "access control" | `cwe-authentication-authz-fixes` | Authentication, authorization, CSRF, access-control issues |
 | "injection" / "SQL" / "command" / "XSS" / "code execution" | `cwe-injection-attack-fixes` | Command, code, HTML, SQL, related injection issues |
-| "disclosure" / "deserialization" / "secret" / "leak" | `cwe-data-protection-fixes` | Information disclosure, deserialization, secret handling, ownership leaks |
 | "logging injection" / "DoS" / "resource" / "privilege" | `cwe-resource-management-fixes` | Logging injection, integer/resource misuse, privilege, DoS, lifecycle issues |
 | "path traversal" / "upload" / "redirect" / "SSRF" / "null pointer" | `cwe-miscellaneous-security-fixes` | Path traversal, upload, null-deref, open redirect, SSRF, filesystem permission issues |
 | "search path" / "DLL hijacking" / "format string" | `cwe-format-external-fixes` | External search-path / format-specific issues |

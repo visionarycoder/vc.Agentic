@@ -19,7 +19,6 @@ Agent uses this bundle for semantic data work spanning terminology, ontology str
 
 | Prompt Signal | Use Bundle | Primary Route |
 |---|---|---|
-| "ontology", "taxonomy", "class model", "controlled vocabulary" | Yes | `ontology-design-patterns` |
 | "semantic model", "Fabric model", "Power BI model", "metrics layer" | Yes | `semantic-layer-fabric` |
 | "business glossary", "term catalog", "definition governance" | Yes | `business-glossary-metadata` |
 | "term harmonization", "synonym cleanup", "canonical naming" | Yes | `terminology-normalization` |
@@ -56,7 +55,6 @@ Agent uses this bundle for semantic data work spanning terminology, ontology str
 
 | Concern | Specialist Skill | Primary Output |
 |---|---|---|
-| Class, property, and ontology reuse patterns | `ontology-design-patterns` | Ontology structure |
 | Fabric-ready semantic layer design | `semantic-layer-fabric` | Measures, dimensions, model contracts |
 | Business term stewardship and metadata | `business-glossary-metadata` | Governed glossary |
 | Canonical term alignment and synonym reduction | `terminology-normalization` | Normalized vocabulary |
@@ -90,7 +88,6 @@ Agent uses this bundle for semantic data work spanning terminology, ontology str
 |---|---|---|---|---|
 | 1 | Raw tables, files, events | Extract candidate nouns, verbs, measures, codes | Source term inventory | `terminology-normalization` |
 | 2 | Source term inventory | Resolve synonyms, abbreviations, collisions | Canonical terminology set | `business-glossary-metadata` |
-| 3 | Canonical terminology set | Formalize concepts, relations, constraints | Ontology classes and properties | `ontology-design-patterns` |
 | 4 | Ontology classes and properties | Shape facts, dimensions, metrics, hierarchies | Semantic model | `semantic-layer-fabric` |
 | 5 | Semantic model | Map intents, entities, filters, metrics to query grammar | NLQ contract | `nlp-to-query-translation` |
 | 6 | NLQ contract | Execute governed query against model or graph | Natural-language query experience | `semantic-modeling-standards` |

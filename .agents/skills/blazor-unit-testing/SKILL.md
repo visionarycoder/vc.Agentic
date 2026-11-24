@@ -28,7 +28,7 @@ Agent tests Blazor components with bUnit and the repository's established .NET t
 | Condition | Route |
 |---|---|
 | The test drives a real browser or user journey | Use `blazor-ui-testing` |
-| The target is a pure service or view model | Use `xunit-test-generation` or `mstest-test-authoring` |
+| The target is a pure service or view model | Use `xunit-test-generation` |
 | The task selects a Blazor hosting model | Use `blazor-patterns` |
 
 ## Required Inputs

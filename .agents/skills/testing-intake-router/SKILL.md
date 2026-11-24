@@ -51,7 +51,5 @@ Agent routes testing requests to one primary testing skill.
 |---|---|---|
 | Mixed test quality or remediation request | `test-fixes` | none |
 | Unsure / alias entry for test analysis | `test-fixes-bundle` | none |
-| Anti-pattern audit | `test-anti-patterns` | none |
-| Missing cases or escaped defects | `test-gap-analysis` | none |
 | Assertion quality or depth | `assertion-quality` | none |
 | Academic smell review | `test-smell-detection` | none |

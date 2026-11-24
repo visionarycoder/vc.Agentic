@@ -21,8 +21,6 @@ Use for streaming ingestion, KQL database or Eventhouse design, event-driven das
 
 ## When Not to Use
 
-- Batch ETL only: use `fabric-data-factory-patterns`.
-- Alerting or trigger rules only: use `fabric-data-activator`.
 - Long-cycle warehouse modeling only: use lakehouse or warehouse guidance.
 
 ## Required Inputs
@@ -32,7 +30,7 @@ Gather before designing: event source, latency target, query pattern, destinatio
 ## Design Choices
 
 - Eventstream for continuous input, routing, and simple transformations; KQL database or Eventhouse for time-series and log storage.
-- Real-time detection that drives actions: Real-Time Analytics plus `fabric-data-activator`.
+- Real-time detection that drives actions: Real-Time Analytics.
 - Raw data landing once and serving many consumers: prefer the OneLake-connected real-time pattern, because unified storage and shared access reduce duplicate pipelines.
 - Add explicit field management and validation checkpoints for schema drift.
 ## Workflow

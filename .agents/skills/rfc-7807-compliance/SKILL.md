@@ -27,7 +27,6 @@ Agent uses this skill only for preserved legacy contracts. Agent uses RFC 9457 f
 
 | User prompt | Route |
 |---|---|
-| Request is broader than this skill and suite routing is still unclear | Use `webapi-intake-router` first |
 | Request belongs to a narrower specialist than this skill | Use that narrower specialist |
 | Request is outside this skill's suite or concern | Use the correct suite router or execution skill |
 
@@ -52,8 +51,6 @@ Agent uses this skill only for preserved legacy contracts. Agent uses RFC 9457 f
 |---|---|
 
 | Existing client contract depends on RFC 7807 behavior | Use this skill |
-
-| Endpoint migration moves toward current Problem Details semantics | Pair with `rfc-9457-compliance` |
 
 | New endpoint or new shared error handler | Do not use this skill |
 

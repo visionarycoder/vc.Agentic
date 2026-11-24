@@ -39,7 +39,6 @@ Test smells erode confidence in a test suite and inflate maintenance costs:
 
 ## When Not to Use
 
-- User wants a quick pragmatic test review (use `test-anti-patterns` — faster, covers the most common issues)
 - User wants to evaluate assertion diversity specifically (use `assertion-quality`)
 - User wants to find duplicated boilerplate across tests (use `exp-test-maintainability`)
 - User wants to write new tests from scratch (help them directly)

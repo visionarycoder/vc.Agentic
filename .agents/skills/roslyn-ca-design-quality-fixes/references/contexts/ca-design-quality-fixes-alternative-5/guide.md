@@ -86,7 +86,7 @@ Pass: All tests pass.
 ## Activation
 
 **USE FOR:** CA1051, CA1062, CA1303, CA1413 warnings
-**DO NOT USE FOR:** Other CA rules → `roslyn-ca-code-quality-fixes`, `roslyn-ca-perf-reliability-fixes`. CS errors with dedicated skill → `roslyn-cs8794-fix`. Security → `cwe-fixes-bundle`.
+**DO NOT USE FOR:** Other CA rules → `roslyn-ca-perf-reliability-fixes`. CS errors with dedicated skill → `roslyn-cs8794-fix`. Security → `cwe-fixes-bundle`.
 
 ## Overview
 

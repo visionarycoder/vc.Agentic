@@ -26,7 +26,6 @@ Agent uses this controller for MSTest warning remediation, version migration, an
 | User prompt | Route |
 |---|---|
 | User asks to write brand-new tests with no modernization scope | Use `test-fixes` or a test-authoring skill |
-| User asks for framework-agnostic smell taxonomy only | Use `test-anti-patterns` |
 | User asks for assertion analysis only | Use `assertion-quality` |
 | User asks for test execution only | Use `run-tests` |
 
@@ -159,7 +158,6 @@ Top 5 Files by Warning Count:
 |---|---|---|---|
 | 1 | Agent runs all tests in scope. | Run `dotnet test <solution-or-project>`. | Zero failing tests. |
 | 2 | Agent checks assertion quality. | Read `assertion-quality` guidance and inspect touched tests. | Assertion strengths and gaps are reported. |
-| 3 | Agent detects test anti-patterns. | Read `test-anti-patterns` guidance and inspect touched tests. | High-confidence smells and fixes are reported. |
 | 4 | Agent generates the quality report. | Review report content. | Report includes execution, assertions, smells, and modernization notes. |
 
 ### Verify Report Sections

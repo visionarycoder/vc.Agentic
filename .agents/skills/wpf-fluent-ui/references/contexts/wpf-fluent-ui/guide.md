@@ -27,7 +27,6 @@ Agent implements Fluent-styled WPF screens with thin views, reusable resources, 
 |---|---|
 | Agent works on WinUI 3 or UWP XAML. | Agent uses the matching Windows UI skill. |
 | Agent changes only view-model logic with no visual impact. | Agent uses `wpf-mvvm-implementation`. |
-| Agent focuses on automation only. | Agent uses `ui-testing-patterns`. |
 | Agent builds browser-based Fluent UI. | Agent uses the matching web UI skill. |
 
 ## Required Inputs

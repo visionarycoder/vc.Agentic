@@ -29,7 +29,6 @@ Agent applies production Roslyn source-generator patterns that scale across larg
 | User prompt | Route |
 |---|---|
 | User asks for a first generator scaffold or a simple single-file generator | Use `roslyn-source-generator-authoring` |
-| User asks for diagnostics without generated output | Use `roslyn-analyzer-authoring` |
 | User asks for IDE edits after diagnostics | Use `roslyn-codefix-authoring` |
 | User asks for runtime templating or reflection-based code creation | Use a runtime or build workflow |
 

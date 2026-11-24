@@ -22,7 +22,6 @@ This skill helps validate custom `dotnet new` templates for correctness before p
 ## When Not to Use
 
 - User wants to find or use existing templates — route to `template-discovery`
-- User wants to create a project — route to `template-instantiation`
 - User wants to create a template from an existing project — route to `template-authoring`
 
 ## Inputs

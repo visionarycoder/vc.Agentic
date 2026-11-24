@@ -26,7 +26,6 @@ Use this when the user is unsure what deserves unit coverage, how to test a char
 
 - `../SKILL.md`
 - `../../typescript-data-visualization-engineering/SKILL.md`
-- `../../accessibility-and-inclusive-visualization/SKILL.md`
 
 ## Source Links
 

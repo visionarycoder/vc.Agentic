@@ -44,7 +44,6 @@ Agent uses this bundle for requests that choose, combine, or implement core plat
 | API contract choice is open | Yes | Classify `graphql-dotnet` or `api-gateway-patterns` |
 | State model choice is open | Yes | Classify `event-sourcing-patterns` or CRUD baseline |
 | .NET UI stack choice is open | Yes | Classify `blazor-patterns` |
-| Packaging or hosting model is open | Yes | Classify `docker-dotnet` or `kubernetes-dotnet` |
 | Request spans two or more listed technologies | Yes | Coordinate order and integration edges |
 | Technology set is fixed and only bug fixing is needed | No | Use the active specialist skill directly |
 
@@ -56,8 +55,6 @@ Agent uses this bundle for requests that choose, combine, or implement core plat
 | `api-gateway-patterns` | YARP, Ocelot, API Management | Edge routing, aggregation, auth, policy, throttling | Gateway topology and route policy |
 | `event-sourcing-patterns` | Event sourcing and CQRS/ES | Audit trail, temporal replay, append-only domain flow | Event model and projection flow |
 | `blazor-patterns` | Blazor Server, WASM, Web App | .NET-first UI delivery and component reuse | Hosting mode and component pattern |
-| `docker-dotnet` | Container packaging for .NET apps | Portable runtime, build parity, image hardening | Dockerfile and container runtime pattern |
-| `kubernetes-dotnet` | Kubernetes orchestration | Multi-service scheduling, scaling, rollout control | Workload, config, and service topology |
 
 ## Decision Order
 
@@ -66,8 +63,6 @@ Agent uses this bundle for requests that choose, combine, or implement core plat
 | 1 | Client contract model | Query flexibility, endpoint count, client ownership | `graphql-dotnet` or REST baseline |
 | 2 | Domain state model | Audit depth, replay needs, write complexity | `event-sourcing-patterns` or CRUD baseline |
 | 3 | UI stack | .NET reuse, interactivity, SPA investment | `blazor-patterns` or existing Angular/Vue path |
-| 4 | Packaging | Environment parity, dependency isolation, release flow | `docker-dotnet` or native deployment |
-| 5 | Orchestration | Service count, autoscaling, ops maturity | `kubernetes-dotnet` or simpler hosting |
 | 6 | Edge topology | Cross-service ingress, policy centralization | `api-gateway-patterns` |
 
 ## Technology Selection Matrix

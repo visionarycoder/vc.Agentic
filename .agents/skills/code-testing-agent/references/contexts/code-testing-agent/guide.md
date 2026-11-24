@@ -24,8 +24,6 @@ Agent generates tests by matching project conventions, proving the tests compile
 
 | Coverage report analysis is the main task | Use `coverage-analysis` or `crap-score` |
 
-| MSTest-specific authoring or modernization is the main task | Use `mstest-test-authoring` |
-
 ## Strategy Matrix
 
 | Scope | Agent Strategy | Pass |

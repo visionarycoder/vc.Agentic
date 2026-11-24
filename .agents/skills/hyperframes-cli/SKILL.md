@@ -18,7 +18,7 @@ Everything runs through `npx hyperframes`. Requires Node.js >= 22 and FFmpeg.
 ## Workflow
 
 1. **Scaffold** — `npx hyperframes init my-video`
-2. **Write** — author HTML composition (see the `hyperframes` skill)
+2. **Write** — author HTML composition
 3. **Lint** — `npx hyperframes lint`
 4. **Visual inspect** — `npx hyperframes inspect`
 5. **Preview** — `npx hyperframes preview`

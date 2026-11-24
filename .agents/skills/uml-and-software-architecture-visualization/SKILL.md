@@ -120,7 +120,6 @@ For architecture consoles, schema explorers, state-machine inspectors, dependenc
 - Use `../typescript-data-visualization-engineering/SKILL.md` for typed graph models, renderer contracts, and browser architecture.
 - Use `../react-and-nextjs-data-visualization/SKILL.md` for React or Next.js integration.
 - Use `../d3-data-visualization/SKILL.md` for bespoke SVG geometry, annotation, and polish.
-- Use `../accessibility-and-inclusive-visualization/SKILL.md` for text alternatives, keyboard paths, contrast, and export accessibility.
 - Use `../testing-data-visualizations/SKILL.md` for visual regression, interaction, and export test strategy.
 - Use `../reports-pdfs-and-slide-automation/SKILL.md` for PDFs, decks, and document embedding.
 - Use `../../references/foundations/mobile-first-responsive-visualization.md` for mobile diagram layout, touch, keyboard, and responsive QA.

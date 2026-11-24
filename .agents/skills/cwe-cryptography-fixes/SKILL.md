@@ -18,7 +18,7 @@ Agent uses this bundle for algorithm, key, hash, IV, nonce, signature, and rando
 ## Activation
 
 **USE FOR:** CWE-327, CWE-328, CWE-321, CWE-323, CWE-326, CWE-329, CWE-347, CWE-330, CWE-338, CWE-335, CWE-336, CWE-337, CWE-759, CWE-760.
-**DO NOT USE FOR:** Certificate validation, cleartext transport, unsafe deserialization, or data-protection defects covered by `cwe-data-protection-fixes`; general authorization routing; style-only refactors.
+**DO NOT USE FOR:** Certificate validation, cleartext transport, or unsafe deserialization defects; general authorization routing; style-only refactors.
 
 ## Critical Rules
 

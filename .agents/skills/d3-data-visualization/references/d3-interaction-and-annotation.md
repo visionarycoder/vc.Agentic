@@ -22,7 +22,6 @@ Use this when the chart needs brushing, zooming, panning, drag interactions, or 
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../accessibility-and-inclusive-visualization/SKILL.md`
 
 ## Source Links
 

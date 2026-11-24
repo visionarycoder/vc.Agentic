@@ -22,7 +22,6 @@ Use this when reviewing an existing visualization or when a user says a chart "f
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../accessibility-and-inclusive-visualization/SKILL.md`
 
 ## Source Links
 

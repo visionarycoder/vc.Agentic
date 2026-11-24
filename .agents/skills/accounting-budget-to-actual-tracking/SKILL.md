@@ -25,14 +25,6 @@ Agent designs budget execution workflows with explicit authority, allotment, enc
 | Reporting feature needs budget versus actual variance analysis | Use this skill |
 | Fiscal logic needs budget amendments, transfers, or lapse-year treatment | Use this skill |
 
-## When Not to Use
-
-| Condition | Route |
-|---|---|
-| Work item focuses on broad governmental accounting standards | Use `accounting-public-sector` |
-| Work item focuses on fund setup and interfund flows | Use `accounting-fund-patterns` |
-| Work item focuses on annual financial statement and note assembly | Use `accounting-financial-reporting-gaap` |
-
 ## Required Inputs
 
 | Input | Required | Notes |

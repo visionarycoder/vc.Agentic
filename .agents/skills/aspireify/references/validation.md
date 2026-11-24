@@ -92,6 +92,3 @@ If the user plans to deploy next, suggest:
 aspire publish --list-steps
 aspire deploy --list-steps
 ```
-
-Then route them to `aspire-deployment` for the actual `aspire deploy` /
-`aspire publish` / `aspire destroy` workflow.

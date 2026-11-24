@@ -25,7 +25,6 @@ Agent applies indirect-tax accounting patterns for sales tax, use tax, nexus, so
 | Condition | Route |
 |---|---|
 | Work item covers journal drafting, approval, or posting without tax specialization | Use `accounting-journal-entry-patterns` |
-| Work item covers tie-out workflow without tax-domain rules | Use `accounting-reconciliation-patterns` |
 | Work item covers payroll withholding or income-tax accounting | Use a payroll or income-tax skill |
 
 ## Required Inputs

@@ -24,7 +24,6 @@ Agent authors `CodeFixProvider` implementations for repository analyzers. Agent 
 
 | User prompt | Route |
 |---|---|
-| User asks for a diagnostic with no automatic edit | Use `roslyn-analyzer-authoring` |
 | User asks for generated files at compile time | Use `roslyn-source-generator-authoring` |
 | User asks for a broad refactor with human choice | Use a refactor workflow |
 

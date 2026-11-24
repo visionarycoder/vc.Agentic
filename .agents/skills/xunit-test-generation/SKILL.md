@@ -27,7 +27,6 @@ Agent creates or updates xUnit tests for .NET production behavior.
 
 | Condition | Route |
 |---|---|
-| The project uses MSTest as its established runner | Use `mstest-test-authoring` or `mstest-test-authoring` |
 | The task tests rendered Blazor markup | Use `blazor-unit-testing` |
 | The task tests a browser journey | Use `blazor-ui-testing` |
 | The user requests execution only | Use `run-tests` |

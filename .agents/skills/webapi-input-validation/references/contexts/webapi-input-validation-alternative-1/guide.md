@@ -24,7 +24,7 @@ Agent standardizes request validation behavior for DTOs, route/query parameters,
 
 | User prompt | Route |
 |---|---|
-| Request is broader multi-concern WebAPI remediation | Use `webapi-fixes-bundle` via `webapi-intake-router` |
+| Request is broader multi-concern WebAPI remediation | Use `webapi-fixes-bundle` |
 | Request is primarily auth or authorization hardening | Use `webapi-authz-hardening` |
 | Request is primarily route shaping or compatibility migration | Use the matching WebAPI specialist |
 
@@ -32,7 +32,7 @@ Agent standardizes request validation behavior for DTOs, route/query parameters,
 
 | Topic | Rule |
 |---|---|
-| Entry ownership | This skill owns input-validation concerns after `webapi-intake-router` resolves scope. |
+| Entry ownership | This skill owns input-validation concerns for WebAPI requests. |
 | Scope control | Keep the skill focused on request validation and invalid-input behavior. |
 | Error contract | Validation failures align with the repository WebAPI error-contract rules. |
 | Specialist loading | Add other WebAPI specialists only when the request clearly expands beyond validation. |

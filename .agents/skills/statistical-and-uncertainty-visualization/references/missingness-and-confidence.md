@@ -22,7 +22,6 @@ Use this when incomplete data or confidence levels materially affect interpretat
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../accessibility-and-inclusive-visualization/SKILL.md`
 
 ## Source Links
 

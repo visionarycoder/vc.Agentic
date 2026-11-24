@@ -22,7 +22,6 @@ a comparison table.
 
 ## When Not to Use
 
-- User wants to create a project — route to `template-instantiation`
 - User wants to author or validate a custom template — route to `template-authoring` or `template-validation`
 - User just needs to find or inspect a single template — route to `template-discovery`
 
@@ -80,7 +79,7 @@ End with a decisive **Recommendation** line — never leave the user with just a
 
 > **Recommendation: `<template>`** — one sentence tying the choice to the user's stated scenario. (Pick the other if `<condition>`.)
 
-Then link to `template-instantiation` to create it. A comparison that ends without naming a winner (or a clear "it depends on X") is incomplete — that indecision is what makes this skill tie with a plain answer.
+Then use that choice to create the project. A comparison that ends without naming a winner (or a clear "it depends on X") is incomplete — that indecision is what makes this skill tie with a plain answer.
 
 ### Decision shortcuts for common pairs
 

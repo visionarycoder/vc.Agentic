@@ -24,8 +24,8 @@ Agent analyzes test suites for repeated structure that now costs more than it cl
 
 | User prompt | Route |
 |---|---|
-| User asks to write new tests | Use `mstest-test-authoring` or another test-writing skill |
-| User asks for defect or smell audit | Use `test-anti-patterns` or `test-smell-detection` |
+| User asks to write new tests | Use a test-writing skill |
+| User asks for defect or smell audit | Use `test-smell-detection` |
 | User asks to execute the refactor automatically | Perform the refactor directly instead of using this analysis-only skill |
 
 ## Required Inputs

@@ -29,7 +29,6 @@ Agent tests Blazor user journeys in a real browser when component unit tests do 
 |---|---|
 | The test targets isolated component rendering | Use `blazor-unit-testing` |
 | The task tests a pure service or view model | Use `xunit-test-generation` |
-| The application is WPF, MAUI, or WinUI | Use `ui-testing-patterns` |
 
 ## Required Inputs
 

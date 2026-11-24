@@ -27,7 +27,6 @@ Agent aligns synonyms, abbreviations, acronyms, and legacy labels into one canon
 | Condition | Route |
 |---|---|
 | Prompt needs ownership, stewardship, or glossary publication flow | Use `business-glossary-metadata` |
-| Prompt needs classes, properties, and semantic reasoning rules | Use `ontology-design-patterns` |
 | Prompt needs casing and code-style conventions only | Use `naming-standards` |
 | Prompt needs Fabric model storage or DAX design | Use `semantic-layer-fabric` |
 

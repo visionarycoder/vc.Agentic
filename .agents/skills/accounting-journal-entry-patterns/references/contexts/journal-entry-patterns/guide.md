@@ -26,7 +26,6 @@ Apply journal entry lifecycle controls, entry templates, and posting workflow ru
 | Prompt or Code Shape | Route |
 |---|---|
 | Work item covers account-type rules and trial balance fundamentals only | Use `accounting-double-entry` |
-| Work item covers reconciliation variance handling only | Use `accounting-reconciliation-patterns` |
 | Work item covers close calendar and year-end sequencing only | Use `accounting-closing-cycle-patterns` |
 | Work item covers access control evidence and segregation controls only | Use `audit-trail-compliance` |
 

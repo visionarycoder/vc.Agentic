@@ -26,7 +26,6 @@ Agent authors Azure WebJobs that bind triggers cleanly, run through the generic 
 | Condition | Use |
 |---|---|
 | Work fits Azure Functions hosting better | Use `azure-functions-dotnet` |
-| Work depends on Quartz trigger features | Use `quartz-job-authoring` and `quartz-scheduling-patterns` |
 | Work is a continuous hosted service outside App Service | Use worker-service patterns |
 
 ## Required Inputs

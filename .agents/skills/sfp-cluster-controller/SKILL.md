@@ -47,17 +47,17 @@ Agent uses this controller to route a CWE-888 Software Fault Pattern (SFP) Prima
 | 9 | Failure to Release Memory (1238) | — | `cwe-memory-safety-fixes` |
 | 10 | Resource Management (892) | Unrestricted Consumption (985), Faulty Resource Use (983) | `cwe-resource-management-fixes` |
 | 11 | Path Resolution (893) | Path Traversal (981) | `cwe-miscellaneous-security-fixes` |
-| 12 | Synchronization (894) | Missing Lock (986), Multiple Locks/Unlocks (987), Race Condition Window (988), Unrestricted Lock (989) | `cwe-concurrency-fixes` |
-| 13 | Information Leak (895) | Exposed Data (963) | `cwe-resource-management-fixes`, `cwe-data-protection-fixes` |
-| 14 | Tainted Input (896) | Tainted Input to Variable (994), Tainted Input to Command (990), Tainted Input to Environment (991) | `cwe-input-validation-fixes`, `cwe-injection-attack-fixes`, `cwe-data-protection-fixes`, `cwe-format-external-fixes` |
-| 15 | Authentication (898) | Digital Certificate (948) | `cwe-authentication-authz-fixes`, `cwe-data-protection-fixes` |
+| 12 | Synchronization (894) | Missing Lock (986), Multiple Locks/Unlocks (987), Race Condition Window (988), Unrestricted Lock (989) | No dedicated skill. |
+| 13 | Information Leak (895) | Exposed Data (963) | `cwe-resource-management-fixes` |
+| 14 | Tainted Input (896) | Tainted Input to Variable (994), Tainted Input to Command (990), Tainted Input to Environment (991) | `cwe-input-validation-fixes`, `cwe-injection-attack-fixes`, `cwe-format-external-fixes` |
+| 15 | Authentication (898) | Digital Certificate (948) | `cwe-authentication-authz-fixes` |
 | 16 | Access Control (899) | Insecure Resource Access (945), Access Management (944) | `cwe-authentication-authz-fixes`, `cwe-resource-management-fixes` |
 | 17 | Privilege (901) | — | `cwe-resource-management-fixes`, `cwe-miscellaneous-security-fixes` |
 | 18 | Channel (902) | Channel Attack (956), Protocol Error (957) | `cwe-channel-fixes` |
 | 19 | Cryptography (903) | Broken Cryptography (958), Weak Cryptography (959) | `cwe-cryptography-fixes` |
 | 20 | Malware (904) | includes Covert Channel (968) | `cwe-malware-indicators-fixes` |
 | 21 | Predictability (905) | — | `cwe-cryptography-fixes` |
-| 22 | UI (906) | Feature (995), Security (996), Information Loss (997) | `cwe-ui-security-fixes` |
+| 22 | UI (906) | Feature (995), Security (996), Information Loss (997) | No dedicated skill. |
 | 23 | Other (907) | — | No dedicated skill. Broad code-quality catch-all. Route case-by-case to `dotnet-code-quality-standards` or `refactor`. |
 
 ## CWE-to-Cluster Lookup
@@ -85,8 +85,8 @@ Agent uses this controller to route a CWE-888 Software Fault Pattern (SFP) Prima
 | Secondary Clusters | 57 of 57 present in the full catalog |
 | Member CWEs | 619 of 619 present in the full catalog |
 | CWE version | 4.20 |
-| New specialist skills added for this task | `cwe-logic-correctness-fixes`, `cwe-api-contract-fixes`, `cwe-exception-management-fixes`, `cwe-memory-safety-fixes`, `cwe-concurrency-fixes`, `cwe-cryptography-fixes`, `cwe-channel-fixes`, `cwe-ui-security-fixes`, `cwe-malware-indicators-fixes` |
-| Existing skills extended with SFP cross-references | `cwe-resource-management-fixes`, `cwe-miscellaneous-security-fixes`, `cwe-data-protection-fixes`, `cwe-injection-attack-fixes`, `cwe-input-validation-fixes`, `cwe-authentication-authz-fixes`, `cwe-format-external-fixes`, `security-controller` |
+| New specialist skills added for this task | `cwe-logic-correctness-fixes`, `cwe-api-contract-fixes`, `cwe-exception-management-fixes`, `cwe-memory-safety-fixes`, `cwe-cryptography-fixes`, `cwe-channel-fixes`, `cwe-malware-indicators-fixes` |
+| Existing skills extended with SFP cross-references | `cwe-resource-management-fixes`, `cwe-miscellaneous-security-fixes`, `cwe-injection-attack-fixes`, `cwe-input-validation-fixes`, `cwe-authentication-authz-fixes`, `cwe-format-external-fixes`, `security-controller` |
 
 ## Special Handling Notes
 

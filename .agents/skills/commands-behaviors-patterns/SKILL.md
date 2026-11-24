@@ -28,7 +28,6 @@ Agent models user interaction through `ICommand`, relay commands, and behavior-b
 
 | Condition | Route |
 |---|---|
-| Work defines overall MVVM architecture only | Use `mvvm-patterns-dotnet` |
 | Work focuses on binding syntax, update triggers, or converters | Use `databinding-patterns` |
 | Work edits background services with no UI interaction | Use the matching service skill |
 | Work follows a deliberate framework pattern that keeps view-only event handlers | Follow the existing pattern |

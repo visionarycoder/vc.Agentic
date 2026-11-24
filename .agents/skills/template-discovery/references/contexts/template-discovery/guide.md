@@ -21,7 +21,6 @@ This skill helps an agent find, inspect, and select the right `dotnet new` templ
 
 ## When Not to Use
 
-- User wants to create a project — route to `template-instantiation` skill
 - User wants to author or validate a custom template — route to `template-authoring` skill
 - User wants a detailed side-by-side comparison of templates — route to `template-comparison` skill
 - User wants smart cross-parameter defaults during creation — route to `template-smart-defaults` skill

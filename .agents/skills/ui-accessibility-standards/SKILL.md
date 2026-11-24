@@ -29,9 +29,7 @@ Agent enforces accessible structure, interaction, and presentation so interfaces
 | Condition | Route |
 |---|---|
 | Agent works on visual polish with no accessibility scope. | Agent uses `ui-design-principles`. |
-| Agent works on Fluent-specific material and motion behavior as the primary goal. | Agent uses `fluent-design-system`. |
 | Agent changes only server-side logic or infrastructure. | Agent uses the matching backend skill. |
-| Agent reviews test harness structure only. | Agent uses `ui-testing-patterns`. |
 
 ## Required Inputs
 

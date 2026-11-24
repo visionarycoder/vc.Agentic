@@ -30,7 +30,6 @@ Agent uses this bundle for accounting system work that spans posting rules, peri
 |---|---|
 | Only debits, credits, or chart of accounts | `accounting-double-entry` |
 | Only journal workflow design | `accounting-journal-entry-patterns` |
-| Only GAAP statements or CAFR reporting | `accounting-financial-reporting-gaap` |
 
 ## Required Inputs
 
@@ -49,17 +48,13 @@ Agent uses this bundle for accounting system work that spans posting rules, peri
 | Chart of accounts structure, segments, numbering | Yes | `accounting-chart-of-accounts-design` |
 | Journal intake, approval, posting, reversal, correction | Yes | `accounting-journal-entry-patterns` |
 | Adjustment entries: correcting, accrual, reclassification | Yes | `adjustment-entry-patterns` |
-| Bank, subledger, or intercompany tie-out | Yes | `accounting-reconciliation-patterns` |
 | Subledger-to-GL reconciliation, break detection | Yes | `accounting-subledger-reconciliation-patterns` |
 | Interfund transactions, due to/from, eliminations | Yes | `accounting-interfund-patterns` |
 | Multi-currency, FX translation, remeasurement | Yes | `accounting-multi-currency` |
 | Sales tax, use tax, tax jurisdiction, 1099 reporting | Yes | `accounting-tax-patterns` |
 | Month-end, year-end, or close checklist | Yes | `accounting-closing-cycle-patterns` |
 | Controls, approvals, evidence, audit trail, segregation | Yes | `audit-trail-compliance` |
-| Governmental, GASB, budgetary, or grant accounting | Yes | `accounting-public-sector` |
-| Fund setup, restriction tracking, or fund balance logic | Yes | `accounting-fund-patterns` |
 | Appropriation, allotment, encumbrance, budget variance | Yes | `accounting-budget-to-actual-tracking` |
-| Financial statements, note support, CAFR outputs | Yes | `accounting-financial-reporting-gaap` |
 
 ## Coverage Matrix
 
@@ -69,17 +64,13 @@ Agent uses this bundle for accounting system work that spans posting rules, peri
 | Chart structure | `accounting-chart-of-accounts-design` | Account numbering, segments, hierarchy, roll-up rules |
 | Entry workflow | `accounting-journal-entry-patterns` | Draft-to-post lifecycle with reversals and corrections |
 | Adjustment entries | `adjustment-entry-patterns` | Correcting, accrual, reclassification, prior period adjustments |
-| Matching and tie-out | `accounting-reconciliation-patterns` | Deterministic reconciliation flow and exception handling |
 | Subledger control | `accounting-subledger-reconciliation-patterns` | AR, AP, Payroll, Fixed Assets to GL reconciliation |
 | Interfund transactions | `accounting-interfund-patterns` | Due to/from, transfers, eliminations for consolidated reporting |
 | Multi-currency | `accounting-multi-currency` | FX translation, remeasurement, gain/loss recognition |
 | Tax accounting | `accounting-tax-patterns` | Sales tax, use tax, jurisdiction-based calculation |
 | Period governance | `accounting-closing-cycle-patterns` | Controlled close calendar and cutoff rules |
 | Controls and evidence | `audit-trail-compliance` | Traceability, approvals, and segregation boundaries |
-| Government model | `accounting-public-sector` | GASB-aligned accounting structure |
-| Fund model | `accounting-fund-patterns` | Fund classification and restriction tracking |
 | Budget control | `accounting-budget-to-actual-tracking` | Encumbrance and variance tracking against authority |
-| External reporting | `accounting-financial-reporting-gaap` | Statements, schedules, and CAFR-ready outputs |
 
 ## Decision Matrix: Commercial vs Public Sector Accounting
 
@@ -94,17 +85,14 @@ Agent uses this bundle for accounting system work that spans posting rules, peri
 
 | Condition | Use Fund Accounting | Route |
 |---|---|---|
-| Resources carry legal, grant, donor, or statutory restrictions | Yes | `accounting-fund-patterns` |
-| Entity tracks independent self-balancing pools | Yes | `accounting-fund-patterns` |
-| Governmental reporting requires fund statements | Yes | `accounting-public-sector` + `accounting-fund-patterns` |
 | One unrestricted commercial ledger fits the model | No | `accounting-double-entry` |
 
 ## Decision Order
 
 | Decision | Agent Action |
 |---|---|
-| Commercial entity with one unrestricted ledger | Agent starts with `accounting-double-entry`, then `accounting-journal-entry-patterns`, `accounting-reconciliation-patterns`, `accounting-closing-cycle-patterns`, and `accounting-financial-reporting-gaap`. |
-| Public sector entity with GASB reporting | Agent starts with `accounting-public-sector`, then `accounting-fund-patterns`, `accounting-budget-to-actual-tracking`, `accounting-journal-entry-patterns`, `accounting-closing-cycle-patterns`, and `accounting-financial-reporting-gaap`. |
+| Commercial entity with one unrestricted ledger | Agent starts with `accounting-double-entry`, then `accounting-journal-entry-patterns`, and `accounting-closing-cycle-patterns`. |
+| Public sector entity with GASB reporting | Agent starts with `accounting-budget-to-actual-tracking`, then `accounting-journal-entry-patterns` and `accounting-closing-cycle-patterns`. |
 | Control-heavy implementation | Agent adds `audit-trail-compliance` before workflow finalization. |
 | Analytics and reporting platform in scope | Agent maps operational ledger events to Fabric semantic, warehouse, or lakehouse outputs after accounting model selection. |
 
@@ -138,7 +126,6 @@ Agent uses this bundle for accounting system work that spans posting rules, peri
 
 | Pitfall | Agent Fix |
 |---|---|
-| Treating governmental accounting as commercial accounting with extra fields | Agent routes first to `accounting-public-sector` and `accounting-fund-patterns`. |
 | Deferring budgetary control until reporting | Agent routes early to `accounting-budget-to-actual-tracking`. |
 | Using reports as the source of reconciliation truth | Agent anchors reconciliation in operational accounting records. |
 | Publishing Fabric models straight from unstable journal drafts | Agent publishes from posted and controlled accounting facts only. |

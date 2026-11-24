@@ -21,7 +21,7 @@ Agent uses this router when a .NET service needs compile-time sidecar behavior t
 |---|---|---|
 | Need generated HTTP or gRPC proxies from contracts | Yes | Agent routes to `dotnet-api-client-generation` and `roslyn-codegen-patterns` |
 | Need generated retry, timeout, or circuit-breaker wrappers | Yes | Agent routes to `dotnet-api-client-resilience` |
-| Need generated traces, metrics, or log envelopes | Yes | Agent routes to `configuring-opentelemetry-dotnet` and `dotnet-telemetry-standards` |
+| Need generated traces, metrics, or log envelopes | Yes | Agent routes to `configuring-opentelemetry-dotnet` |
 | Need incremental generator design, diagnostics, or deterministic output | Yes | Agent routes to `roslyn-source-generator-authoring` |
 | Need polyglot runtime mesh, transparent traffic interception, or live policy changes | No | Agent routes to platform mesh guidance outside this skill |
 
@@ -34,7 +34,6 @@ Agent uses this router when a .NET service needs compile-time sidecar behavior t
 | Typed service proxy emission | `dotnet-api-client-generation` | Contract-driven HTTP or gRPC clients |
 | Resilience policy injection | `dotnet-api-client-resilience` | Generated retry, timeout, and breaker behavior |
 | Trace, metric, and log injection | `configuring-opentelemetry-dotnet` | Generated telemetry hooks |
-| Telemetry naming and evidence conventions | `dotnet-telemetry-standards` | Stable observability contract |
 
 ## Decision Order
 

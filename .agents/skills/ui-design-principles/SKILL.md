@@ -28,10 +28,8 @@ Agent applies durable UI quality patterns across hierarchy, spacing, responsiven
 
 | Condition | Route |
 |---|---|
-| Agent works on platform-specific Fluent behavior as the primary goal. | Agent uses `fluent-design-system`. |
 | Agent works on accessibility conformance and assistive-technology support as the primary goal. | Agent uses `ui-accessibility-standards`. |
 | Agent works on backend logic or transport behavior only. | Agent uses the matching backend skill. |
-| Agent focuses on automation strategy only. | Agent uses `ui-testing-patterns`. |
 
 ## Required Inputs
 

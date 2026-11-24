@@ -145,8 +145,7 @@ Default assumption: use the smallest test mix that catches wrong numbers, broken
   - `../typescript-data-visualization-engineering/SKILL.md`
   - `../../references/foundations/fictional-data-story-simulation.md`
   - `../dashboards-and-real-time-visualization/SKILL.md`
-  - `../accessibility-and-inclusive-visualization/SKILL.md`
-
+  
 ## Representative Prompts
 
 - "How should I test this React chart component?"

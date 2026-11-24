@@ -18,7 +18,7 @@ Agent uses this bundle for performance, reliability CA diagnostics. When new CA 
 ## Activation
 
 **USE FOR:** CA1824, CA1825, CA1873, CA2207 warnings
-**DO NOT USE FOR:** API-design rules → `roslyn-ca-design-quality-fixes`. Code-quality rules → `roslyn-ca-code-quality-fixes`. Deeper perf analysis → `analyzing-dotnet-performance`.
+**DO NOT USE FOR:** API-design rules → `roslyn-ca-design-quality-fixes`. Deeper perf analysis → `analyzing-dotnet-performance`.
 
 ## Overview
 

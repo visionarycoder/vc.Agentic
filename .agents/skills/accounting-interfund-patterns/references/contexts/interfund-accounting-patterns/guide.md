@@ -26,10 +26,7 @@ Agent classifies interfund activity, creates reciprocal entries, enforces balanc
 
 | Condition | Route |
 |---|---|
-| Work item focuses on broad fund setup or fund balance classification only | Use `accounting-fund-patterns` |
-| Work item focuses on broad governmental accounting policy outside interfund scope | Use `accounting-public-sector` |
 | Work item focuses on baseline debit-credit structure only | Use `accounting-double-entry` |
-| Work item focuses on reconciliation workflow only | Use `accounting-reconciliation-patterns` |
 
 ## Required Inputs
 

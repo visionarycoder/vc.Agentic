@@ -18,7 +18,6 @@ Agent uses this bundle for one-pass MSTest analyzer fixes across common warning 
 |---|---|---|
 | Several `MSTEST0017`, `MSTEST0042`, `MSTEST0044`, `MSTEST0052`, or `MSTEST0065` warnings | Yes | Agent fixes all listed warnings in one workflow |
 | One warning family plus broader test-quality audit | Yes | Agent fixes warnings first, then routes to `test-fixes` |
-| New test authoring with no analyzer warnings | No | Agent routes to `mstest-test-authoring` |
 
 ## Rules Coverage
 

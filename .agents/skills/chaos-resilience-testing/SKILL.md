@@ -13,7 +13,7 @@ metadata:
 
 # Chaos and Resilience Testing
 
-Load this skill when `chaos-tester` writes tests in `tests/chaos/**`. Also load `dotnet-resilience-standards`.
+Load this skill when `chaos-tester` writes tests in `tests/chaos/**`.
 
 ## When to use
 

@@ -134,7 +134,6 @@ partial class CustomerEditorViewModel
 | Platform | Hook | Route |
 |---|---|---|
 | WPF | Emit APIs that align with existing WPF binding, validation, and command patterns. | `wpf-mvvm-implementation` |
-| .NET MAUI | Emit APIs that align with MAUI view models and platform navigation services. | `maui-patterns` |
 | WinUI 3 | Emit APIs that align with WinUI 3 `x:Bind`, command, and observable state patterns. | `winui3-patterns` |
 
 ## MCP Hooks

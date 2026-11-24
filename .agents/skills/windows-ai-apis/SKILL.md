@@ -28,8 +28,6 @@ Agent implements Windows AI workloads with Windows ML, WinML, DirectML, ONNX Run
 
 | Condition | Route |
 |---|---|
-| Work depends on hosted foundation models or managed search | Use `azure-ai-services` |
-| Work focuses on Foundry Local prompt iteration and local model catalog use | Use `windows-ai-foundry-local` |
 | Target platform excludes Windows | Use cross-platform ONNX or cloud guidance outside this skill |
 | Requirement is large-scale distributed training | Use cloud ML guidance outside this skill |
 

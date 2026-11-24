@@ -28,7 +28,6 @@ Agent defines predictable data flow between XAML views and observable .NET state
 
 | Condition | Route |
 |---|---|
-| Work restructures overall MVVM boundaries | Use `mvvm-patterns-dotnet` |
 | Work focuses on command implementations and behavior mapping | Use `commands-behaviors-patterns` |
 | Work edits domain services with no UI binding impact | Use the matching service skill |
 | Work runs in a UI stack without XAML-style binding | Follow the platform-native pattern |

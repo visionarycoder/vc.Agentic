@@ -10,8 +10,7 @@ prerequisites:
   - accounting-closing-cycle-patterns
 related_skills:
   - accounting-closing-cycle-patterns
-  - accounting-reconciliation-patterns
-  - audit-trail-compliance
+    - audit-trail-compliance
 related_docs:
   - ../SKILL.md
 tags:
@@ -27,7 +26,6 @@ tags:
 | Source | Reference Use | Observable Pass |
 |---|---|---|
 | `../SKILL.md` | Establishes close-run ownership, dependency, evidence, and reopen governance patterns. | The close workflow records one owner, one dependency state, and one evidence path for every task. |
-| `accounting-reconciliation-patterns` | Establishes exception routing and tie-out discipline across subledgers, bank activity, and statewide reports. | Every unresolved difference carries one owner, one reason, and one due point. |
 | `audit-trail-compliance` | Establishes evidence retention, sign-off trace, and controlled reopen handling. | Every close event stores timestamp, actor, source artifact, and approval state. |
 
 ## Close Calendar and State Model

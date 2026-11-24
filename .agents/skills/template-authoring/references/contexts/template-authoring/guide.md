@@ -21,7 +21,7 @@ This skill helps an agent create and validate custom `dotnet new` templates. It 
 
 ## When Not to Use
 
-- User wants to find or use existing templates — route to `template-discovery` or `template-instantiation`
+- User wants to find or use existing templates — route to `template-discovery`
 - User has MSBuild issues unrelated to template authoring — route to `dotnet-msbuild` plugin
 
 ## Inputs

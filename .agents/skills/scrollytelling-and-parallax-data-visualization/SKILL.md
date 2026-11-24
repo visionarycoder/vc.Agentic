@@ -80,7 +80,6 @@ Avoid scrollytelling when the story is clearer as a static chart, direct-label s
 - Use `../canvas2d-data-visualization/SKILL.md` when dense flat marks or custom hit testing make SVG too heavy.
 - Use `../threejs-data-visualization/SKILL.md` when WebGL, GPU layers, particles, flow, or camera-led 3D are necessary.
 - Use `../geospatial-and-cartographic-visualization/SKILL.md` for map scrollytelling, fly-to sequences, route stories, or pan/zoom geography.
-- Use `../accessibility-and-inclusive-visualization/SKILL.md` when motion sensitivity, keyboard path, screen-reader alternatives, or static fallbacks are central.
 - Use `../testing-data-visualizations/SKILL.md` when validating scroll states, visual regression, render readiness, media loading, or reduced-motion behavior.
 - Use `../../references/foundations/fictional-data-story-simulation.md` when sparse invented data would otherwise force the scroll story to rely on walls of text, decorative parallax, or generic chart tiles.
 

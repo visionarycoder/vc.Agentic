@@ -7,10 +7,7 @@ target_audience: ai
 related_docs:
   - ../SKILL.md
 related_skills:
-  - accounting-fund-patterns
-  - accounting-public-sector
   - accounting-double-entry
-  - accounting-reconciliation-patterns
 tags:
   - interfund
   - fund-accounting

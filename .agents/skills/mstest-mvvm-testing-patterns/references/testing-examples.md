@@ -64,7 +64,6 @@ public sealed class OrderEditorViewModelTests
 | Integration | Agent action | Pass |
 |---|---|---|
 | `CommunityToolkit.Mvvm` | Agent tests `ObservableObject`, `ObservableValidator`, `RelayCommand`, and `AsyncRelayCommand` through their public surface. | Toolkit abstractions stay observable and deterministic. |
-| `mstest-test-authoring` | Agent aligns assertions, lifecycle, naming, and data-driven usage with repository MSTest v4 conventions. | Tests match repository MSTest patterns. |
 | DI container | Agent uses `Microsoft.Extensions.DependencyInjection` only for composition checks that add value. | Container coverage stays focused and low-noise. |
 
 ## MCP Hooks

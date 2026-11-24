@@ -25,8 +25,6 @@ Agent evaluates whether tests prove behavior with meaningful and varied assertio
 | User prompt | Route |
 |---|---|
 | User asks to write or repair tests | Use a test-writing skill |
-| User asks for general suite defects beyond assertions | Use `test-anti-patterns` |
-| User asks for runtime coverage | Use `coverage-analysis` or `test-gap-analysis` |
 
 ## Required Inputs
 
