@@ -32,7 +32,7 @@ Pair with [token-efficient-implementation](../token-efficient-implementation/SKI
 - Do not force shared code when the duplication is superficial or likely to diverge.
 - Keep abstractions explicit and easy to test.
 - Preserve readability; fewer lines is not a win if the code becomes opaque.
-- If the main issue is responsibility or dependency shape, use [solid-principles](../solid-principles/SKILL.md) instead.
+- If the main issue is responsibility or dependency shape, apply SOLID principles instead.
 
 ## Output Expectation
 

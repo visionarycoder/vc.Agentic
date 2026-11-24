@@ -8,7 +8,6 @@ target_audience: ai
 related_docs:
   - ../SKILL.md
   - ../../accounting-journal-entry-patterns/SKILL.md
-  - ../../accounting-reconciliation-patterns/SKILL.md
 tags:
   - tax
   - sales-tax
@@ -26,7 +25,6 @@ This reference expands `accounting-tax-patterns` with implementation detail for 
 
 - [Tax Accounting Patterns](../SKILL.md)
 - [Journal Entry Patterns](../../accounting-journal-entry-patterns/SKILL.md)
-- [Reconciliation Patterns](../../accounting-reconciliation-patterns/SKILL.md)
 
 ## Core Tax Invariants
 

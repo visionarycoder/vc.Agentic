@@ -309,4 +309,3 @@ Agent uses Fluent symbols at 24px for UI chrome and 16px for inline content.
 - [Fluent 2 Design System](https://fluent2.microsoft.design/)
 - [WPF-UI Library](https://wpfui.lepo.co/)
 - [ModernWpf Library](https://github.com/Kinnara/ModernWpf)
-- [Fluent Design System Skill](../../fluent-design-system/SKILL.md)

@@ -16,7 +16,7 @@ Use this skill first for manager, engine, and access vault work; treat it as the
 
 This skill defines the architectural boundary shape. It does not require a network hop, and it does not require CoreWCF unless you are actually hosting ServiceModel contracts over CoreWCF.
 
-Pair with [../solid-principles/SKILL.md](../../../../solid-principles/SKILL.md) for responsibility and dependency-shape refactors, and [../dry-principles/SKILL.md](../../../../dry-principles/SKILL.md) for repeated-code cleanup after the boundary shape is set.
+Pair with SOLID principles for responsibility and dependency-shape refactors, and [../dry-principles/SKILL.md](../../../../dry-principles/SKILL.md) for repeated-code cleanup after the boundary shape is set.
 
 Read [references/service-model-vbd.md](../../service-model-vbd.md) when you need the component checklist or the vault-specific mapping rules. Use [../vbd-rules/references/service-model-default-path.md](../../../../vbd-rules/references/service-model-default-path.md) for the default sequencing and shared shape.
 
