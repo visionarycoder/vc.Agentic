@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -70,23 +70,15 @@ Agent packages .NET applications into Docker images with explicit base-image cho
 
 | Concern | Preferred pattern | Avoid |
 |---|---|---|
-| Restore layer reuse | Copy project files first, restore, then copy source | Copy full repo before restore |
-| Publish output | `dotnet publish -c Release -o /app/publish` | Run from `bin` or Debug output |
 | Final image user | Explicit non-root user when supported | Default root runtime without review |
-| Health | HTTP endpoint or process probe aligned to app type | Blind TCP-only checks for readiness |
 | Environment | `ASPNETCORE_URLS`, `DOTNET_ENVIRONMENT`, and app settings via runtime injection | Bake environment-specific values into the image |
-| Size | Trim caches, exclude build tools, minimize copied content | Ship SDK, tests, and source into final stage |
 
 ## Verification Checklist
 
 | Check | Test | Pass |
 |---|---|---|
-| Stage split | Read the Dockerfile. | Build and final stages are separate. |
-| Image build | Run `docker build` for the target image. | Build exits successfully. |
-| Runtime contract | Run the container with required ports and environment variables. | Application starts and logs a healthy startup path. |
-| Health behavior | Query the container health endpoint or `HEALTHCHECK` status. | Probe reports healthy after startup. |
+| Image build and start | Run `docker build`, then run the container with required ports and environment variables. | Build succeeds, application starts, and probes report healthy. |
 | Secret handling | Inspect Dockerfile, compose file, and committed config. | No secret literal appears in build instructions or source control. |
-| Size discipline | Compare the final image to the base-image choice and publish model. | Final image excludes SDK tooling and unnecessary assets. |
 | Security scan | Run the approved image scanner in the delivery flow. | No unreviewed critical issue remains. |
 | Debug path | Attach debugger or capture container logs for the local scenario. | Debug workflow reaches the process without changing production defaults. |
 
@@ -95,10 +87,7 @@ Agent packages .NET applications into Docker images with explicit base-image cho
 | Pitfall | Agent Fix |
 |---|---|
 | Using `sdk` as the final runtime image | Agent moves the final stage to `aspnet` or `runtime`. |
-| Single-stage Dockerfile copies the whole repo into production image | Agent splits restore, publish, and final runtime stages. |
 | Alpine image breaks globalization or native library loading | Agent moves to Debian or adds required packages with verification. |
-| Compose file stores connection strings or API keys inline | Agent moves secrets to external injection surfaces. |
-| Health check pings a dependency before the app is ready | Agent maps readiness to the application health contract. |
 | Container runs as root without a reason | Agent adds an explicit runtime user path or documents the platform constraint. |
 | Debug tooling ships in the production image | Agent limits debugger support to development images or attach flows. |
 | Docker adds operational weight with no host isolation value | Agent records the native deployment alternative and its tradeoff. |
