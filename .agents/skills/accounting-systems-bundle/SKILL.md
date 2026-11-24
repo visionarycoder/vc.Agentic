@@ -37,7 +37,6 @@ Agent uses this bundle for accounting system work that spans posting rules, peri
 
 | Request Signal | Use Bundle | Route Detail |
 |---|---|---|
-| Adjustment entries: correcting, accrual, reclassification | Yes | `adjustment-entry-patterns` |
 | Subledger-to-GL reconciliation, break detection | Yes | `accounting-subledger-reconciliation-patterns` |
 | Month-end, year-end, or close checklist | Yes | `accounting-closing-cycle-patterns` |
 | Controls, approvals, evidence, audit trail, segregation | Yes | `audit-trail-compliance` |
@@ -46,7 +45,6 @@ Agent uses this bundle for accounting system work that spans posting rules, peri
 
 | Need | Specialist Skill | Primary Outcome |
 |---|---|---|
-| Adjustment entries | `adjustment-entry-patterns` | Correcting, accrual, reclassification, prior period adjustments |
 | Subledger control | `accounting-subledger-reconciliation-patterns` | AR, AP, Payroll, Fixed Assets to GL reconciliation |
 | Period governance | `accounting-closing-cycle-patterns` | Controlled close calendar and cutoff rules |
 | Controls and evidence | `audit-trail-compliance` | Traceability, approvals, and segregation boundaries |

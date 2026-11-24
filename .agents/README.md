@@ -10,7 +10,7 @@ updated: "2026-11-24"
 
 # Skill catalog
 
-The library contains **477 skills**. All entrypoints are under `skills/<name>/SKILL.md`. [Inventory](inventory.csv) records current metadata and hashes. [Collections](collections.md) distinguish the recommended core from optional capabilities. [Maintenance](../tools/README.md) describes validation and safe changes.
+The library contains **473 skills**. All entrypoints are under `skills/<name>/SKILL.md`. [Inventory](inventory.csv) records current metadata and hashes. [Collections](collections.md) distinguish the recommended core from optional capabilities. [Maintenance](../tools/README.md) describes validation and safe changes.
 
 | Collection | Skills |
 | --- | --- |
@@ -23,7 +23,7 @@ The library contains **477 skills**. All entrypoints are under `skills/<name>/SK
 | Biology and life-sciences research | 22 |
 | Accounting systems and controls | 3 |
 | Financial trading and investment research | 24 |
-| Additional workflows, integrations, and specialist utilities | 279 |
+| Additional workflows, integrations, and specialist utilities | 275 |
 
 | Skill | Collection | Purpose |
 | --- | --- | --- |
@@ -275,7 +275,6 @@ The library contains **477 skills**. All entrypoints are under `skills/<name>/SK
 | [list-plans](skills/list-plans/SKILL.md) | optional | Discovers valid migration plans in the workspace and returns the selected plan path. A valid plan is a subdirectory of .github/modernize/ that contains plan.md AND tasks.json (tasks.json may be in ... |
 | [loop-me](skills/loop-me/SKILL.md) | optional | Grill me about specs for the workflows I want to build, within this workspace. |
 | [magicpath](skills/magicpath/SKILL.md) | optional | Use when the user mentions MagicPath, designs, UI components, themes, canvas selections, or repo-to-canvas UI work; run magicpath-ai to search, inspect, install, or author components. |
-| [mainframe-integration-bundle](skills/mainframe-integration-bundle/SKILL.md) | optional | Bundle router for COBOL copybook parsing, C# model generation, and mainframe data conversion work tied to legacy file integration. |
 | [mapping-crosswalk-governance](skills/mapping-crosswalk-governance/SKILL.md) | optional | Build, review, and change value mappings and crosswalks between systems with traceable sources, conflict logging, and reverse-mapping limits. |
 | [market-sizing](skills/market-sizing/SKILL.md) | optional | Estimate market, segment, or opportunity size with transparent assumptions and uncertainty. Use for TAM/SAM/SOM, sizing scenarios, or comparing the scale of possible opportunities. |
 | [maui-app-lifecycle](skills/maui-app-lifecycle/SKILL.md) | dotnet | Handle application state transitions correctly in .NET MAUI. This skill covers the cross-platform Window lifecycle events, their platform-native mappings, and patterns for preserving state across b... |
@@ -323,7 +322,6 @@ The library contains **477 skills**. All entrypoints are under `skills/<name>/SK
 | [publish-artifact-to-sites](skills/publish-artifact-to-sites/SKILL.md) | optional | Publish a validated Data Analytics report or dashboard artifact through Sites. Use automatically for durable artifacts in any positively identified Work Mode when the full Sites lifecycle is callab... |
 | [quality-gates](skills/quality-gates/SKILL.md) | optional | Runs quality gate validation at each workflow stage. Supports 4 gate types: spec-quality, spec-to-plan, plan-to-tasks, completeness. Produces gate pass/fail reports with actionable feedback. Trigge... |
 | [rabbitmq-patterns](skills/rabbitmq-patterns/SKILL.md) | optional | Implement RabbitMQ exchanges, bindings, acknowledgments, prefetch, and reliable consumer flows in .NET. |
-| [realtime-communication-bundle](skills/realtime-communication-bundle/SKILL.md) | optional | Bundle routing skill for real-time communication patterns including SignalR hubs and WebSocket connections. |
 | [redis-patterns-dotnet](skills/redis-patterns-dotnet/SKILL.md) | optional | Implement StackExchange.Redis connection multiplexing, distributed cache, pub/sub, streams, and Lua-scripted atomic flows in .NET. |
 | [release-management](skills/release-management/SKILL.md) | optional | Promote builds through environments with readiness checks, release notes, rollback plans, human production approval, and post-release verification. |
 | [repo-reconciliation](skills/repo-reconciliation/SKILL.md) | core | Audit and reconcile repository guidance across .agents, .github, docs, and workflows when architecture, project layout, release packaging, or canonical ownership changes. Use when project consolida... |
@@ -354,7 +352,6 @@ The library contains **477 skills**. All entrypoints are under `skills/<name>/SK
 | [security-diff-scan](skills/security-diff-scan/SKILL.md) | optional | Review a pull request, commit, branch diff, or working-tree patch for security vulnerabilities. |
 | [security-intake-router](skills/security-intake-router/SKILL.md) | optional | Route security requests to the minimum correct security skill by separating broad CWE sweeps from narrow vulnerability-family remediation. |
 | [security-scan](skills/security-scan/SKILL.md) | optional | Use for a standard, single-pass security audit of an entire repository or a scoped path, package, folder, or submodule with no diff to review. This is the default repository scan. Do not use for PR... |
-| [semantic-data-bundle](skills/semantic-data-bundle/SKILL.md) | optional | Route semantic data requests across ontology design, semantic layers, glossaries, knowledge graphs, terminology normalization, NLP-to-query, and semantic modeling. |
 | [sentry](skills/sentry/SKILL.md) | optional | Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry API; perform read-only queries with the bundled script... |
 | [setting-up-constitution](skills/setting-up-constitution/SKILL.md) | optional | Creates or updates the project constitution that defines migration principles, constraints, and conventions. Triggers: "set up constitution", "define migration principles", "create project rules", ... |
 | [setup-local-sdk](skills/setup-local-sdk/SKILL.md) | optional | Guide the user through installing a .NET SDK into a project-local `.dotnet/` |
@@ -392,7 +389,6 @@ The library contains **477 skills**. All entrypoints are under `skills/<name>/SK
 | [template-smart-defaults](skills/template-smart-defaults/SKILL.md) | optional | Applies cross-parameter default rules when creating .NET projects with dotnet new, filling gaps consistently without overriding values the user set explicitly. USE FOR: choosing which target framew... |
 | [template-validation](skills/template-validation/SKILL.md) | optional | Validates custom dotnet new templates for correctness before publishing. Catches missing fields, parameter bugs, shortName conflicts, constraint issues, and common authoring mistakes that cause tem... |
 | [test-driven-development](skills/test-driven-development/SKILL.md) | core | Implement assigned behavior through a meaningful failing test, minimal passing code, and refactoring when a test-first workflow is requested or appropriate. |
-| [test-fixes-bundle](skills/test-fixes-bundle/SKILL.md) | optional | Routes test-analysis requests through the canonical test fixes bundle and its specialized skills. |
 | [test-infrastructure-harness](skills/test-infrastructure-harness/SKILL.md) | optional | Build the shared test harness, fixtures, fakes, builders, disposable resources, and synthetic data that every test tier consumes. |
 | [test-smell-detection](skills/test-smell-detection/SKILL.md) | optional | Detect literature-backed test smells and produce a location-based remediation report with severity, snippet, and fix guidance. |
 | [test-strategy-design](skills/test-strategy-design/SKILL.md) | optional | Allocate requirements to test tiers, assign stable IDs, write the test specification, and report traceability gaps. |

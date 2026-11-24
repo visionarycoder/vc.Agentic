@@ -151,7 +151,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `security-controller` | `cwe-input-validation-fixes` | Declared related skill |
 | `security-controller` | `cwe-miscellaneous-security-fixes` | Declared related skill |
 | `security-controller` | `cwe-resource-management-fixes` | Declared related skill |
-| `semantic-data-bundle` | `business-glossary-metadata` | Declared related skill |
 | `skill-discovery-guide` | `documentation-fixes` | Declared related skill |
 | `skill-discovery-guide` | `rfc-fixes-bundle` | Declared related skill |
 | `skill-discovery-guide` | `security-controller` | Declared related skill |
@@ -169,7 +168,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `subagent-orchestration` | `run-tests` | Declared related skill |
 | `accounting-subledger-reconciliation-patterns` | `audit-trail-compliance` | Declared related skill |
 | `technology-selection` | `webapi-hardening-controller` | Declared related skill |
-| `test-fixes-bundle` | `assertion-quality` | Declared related skill |
 | `mstest-modernization-controller` | `assertion-quality` | Declared related skill |
 | `mstest-modernization-controller` | `run-tests` | Declared related skill |
 | `test-smell-detection` | `assertion-quality` | Declared related skill |

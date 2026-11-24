@@ -11,7 +11,7 @@ tags:
 ---
 # Skill Discovery Lookup
 
-Lists all 477 skills under `.agents/skills`. Regenerate it from the skill directories whenever skills are added, renamed, or removed. Use [Inventory by Category](inventory-by-category.md) for the grouped view.
+Lists all 473 skills under `.agents/skills`. Regenerate it from the skill directories whenever skills are added, renamed, or removed. Use [Inventory by Category](inventory-by-category.md) for the grouped view.
 
 | Skill | Category | Purpose |
 |---|---|---|
@@ -263,7 +263,6 @@ Lists all 477 skills under `.agents/skills`. Regenerate it from the skill direct
 | `list-plans` | Workflows & General Productivity | Discovers valid migration plans in the workspace and returns the selected plan path. A valid plan is a subdirectory of .github/modernize/ that contains plan.md AND tasks.json (tasks.json may be in the plan folder or in a .metadata subfol... |
 | `loop-me` | Workflows & General Productivity | Grill me about specs for the workflows I want to build, within this workspace. |
 | `magicpath` | UI, Desktop & Frontend | Use when the user mentions MagicPath, designs, UI components, themes, canvas selections, or repo-to-canvas UI work; run magicpath-ai to search, inspect, install, or author components. |
-| `mainframe-integration-bundle` | Bundles, Routers & Controllers | Bundle router for COBOL copybook parsing, C# model generation, and mainframe data conversion work tied to legacy file integration. |
 | `mapping-crosswalk-governance` | Data, Fabric & Semantic Systems | Build, review, and change value mappings and crosswalks between systems with traceable sources, conflict logging, and reverse-mapping limits. |
 | `market-sizing` | Workflows & General Productivity | Estimate market, segment, or opportunity size with transparent assumptions and uncertainty. Use for TAM/SAM/SOM, sizing scenarios, or comparing the scale of possible opportunities. |
 | `maui-app-lifecycle` | UI, Desktop & Frontend | Handle application state transitions correctly in .NET MAUI. This skill covers the cross-platform Window lifecycle events, their platform-native mappings, and patterns for preserving state across backgrounding and resume cycles. |
@@ -311,7 +310,6 @@ Lists all 477 skills under `.agents/skills`. Regenerate it from the skill direct
 | `publish-artifact-to-sites` | Workflows & General Productivity | Publish a validated Data Analytics report or dashboard artifact through Sites. Use automatically for durable artifacts in any positively identified Work Mode when the full Sites lifecycle is callable, or in ChatGPT Desktop outside Work M... |
 | `quality-gates` | Testing & Quality | Runs quality gate validation at each workflow stage. Supports 4 gate types: spec-quality, spec-to-plan, plan-to-tasks, completeness. Produces gate pass/fail reports with actionable feedback. Triggers: "run quality gate", "validate spec q... |
 | `rabbitmq-patterns` | Messaging, Scheduling & Distributed Systems | Implement RabbitMQ exchanges, bindings, acknowledgments, prefetch, and reliable consumer flows in .NET. |
-| `realtime-communication-bundle` | Bundles, Routers & Controllers | Bundle routing skill for real-time communication patterns including SignalR hubs and WebSocket connections. |
 | `redis-patterns-dotnet` | Messaging, Scheduling & Distributed Systems | Implement StackExchange.Redis connection multiplexing, distributed cache, pub/sub, streams, and Lua-scripted atomic flows in .NET. |
 | `release-management` | Workflows & General Productivity | Promote builds through environments with readiness checks, release notes, rollback plans, human production approval, and post-release verification. |
 | `repo-reconciliation` | Workflows & General Productivity | Audit and reconcile repository guidance across .agents, .github, docs, and workflows when architecture, project layout, release packaging, or canonical ownership changes. Use when project consolidation creates doc drift, workflows refere... |
@@ -342,7 +340,6 @@ Lists all 477 skills under `.agents/skills`. Regenerate it from the skill direct
 | `security-diff-scan` | Security & Compliance | Review a pull request, commit, branch diff, or working-tree patch for security vulnerabilities. |
 | `security-intake-router` | Bundles, Routers & Controllers | Route security requests to the minimum correct security skill by separating broad CWE sweeps from narrow vulnerability-family remediation. |
 | `security-scan` | Security & Compliance | Use for a standard, single-pass security audit of an entire repository or a scoped path, package, folder, or submodule with no diff to review. This is the default repository scan. Do not use for PR, commit, branch, or working-tree diffs,... |
-| `semantic-data-bundle` | Bundles, Routers & Controllers | Route semantic data requests across ontology design, semantic layers, glossaries, knowledge graphs, terminology normalization, NLP-to-query, and semantic modeling. |
 | `sentry` | Azure, Cloud & Observability | Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry API; perform read-only queries with the bundled script and require `SENTRY_AUTH_TOKEN`. |
 | `setting-up-constitution` | Workflows & General Productivity | Creates or updates the project constitution that defines migration principles, constraints, and conventions. Triggers: "set up constitution", "define migration principles", "create project rules", "establish conventions", "establish migr... |
 | `setup-local-sdk` | MSBuild, Tooling & Packaging | Guide the user through installing a .NET SDK into a project-local `.dotnet/` |
@@ -380,7 +377,6 @@ Lists all 477 skills under `.agents/skills`. Regenerate it from the skill direct
 | `template-smart-defaults` | Documentation & Writing | Applies cross-parameter default rules when creating .NET projects with dotnet new, filling gaps consistently without overriding values the user set explicitly. USE FOR: choosing which target framework to pair with native AOT, deciding wh... |
 | `template-validation` | Documentation & Writing | Validates custom dotnet new templates for correctness before publishing. Catches missing fields, parameter bugs, shortName conflicts, constraint issues, and common authoring mistakes that cause templates to fail silently. USE FOR: checki... |
 | `test-driven-development` | Testing & Quality | Implement assigned behavior through a meaningful failing test, minimal passing code, and refactoring when a test-first workflow is requested or appropriate. |
-| `test-fixes-bundle` | Bundles, Routers & Controllers | Routes test-analysis requests through the canonical test fixes bundle and its specialized skills. |
 | `test-infrastructure-harness` | Testing & Quality | Build the shared test harness, fixtures, fakes, builders, disposable resources, and synthetic data that every test tier consumes. |
 | `test-smell-detection` | Testing & Quality | Detect literature-backed test smells and produce a location-based remediation report with severity, snippet, and fix guidance. |
 | `test-strategy-design` | Testing & Quality | Allocate requirements to test tiers, assign stable IDs, write the test specification, and report traceability gaps. |

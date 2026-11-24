@@ -22,7 +22,5 @@ tags:
 | `mvvm-toolkit-bundle` | 5 | `roslyn-mvvm-source-generators`, `prism-framework-patterns`, `viewmodel-lifecycle`, `winui3-patterns`, `wpf-fluent-ui` |
 | `orleans-distributed-bundle` | 3 | `aspire-components`, `aspire-orchestration`, `dotnet-aspire-vbd-development` |
 | `security-controller` | 5 | `cwe-authentication-authz-fixes`, `cwe-injection-attack-fixes`, `cwe-input-validation-fixes`, `cwe-miscellaneous-security-fixes`, `cwe-resource-management-fixes` |
-| `semantic-data-bundle` | 1 | `business-glossary-metadata` |
 | `skill-lifecycle-controller` | 3 | `documentation-governance`, `skill-discovery-guide`, `skill-suite-optimization` |
-| `test-fixes-bundle` | 1 | `assertion-quality` |
 | `mstest-modernization-controller` | 2 | `assertion-quality`, `run-tests` |
