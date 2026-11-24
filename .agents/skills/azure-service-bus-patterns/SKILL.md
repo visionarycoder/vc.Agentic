@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "azure"
 ---
 
@@ -56,13 +56,7 @@ Implement Azure Service Bus messaging with explicit settlement, session-aware pr
 
 ## Implementation Patterns
 
-| Pattern | Use | Avoid |
-|---|---|---|
-| Queue | Single consumer group owns one work stream | Topic when fan-out is absent |
-| Topic + subscription | Many downstream handlers need independent delivery | One queue with in-handler branching |
-| Sessions | Per-key ordering and exclusive processing matter | Global ordering across unrelated keys |
-| Dead-letter | Validation or business rejection is final | Infinite abandon loop |
-| Deferral | Dependency arrives later or sequence gap exists | Dead-lettering recoverable ordering cases |
+Dead-letter final failures; defer recoverable ordering gaps (never dead-letter them or loop on abandon).
 
 ```csharp
 builder.Services.AddSingleton(_ => new ServiceBusClient(
@@ -111,32 +105,9 @@ public sealed class InvoicePostedProcessor(ServiceBusClient client, ServiceBusPr
 | ASB-006 | Processor concurrency matches handler throughput and lock duration | Tune `MaxConcurrentCalls`, prefetch, and lock renewal |
 | ASB-007 | Logs include entity path, message id, and correlation id only | Remove payload or secret logging |
 
-## Verification Checklist
+## Verification
 
-| Check | Test | Pass |
-|---|---|---|
-| Registration and entity fit | Review DI setup and queue, topic, or session selection. | Client, processor, and entity shape match the delivery semantics. |
-| Success and replay safety | Send a valid message and then replay the same `MessageId`. | The handler completes successfully and duplicate delivery does not repeat business effects. |
-| Dead-letter, deferral, and session behavior | Send invalid, out-of-order, and same-session sequences. | Poison messages dead-letter, recoverable gaps defer, and session messages keep order. |
-| Build and tests | Run targeted build and tests. | Build succeeds and changed tests pass. |
-
-## Common Pitfalls
-
-| Pitfall | Agent Fix |
-|---|---|
-| `AutoCompleteMessages = true` with business logic side effects | Switch to explicit settlement |
-| No dead-letter reason data | Agent writes stable reason and description |
-| Session entity with random `SessionId` | Map `SessionId` to business key |
-| Blind abandon loop for poison payload | Agent dead-letters unrecoverable cases |
-| Deferral with no retrieval index | Store `SequenceNumber` and retrieval key |
-
-## MCP Hooks
-
-| Need | GitHub MCP hook | Agent action |
-|---|---|---|
-| Find existing Service Bus processors | `search_code` | Search for `ServiceBusProcessor`, `ServiceBusSessionProcessor`, settlement calls, and entity names before editing. |
-| Review Service Bus PR changes | `pull_request_read` | Read changed processors, handlers, and dead-letter or deferral flow before extending messaging behavior. |
-| Verify session and retry coverage | `search_code` | Search for `SessionId`, duplicate guards, and dead-letter tests so reliability work stays aligned. |
+Replay the same `MessageId`, send invalid, out-of-order, and same-session messages, then run targeted build and tests. Duplicates must not repeat effects, poison messages dead-letter, gaps defer (store `SequenceNumber` and a retrieval key), and sessions keep order.
 
 ## Outputs
 

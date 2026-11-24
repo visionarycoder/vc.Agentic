@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -17,20 +17,7 @@ Configure ASP.NET Core request throttling with the built-in .NET 7+ rate limitin
 
 ## When to Use
 
-| Condition | Agent Action |
-|---|---|
-| API needs per-client or per-user request quotas | Use this skill |
-| Expensive endpoints need burst control | Use this skill |
-| Application needs concurrency protection for downstream dependencies | Use this skill |
-| Application needs endpoint-specific throttling rules | Use this skill |
-
-## When Not to Use
-
-| Condition | Agent Action |
-|---|---|
-| Reverse proxy or API gateway owns all throttling rules and app adds no per-endpoint behavior | Configure the gateway layer |
-| Workload is background processing instead of HTTP request admission control | Use queue or channel backpressure patterns |
-| Platform is not ASP.NET Core on .NET 7 or later | Use the platform-specific limiter |
+Use for per-client or per-user quotas, burst control, downstream concurrency protection, or endpoint-specific throttling. Do not use when a gateway owns all throttling, for background-processing backpressure, or outside ASP.NET Core .NET 7+.
 
 ## Required Inputs
 
@@ -51,16 +38,6 @@ Configure ASP.NET Core request throttling with the built-in .NET 7+ rate limitin
 | 4 | Return a stable rejection response with `429` and retry metadata when applicable. | Inspect `OnRejected` and call a throttled endpoint. | Rejected requests return the intended contract. |
 | 5 | Agent excludes health or infrastructure endpoints when prompt scope calls for exemption. | Read endpoint metadata. | Exempt endpoints do not use the throttling policy. |
 | 6 | Agent runs targeted request bursts and concurrency checks. | Run existing API tests or scripted HTTP calls. | Allowed requests pass, excess requests fail with the intended result. |
-
-## Decision Matrix
-
-| Limiter | Use When | Strength | Tradeoff |
-|---|---|---|---|
-| Fixed window | Traffic tolerates boundary bursts and rule simplicity matters | Simple configuration and predictable counters | Boundary bursts double at window boundaries |
-| Sliding window | Traffic needs smoother enforcement across window edges | Better fairness than fixed windows | Higher tracking cost |
-| Token bucket | Traffic needs burst allowance with steady refill | Supports short bursts with sustained rate control | Refill tuning needs traffic knowledge |
-| Concurrency limiter | Workload cost depends on active in-flight requests | Protects scarce downstream resources | No time-based quota |
-| Custom partitioned policy | Rule changes by user, tenant, API key, or route metadata | Fine-grained fairness | Partition selection errors reduce protection |
 
 ## Implementation Patterns
 
@@ -99,13 +76,6 @@ app.MapGet("/health/live", () => Results.Ok()).DisableRateLimiting();
 app.MapGroup("/api/orders").RequireRateLimiting("per-user");
 ```
 
-| Need | Pattern |
-|---|---|
-| Fixed quota | `AddFixedWindowLimiter` or `AddSlidingWindowLimiter` |
-| Burst with refill | `AddTokenBucketLimiter` |
-| In-flight protection | `AddConcurrencyLimiter` |
-| Tenant or route fairness | Custom partitioned policy |
-
 ## Rules
 
 | Rule | Agent Verifies | Fix |
@@ -116,24 +86,6 @@ app.MapGroup("/api/orders").RequireRateLimiting("per-user");
 | RL-004 | Rejected requests return `429` with stable body shape and retry metadata when available. | Add `OnRejected` and `Retry-After` handling. |
 | RL-005 | Queue limits stay bounded for latency-sensitive endpoints. | Set `QueueLimit` to zero or a small explicit value. |
 | RL-006 | Health and infrastructure endpoints stay exempt when the scope calls for it. | Add `DisableRateLimiting()` or map a separate policy. |
-
-## Verification Checklist
-
-| Check | Test | Pass |
-|---|---|---|
-| Quota enforcement | Send requests past the configured fixed, sliding, or token limits. | Excess requests return `429` and allowed requests succeed. |
-| Concurrency protection | Hold requests open past the permit limit. | Extra requests queue or reject per policy. |
-| Retry metadata and scope | Inspect rejected responses and call exempt endpoints. | `Retry-After` appears when available and exempt endpoints bypass limits. |
-
-## Common Pitfalls
-
-| Pitfall | Agent Fix |
-|---|---|
-| Global anonymous bucket throttles every signed-in caller together | Agent partitions by authenticated identity after authentication runs. |
-| IP throttling behind reverse proxy uses proxy IP only | Configure forwarded headers before partition lookup. |
-| Queue limit hides overload with long waits | Agent bounds or removes the queue for latency-sensitive paths. |
-| Policy lives in services but no endpoint uses it | Add `RequireRateLimiting()` or global middleware scope. |
-| Health checks return `429` during incident response | Agent disables rate limiting for health endpoints. |
 
 ## Outputs
 
