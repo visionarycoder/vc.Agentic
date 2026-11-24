@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "biology"
 ---
 
@@ -16,14 +16,11 @@ metadata:
 ## Operating rules
 - Use `scripts/rest_request.py` for all OLS4 and EFO API calls.
 - Use `base_url=https://www.ebi.ac.uk/ols4/api`.
-- Search, children, and descendant endpoints are better with `max_items=10`; single term lookups usually do not need `max_items`.
-- Use the smallest ontology expansion that answers the question.
-- Re-run requests in long conversations instead of relying on older tool output.
+- Search, children, and descendant endpoints: `max_items=10`; single term lookups need no cap.
 - Treat displayed `...` in tool previews as UI truncation, not literal request content.
 
 ## Execution behavior
 - Return concise markdown summaries from the script JSON by default.
-- Prefer these paths: `search`, `ontologies/efo/terms/<double-encoded-iri>`, and the corresponding `children` or `descendants` paths.
 - If the user needs the full payload, set `save_raw=true` and report the saved file path.
 
 ## Input
@@ -41,9 +38,7 @@ metadata:
 - Failure returns `ok=false` with `error.code` and `error.message`.
 
 ## Execution
-```bash
-echo '{"base_url":"https://www.ebi.ac.uk/ols4/api","path":"search","params":{"q":"asthma","ontology":"efo"},"record_path":"response.docs","max_items":10}' | python scripts/rest_request.py
-```
+Pipe the JSON object to `python scripts/rest_request.py`.
 
 ## References
 - No additional runtime references are required; keep the import package limited to this file and `scripts/rest_request.py`.

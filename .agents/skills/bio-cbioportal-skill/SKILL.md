@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "biology"
 ---
 
@@ -15,16 +15,13 @@ metadata:
 
 ## Operating rules
 - Use `scripts/rest_request.py` for all cBioPortal API calls.
-- Use `base_url=https://www.cbioportal.org/api`.
-- Collection endpoints are better with `pageSize=10` and `max_items=10`; single study or profile lookups usually do not need `max_items`.
-- Use `method=POST` plus `json_body` for fetch-style endpoints such as mutation fetches.
-- Send `Accept: application/json` in `headers`.
-- Re-run requests in long conversations instead of relying on older tool output.
+- Use `base_url=https://www.cbioportal.org/api` and `Accept: application/json`; use `method=POST` plus `json_body` for fetch-style endpoints.
+- Collection endpoints: `pageSize=10` and `max_items=10`; single study or profile lookups need no cap.
 - Treat displayed `...` in tool previews as UI truncation, not literal request content.
+- Re-run requests rather than rely on older output.
 
 ## Execution behavior
 - Return concise markdown summaries from the script JSON by default.
-- Prefer these paths: `studies`, `studies/<studyId>/molecular-profiles`, `molecular-profiles/<profileId>/mutations/fetch`, and study-level clinical or sample endpoints.
 - If the user needs the full payload, set `save_raw=true` and report the saved file path.
 
 ## Input
@@ -41,9 +38,7 @@ metadata:
 - Failure returns `ok=false` with `error.code` and `error.message`.
 
 ## Execution
-```bash
-echo '{"base_url":"https://www.cbioportal.org/api","path":"studies","params":{"keyword":"breast","projection":"SUMMARY","pageSize":10},"headers":{"Accept":"application/json"},"max_items":10}' | python scripts/rest_request.py
-```
+Pipe the JSON object to `python scripts/rest_request.py`.
 
 ## References
 - No additional runtime references are required; keep the import package limited to this file and `scripts/rest_request.py`.
