@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -49,22 +49,14 @@ Agent applies Fluent Design System 2 patterns so Windows-aligned interfaces feel
 
 | Principle | Preferred Pattern | Avoid | Pass |
 |---|---|---|---|
-| Material | Use Mica for window-level background context, Acrylic for transient light-dismiss surfaces, and Smoke for modal emphasis. | Acrylic behind dense text or Mica on transient menus. | Surface roles stay clear and readable. |
 | Depth | Use a small elevation scale with consistent layer roles. | Many ad hoc shadow values. | Users distinguish base, active, and transient layers instantly. |
 | Motion | Use short entrance, exit, and connected motion tied to task continuity. | Decorative motion that competes with content. | Motion explains change and ends quickly. |
-| Lighting | Use focus, reveal, highlight, and contrast to guide attention. | Persistent glow on passive content. | Attention cues remain meaningful. |
 | Tokens | Use shared color, radius, spacing, and typography tokens. | One-off visual constants in each view. | Sibling surfaces render as one system. |
-| Theme parity | Verify light, dark, and high-contrast meaning. | Dark theme as an inverted light theme only. | Hierarchy and semantics persist across themes. |
 
 ## Component Decision Matrix
 
 | Area | Select | Select When | Pass |
 |---|---|---|---|
-| Window background | Mica | The surface anchors the main app chrome or root container. | Root window feels native and stable. |
-| Flyout or context menu | Acrylic | The surface is transient and overlays active content. | Overlay feels layered without harming legibility. |
-| Modal interruption | Smoke | The background needs to recede under blocking content. | Modal focus stays clear. |
-| Primary action | One prominent filled action | The layout has a single dominant next step. | Users identify the next step in one scan. |
-| Secondary action set | Neutral, subtle, or outline treatment | Multiple low-priority actions share one region. | Action weight matches task priority. |
 | Transition | Connected or content continuity motion | Navigation preserves object or place continuity. | Users track what changed. |
 | Focus treatment | Strong ring or reveal tied to control state | Keyboard or assistive input path enters the control. | Focus remains visible in every theme. |
 
@@ -91,22 +83,16 @@ Agent applies Fluent Design System 2 patterns so Windows-aligned interfaces feel
 
 | Check | Test | Pass |
 |---|---|---|
-| Material fit | Review Mica, Acrylic, and Smoke usage in context. | Each material matches the correct surface role. |
-| Depth clarity | Review dialogs, panes, menus, and overlays. | Layer order stays obvious. |
 | Motion quality | Trigger navigation and transient interactions. | Motion explains change without distraction. |
 | Theme parity | Review light, dark, and high-contrast output. | Meaning and hierarchy persist in each theme. |
 | Token reuse | Inspect changed styling assets. | Shared tokens replace one-off values. |
-| Primary action weight | Review action groups. | One dominant action stands above secondary actions. |
 
 ## Common Pitfalls
 
 | Pitfall | Agent Fix |
 |---|---|
-| Acrylic appears behind dense tables or long text. | Agent moves dense content to opaque or lightly tinted surfaces. |
 | Elevation values drift across screens. | Agent reduces the layer scale to repeatable roles. |
-| Reveal or glow appears as decoration. | Agent reserves lighting cues for actionable or focused elements. |
 | Motion length exceeds task value. | Agent shortens duration and removes non-informational movement. |
-| Brand overrides erase Fluent structure. | Agent keeps Fluent spacing, state, and hierarchy while applying brand accents selectively. |
 
 ## Outputs
 
