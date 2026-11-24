@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -53,29 +53,21 @@ Agent traces each mock setup through production execution to decide whether the 
 
 | Pitfall | Agent fix |
 |---|---|
-| Agent flags every mock as suspicious | Agent preserves mocks at true system boundaries. |
-| Agent judges setups without reading production code | Agent traces the actual path first. |
-| Agent ignores verify-only interaction tests | Agent credits verifications that prove required side effects. |
 | Agent extracts shared setup after two occurrences only | Agent waits for material repetition. |
 
 ## Classification Table
 
-| Classification | Signal | Agent conclusion | Agent fix |
-|---|---|---|---|
-| Used | Production code reaches the setup on this path. | Setup is justified. | Agent keeps it and cites why when explanation adds value. |
-| Unreachable | Guard clause, exception, or branch prevents the call. | Setup is unnecessary for this test path. | Agent removes or relocates it. |
-| Unused | Production method never calls that member. | Setup adds noise without value. | Agent deletes it. |
-| Redundant | Multiple tests repeat the same setup. | Shared infrastructure helps when repetition is material. | Agent proposes extraction when repetition is material. |
-| Replaceable | Stable framework type does not need a mock. | Real helper is simpler. | Agent swaps to `NullLogger`, `Options.Create`, or a real value object. |
+| Classification | Signal | Agent fix |
+|---|---|---|
+| Unreachable | Guard clause, exception, or branch prevents the call. | Agent removes or relocates it. |
+| Unused | Production method never calls that member. | Agent deletes it. |
+| Redundant | Multiple tests repeat the same setup. | Agent proposes extraction when repetition is material. |
+| Replaceable | Stable framework type or DTO does not need a mock. | Agent swaps to `NullLogger<T>.Instance`, `Options.Create`, or a real object. |
 
 ## Mock Pattern Table
 
 | Pattern | Agent interpretation | Pass |
 |---|---|---|
-| `Setup` plus `Verify` on called dependency | Legitimate interaction proof | Setup remains because observable behavior depends on it. |
-| Mocked DTO or record | Likely replaceable | Real object removes indirection. |
-| Logging mock without verification | Usually replaceable | `NullLogger<T>.Instance` preserves behavior. |
-| Options mock | Usually replaceable | `Options.Create(new T())` preserves behavior. |
 | Branch-only setup | Path-specific evidence needed | Agent keeps it only in tests that reach the branch. |
 
 ## Report Contract
