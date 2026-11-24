@@ -7,21 +7,13 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "core"
 ---
 
 # Test Anti-Pattern Detection
 
 Agent audits tests for pragmatic defects that break trust in the suite.
-
-## When to Use
-
-| User prompt | Use |
-|---|---|
-| User asks why tests feel unreliable | Use this skill |
-| User asks for a PR-focused quality review | Use this skill |
-| User asks for flaky, over-mocked, or weak-test findings | Use this skill |
 
 ## When Not to Use
 
@@ -41,23 +33,10 @@ Agent audits tests for pragmatic defects that break trust in the suite.
 
 ## Workflow
 
-| Step | Agent action | Test | Pass |
-|---|---|---|---|
-| 1 | Agent defines the audit scope. | Read the prompt and selected files. | Audit stays inside the requested boundary. |
-| 2 | Agent reads the matching extension guidance. | Read `test-analysis-extensions` and one extension file. | Framework idioms and skips are recognized correctly. |
-| 3 | Agent scans for anti-pattern signals. | Review each flagged location. | Each finding maps to one table entry. |
-| 4 | Agent calibrates severity by trust impact. | Compare defect to severity table. | Critical and High items reflect false confidence or instability. |
-| 5 | Agent collapses repeated symptoms into systemic findings. | Review final report. | Output stays concise and non-repetitive. |
-| 6 | Agent includes strengths. | Review final report. | Report shows positive observations as well as defects. |
-
-## Common Pitfalls
-
-| Pitfall | Agent fix |
-|---|---|
-| Agent rates naming nits as severe | Agent reserves top severity for false confidence or flakiness. |
-| Agent flags framework idioms as defects | Agent calibrates against the extension file first. |
-| Agent repeats the same root issue in every test | Agent reports the systemic cause once, then cites examples. |
-| Agent invents missing tests from speculation | Agent reports observable evidence only. |
+1. Stay inside the requested scope.
+2. Read `test-analysis-extensions` and one extension file first so framework idioms and skips are not flagged.
+3. Map each finding to one table entry; rate severity by trust impact.
+4. Report a repeated root cause once as a systemic finding, with examples.
 
 ## Anti-Pattern Table
 
@@ -83,24 +62,9 @@ Agent audits tests for pragmatic defects that break trust in the suite.
 | Lower-severity items | Agent uses a compact table. |
 | Positive observations | Agent names trustworthy patterns already present. |
 
-## Verification Checklist
+Report observed defects only.
 
-- [ ] Agent read framework guidance before judging patterns.
-- [ ] Agent tied every finding to a specific location.
-- [ ] Agent gave a concrete fix for every Critical or High issue.
-- [ ] Agent reported observed defects only.
-- [ ] Agent kept severity aligned to trust impact.
-
-## Example Findings
-
-Agent produces findings in this format for every Critical or High issue:
-
-**Pattern:** Unawaited async work
-**Severity:** Critical
-**Location:** `Tests/UserServiceTests.cs`, line 42, `TestUserLoginReturnsValidToken`
-**Signal:** `var task = _userService.LoginAsync(user); Assert.IsTrue(_user.IsAuthenticated);` — test does not await the task, assertion runs before login completes
-**Risk:** Test passes even if LoginAsync fails; false confidence in authentication flow
-**Fix:** Add `await` before the call: `await _userService.LoginAsync(user);`
+## Example Finding
 
 **Pattern:** Over-mocking
 **Severity:** High

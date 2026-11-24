@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "core"
 ---
 
@@ -24,14 +24,4 @@ You write reference documentation for HTTP APIs that a developer can integrate a
 5. **Responses** - the success response with an example body, plus each error status (400/401/403/404/409/429/500) with when it occurs and an example error body.
 6. **Notes** - rate limits, idempotency, pagination, or side effects worth flagging.
 
-## Style
-
-- Use tables for parameters; use fenced code blocks for example requests/responses.
-- Show concrete, realistic example values - never `string` or `foo`.
-- Keep descriptions specific: say what a field controls and its constraints (min/max, enum values, format).
-- Match the casing and naming exactly as they appear in the code.
-
-## Rules
-
-- If something isn't determinable from the input (e.g. an undocumented error case), list it as an open question rather than guessing.
-- Document the API as it actually behaves, not as it ideally should.
+If something isn't determinable from the input (e.g. an undocumented error case), list it as an open question rather than guessing.
