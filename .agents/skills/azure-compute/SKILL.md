@@ -7,21 +7,13 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "azure"
 ---
 
 # Azure Compute Skill
 
 Routes Azure VM and Virtual Machine Scale Set (VMSS) requests to the right workflow.
-
-## When to Use This Skill
-
-- User wants to **recommend, compare, or price** a VM or VMSS
-- User wants to **create, provision, or deploy** a VM or VMSS
-- User **can't connect** to a VM (RDP / SSH / port refused / black screen / password reset)
-- User asks about **Capacity Reservation Groups** (CRG) — reserve, guarantee capacity, pre-provision
-- User asks about **Essential Machine Management** (EMM) — machine enrollment, monitor
 
 **Disambiguate with `azure-prepare`:** if the user wants to deploy an **application** (Docker service, web app, API, serverless workload), route to `azure-prepare`. `vm-creator` is for **bare VM/VMSS infrastructure** only.
 
