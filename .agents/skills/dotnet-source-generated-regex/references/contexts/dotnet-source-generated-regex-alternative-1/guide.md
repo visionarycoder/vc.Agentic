@@ -25,7 +25,6 @@ Convert runtime-compiled regex patterns to compile-time source-generated pattern
 | User prompt | Route |
 |---|---|
 | User targets .NET 6 or earlier | Use `dotnet-compiled-regex-patterns` |
-| User asks for general performance optimization | Use `analyzing-dotnet-performance` first |
 
 ## Overview
 
@@ -108,4 +107,3 @@ public static Match? ParseDecimalPicture(string input)
 
 - `dotnet-compiled-regex-patterns` — Traditional `RegexOptions.Compiled` approach
 - `roslyn-source-generator-authoring` — Writing custom source generators
-- `analyzing-dotnet-performance` — General performance optimization

@@ -173,4 +173,3 @@ RegexOptions.Compiled           // Compile to IL
 
 - [System.Text.RegularExpressions](https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions)
 - [RegexOptions.Compiled](https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexoptions)
-- `.github/skills/analyzing-dotnet-performance/references/regex-patterns.md`

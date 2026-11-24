@@ -92,7 +92,7 @@ Agent classifies the request on four axes:
 | Access capability or query pattern | `vbd-access-components` | `vbd-dto-authoring` | Load DTO skill only when contract shape changes |
 | Engine capability or rule pattern | `vbd-engine-components` | `vbd-dto-authoring` | Load DTO skill only when boundary contracts change |
 | Manager workflow or orchestration pattern | `vbd-manager-components` | `vbd-dto-authoring` | Load DTO skill only when workflow contracts change |
-| Boundary DTO ownership or immutable record design | `vbd-dto-authoring` | `dotnet-dto-standards` | Use VBD DTO skill inside VBD scope |
+| Boundary DTO ownership or immutable record design | `vbd-dto-authoring` | `vbd-system-design` | Use VBD DTO skill inside VBD scope |
 | Existing slice violates VBD boundaries | `vbd-boundary-contract-mapping` | `vbd-architecture-conformance` | Load corrective skill first |
 | Architecture rule audit or drift check | `vbd-architecture-conformance` | `vbd-system-design` | Load audit skill first |
 

@@ -25,7 +25,6 @@ Agent reorganizes Portal and Scheduler APIs into versioned business modules so t
 | Condition | Use |
 |---|---|
 | Agent fixes one endpoint locally. | Agent uses a focused web API skill. |
-| Agent reorganizes frontend modules only. | Agent uses `frontend-module-consolidation`. |
 | Agent lacks a compatibility plan for v1 consumers. | Agent defines compatibility first. |
 
 ## Required Inputs

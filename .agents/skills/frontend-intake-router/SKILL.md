@@ -50,4 +50,3 @@ Agent routes frontend work to one primary frontend skill.
 | Intent | Primary skill | Optional secondary |
 |---|---|---|
 | Web app consolidation or cutover planning | `webapp-consolidation-strategy` | `webapp-cutover-strategy` |
-| WPF application setup | `wpf-project-setup` | `wpf-mvvm-implementation` |

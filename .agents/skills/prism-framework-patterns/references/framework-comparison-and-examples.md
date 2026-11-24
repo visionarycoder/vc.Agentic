@@ -80,7 +80,6 @@ public sealed class CustomerListViewModel : INotifyPropertyChanged
 
 | Platform | Hook | Route |
 |---|---|---|
-| WPF | Pair Prism regions, dialogs, and locator conventions with thin WPF views. | `wpf-mvvm-implementation` |
 | WinUI 3 | Route WinUI 3 work to native WindowsAppSDK patterns unless the repository already exposes a supported Prism integration layer. | `winui3-patterns` |
 
 ## MCP Hooks

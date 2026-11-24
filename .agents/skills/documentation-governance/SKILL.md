@@ -28,7 +28,6 @@ Agent governs markdown placement, link integrity, front matter, and collaborativ
 
 | Condition | Route |
 |---|---|
-| One file needs front matter only | Use `markdown-frontmatter` |
 | One file needs link repair only | Use `documentation-link-repair` |
 | One file needs path selection only | Use `documentation-file-placement` |
 | One file needs wording refinement only | Use `documentation-style-collaboration` |

@@ -26,7 +26,6 @@ Agent adds Azure Monitor Application Insights telemetry to .NET apps. Agent veri
 |---|---|
 | User asks for a different observability backend only | Use that backend workflow |
 | User asks for local logging only | Use logging guidance |
-| User asks for vendor-neutral tracing only | Use `configuring-opentelemetry-dotnet` |
 
 ## Required Inputs
 

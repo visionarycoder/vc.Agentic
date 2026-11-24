@@ -49,8 +49,4 @@ Agent routes data and Fabric work to one primary data skill.
 
 | Intent | Primary skill | Optional secondary |
 |---|---|---|
-| KQL failure or performance diagnosis | `fabric-kql-diagnostics` | none |
-| Lakehouse ingestion shape or file landing | `fabric-lakehouse-ingestion` | `data-quality-reporting` |
-| Fabric pipeline failure or orchestration issue | `fabric-pipeline-diagnostics` | none |
-| Semantic model authoring | `fabric-semantic-model-builder` | `data-contract-frontmatter` |
 | Data-quality reporting or rule evaluation | `data-quality-reporting` | `data-lineage` |

@@ -29,7 +29,6 @@ Agent imports CDC rows in batches that preserve idempotency, bound memory growth
 | Condition | Route |
 |---|---|
 | Agent enforces duplicate detection and idempotent key rules | Use `cdc-uniqueness-enforcement` |
-| Agent tunes read-side EF queries instead of write-side imports | Use `optimizing-ef-core-queries` |
 | Agent designs one-row administrative inserts with no batching need | Use direct repository patterns |
 
 ## Required Inputs

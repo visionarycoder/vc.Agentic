@@ -1,6 +1,6 @@
 ---
 name: "security-controller"
-description: "Manages security workflows with modes for scan, remediate, verify, and report. Executes SAST analysis, CWE remediation, and compliance reporting across injection, authentication, data protection, and resource management vulnerabilities. - ste-agent-writing-standard - terminology-dictionary - cwe-input-validation-fixes - cwe-authentication-authz-fixes - cwe-injection-attack-fixes - cwe-data-protection-fixes - cwe-resource-management-fixes - cwe-miscellaneous-security-fixes - cwe-format-external-fixes - security - cwe - controller - sast - compliance"
+description: "Manages security workflows with modes for scan, remediate, verify, and report. Executes SAST analysis, CWE remediation, and compliance reporting across injection, authentication, data protection, and resource management vulnerabilities. - ste-agent-writing-standard - terminology-dictionary - cwe-input-validation-fixes - cwe-authentication-authz-fixes - cwe-injection-attack-fixes - cwe-data-protection-fixes - cwe-resource-management-fixes - cwe-miscellaneous-security-fixes - security - cwe - controller - sast - compliance"
 metadata:
   metadata-version: "1.0.0"
   title: "Security controller"

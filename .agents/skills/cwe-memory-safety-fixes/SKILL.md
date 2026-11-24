@@ -68,7 +68,7 @@ Agent uses this bundle for CWE-888 memory-safety clusters that reach .NET throug
 | Area | Agent Uses | Agent Avoids |
 |---|---|---|
 | Managed code default | Honest scoping: most classic buffer and pointer CWEs are not directly reachable in safe C# | Claiming native exploit paths in pure managed code |
-| Interop paths | `dotnet-pinvoke` for signature and ownership review | Raw `IntPtr` ownership with undocumented allocator rules |
+| Interop paths | Signature and ownership review of P/Invoke declarations | Raw `IntPtr` ownership with undocumented allocator rules |
 | Buffer logic | `Span<T>` and explicit length guards | Hidden byte-count assumptions and unchecked slices |
 
 ## Verification Checklist
@@ -86,7 +86,7 @@ Agent verifies:
 |---|---|---|
 | Repo or component path | Yes | - |
 | CWE subset | No | All 8 rows |
-| Native ownership or header contract | No | Existing code and `dotnet-pinvoke` guidance |
+| Native ownership or header contract | No | Existing code and header contract |
 
 ## Outputs
 

@@ -29,8 +29,6 @@ Agent keeps VBD DTOs immutable, scope-owned, and business-aligned. Agent uses re
 | Condition | Route |
 |---|---|
 | Type is a persistence entity or ORM model | `vbd-access-components` |
-| Type owns behavior or identity-rich invariants | `dotnet-value-object-standards` |
-| Type is generic .NET DTO guidance outside VBD boundaries | `dotnet-dto-standards` |
 
 ## Required Inputs
 

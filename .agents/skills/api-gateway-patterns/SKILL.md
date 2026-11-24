@@ -31,7 +31,6 @@ Agent designs gateway layers with explicit routing, bounded transforms, and obse
 | Work changes one API with no cross-service ingress layer | Edit the API directly |
 | Work needs east-west traffic policy inside the cluster only | Use service-mesh or platform networking guidance |
 | Work adds static-file or CDN rules with no API routing logic | Use the matching edge-configuration path |
-| Work hardens one outbound HTTP client inside an app service | Use `dotnet-api-client-resilience` |
 
 ## Required Inputs
 

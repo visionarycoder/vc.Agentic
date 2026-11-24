@@ -28,7 +28,6 @@ Agent implements RabbitMQ messaging with explicit topology, bounded consumer con
 
 | Condition | Route |
 |---|---|
-| Work stays inside one process | Use `background-services-channels` |
 | Need is pub/sub pattern guidance without broker choice | Use `message-patterns-dotnet` |
 | Need is cache or lightweight ephemeral pub/sub | Use `redis-patterns-dotnet` |
 

@@ -55,7 +55,7 @@ Agent routes ambiguous prompts to the smallest skill set that covers the work.
 |---|---|---|
 | Skill creation, review, optimization, or ecosystem audit | `skill-lifecycle-controller` | `skill-authoring` |
 | Markdown, links, front matter, guidance drift | `documentation-fixes` | `documentation-governance` |
-| Test failures, MSTest warnings, or test modernization | `mstest-modernization-controller` | `test-fixes` |
+| Test failures, MSTest warnings, or test modernization | `mstest-modernization-controller` | none |
 | xUnit test creation or maintenance | `code-testing-agent` | `mstest-test-authoring` |
 | Blazor component unit tests | `blazor-unit-testing` | `code-testing-agent` |
 | Blazor browser and UI journeys | `blazor-ui-testing` | None |
@@ -63,7 +63,7 @@ Agent routes ambiguous prompts to the smallest skill set that covers the work.
 | Security, auth, injection, or CWE families | `security-controller` | `webapi-hardening-controller` |
 | Problem Details, JSON, JWT, or JSON-seq | `rfc-fixes-bundle` | Self-contained; see bundle references |
 | Cross-stack platform or architecture choice | `technology-selection` | `critical-infrastructure-bundle` |
-| Desktop MVVM, WPF, WinUI, or MAUI | `mvvm-toolkit-bundle` | `wpf-mvvm-implementation` |
+| Desktop MVVM, WPF, WinUI, or MAUI | `mvvm-toolkit-bundle` | none |
 | Fabric, semantic models, or analytics integration | `fabric-integration-bundle` | `semantic-data-bundle` |
 | Mainframe copybooks or fixed-width migration | `mainframe-integration-bundle` | — |
 

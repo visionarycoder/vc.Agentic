@@ -133,7 +133,7 @@ partial class CustomerEditorViewModel
 
 | Platform | Hook | Route |
 |---|---|---|
-| WPF | Emit APIs that align with existing WPF binding, validation, and command patterns. | `wpf-mvvm-implementation` |
+| WPF | Emit APIs that align with existing WPF binding, validation, and command patterns. | `wpf-fluent-ui` |
 | WinUI 3 | Emit APIs that align with WinUI 3 `x:Bind`, command, and observable state patterns. | `winui3-patterns` |
 
 ## MCP Hooks

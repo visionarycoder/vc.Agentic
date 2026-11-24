@@ -29,7 +29,6 @@ Agent integrates Windows AI connectors through Windows ODR discovery, user-appro
 | Condition | Route |
 |---|---|
 | Work only creates a general MCP server or client | Use `mcp-integration-patterns` |
-| Work only scaffolds a C# MCP server | Use `mcp-csharp-create` |
 | Work does not target Windows ODR or Windows-local inference | Use a platform-neutral MCP or AI integration skill |
 
 ## Required Inputs

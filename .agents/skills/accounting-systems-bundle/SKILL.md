@@ -24,13 +24,6 @@ Agent uses this bundle for accounting system work that spans posting rules, peri
 | Journal, reconciliation, close, controls, and reporting in one request | Yes |
 | Single accounting topic with no routing need | No |
 
-## When Not to Use
-
-| Prompt Pattern | Agent Route |
-|---|---|
-| Only debits, credits, or chart of accounts | `accounting-double-entry` |
-| Only journal workflow design | `accounting-journal-entry-patterns` |
-
 ## Required Inputs
 
 | Input | Required | Notes |
@@ -44,14 +37,8 @@ Agent uses this bundle for accounting system work that spans posting rules, peri
 
 | Request Signal | Use Bundle | Route Detail |
 |---|---|---|
-| Debits, credits, posting rules, chart design | Yes | `accounting-double-entry` |
-| Chart of accounts structure, segments, numbering | Yes | `accounting-chart-of-accounts-design` |
-| Journal intake, approval, posting, reversal, correction | Yes | `accounting-journal-entry-patterns` |
 | Adjustment entries: correcting, accrual, reclassification | Yes | `adjustment-entry-patterns` |
 | Subledger-to-GL reconciliation, break detection | Yes | `accounting-subledger-reconciliation-patterns` |
-| Interfund transactions, due to/from, eliminations | Yes | `accounting-interfund-patterns` |
-| Multi-currency, FX translation, remeasurement | Yes | `accounting-multi-currency` |
-| Sales tax, use tax, tax jurisdiction, 1099 reporting | Yes | `accounting-tax-patterns` |
 | Month-end, year-end, or close checklist | Yes | `accounting-closing-cycle-patterns` |
 | Controls, approvals, evidence, audit trail, segregation | Yes | `audit-trail-compliance` |
 
@@ -59,14 +46,8 @@ Agent uses this bundle for accounting system work that spans posting rules, peri
 
 | Need | Specialist Skill | Primary Outcome |
 |---|---|---|
-| Ledger foundation | `accounting-double-entry` | Balanced posting model and chart of accounts |
-| Chart structure | `accounting-chart-of-accounts-design` | Account numbering, segments, hierarchy, roll-up rules |
-| Entry workflow | `accounting-journal-entry-patterns` | Draft-to-post lifecycle with reversals and corrections |
 | Adjustment entries | `adjustment-entry-patterns` | Correcting, accrual, reclassification, prior period adjustments |
 | Subledger control | `accounting-subledger-reconciliation-patterns` | AR, AP, Payroll, Fixed Assets to GL reconciliation |
-| Interfund transactions | `accounting-interfund-patterns` | Due to/from, transfers, eliminations for consolidated reporting |
-| Multi-currency | `accounting-multi-currency` | FX translation, remeasurement, gain/loss recognition |
-| Tax accounting | `accounting-tax-patterns` | Sales tax, use tax, jurisdiction-based calculation |
 | Period governance | `accounting-closing-cycle-patterns` | Controlled close calendar and cutoff rules |
 | Controls and evidence | `audit-trail-compliance` | Traceability, approvals, and segregation boundaries |
 
@@ -79,18 +60,11 @@ Agent uses this bundle for accounting system work that spans posting rules, peri
 | Budgetary control | Optional management control | Core accounting dimension |
 | Fund separation | Rare | Frequent or required |
 
-## Decision Matrix: When to Use Fund Accounting
-
-| Condition | Use Fund Accounting | Route |
-|---|---|---|
-| One unrestricted commercial ledger fits the model | No | `accounting-double-entry` |
-
 ## Decision Order
 
 | Decision | Agent Action |
 |---|---|
-| Commercial entity with one unrestricted ledger | Agent starts with `accounting-double-entry`, then `accounting-journal-entry-patterns`, and `accounting-closing-cycle-patterns`. |
-| Public sector entity with GASB reporting | Agent starts with `accounting-journal-entry-patterns` and `accounting-closing-cycle-patterns`. |
+| Commercial or public sector entity with period-close needs | Agent starts with `accounting-closing-cycle-patterns`. |
 | Control-heavy implementation | Agent adds `audit-trail-compliance` before workflow finalization. |
 | Analytics and reporting platform in scope | Agent maps operational ledger events to Fabric semantic, warehouse, or lakehouse outputs after accounting model selection. |
 

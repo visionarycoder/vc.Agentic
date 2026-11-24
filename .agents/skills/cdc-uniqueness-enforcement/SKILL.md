@@ -29,7 +29,6 @@ Agent enforces CDC idempotency with the composite key `(StartLsn, SequenceValue)
 | Condition | Route |
 |---|---|
 | Agent tunes batch size, transaction scope, or progress reporting | Use `cdc-batch-import-patterns` |
-| Agent finds business duplicates that do not use CDC metadata | Use `transaction-duplication-detection` |
 | Agent reviews one-off generic hash-key logic outside CDC import | Use direct code review or repository-specific patterns |
 
 ## Required Inputs

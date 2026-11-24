@@ -28,7 +28,6 @@ Agent uses this skill to add package metadata, classify project packability, and
 
 | Condition | Route |
 |---|---|
-| User asks to publish packages to nuget.org or replace API-key publishing | Use `nuget-trusted-publishing` after local packaging succeeds |
 | User asks only to update dependency versions | Use central package management or dependency update guidance |
 | User asks to create a new library from scratch | Use the project creation workflow first, then return to this skill |
 

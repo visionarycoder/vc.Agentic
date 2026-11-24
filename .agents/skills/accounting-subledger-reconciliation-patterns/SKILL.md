@@ -30,8 +30,6 @@ Agent reconciles subsidiary-ledger summaries to general-ledger control accounts 
 
 | Prompt or Code Shape | Route |
 |---|---|
-| Work item covers journal balancing fundamentals only | Agent uses `accounting-double-entry` |
-| Work item covers anomaly detection in flat ledger extracts without control-account tie-out | Agent uses `accounting-ledger-balance-anomaly` |
 | Work item covers audit evidence design without reconciliation logic | Agent uses `audit-trail-compliance` |
 
 ## Required Inputs

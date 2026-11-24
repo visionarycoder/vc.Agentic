@@ -25,7 +25,7 @@ Agent uses this controller for MSTest warning remediation, version migration, an
 
 | User prompt | Route |
 |---|---|
-| User asks to write brand-new tests with no modernization scope | Use `test-fixes` or a test-authoring skill |
+| User asks to write brand-new tests with no modernization scope | Use a test-authoring skill |
 | User asks for assertion analysis only | Use `assertion-quality` |
 | User asks for test execution only | Use `run-tests` |
 

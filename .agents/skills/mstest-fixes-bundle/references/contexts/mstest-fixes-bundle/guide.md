@@ -17,7 +17,7 @@ Agent uses this bundle for one-pass MSTest analyzer fixes across common warning 
 | Prompt Scope | Use This Bundle | Route Detail |
 |---|---|---|
 | Several `MSTEST0017`, `MSTEST0042`, `MSTEST0044`, `MSTEST0052`, or `MSTEST0065` warnings | Yes | Agent fixes all listed warnings in one workflow |
-| One warning family plus broader test-quality audit | Yes | Agent fixes warnings first, then routes to `test-fixes` |
+| One warning family plus broader test-quality audit | Yes | Agent fixes the warnings first, then reviews test quality |
 
 ## Rules Coverage
 

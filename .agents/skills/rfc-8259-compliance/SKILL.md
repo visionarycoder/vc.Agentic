@@ -23,8 +23,6 @@ Agent uses this skill for external JSON payloads, serializers, parsers, examples
 
 | API, file, or tool emits or parses JSON | Use this skill |
 
-| Stream uses JSON text sequences | Pair with `rfc-8091-compliance` |
-
 | Internal object graph never crosses a contract boundary | Use local project conventions only when the boundary stays internal |
 
 ## When Not to Use

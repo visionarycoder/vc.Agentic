@@ -25,7 +25,7 @@ Agent builds Azure Functions that keep trigger intent explicit, function bodies 
 
 | Condition | Use |
 |---|---|
-| Work exceeds host limits and needs durable checkpointed execution | Pair with `long-running-job-patterns` or choose another host |
+| Work exceeds host limits and needs durable checkpointed execution | Choose another host |
 | Work depends on Quartz-style holiday or business-day Schedule rules | Use Quartz skills |
 | Work needs always-on process control with App Service semantics | Use WebJobs or worker-service patterns |
 

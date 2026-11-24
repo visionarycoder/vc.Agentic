@@ -27,7 +27,6 @@ Agent keeps Access code query-focused, infrastructure-aware, and free of busines
 |---|---|
 | Workflow orchestration belongs in a Manager | Route to `vbd-manager-components` |
 | Business rules belong in an Engine | Route to `vbd-engine-components` |
-| Type is request or response transport only | Route to `dotnet-dto-standards` |
 
 ## Required Inputs
 

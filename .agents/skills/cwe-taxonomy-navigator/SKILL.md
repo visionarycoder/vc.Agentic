@@ -63,11 +63,10 @@ Agent uses this controller to decode MITRE CWE organizer entries, then route to 
 |---|---|---|
 | A01:2025 - Broken Access Control | Authentication and authorization | `cwe-authentication-authz-fixes` |
 | A02:2025 - Security Misconfiguration | Deployment and control-surface hardening | `cwe-miscellaneous-security-fixes` |
-| A03:2025 - Software Supply Chain Failures | External control and hostile artifact indicators | `cwe-format-external-fixes`, `cwe-malware-indicators-fixes` |
+| A03:2025 - Software Supply Chain Failures | External control and hostile artifact indicators | `cwe-malware-indicators-fixes` |
 | A05:2025 - Injection | Injection and untrusted command or query construction | `cwe-injection-attack-fixes`, `cwe-input-validation-fixes` |
 | A06:2025 - Insecure Design | Trust-boundary and security-design flaws | `security-controller`, then the owning family |
 | A07:2025 - Authentication Failures | Identity, session, and authorization control failures | `cwe-authentication-authz-fixes` |
-| A08:2025 - Software or Data Integrity Failures | Integrity and unsafe trust of code or data | `cwe-format-external-fixes` |
 | A09:2025 - Logging &amp; Alerting Failures | Logging, alert coverage, and detection gaps | `cwe-resource-management-fixes`, `cwe-exception-management-fixes` |
 | A10:2025 - Mishandling of Exceptional Conditions | Error handling and exception control flow | `cwe-exception-management-fixes`, `cwe-logic-correctness-fixes` |
 

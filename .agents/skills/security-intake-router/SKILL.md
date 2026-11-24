@@ -56,4 +56,3 @@ Agent routes security work to one primary security skill.
 | Injection / SQL / command / XSS | `cwe-injection-attack-fixes` |
 | Resource, logging injection, privilege, DoS | `cwe-resource-management-fixes` |
 | Traversal, upload, redirect, SSRF, null | `cwe-miscellaneous-security-fixes` |
-| Search path / format external control | `cwe-format-external-fixes` |

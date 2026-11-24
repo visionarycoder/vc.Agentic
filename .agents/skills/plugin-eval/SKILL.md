@@ -34,8 +34,7 @@ plugin-eval start <path> --request "<user request>" --format markdown
    - "Help me benchmark this plugin." -> starter benchmark flow
    - "What should I run next?" -> `plugin-eval start <path> --request "What should I run next?" --format markdown`
 4. If the user wants rewrite help after evaluation, route to `../improve-skill/SKILL.md`.
-5. If the user wants a custom rubric, route to `../metric-pack-designer/SKILL.md`.
-6. If the user names a skill instead of giving a path, resolve it locally before running commands:
+5. If the user names a skill instead of giving a path, resolve it locally before running commands:
    - check `~/.codex/skills/<skill-name>` first
    - then check any repo-local `skills/<skill-name>` directory
    - if the name is still ambiguous, ask one short clarifying question before continuing

@@ -25,8 +25,6 @@ Agent makes error responses deterministic by aligning status semantics and Probl
 
 | Validation, not-found, conflict, or server-failure paths drift apart | Use this skill |
 
-| Streamed endpoint already wrote response bytes | Pair with `rfc-8091-compliance` |
-
 ## Workflow
 
 | Step | Agent Action | Test | Pass |

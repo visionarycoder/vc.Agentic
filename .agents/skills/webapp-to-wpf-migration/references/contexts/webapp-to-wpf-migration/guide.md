@@ -25,7 +25,7 @@ Agent migrates one web feature at a time into WPF by preserving contracts, re-ma
 | Condition | Use |
 |---|---|
 | Agent keeps the feature on the web and changes only the framework. | Agent uses a web migration skill. |
-| Agent creates only a new WPF shell. | Agent uses `wpf-project-setup`. |
+| Agent creates only a new WPF shell. | Agent uses a WPF project setup workflow. |
 | Agent faces unresolved domain or API redesign that invalidates the migration surface. | Agent stabilizes the contract first. |
 
 ## Required Inputs

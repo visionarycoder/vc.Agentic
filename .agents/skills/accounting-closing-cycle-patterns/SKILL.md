@@ -28,9 +28,7 @@ Apply period-close and year-end close controls, adjusting entry patterns, and cl
 
 | Prompt or Code Shape | Route |
 |---|---|
-| Work item covers journal entry lifecycle only | Use `accounting-journal-entry-patterns` |
 | Work item covers control evidence and access policy only | Use `audit-trail-compliance` |
-| Work item covers account-type rules and ledger design only | Use `accounting-double-entry` |
 
 ## Required Inputs
 

@@ -70,7 +70,6 @@ Pass: Zero new build errors. Zero test failures.
 | "injection" / "SQL" / "command" / "XSS" / "code execution" | `cwe-injection-attack-fixes` | Command, code, HTML, SQL, related injection issues |
 | "logging injection" / "DoS" / "resource" / "privilege" | `cwe-resource-management-fixes` | Logging injection, integer/resource misuse, privilege, DoS, lifecycle issues |
 | "path traversal" / "upload" / "redirect" / "SSRF" / "null pointer" | `cwe-miscellaneous-security-fixes` | Path traversal, upload, null-deref, open redirect, SSRF, filesystem permission issues |
-| "search path" / "DLL hijacking" / "format string" | `cwe-format-external-fixes` | External search-path / format-specific issues |
 
 ## Cross-Cutting Security Rules
 

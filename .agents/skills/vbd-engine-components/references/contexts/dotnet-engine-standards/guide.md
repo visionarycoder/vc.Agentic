@@ -27,7 +27,6 @@ Agent keeps Engines focused on business rules, deterministic transforms, and sta
 |---|---|
 | Code coordinates workflow steps | Route to `vbd-manager-components` |
 | Code loads or saves data | Route to `vbd-access-components` |
-| Code defines transport contracts | Route to `dotnet-dto-standards` |
 
 ## Required Inputs
 

@@ -332,5 +332,4 @@ public class RegexCompilationBenchmark
 
 ## Related Skills
 
-- `.github/skills/analyzing-dotnet-performance/` — Broader performance diagnostics
 - `.github/skills/microbenching/` — Set up BenchmarkDotNet suites

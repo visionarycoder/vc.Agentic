@@ -26,7 +26,6 @@ Agent integrates Microsoft Entra ID authentication for .NET apps. Agent uses Mic
 |---|---|
 | User asks for machine-to-machine access with no user context and platform identity is available | Use managed identity patterns |
 | User asks for consumer-only identity | Use Azure AD B2C or generic OIDC guidance |
-| User asks for local username and password storage | Use `aspnetcore-identity-setup` |
 
 ## Required Inputs
 

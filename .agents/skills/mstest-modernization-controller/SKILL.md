@@ -1,6 +1,6 @@
 ---
 name: "mstest-modernization-controller"
-description: "Manages test modernization with modes for scan, fix, modernize, and verify. Executes MSTest analyzer remediation, version migration (v3→v4), and test quality analysis. - ste-agent-writing-standard - terminology-dictionary - run-tests - test-fixes - test-anti-patterns - assertion-quality - mstest - testing - controller - modernization - analyzers"
+description: "Manages test modernization with modes for scan, fix, modernize, and verify. Executes MSTest analyzer remediation, version migration (v3→v4), and test quality analysis. - ste-agent-writing-standard - terminology-dictionary - run-tests - test-anti-patterns - assertion-quality - mstest - testing - controller - modernization - analyzers"
 metadata:
   metadata-version: "1.0.0"
   title: "Test modernization controller"

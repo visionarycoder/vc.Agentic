@@ -28,9 +28,7 @@ Agent applies audit trail, control, and event-history patterns for financial sys
 
 | Prompt or Code Shape | Route |
 |---|---|
-| Journal lifecycle without control-design focus | `accounting-journal-entry-patterns` |
 | Period-close orchestration only | `accounting-closing-cycle-patterns` |
-| Double-entry fundamentals only | `accounting-double-entry` |
 
 ## Required Inputs
 

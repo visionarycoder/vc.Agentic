@@ -155,9 +155,9 @@ When anti-pattern detected:
 
 | Anti-Pattern Type | Primary Skill | Secondary Skills |
 |---|---|---|
-| Azure performance anti-patterns | `azure-performance-antipatterns` | `analyzing-dotnet-performance`, `optimizing-ef-core-queries` |
+| Azure performance anti-patterns | `azure-performance-antipatterns` | None |
 | Code smells | `code-smell-detection` | `refactor`, `dotnet-code-quality-standards` |
-| Design smells | `design-smell-detection` | `dotnet-architectural-layers`, `dependency-injection-patterns` |
+| Design smells | `design-smell-detection` | None |
 | Architectural decisions | `architectural-decision-debate` | `technology-selection`, `api-gateway-patterns` |
 
 ## Output Format

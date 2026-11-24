@@ -1,6 +1,6 @@
 ---
 name: "test-fixes-bundle"
-description: "Routes test-analysis requests through the canonical test-fixes bundle and its specialized skills."
+description: "Routes test-analysis requests through the canonical test fixes bundle and its specialized skills."
 metadata:
   metadata-version: "1.0.0"
   title: "Test fixes bundle"

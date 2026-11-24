@@ -24,18 +24,6 @@ Agent uses this skill to collect .NET trace artifacts only. Agent leaves trace a
 
 | User asks for artifact handoff data with a trace file | Agent uses this skill |
 
-## When Not to Use
-
-| User prompt | Route |
-
-|---|---|
-
-| User asks for source-code optimization review | Agent uses `analyzing-dotnet-performance` |
-
-| User asks for dump collection | Agent uses `dump-collect` |
-
-| User asks for trace analysis | Agent uses the matching analysis workflow |
-
 ## Required Inputs
 
 | Input | Required | Notes |

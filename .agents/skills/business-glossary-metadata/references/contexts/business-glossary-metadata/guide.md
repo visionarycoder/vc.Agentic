@@ -22,14 +22,6 @@ Agent structures glossary, catalog, and data-dictionary assets with explicit own
 | Prompt needs Purview-ready term, asset, and classification mapping | Use this skill |
 | Prompt needs glossary terms coordinated with ontology or semantic-model labels | Use this skill |
 
-## When Not to Use
-
-| Condition | Route |
-|---|---|
-| Prompt needs synonym cleanup and canonical naming only | Use `terminology-normalization` |
-| Prompt needs DAX, calculation groups, or Fabric storage design | Use `semantic-layer-fabric` |
-| Prompt needs fact and dimension schema design | Use `semantic-modeling-standards` |
-
 ## Required Inputs
 
 | Input | Required | Notes |

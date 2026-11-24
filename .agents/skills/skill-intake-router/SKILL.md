@@ -61,7 +61,6 @@ Agent chooses the smallest correct routing surface before loading execution skil
 | Broad hardening, CWE families, multi-theme vulnerability cleanup | `security-intake-router` | Security routing and remediation |
 | Project files, SDK-style migration, props/targets, build graph, binlogs | `msbuild-intake-router` | Build and MSBuild routing |
 | Azure Functions, Key Vault, App Configuration, Entra ID, Storage | `azure-intake-router` | Azure technology routing |
-| EF Core DbContext, migrations, EF testing, query tuning | `efcore-intake-router` | EF Core routing |
 | Angular, Vue, web app, or WPF work | `frontend-intake-router` | Frontend routing |
 | Roslyn analyzers, code fixes, source generators, Ifx authoring | `roslyn-intake-router` | Roslyn and Ifx routing |
 | Fabric, KQL, Lakehouse, pipelines, semantic models, data quality | `data-intake-router` | Data and Fabric routing |

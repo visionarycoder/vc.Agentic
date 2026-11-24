@@ -29,10 +29,10 @@ COLLECTIONS = {
     'optional': 'Additional workflows, integrations, and specialist utilities',
 }
 CORE = {
-    'adr', 'api-documentation', 'assertion-quality', 'code-refactoring', 'code-review',
+    'adr', 'assertion-quality', 'code-review',
     'dry-principles', 'executing-plans', 'prepare-task-handoff', 'repo-reconciliation',
-    'skill-authoring', 'skill-selection', 'solid-principles', 'systematic-debugging',
-    'test-anti-patterns', 'test-driven-development', 'token-efficient-implementation',
+    'skill-authoring', 'skill-selection', 'systematic-debugging',
+    'test-driven-development', 'token-efficient-implementation',
     'verification-before-completion', 'writing-plans',
 }
 NAME = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')

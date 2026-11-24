@@ -22,7 +22,6 @@ Agent uses this bundle for message-based integration including RabbitMQ, idempot
 | Integrate RabbitMQ | Yes | Agent uses rabbitmq-patterns |
 | Implement message patterns (pub/sub, idempotency, outbox) | Yes | Agent uses message-patterns-dotnet |
 | Use Redis for messaging | Yes | Agent uses redis-patterns-dotnet |
-| In-process async work queue | No | Agent routes to background-services-channels |
 
 ## Coverage Matrix
 

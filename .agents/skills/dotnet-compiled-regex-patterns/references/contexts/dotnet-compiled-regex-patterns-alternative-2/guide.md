@@ -25,7 +25,6 @@ Convert existing or ad-hoc `Regex` instances to compiled expressions to improve 
 | User prompt | Route |
 |---|---|
 | User targets .NET 7+ | Use `dotnet-source-generated-regex` (modern approach) |
-| User asks for general performance optimization | Use `analyzing-dotnet-performance` first |
 
 ## Problem
 
@@ -186,4 +185,3 @@ RegexOptions.Compiled           // Compile to IL
 
 - [System.Text.RegularExpressions](https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions)
 - [RegexOptions.Compiled](https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regexoptions)
-- `.github/skills/analyzing-dotnet-performance/references/regex-patterns.md`

@@ -49,7 +49,7 @@ Agent uses this controller to route a CWE-888 Software Fault Pattern (SFP) Prima
 | 11 | Path Resolution (893) | Path Traversal (981) | `cwe-miscellaneous-security-fixes` |
 | 12 | Synchronization (894) | Missing Lock (986), Multiple Locks/Unlocks (987), Race Condition Window (988), Unrestricted Lock (989) | No dedicated skill. |
 | 13 | Information Leak (895) | Exposed Data (963) | `cwe-resource-management-fixes` |
-| 14 | Tainted Input (896) | Tainted Input to Variable (994), Tainted Input to Command (990), Tainted Input to Environment (991) | `cwe-input-validation-fixes`, `cwe-injection-attack-fixes`, `cwe-format-external-fixes` |
+| 14 | Tainted Input (896) | Tainted Input to Variable (994), Tainted Input to Command (990), Tainted Input to Environment (991) | `cwe-input-validation-fixes`, `cwe-injection-attack-fixes` |
 | 15 | Authentication (898) | Digital Certificate (948) | `cwe-authentication-authz-fixes` |
 | 16 | Access Control (899) | Insecure Resource Access (945), Access Management (944) | `cwe-authentication-authz-fixes`, `cwe-resource-management-fixes` |
 | 17 | Privilege (901) | — | `cwe-resource-management-fixes`, `cwe-miscellaneous-security-fixes` |
@@ -86,7 +86,7 @@ Agent uses this controller to route a CWE-888 Software Fault Pattern (SFP) Prima
 | Member CWEs | 619 of 619 present in the full catalog |
 | CWE version | 4.20 |
 | New specialist skills added for this task | `cwe-logic-correctness-fixes`, `cwe-api-contract-fixes`, `cwe-exception-management-fixes`, `cwe-memory-safety-fixes`, `cwe-malware-indicators-fixes` |
-| Existing skills extended with SFP cross-references | `cwe-resource-management-fixes`, `cwe-miscellaneous-security-fixes`, `cwe-injection-attack-fixes`, `cwe-input-validation-fixes`, `cwe-authentication-authz-fixes`, `cwe-format-external-fixes`, `security-controller` |
+| Existing skills extended with SFP cross-references | `cwe-resource-management-fixes`, `cwe-miscellaneous-security-fixes`, `cwe-injection-attack-fixes`, `cwe-input-validation-fixes`, `cwe-authentication-authz-fixes`, `security-controller` |
 
 ## Special Handling Notes
 

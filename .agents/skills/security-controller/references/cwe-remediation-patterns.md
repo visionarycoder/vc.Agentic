@@ -11,7 +11,6 @@ prerequisites:
 related_skills:
   - security-controller
   - cwe-authentication-authz-fixes
-  - cwe-format-external-fixes
   - cwe-injection-attack-fixes
   - cwe-input-validation-fixes
   - cwe-miscellaneous-security-fixes

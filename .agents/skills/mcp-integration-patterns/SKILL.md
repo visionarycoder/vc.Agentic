@@ -28,9 +28,6 @@ Agent designs MCP clients, servers, and skill references with protocol-clean tra
 
 | Condition | Agent Action |
 |---|---|
-| Work only scaffolds one C# MCP server project | Use `mcp-csharp-create` |
-| Work only debugs one existing MCP server | Use `mcp-csharp-debug` |
-| Work only packages or deploys one MCP server | Use `mcp-csharp-publish` |
 | Work focuses on Windows AI file and local model flows | Use `windows-ai-mcp-integration` |
 
 ## Required Inputs

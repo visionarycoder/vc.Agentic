@@ -77,7 +77,6 @@ Pass: Agent observes zero compile errors. Agent confirms one representative trig
 | Settings | Options binding from configuration | Keep secrets outside source control |
 | External clients | `AddHttpClient(...)` and DI | Reuse normal .NET patterns |
 | Telemetry | Structured logs and Azure telemetry | Include job, tenant, or run identifiers |
-| Long work | Pair with checkpoint skill | Route to `long-running-job-patterns` when needed |
 
 ## Verification Matrix
 

@@ -50,10 +50,4 @@ Agent routes MSBuild and build-system work to one primary build skill.
 
 | Intent | Primary skill | Optional secondary |
 |---|---|---|
-| Legacy project to SDK-style migration | `msbuild-modernization` | `msbuild-directory-build-organization` |
-| Broad MSBuild anti-pattern cleanup | `msbuild-antipatterns` | none |
-| Shared props/targets organization | `msbuild-directory-build-organization` | none |
-| Build parallelism and graph scheduling | `msbuild-parallelism` | none |
-| Build performance diagnosis | `msbuild-performance-diagnostics` | `msbuild-binlog-failure-analysis` |
-| Failure root-cause from binlog | `msbuild-binlog-failure-analysis` | none |
 | Output or intermediate path clash | `check-bin-obj-clash` | none |

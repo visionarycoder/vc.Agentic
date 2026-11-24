@@ -19,12 +19,7 @@ Agent uses this bundle for semantic data work spanning terminology, ontology str
 
 | Prompt Signal | Use Bundle | Primary Route |
 |---|---|---|
-| "semantic model", "Fabric model", "Power BI model", "metrics layer" | Yes | `semantic-layer-fabric` |
 | "business glossary", "term catalog", "definition governance" | Yes | `business-glossary-metadata` |
-| "term harmonization", "synonym cleanup", "canonical naming" | Yes | `terminology-normalization` |
-| "entity relationships across domains", "graph traversal", "knowledge graph" | Yes | `knowledge-graph-patterns` |
-| "natural language to SQL", "NLQ", "query translation" | Yes | `nlp-to-query-translation` |
-| "modeling standards", "naming standards", "semantic consistency" | Yes | `semantic-modeling-standards` |
 
 ## When to Use
 
@@ -39,8 +34,6 @@ Agent uses this bundle for semantic data work spanning terminology, ontology str
 | Request Pattern | Route |
 |---|---|
 | Single glossary curation task only | `business-glossary-metadata` |
-| Single Fabric semantic model task only | `semantic-layer-fabric` |
-| Single NLQ prompt translation task only | `nlp-to-query-translation` |
 
 ## Required Inputs
 
@@ -55,12 +48,7 @@ Agent uses this bundle for semantic data work spanning terminology, ontology str
 
 | Concern | Specialist Skill | Primary Output |
 |---|---|---|
-| Fabric-ready semantic layer design | `semantic-layer-fabric` | Measures, dimensions, model contracts |
 | Business term stewardship and metadata | `business-glossary-metadata` | Governed glossary |
-| Canonical term alignment and synonym reduction | `terminology-normalization` | Normalized vocabulary |
-| Multi-hop relationship modeling and graph traversal design | `knowledge-graph-patterns` | Graph schema and patterns |
-| Natural-language intent mapping to executable query plans | `nlp-to-query-translation` | NLQ translation flow |
-| Cross-model naming, granularity, and semantic consistency | `semantic-modeling-standards` | Modeling standards |
 
 ## Decision Order
 
@@ -86,11 +74,7 @@ Agent uses this bundle for semantic data work spanning terminology, ontology str
 
 | Stage | Input Artifact | Transformation | Output Artifact | Primary Skill |
 |---|---|---|---|---|
-| 1 | Raw tables, files, events | Extract candidate nouns, verbs, measures, codes | Source term inventory | `terminology-normalization` |
 | 2 | Source term inventory | Resolve synonyms, abbreviations, collisions | Canonical terminology set | `business-glossary-metadata` |
-| 4 | Ontology classes and properties | Shape facts, dimensions, metrics, hierarchies | Semantic model | `semantic-layer-fabric` |
-| 5 | Semantic model | Map intents, entities, filters, metrics to query grammar | NLQ contract | `nlp-to-query-translation` |
-| 6 | NLQ contract | Execute governed query against model or graph | Natural-language query experience | `semantic-modeling-standards` |
 
 ## Microsoft Fabric Integration Guidance
 

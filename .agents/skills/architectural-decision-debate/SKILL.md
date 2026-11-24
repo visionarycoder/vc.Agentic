@@ -254,8 +254,6 @@ Each evolution adds complexity. Agent recommends moving right only when:
 - Boundaries are stable and well-understood
 - Metrics show tipping point reached
 
-See `architectural-pattern-tipping-point` skill for detailed tipping point analysis.
-
 ## Example Debates
 
 ### Example 1: "Should we use microservices?"

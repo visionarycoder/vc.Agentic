@@ -156,7 +156,7 @@ Some agents route to specific skills, or some skills depend on sibling agents. I
 setup:
   copy_test_files: true
   additional_required_skills:
-    - msbuild-binlog-failure-analysis    # loaded in isolated run alongside the target
+    - example-helper-skill       # loaded in isolated run alongside the target
   additional_required_agents:
     - build-perf                 # registered in isolated run alongside the target
 ```

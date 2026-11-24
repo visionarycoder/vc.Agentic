@@ -78,7 +78,7 @@ Agent uses this controller for broad security workflows that need scanning, prio
 | Injection attacks | SQL injection, command injection, XSS, code execution, unsafe HTML sinks | Critical | `cwe-injection-attack-fixes` |
 | Resource management | DoS, allocation limits, logging injection, concurrency exhaustion, lifecycle misuse | Medium or Low | `cwe-resource-management-fixes` |
 | Miscellaneous security | Path traversal, SSRF, open redirect, null dereference, upload control gaps | High or Medium | `cwe-miscellaneous-security-fixes` |
-| Format and external control | Search-path control, DLL hijacking, format-string or external resolution flaws | High or Medium | `cwe-format-external-fixes` |
+| Format and external control | Search-path control, DLL hijacking, format-string or external resolution flaws | High or Medium | `cwe-miscellaneous-security-fixes` |
 
 ## Priority Matrix
 
@@ -98,7 +98,7 @@ Agent uses this controller for broad security workflows that need scanning, prio
 | "injection" / "SQL" / "command" / "XSS" / "code execution" | `cwe-injection-attack-fixes` | Command, code, HTML, SQL, related injection issues |
 | "logging injection" / "DoS" / "resource" / "privilege" | `cwe-resource-management-fixes` | Logging injection, integer/resource misuse, privilege, DoS, lifecycle issues |
 | "path traversal" / "upload" / "redirect" / "SSRF" / "null pointer" | `cwe-miscellaneous-security-fixes` | Path traversal, upload, null-deref, open redirect, SSRF, filesystem permission issues |
-| "search path" / "DLL hijacking" / "format string" | `cwe-format-external-fixes` | External search-path and format-specific issues |
+| "search path" / "DLL hijacking" / "format string" | `cwe-miscellaneous-security-fixes` | External search-path and format-specific issues |
 
 ## Remediation Execution Rules
 

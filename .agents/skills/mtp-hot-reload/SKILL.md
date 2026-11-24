@@ -21,9 +21,7 @@ This skill activates only when the project already uses, or is intentionally mov
 
 | Concern | Agent action |
 |---|---|
-| Platform detection | Agent confirms MTP with `platform-detection` before changing commands or configuration. |
 | Package setup | Agent adds only the required MTP hot-reload package or setting for the existing framework stack. |
-| Filter usage | Agent reuses `filter-syntax` for runner-correct selection syntax. |
 | Loop control | Agent scopes hot reload to the smallest failing test set. |
 
 ## Workflow

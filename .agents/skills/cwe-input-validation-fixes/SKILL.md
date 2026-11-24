@@ -1,6 +1,6 @@
 ---
 name: "cwe-input-validation-fixes"
-description: "Consolidated guidance for input-verification and bounds CWEs (CWE-20, CWE-119, CWE-120, CWE-121, CWE-122, CWE-125, CWE-787) with detection patterns, fix patterns, and measurable verification. - Buildable repo (dotnet or native toolchain) - Sanitizers available in CI (ASan/UBSan) for native code - Static analyzers (clang-tidy, Coverity) and Roslyn analyzers - ste-agent-writing-standard - terminology-dictionary - cwe-authentication-authz-fixes - cwe-injection-attack-fixes - cwe-data-protection-fixes - cwe-resource-management-fixes - cwe-miscellaneous-security-fixes - cwe-format-external-fixes - security-controller - cwe - input-validation - buffer-safety - fuzzing"
+description: "Consolidated guidance for input-verification and bounds CWEs (CWE-20, CWE-119, CWE-120, CWE-121, CWE-122, CWE-125, CWE-787) with detection patterns, fix patterns, and measurable verification. - Buildable repo (dotnet or native toolchain) - Sanitizers available in CI (ASan/UBSan) for native code - Static analyzers (clang-tidy, Coverity) and Roslyn analyzers - ste-agent-writing-standard - terminology-dictionary - cwe-authentication-authz-fixes - cwe-injection-attack-fixes - cwe-data-protection-fixes - cwe-resource-management-fixes - cwe-miscellaneous-security-fixes - security-controller - cwe - input-validation - buffer-safety - fuzzing"
 metadata:
   metadata-version: "1.0.0"
   title: "Cwe input validation fixes"
