@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -65,13 +65,11 @@ Agent designs SignalR hubs with typed contracts, predictable connection behavior
 
 | Topic | Rule |
 |---|---|
-| Hub lifetime | Treat hubs as transient. Store durable state in services or data stores. |
-| Client invocation | Prefer strongly typed hubs over raw method-name strings. |
+| Hub state | Hubs are transient; keep per-connection data only in `Context.Items`. |
 | Groups | Use stable, namespaced group keys with explicit join and leave methods. |
-| Identity | Target users through user identifiers instead of cached connection IDs. |
-| Publishing | Use `IHubContext` from controllers, workers, and message handlers. |
-| Reliability | Add idempotency or replay logic in application services when reconnect gaps matter. |
-| Topology terms | Treat Redis and Azure SignalR Service as backplane choices. Treat Service Bus as upstream ingress. |
+| Redis backplane | Record sticky-session requirements and stable group keys. |
+| Reliability | SignalR does not replay; add idempotency or replay logic in application services. |
+| Topology terms | Redis and Azure SignalR Service are backplanes. Service Bus is upstream ingress. |
 
 ## Verification Checklist
 
