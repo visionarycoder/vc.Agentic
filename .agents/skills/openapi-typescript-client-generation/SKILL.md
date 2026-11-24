@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-11"
+  updated: "2026-11-23"
   collection: "dotnet"
 ---
 
@@ -51,36 +51,10 @@ Agent treats the OpenAPI document as the server contract authority and keeps gen
 
 ## Workflow
 
-| Step | Agent Action | Test | Pass |
+1. Export one versioned OpenAPI document per API version (committed or reproducible).
+2. Pin the generator (NSwag or OpenAPI Generator) version.
+3. Generate into a dedicated versioned folder; keep prior versions side by side during migrations.
+4. Keep auth, correlation, and Problem Details mapping in handwritten wrappers.
+5. Run existing generation, diff, and TypeScript build commands in scope. Pass: clean regeneration yields zero diff and zero compile errors.
 
-|---|---|---|---|
-
-| 1. Export contract | Agent produces one checked or reproducible OpenAPI document per API version. | Inspect generated or committed document path. | Versioned document exists for the changed API scope. |
-
-| 2. Pin generator | Agent selects one generator path and pins its version. | Inspect package or tool configuration. | Generator version is explicit. |
-
-| 3. Generate isolated client | Agent writes generated files into a dedicated versioned folder. | Run existing generation command in scope. | Generated output lands only in the intended folder. |
-
-| 4. Wrap runtime concerns | Agent keeps auth, correlation, and Problem Details mapping outside generated code. | Inspect changed TypeScript wrapper files. | Handwritten runtime logic stays outside generated output. |
-
-| 5. Verify drift and compile | Agent runs generation, diff, and existing app build or test commands in scope. | Run existing generation and build commands in scope. | Clean regeneration produces no unexpected diff and compile succeeds. |
-
-## Verification Matrix
-
-| Test | Run | Pass |
-
-|---|---|---|
-
-| Generation verification | Run existing client generation command in scope. | Generated files update deterministically. |
-
-| Drift verification | Run existing diff or check command in scope. | Clean regeneration produces zero unexpected diff. |
-
-| Compile verification | Run existing TypeScript or app build command in scope. | Zero compile errors. |
-
-## Guardrails
-
-- Agent does not hand-edit generated files.
-
-- Agent fixes contract issues at the OpenAPI source when possible.
-
-- Agent keeps versioned client outputs side by side during migrations.
+Fix contract problems at the OpenAPI source; never hand-edit generated files.

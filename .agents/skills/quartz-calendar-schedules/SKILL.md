@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-11"
+  updated: "2026-11-23"
   collection: "dotnet"
 ---
 
@@ -56,56 +56,11 @@ Pass: Agent observes zero compile errors. Agent confirms that previewed fire tim
 
 ## Calendar Rule Table
 
-| Need | Preferred pattern | Notes |
-|---|---|---|
-| One-off holiday exclusions | `HolidayCalendar` | Use for ad hoc blackout dates |
-| Annual recurring exclusions | `AnnualCalendar` | Use for fixed annual holidays |
-| Weekday-only recurrence | `WeeklyCalendar` | Use for weekend exclusion |
-| Combined business-day logic | Chained weekday plus holiday calendars | Keep rules reusable |
-| Domain-specific included dates | Custom `BaseCalendar` implementation | Use for payroll or fiscal-date logic |
-
-## Recurrence Pattern Table
-
-| Recurrence intent | Preferred approach | Reason |
-|---|---|---|
-| Daily or weekly clock timing | Cron trigger plus calendar exclusion | Trigger keeps timing. Calendar keeps date logic. |
-| Payroll date with business-day shift | Custom calendar or date calculator plus trigger | Payroll recurrence depends on domain rules |
-| Month-end with holiday skip | Cron trigger for month-end plus holiday calendar | Trigger expresses month boundary. Calendar expresses exclusion. |
-| Quarter-end with move-earlier rule | Trigger plus shift calculator | Shift policy stays explicit and testable |
-
-## Schedule Rule Matrix
-
-| Concern | Preferred rule | Avoid |
-|---|---|---|
-| Terminology | Agent uses `Schedule` for domain concepts | Mixed terms such as schedule and scheduling in the same rule set |
-| Rule reuse | Agent registers calendars once and references them from triggers | Duplicated holiday logic in each trigger |
-| Shift behavior | Agent defines skip, move earlier, or move later in one place | Implicit date movement |
-| Boundary testing | Agent tests weekend adjacency, month end, quarter end, and year end | Happy-path-only validation |
-
-## Verification Matrix
-
-| Test | Run | Pass |
-|---|---|---|
-| Compile verification | `dotnet build [project].csproj` | Zero compile errors |
-| Calendar rule verification | Existing scheduler test or preview code with representative dates | Preview matches documented Schedule rules |
-| Shift-policy verification | Existing test or targeted date-calculator test | Excluded dates move exactly as documented |
-| Naming verification | Review changed markdown and code comments | `Schedule` terminology stays consistent |
-
-## Verification Checklist
-
-Agent verifies:
-- [ ] Schedule rules identify holidays, weekends, and exception dates explicitly
-- [ ] Quartz calendar type matches the rule set
-- [ ] Shared calendars replace duplicated date logic
-- [ ] Shift policy is explicit and testable
-- [ ] Boundary-date previews match the intended Schedule behavior
-- [ ] `Schedule` terminology stays consistent
-
-## Common Pitfalls
-
-| Pitfall | Fix |
+| Need | Preferred pattern |
 |---|---|
-| Cron encodes business-day logic by itself | Move date logic into Quartz calendars or a dedicated calculator |
-| Each trigger repeats the same holiday list | Register one shared calendar |
-| Shift behavior stays implicit | Document and test one shift policy |
-| Payroll recurrence looks like ordinary weekday timing | Keep payroll logic in domain-specific Schedule rules |
+| Domain-specific included dates (payroll, fiscal) | Custom `BaseCalendar` implementation, or a date calculator plus trigger |
+| Quarter-end with move-earlier rule | Trigger plus shift calculator so the shift policy is explicit and testable |
+
+Standard calendars (`HolidayCalendar` for ad hoc dates, `AnnualCalendar` for fixed annual holidays, `WeeklyCalendar` for weekends) are chained and registered once, then referenced by triggers. Keep business-day logic out of cron expressions.
+
+Use `Schedule` consistently for domain concepts. Test weekend adjacency, month end, quarter end, and year end, with each shift policy (skip, move earlier, move later) defined in one place.

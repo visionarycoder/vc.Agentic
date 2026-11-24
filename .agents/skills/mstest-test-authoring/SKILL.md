@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "dotnet"
 ---
 
@@ -18,9 +18,16 @@ Use for new tests, regression coverage after code changes, and improving existin
 1. Inspect the target behavior, existing test layout, MSTest package versions, test discovery, and repository naming/DI conventions. Preserve intentionally selected frameworks and versions.
 2. Choose cases for expected outcomes, boundaries, errors, cancellation, and relevant dependency failures. Test application behavior rather than merely asserting that mocks were configured.
 3. Keep each test deterministic and independently runnable. Use scoped setup/cleanup and test doubles only at appropriate dependency boundaries. Match repository naming and avoid unapproved global state or ordering.
-4. Use specific assertions and data-driven patterns supported by the selected MSTest version. Modernize obsolete APIs only within the assigned scope; a test edit does not authorize a framework upgrade.
+4. Use specific assertions and data-driven patterns supported by the selected MSTest version, such as `Assert.HasCount`, `Assert.Contains`, and `Assert.IsEmpty` instead of `Assert.IsTrue` on counts or membership. Modernize obsolete APIs only within the assigned scope; a test edit does not authorize a framework upgrade.
 5. Run the targeted tests through the existing build, confirm discovery and counts, and exercise the intended failure cases. Report skipped tests and environment limits explicitly.
 6. Report changed scenarios, relevant gaps, and actual verification results. Do not change acceptance criteria or weaken assertions merely to obtain a pass.
+
+## Repository specifics
+
+- Verify DI registration by inspecting `ServiceCollection` descriptors (for example `services.Any(sd => sd.ServiceType == ...)`) without building the provider.
+- Verify logging through `IsEnabled` at the relevant levels, not exact message text.
+- For helpers over collections, cover empty, single, multiple, null, and large inputs.
+- When an upstream dependency fails, verify downstream dependencies are `Times.Never`, and test each dependency failure independently.
 
 ## Detailed guidance
 
