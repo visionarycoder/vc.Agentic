@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "security"
 ---
 
@@ -20,17 +20,13 @@ Agent uses this bundle for disclosure, unsafe deserialization, secret exposure, 
 **USE FOR:** CWE-200, CWE-209, CWE-295, CWE-319, CWE-502, CWE-798, CWE-639, CWE-401, CWE-363.
 **DO NOT USE FOR:** General authorization routing, input bounds defects, or style-only refactors.
 
-## Critical Rules
+## Rules
 
-| Rule | Test | Pass |
-|---|---|---|
-| Agent keeps secrets out of source, config literals, and image layers. | Run secret scan on touched files. | Zero active secret hits remain. |
-| Agent replaces unsafe type-open deserialization on untrusted input. | Run grep for banned serializers. | Zero banned serializer hits remain in touched files. |
-| Agent returns safe error payloads to callers. | Run exception-path tests. | External responses exclude stack traces, SQL, and environment values. |
-| Agent validates server certificates and host keys on outbound connections. | Run connection tests against a mismatched or self-signed endpoint. | Connection fails closed on validation mismatch; no blanket accept-all callback remains. |
-| Agent encrypts data in transit for credential-bearing and sensitive-data protocols. | Run protocol/config review for touched transport clients. | Touched clients negotiate TLS/FTPS/SFTP rather than defaulting to cleartext. |
-| Agent verifies ownership for user-supplied identifiers. | Run owner and non-owner tests. | Non-owner returns 404 or 403. |
-| Agent closes disposable resources with scope-based disposal. | Run analyzers and leak-focused tests already in repo. | Zero new disposal findings appear. |
+- Keep secrets out of source, config, and image layers; rotate any real exposed secret and note the rotation.
+- Return safe error payloads (generic message plus correlation ID); gate `ex.Message` behind `IHostEnvironment.IsProduction()`.
+- Validate server certificates and host keys; fail closed, no accept-all callbacks. Default to TLS/FTPS/SFTP with no plaintext fallback.
+- Check ownership for user-supplied identifiers; non-owners get 404 or 403.
+- Dispose with `using`, `await using`, or factory-managed scope.
 
 ## CWE Coverage
 
@@ -46,26 +42,6 @@ Agent uses this bundle for disclosure, unsafe deserialization, secret exposure, 
 | 401 | Resource leak | Missing `using`, new `HttpClient` per request, unclosed stream | Use `using`, `await using`, or factory pattern | Run analyzers or stability tests. Pass: Zero new leak findings. | Not present in CWE-888 SFP taxonomy. |
 | 363 | TOCTOU race | `File.Exists` before later open or delete | Open stable handle first and verify handle state | Run race or symlink tests when present. Pass: Swap attack fails. | Not present in CWE-888 SFP taxonomy. |
 
-## Workflow
-
-| Step | Agent Action | Test | Pass |
-|---|---|---|---|
-| 1. Inventory | Agent runs scans for secrets, serializers, error leaks, IDOR, disposables, and pre-open file race logic. | Run repo grep and secret scan commands already used by the repo. | Hotspot list exists for every touched file. |
-| 2. Classify | Agent maps each hotspot to one CWE row. | Review hotspot list. | Every hotspot has one CWE label or explicit out-of-scope note. |
-| 3. Fix | Agent moves secrets, replaces serializers, adds ownership gates, and closes resource scope. | Run targeted build for touched project. | Build passes with zero new errors. |
-| 4. Run tests | Agent runs unit tests, integration tests, and scan jobs for touched scope. | Run existing tests and secret scans for touched scope. | All targeted tests pass. Zero secret hits remain. |
-| 5. Re-scan | Agent runs grep and secret scans again. | Re-run inventory commands. | Zero unexplained banned patterns remain in touched files. |
-
-## Decision Matrix
-
-| Condition | Use |
-|---|---|
-| Input deserializes from network or queue | Use typed DTOs and explicit discriminators |
-| Request accesses user-owned resource | Use ownership predicate in query or handler |
-| Secret appears in code or config | Move to secret store and rotate value |
-| File workflow uses pre-open existence logic | Use handle-first logic |
-| Disposable object has request scope | Use `using`, `await using`, or factory-managed scope |
-
 ## Detection Commands
 
 | Concern | Command | Pass |
@@ -76,23 +52,12 @@ Agent uses this bundle for disclosure, unsafe deserialization, secret exposure, 
 | Secret literals | Use repo secret scan or `gitleaks` command already present in CI | Zero active secret hits |
 | IDOR entry points | `rg -n "\{id\}|\{userId\}|\{orderId\}" -g "**/*.cs"` | Every route has ownership review |
 
-## Verification Checklist
-
-Agent verifies:
-- [ ] Secret scans report zero active secrets in touched files
-- [ ] Banned serializers are absent from touched files
-- [ ] Error responses are safe for external users
-- [ ] Certificate/host-key validation fails closed on mismatch
-- [ ] Credential-bearing transport clients negotiate encryption by default
-- [ ] Ownership tests pass for positive and negative cases
-- [ ] Disposal and resource-scope defects do not increase
-
 ## Inputs
 
 | Input | Required | Default |
 |---|---|---|
 | Repo or project path | Yes | - |
-| CWE subset | No | All 7 |
+| CWE subset | No | All listed |
 | Secret scan command | No | Existing repo default |
 
 ## Outputs
