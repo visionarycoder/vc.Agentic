@@ -5,7 +5,7 @@ description: "Select a small development core and optional stacks or domains."
 document-type: "index"
 repository: "vc.Agentic"
 language: "Standard Technical English"
-updated: "2026-11-08"
+updated: "2026-11-11"
 ---
 
 # Skill collections
@@ -33,13 +33,14 @@ Start with the recommended core and select optional capabilities for the actual 
 - [verification-before-completion](skills/verification-before-completion/SKILL.md)
 - [writing-plans](skills/writing-plans/SKILL.md)
 
-## .NET, C#, MSBuild, MSTest, and Roslyn (109)
+## .NET, C#, MSBuild, MSTest, and Roslyn (119)
 
 - [aspnet-rest-openapi-controller](skills/aspnet-rest-openapi-controller/SKILL.md)
 - [aspnetcore-identity-setup](skills/aspnetcore-identity-setup/SKILL.md)
 - [blazor-patterns](skills/blazor-patterns/SKILL.md)
 - [blazor-ui-testing](skills/blazor-ui-testing/SKILL.md)
 - [blazor-unit-testing](skills/blazor-unit-testing/SKILL.md)
+- [check-bin-obj-clash](skills/check-bin-obj-clash/SKILL.md)
 - [dotnet-aot-compat](skills/dotnet-aot-compat/SKILL.md)
 - [dotnet-api-client-generation](skills/dotnet-api-client-generation/SKILL.md)
 - [dotnet-api-client-resilience](skills/dotnet-api-client-resilience/SKILL.md)
@@ -75,6 +76,8 @@ Start with the recommended core and select optional capabilities for the actual 
 - [efcore-migrations](skills/efcore-migrations/SKILL.md)
 - [efcore-orm-project](skills/efcore-orm-project/SKILL.md)
 - [efcore-testing-patterns](skills/efcore-testing-patterns/SKILL.md)
+- [find-untested-sources](skills/find-untested-sources/SKILL.md)
+- [kubernetes-dotnet](skills/kubernetes-dotnet/SKILL.md)
 - [maui-app-lifecycle](skills/maui-app-lifecycle/SKILL.md)
 - [maui-collectionview](skills/maui-collectionview/SKILL.md)
 - [maui-data-binding](skills/maui-data-binding/SKILL.md)
@@ -86,6 +89,7 @@ Start with the recommended core and select optional capabilities for the actual 
 - [maui-shell-navigation](skills/maui-shell-navigation/SKILL.md)
 - [maui-theming](skills/maui-theming/SKILL.md)
 - [maui-troubleshooting](skills/maui-troubleshooting/SKILL.md)
+- [migrate-dotnet9-to-dotnet10](skills/migrate-dotnet9-to-dotnet10/SKILL.md)
 - [msbuild-antipatterns](skills/msbuild-antipatterns/SKILL.md)
 - [msbuild-binlog-failure-analysis](skills/msbuild-binlog-failure-analysis/SKILL.md)
 - [msbuild-binlog-generation](skills/msbuild-binlog-generation/SKILL.md)
@@ -112,6 +116,11 @@ Start with the recommended core and select optional capabilities for the actual 
 - [mstest-mvvm-testing-patterns](skills/mstest-mvvm-testing-patterns/SKILL.md)
 - [mstest-test-authoring](skills/mstest-test-authoring/SKILL.md)
 - [mstest-wpf-testing-patterns](skills/mstest-wpf-testing-patterns/SKILL.md)
+- [mtp-hot-reload](skills/mtp-hot-reload/SKILL.md)
+- [openapi-typescript-client-generation](skills/openapi-typescript-client-generation/SKILL.md)
+- [quartz-calendar-schedules](skills/quartz-calendar-schedules/SKILL.md)
+- [quartz-job-authoring](skills/quartz-job-authoring/SKILL.md)
+- [quartz-scheduling-patterns](skills/quartz-scheduling-patterns/SKILL.md)
 - [roslyn-analyzer-authoring](skills/roslyn-analyzer-authoring/SKILL.md)
 - [roslyn-analyzer-codefix-parity-audit](skills/roslyn-analyzer-codefix-parity-audit/SKILL.md)
 - [roslyn-analyzer-codefix-sample-rollout](skills/roslyn-analyzer-codefix-sample-rollout/SKILL.md)
@@ -137,6 +146,7 @@ Start with the recommended core and select optional capabilities for the actual 
 - [roslyn-vbd-drift-analyzer-design](skills/roslyn-vbd-drift-analyzer-design/SKILL.md)
 - [roslyn-vbd-generator-suite](skills/roslyn-vbd-generator-suite/SKILL.md)
 - [windows-ai-apis](skills/windows-ai-apis/SKILL.md)
+- [windows-ai-foundry-local](skills/windows-ai-foundry-local/SKILL.md)
 - [windows-ai-mcp-integration](skills/windows-ai-mcp-integration/SKILL.md)
 - [winui3-patterns](skills/winui3-patterns/SKILL.md)
 - [wpf-fluent-ui](skills/wpf-fluent-ui/SKILL.md)
@@ -221,8 +231,9 @@ Start with the recommended core and select optional capabilities for the actual 
 - [vbd-use-case-migration](skills/vbd-use-case-migration/SKILL.md)
 - [vbd-use-case-reconstruction](skills/vbd-use-case-reconstruction/SKILL.md)
 
-## Security engineering and weakness remediation (19)
+## Security engineering and weakness remediation (20)
 
+- [angular-security-hardening](skills/angular-security-hardening/SKILL.md)
 - [cwe-ai-ml-security-fixes](skills/cwe-ai-ml-security-fixes/SKILL.md)
 - [cwe-api-contract-fixes](skills/cwe-api-contract-fixes/SKILL.md)
 - [cwe-authentication-authz-fixes](skills/cwe-authentication-authz-fixes/SKILL.md)
@@ -243,11 +254,12 @@ Start with the recommended core and select optional capabilities for the actual 
 - [cwe-taxonomy-navigator](skills/cwe-taxonomy-navigator/SKILL.md)
 - [cwe-ui-security-fixes](skills/cwe-ui-security-fixes/SKILL.md)
 
-## Data analysis and Microsoft Fabric (25)
+## Data analysis and Microsoft Fabric (26)
 
 - [analyze-data-quality](skills/analyze-data-quality/SKILL.md)
 - [build-dashboard](skills/build-dashboard/SKILL.md)
 - [build-report](skills/build-report/SKILL.md)
+- [csv-ingestion-diagnostics](skills/csv-ingestion-diagnostics/SKILL.md)
 - [data-analytics-routing](skills/data-analytics-routing/SKILL.md)
 - [fabric-copilot-studio](skills/fabric-copilot-studio/SKILL.md)
 - [fabric-data-activator](skills/fabric-data-activator/SKILL.md)
@@ -373,14 +385,19 @@ Start with the recommended core and select optional capabilities for the actual 
 - [trading-thesis-tracker](skills/trading-thesis-tracker/SKILL.md)
 - [trading-three-statement-model-builder](skills/trading-three-statement-model-builder/SKILL.md)
 
-## Additional workflows, integrations, and specialist utilities (394)
+## Additional workflows, integrations, and specialist utilities (404)
 
 - [accessibility-and-inclusive-visualization](skills/accessibility-and-inclusive-visualization/SKILL.md)
 - [add-python-version-support](skills/add-python-version-support/SKILL.md)
 - [agent-instruction-maintenance](skills/agent-instruction-maintenance/SKILL.md)
+- [ai-integration-bundle](skills/ai-integration-bundle/SKILL.md)
 - [analyze-repo](skills/analyze-repo/SKILL.md)
 - [analyzing-architecture](skills/analyzing-architecture/SKILL.md)
 - [analyzing-dotnet-performance](skills/analyzing-dotnet-performance/SKILL.md)
+- [angular-anti-patterns](skills/angular-anti-patterns/SKILL.md)
+- [angular-modernization](skills/angular-modernization/SKILL.md)
+- [angular-to-vue3-migration](skills/angular-to-vue3-migration/SKILL.md)
+- [angular-vue-migration-orchestrator](skills/angular-vue-migration-orchestrator/SKILL.md)
 - [antipattern-detection-bundle](skills/antipattern-detection-bundle/SKILL.md)
 - [api-gateway-patterns](skills/api-gateway-patterns/SKILL.md)
 - [api-infrastructure-bundle](skills/api-infrastructure-bundle/SKILL.md)
@@ -739,6 +756,11 @@ Start with the recommended core and select optional capabilities for the actual 
 - [visualization-strategy-and-critique](skills/visualization-strategy-and-critique/SKILL.md)
 - [visualize](skills/visualize/SKILL.md)
 - [volatility-based-decomposition-dotnet](skills/volatility-based-decomposition-dotnet/SKILL.md)
+- [vue3-component-library-design](skills/vue3-component-library-design/SKILL.md)
+- [vue3-e2e-testing-playwright](skills/vue3-e2e-testing-playwright/SKILL.md)
+- [vue3-msal-authentication](skills/vue3-msal-authentication/SKILL.md)
+- [vue3-pinia-state-management](skills/vue3-pinia-state-management/SKILL.md)
+- [vue3-webapp-setup](skills/vue3-webapp-setup/SKILL.md)
 - [vulnerability-writeup](skills/vulnerability-writeup/SKILL.md)
 - [wait-what](skills/wait-what/SKILL.md)
 - [wayfinder](skills/wayfinder/SKILL.md)

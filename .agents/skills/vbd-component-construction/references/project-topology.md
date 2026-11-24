@@ -2,11 +2,14 @@
 title: Project Topology
 doc_type: reference
 status: active
-last_updated: 2026-08-14
+last_updated: 2026-11-09
 ---
 # Project Topology
 
-## Default physical layout
+## Illustrative physical layout
+
+Use the accepted component design and repository conventions. This example does
+not mandate project counts, hosting technology or a solution format.
 
 ```text
 src/
@@ -43,7 +46,8 @@ tests/
 
 ## Required projects
 
-Always create:
+Create or reuse only the projects required by the assigned accepted design.
+The following are illustrative names:
 
 ```text
 <VaultType>.<Capability>.Contract
@@ -54,7 +58,7 @@ Always create:
 
 ## Solution
 
-Use `.slnx`.
+Use the repository's accepted solution format; use `.slnx` when selected there.
 
 Mirror the physical hierarchy with solution folders:
 

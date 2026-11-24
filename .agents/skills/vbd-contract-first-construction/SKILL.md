@@ -7,13 +7,29 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-09"
   collection: "vbd"
 ---
 
 # VBD Contract-First Construction
 
 Agent converts a selected candidate into an executable construction graph without reopening candidate selection.
+
+The consuming project's governance, accepted SDP, review routes and PM assignment
+control this graph. Candidate selection alone does not authorize construction.
+Inspect existing Ifx mechanisms before proposing foundations. Record capability,
+existing package/API and version, suitability evidence, selection and any gap in
+the detailed design. Reuse suitable mechanisms; do not regenerate Ifx, proxies,
+messaging or test helpers that already meet the accepted requirements. Route new
+reusable mechanisms to Ifx. Use only the approved technology baseline.
+
+Construct each component and its white-box test client together. The node list
+below describes dependencies, not permission to defer that client or impose a
+serial test-planning branch. Reviewed service requirements allow concurrent test
+planning and bounded exploration/detailed design. Full construction requires the
+reviewed detailed design, accepted SDP and current PM assignment. Design refinements
+return to the Application Architect before use. Preserve required Solution Architect
+review and Test Architect input. Integration and verification bind exact revisions.
 
 ## When to Use
 
@@ -41,7 +57,7 @@ Do not use when the prompt asks for design comparison only.
 | Step | Agent action | Output | Test | Pass |
 |---|---|---|---|---|
 | 1. Verify selection integrity | Agent verifies candidate ID, manifest hash, approved modifications, and unresolved decisions. | Selection packet | Agent reads the packet. | Candidate ID and manifest hash match the decision record. |
-| 2. Generate shared foundations | Agent generates Ifx, proxy, messaging, config, Aspire, template, analyzer, and test-helper prerequisites. | Foundation packet | Agent reads the packet. | Shared prerequisites exist before dependent component work starts. |
+| 2. Resolve shared foundations | Agent maps prerequisites to existing approved packages and APIs, records reuse evidence and routes genuine gaps to their owners. | Reuse assessment | Review API and consumer evidence. | Selected dependencies satisfy accepted requirements without duplicate infrastructure. |
 | 3. Generate component DAGs | Agent generates nodes for contract, tests, service, optional data code, integration tests, benchmarks, client, and UI work. | Task DAG | Agent reads DAG edges. | Every dependent node points to required contract nodes. |
 | 4. Link traceability | Agent links `UC-*`, `SYM-*`, `GAP-*`, `CMP-*`, `TASK-*`, tests, and benchmarks. | Traceability matrix | Agent reads the matrix. | Every `TASK-*` row has source evidence and output links. |
 | 5. Write gates | Agent writes build, analyzer, test, coverage, proxy, bus, doc, and artifact gates. | Gate list | Agent reads the list. | Every gate has one test and one pass rule. |

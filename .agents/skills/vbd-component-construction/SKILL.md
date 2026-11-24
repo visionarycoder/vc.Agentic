@@ -7,13 +7,20 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-09"
   collection: "vbd"
 ---
 
 # VBD component construction
 
 Use to create one component's structural skeleton from an assigned scope and accepted design. Do not invent component boundaries, domain behavior, operations, entities, or deployment authority.
+
+Record the capability-to-existing-code assessment in the accepted detailed design:
+examined Ifx package/API and version, suitability evidence, selection and any gap.
+Reuse suitable existing mechanisms before creating infrastructure. Construct the
+white-box test client with the component. Verify exact design inputs and expected
+dependencies through the consuming project's independently controlled integration
+checks. A self-generated snapshot cannot establish the approved baseline.
 
 1. Read the target repository's governing instructions, accepted component design, actual Ifx API, SDK/package baseline, and testing conventions. Resolve missing design decisions through the assigned owner before construction depends on them.
 2. Identify capability, approved Manager/Engine/Access classification, contract surface, namespaces, collaborators, and resource boundaries. Reuse supplied answers instead of repeatedly interviewing the user.

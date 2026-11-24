@@ -2,7 +2,7 @@
 title: Repository Discovery
 doc_type: reference
 status: active
-last_updated: 2026-08-14
+last_updated: 2026-11-09
 ---
 # Repository Discovery
 
@@ -62,14 +62,16 @@ Use the latest stable .NET SDK supported by the repository. Prefer repository co
 
 ## Physical layout
 
-Default to the hierarchical VBD layout.
+Follow the accepted design and existing repository conventions. The hierarchical
+layout is an illustration, not an architectural default or authorization.
 
 If the repository uses a materially different existing structure, show both choices and ask whether the new component should follow:
 
 - the existing repository structure, or
 - the hierarchical VBD structure
 
-Default to hierarchical.
+Resolve any conflict through the Application Architect before generating the
+affected structure. Do not replace accepted topology through a worker preference.
 
 ## Test conventions
 
