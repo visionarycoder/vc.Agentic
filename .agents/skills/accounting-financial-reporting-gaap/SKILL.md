@@ -7,23 +7,13 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "accounting"
 ---
 
 # Financial Reporting GAAP
 
 Agent assembles GAAP-aligned financial statements, notes, MD&A support, RSI, and comprehensive annual reporting datasets with public sector awareness.
-
-## When to Use
-
-| Condition | Use |
-|---|---|
-| Prompt needs statement preparation logic for balance sheet, operating results, cash flow, or equity or net position changes | Use this skill |
-| Work item needs footnote or disclosure support data | Use this skill |
-| Reporting package needs MD&A, RSI, or statistical section structure | Use this skill |
-| Government reporting flow needs comprehensive annual report component mapping | Use this skill |
-| .NET report generation needs statement-ready datasets and narrative support hooks | Use this skill |
 
 ## When Not to Use
 
@@ -53,27 +43,9 @@ Agent assembles GAAP-aligned financial statements, notes, MD&A support, RSI, and
 | 4 | Build narrative, comparative, and trend measures from governed datasets. | MD&A, RSI, and statistical sections avoid ad hoc spreadsheet-only values. |
 | 5 | Validate cross-statement ties, disclosure completeness, and issue-state controls. | Statements, notes, and trend schedules reconcile across the package. |
 
-## Accounting Standards Reference
+## Package Structure
 
-| Topic | Pattern | Focus |
-|---|---|---|
-| Statements | Use closed and adjusted balances with consistent classification. | Maintain chart-to-line mappings and close-stage locks. |
-| Footnotes | Publish structured support for policies, balances, commitments, and risks. | Prefer schedule datasets over prose-only evidence. |
-| MD&A | Source comparative metrics and explanations from issued statements. | Govern ratios, variances, and trend inputs. |
-| RSI | Preserve mandated multi-year schedules and source lineage. | Keep schedule grain stable across years. |
-| Statistical section | Maintain long-horizon trends with consistent dimensions. | Record restatements and definition changes. |
-| Annual report package | Version statements, notes, MD&A, RSI, and statistics together. | Track release state per section and issue set. |
-
-## Statement Reference Table
-
-| Section | Core sources | Output |
-|---|---|---|
-| Balance sheet or net position | General ledger, asset ledger, debt ledger, accrual adjustments | Statement-ready ending balances |
-| Activities or operating results | Revenue, expenditure or expense, transfer, and adjustment balances | Operating results by classification |
-| Cash flow | Cash ledger, AP, AR, debt, payroll, investing activity | Cash flow lines and reconciliation schedules |
-| Equity or net-position rollforward | Beginning balance, activity, adjustments, ending balance | Rollforward by class |
-| Notes | Structured schedules and narrative-support metrics | Disclosure schedules and checklists |
-| MD&A, RSI, and statistical sections | Comparative measures, required schedules, and trend datasets | Narrative-support, supplementary, and long-horizon outputs |
+A comprehensive annual report package contains statements, notes (structured note-support schedules with line references and disclosure checklists for debt, capital assets, leases, pensions, commitments, contingencies), MD&A, RSI, and a statistical section (long-horizon trends with consistent dimensions), all versioned together.
 
 ## Public Sector Specific Patterns
 
@@ -97,19 +69,7 @@ Agent assembles GAAP-aligned financial statements, notes, MD&A support, RSI, and
 
 | Check | Test | Pass |
 |---|---|---|
-| Lineage and reconciliation | Trace sample lines and compare statement-ending balances across the package. | Each line ties to governed sources and cross-statement totals agree. |
-| Disclosure support | Review note topics, MD&A metrics, RSI inputs, and statistical definitions. | Material notes and supplementary sections have structured support with stable measures. |
-| Publication control | Review package version and issue state. | Issued packages stay immutable and reproducible. |
-
-## Common Pitfalls
-
-| Pitfall | Agent Fix |
-|---|---|
-| Statement lines pull directly from ad hoc report formulas | Agent creates governed mapping tables and close snapshots. |
-| Footnotes rely on manual narrative with no structured evidence | Agent publishes note-support schedules and disclosure checklists. |
-| MD&A metrics differ from published statements | Agent sources narrative support from the same governed model as the issued package. |
-| RSI and statistical schedules change definitions silently | Agent versions schedule definitions and records restatement notes. |
-| Issued reports stay editable in place | Apply package versioning and immutable issue states. |
+| Publication control | Review package version and issue state. | Issued packages stay immutable and reproducible; track release state per section. |
 
 ## Outputs
 

@@ -7,22 +7,13 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "accounting"
 ---
 
 # Reconciliation Patterns
 
 Apply reconciliation workflows that align external evidence, subsidiary detail, and general-ledger balances.
-
-## When to Use
-
-| Prompt or Code Shape | Use |
-|---|---|
-| Bank statements need comparison to cash ledger activity | Use this skill |
-| Subsidiary-ledger, intercompany, or three-way match defects are in scope | Use this skill |
-| Work item needs discrepancy classification and resolution workflow | Use this skill |
-| .NET services need automated and manual reconciliation orchestration | Use this skill |
 
 ## When Not to Use
 
@@ -64,15 +55,17 @@ Apply reconciliation workflows that align external evidence, subsidiary detail, 
 | Manual reconciliation | Case record, evidence, owner, and notes | Open items keep owner, age, and next action. |
 | Automated reconciliation | Rule set, run log, and result queue | The same input set produces the same output. |
 
-## Discrepancy Pattern Table
+## Discrepancy Patterns
 
-| Category | Resolution pattern | Pass |
-|---|---|---|
-| Outstanding check or deposit in transit | Carry forward until clearance, void, or aging escalation. | The item clears later or escalates by policy. |
-| Timing difference | Preserve period note and close after crossover. | No correction entry is needed for valid adjacent-period timing. |
-| Amount variance | Route for correction, dispute, or approved write-off. | Resolution code matches tolerance policy. |
-| Missing transaction | Open investigation or journal action. | Missing items gain owner and root-cause code. |
-| Duplicate activity | Reverse the duplicate or suppress the duplicate import. | Net activity reflects one valid event. |
+Each open item gets exactly one primary category, set at case creation. Every open case keeps owner, category, age, and next action.
+
+| Category | Resolution pattern |
+|---|---|
+| Outstanding check or deposit in transit | Carry forward until clearance, void, or aging escalation. Valid adjacent-period timing needs no correction entry; keep open-item aging and carry-forward detail in the report. |
+| Timing difference | Preserve period note and close after crossover. |
+| Amount variance | Route for correction, dispute, or approved write-off per tolerance policy. |
+| Missing transaction | Open investigation or journal action; assign owner and root-cause code. |
+| Duplicate activity | Reverse the duplicate or suppress the duplicate import. |
 
 ## .NET Implementation Guidance
 
@@ -93,24 +86,6 @@ Apply reconciliation workflows that align external evidence, subsidiary detail, 
 | Domain events | `ReconciliationCompleted`, `DiscrepancyOpened`, and `DiscrepancyResolved` |
 | CQRS | Commands for import, run, assign, resolve, and reopen; queries for reports and aging |
 | Scheduling | Automated runs tied to scheduler or close-calendar cadence |
-
-## Verification Checklist
-
-| Check | Test | Pass |
-|---|---|---|
-| Front matter and STE wording | Run front-matter validation and the STE scan. | Validation passes and banned wording stays absent. |
-| Match determinism and tie-out | Re-run the same source set and recalculate bank or subledger tie-outs. | Results repeat exactly and balances tie within configured precision. |
-| Case ownership | Review unresolved discrepancy cases. | Every open case has owner, category, and age. |
-
-## Common Pitfalls
-
-| Pitfall | Agent Fix |
-|---|---|
-| Tolerance match runs before exact match | Agent orders match stages from exact to approximate. |
-| Unmatched rows lack one primary category | Enforce category assignment at case creation. |
-| Reconciliation report omits carried timing items | Keep open-item aging and carry-forward detail. |
-| Three-way match ignores quantity variance | Agent validates quantity, price, and term fields separately. |
-| Import replay duplicates source evidence | Enforce idempotent import keys and source hashes. |
 
 ## Outputs
 

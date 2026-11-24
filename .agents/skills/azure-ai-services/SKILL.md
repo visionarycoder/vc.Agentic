@@ -7,22 +7,13 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "azure"
 ---
 
 # Azure AI Services
 
 Agent designs Azure AI integrations across Azure OpenAI, Azure AI Search, Document Intelligence, Vision, Speech, and Language with service-appropriate contracts and deployment boundaries.
-
-## When to Use
-
-| Condition | Use |
-|---|---|
-| Application needs hosted LLM, embeddings, or grounded chat flows | Use this skill |
-| Work needs indexed retrieval, hybrid search, semantic ranking, or vector search | Use this skill |
-| Workflow extracts text, tables, key-value pairs, or document fields | Use this skill |
-| Product needs image, speech, or language intelligence from managed Azure services | Use this skill |
 
 ## When Not to Use
 
@@ -58,11 +49,8 @@ Agent designs Azure AI integrations across Azure OpenAI, Azure AI Search, Docume
 | Service | Preferred Pattern | Avoid |
 |---|---|---|
 | Azure OpenAI | System prompt plus typed response contract and retrieved context | Free-form string parsing with no schema |
-| Azure AI Search | Hybrid or vector retrieval over curated documents and metadata | Full-scan prompt stuffing with no retrieval stage |
-| Document Intelligence | Model-per-document-family with field-level validation | One generic parser for unrelated document layouts |
 | Vision | Task-specific image analysis pipeline | Sending full-resolution media when reduced input meets the goal |
 | Speech | Separate recognition, synthesis, and diarization responsibilities | One endpoint contract that hides distinct speech tasks |
-| Language | Task-specific sentiment, key-phrase, entity, or summarization contract | Treating every text task as a chat-completion request |
 
 ### Example: Azure OpenAI Chat Request
 
@@ -131,8 +119,5 @@ var vendor = invoice.Fields["VendorName"].Content;
 
 | Pitfall | Agent Fix |
 |---|---|
-| Prompt output drives business logic with no schema | Agent adds typed response contracts and validation. |
-| Search index stores weak metadata | Agent adds filterable fields for tenant, source, and freshness boundaries. |
-| Document extraction accepts low-confidence fields silently | Agent adds threshold checks and review branches. |
 | Vision, speech, or language flows send oversized or noisy payloads blindly | Agent right-sizes media or text before service calls. |
 | Deployment automation omits quota and secret checks | Agent adds workflow validation and secret-source inspection. |
