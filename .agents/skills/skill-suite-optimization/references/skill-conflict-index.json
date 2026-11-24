@@ -5,7 +5,6 @@
       "suite": "global",
       "router": "skill-intake-router",
       "primary_execution": [
-        "create-skill",
         "skill-suite-optimization",
         "solution-markdown-sync",
         "technology-selection"
@@ -22,8 +21,6 @@
       "router": "documentation-intake-router",
       "primary_execution": [
         "documentation-fixes",
-        "agent-instruction-governance",
-        "documentation-frontmatter",
         "documentation-governance",
         "documentation-link-repair",
         "documentation-file-placement",
@@ -44,23 +41,15 @@
       "suite": "testing",
       "router": "testing-intake-router",
       "primary_execution": [
-        "test-anti-patterns",
-        "test-gap-analysis",
         "assertion-quality",
         "test-smell-detection",
         "run-tests",
         "code-testing-agent",
         "code-testing-extensions",
-        "mstest-test-authoring",
         "test-tagging",
-        "coverage-analysis",
         "crap-score",
         "find-untested-sources",
-        "exp-mock-usage-analysis",
-        "mstest-test-authoring",
         "mstest-fixes-bundle",
-        "migrate-mstest-v1v2-to-v3",
-        "migrate-mstest-v3-to-v4",
         "mtp-hot-reload"
       ],
       "mixed_entry_bundles": [],
@@ -78,15 +67,12 @@
         "cwe-input-validation-fixes",
         "cwe-authentication-authz-fixes",
         "cwe-injection-attack-fixes",
-        "cwe-data-protection-fixes",
         "cwe-resource-management-fixes",
         "cwe-miscellaneous-security-fixes",
         "angular-security-hardening",
         "webapp-frontend-security"
       ],
-      "mixed_entry_bundles": [
-        "cwe-fixes-bundle"
-      ],
+      "mixed_entry_bundles": [],
       "forbidden_overlaps": [
         "Broad intake does not belong to execution skills.",
         "Generic dotnet ownership does not override narrower suite ownership.",
@@ -110,10 +96,6 @@
       "suite": "azure",
       "router": "azure-intake-router",
       "primary_execution": [
-        "azure-functions",
-        "azure-ad-authentication",
-        "azure-app-configuration",
-        "azure-keyvault",
         "azure-storage"
       ],
       "mixed_entry_bundles": [],
@@ -127,13 +109,11 @@
       "suite": "frontend",
       "router": "frontend-intake-router",
       "primary_execution": [
-        "angular-modernization",
         "angular-anti-patterns",
         "angular-to-vue3-migration",
         "angular-vue-migration-orchestrator",
         "webapp-consolidation-strategy",
-        "webapp-cutover-strategy",
-        "openapi-typescript-client-generation"
+        "webapp-cutover-strategy"
       ],
       "mixed_entry_bundles": [],
       "forbidden_overlaps": [
@@ -146,10 +126,8 @@
       "suite": "roslyn",
       "router": "roslyn-intake-router",
       "primary_execution": [
-        "roslyn-analyzer-authoring",
         "roslyn-codefix-authoring",
-        "roslyn-source-generator-authoring",
-        "roslyn-ca-code-quality-fixes"
+        "roslyn-source-generator-authoring"
       ],
       "mixed_entry_bundles": [],
       "forbidden_overlaps": [
@@ -176,16 +154,13 @@
     },
     {
       "suite": "webapi",
-      "router": "webapi-intake-router",
+      "router": null,
       "primary_execution": [
-        "dotnet-webapi",
         "webapi-input-validation",
         "webapi-error-contract-hardening",
         "webapi-compatibility-migration",
         "rfc-8259-compliance",
-        "rfc-9457-compliance",
         "rfc-fixes-bundle",
-        "aspnet-exception-handler",
         "aspnet-rest-openapi-controller"
       ],
       "mixed_entry_bundles": [
@@ -222,7 +197,6 @@
         "vbd-phased-modernization",
         "vbd-symbolic-mapping",
         "vbd-use-case-reconstruction",
-        "refactor",
         "post-implementation-cleanup",
         "ifx-component-communication"
       ],
@@ -239,30 +213,14 @@
       "primary_execution": [
         "azure-application-insights-dotnet",
         "csharp-scripts",
-        "dependency-injection-patterns",
         "dotnet-aot-compat",
         "dotnet-aspire-vbd-development",
         "dotnet-code-quality-standards",
-        "dotnet-code-review",
-        "dotnet-dependency-injection-standards",
-        "dotnet-exception-handling-standards",
-        "dotnet-logging-best-practices",
-        "dotnet-logging-standards",
-        "dotnet-naming-standards",
-        "dotnet-resilience-standards",
-        "dotnet-telemetry-standards",
         "dotnet-trace-collect",
         "env-provider-skill",
-        "global-exception-handling",
-        "microbenchmarking",
-        "migrate-dotnet8-to-dotnet9",
         "migrate-dotnet9-to-dotnet10",
-        "migrate-dotnet10-to-dotnet11",
         "migrate-nullable-references",
-        "naming-standards",
-        "structured-logging-serilog",
         "subagent-orchestration",
-        "dotnet-caching-patterns",
         "dotnet-channels-patterns"
       ],
       "mixed_entry_bundles": [],

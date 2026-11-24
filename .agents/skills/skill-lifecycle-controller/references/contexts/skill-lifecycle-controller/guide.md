@@ -44,7 +44,7 @@ Agent manages the full skill lifecycle through direct execution modes with measu
 
 | User Intent | Mode | What Controller Does |
 |---|---|---|
-| "Create a skill for X" | `create` | Delegates to `create-skill`, validates output |
+| "Create a skill for X" | `create` | Scaffolds the skill and validates output |
 | "Review skill X" | `review` | Validates one skill for STE compliance, front matter, tokens, cross-references, and routing |
 | "Optimize skills" | `optimize` | Delegates to `skill-suite-optimization` with enhanced token analysis |
 | "Audit ecosystem" | `audit` | Scans all skills and generates a priority report for token burn, drift, and routing conflicts |
@@ -57,7 +57,7 @@ Agent manages the full skill lifecycle through direct execution modes with measu
 |---|---|---|---|
 | 1. Detect mode | Agent reads user intent and selects one lifecycle mode. | Review the mode mapping table. | One of six defined modes is selected. |
 | 2. Execute mode | Agent runs the mode-specific workflow. | Review mode-specific output. | Mode-specific checks pass or residual risk is named. |
-| 3. Delegate when appropriate | Agent calls `create-skill` or `skill-suite-optimization` for `create` and `optimize` modes. | Review specialist output. | Delegation succeeds and controller validation completes. |
+| 3. Delegate when appropriate | Agent calls `skill-suite-optimization` for `optimize` mode. | Review specialist output. | Delegation succeeds and controller validation completes. |
 | 4. Generate report | Agent returns the mode-specific report, file list, and validation results. | Review the final report. | Report contains the required sections and next-state summary. |
 
 ## Review Validation Matrix

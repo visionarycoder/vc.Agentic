@@ -49,9 +49,6 @@ Agent routes generic .NET work to one primary implementation skill after domain 
 
 | Intent | Primary skill | Optional secondary |
 |---|---|---|
-| Dependency injection or lifetime design | `dotnet-dependency-injection-standards` | none |
-| Structured logging or log design | `dotnet-logging-standards` | none |
-| Caching design | `dotnet-caching-patterns` | none |
 | Channel-based concurrency | `dotnet-channels-patterns` | none |
 | Source-generated regex (.NET 7+) | `dotnet-source-generated-regex` | none |
 | Compiled regex (legacy) | `dotnet-compiled-regex-patterns` | none |

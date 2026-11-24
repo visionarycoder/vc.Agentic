@@ -52,6 +52,4 @@ Agent routes markdown and instruction work to one primary documentation skill.
 | Broad documentation cleanup | `documentation-fixes` | none |
 | Unsure / mixed documentation remediation | `documentation-fixes-bundle` | none |
 | Link breakage only | `documentation-link-repair` | none |
-| Front matter only | `documentation-frontmatter` | none |
 | File placement or move decision | `documentation-file-placement` | `documentation-link-repair` |
-| Agent instructions, prompts, skills governance | `agent-instruction-governance` | `documentation-governance` |

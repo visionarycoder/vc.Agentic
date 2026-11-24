@@ -40,7 +40,7 @@ Agent uses this controller to route a CWE-888 Software Fault Pattern (SFP) Prima
 | 2 | Unused entities (886) | — | `cwe-logic-correctness-fixes` |
 | 3 | API (887) | Use of an Improper API (1001) | `cwe-api-contract-fixes` |
 | 4 | Entry Points (897) | — | No dedicated skill. Route case-by-case to `dotnet-code-quality-standards` or `refactor`. Cluster is mostly Java/J2EE-specific entry-point patterns with limited direct applicability to managed C#. |
-| 5 | Exception Management (889) | Ambiguous Exception Type (960), Incorrect Exception Behavior (961), Unchecked Status Condition (962) | `cwe-exception-management-fixes` |
+| 5 | Exception Management (889) | Ambiguous Exception Type (960), Incorrect Exception Behavior (961), Unchecked Status Condition (962) | No dedicated skill. |
 | 6 | Memory Access (890) | Faulty Buffer Access (970), Faulty Pointer Use (971), Faulty String Expansion (972), Improper NULL Termination (973), Incorrect Buffer Length Computation (974) | `cwe-memory-safety-fixes` |
 | 7 | Memory Management (891) | Faulty Memory Release (969) | `cwe-memory-safety-fixes` |
 | 8 | Faulty Resource Release (1237) | — | `cwe-memory-safety-fixes` |
@@ -85,7 +85,7 @@ Agent uses this controller to route a CWE-888 Software Fault Pattern (SFP) Prima
 | Secondary Clusters | 57 of 57 present in the full catalog |
 | Member CWEs | 619 of 619 present in the full catalog |
 | CWE version | 4.20 |
-| New specialist skills added for this task | `cwe-logic-correctness-fixes`, `cwe-api-contract-fixes`, `cwe-exception-management-fixes`, `cwe-memory-safety-fixes`, `cwe-malware-indicators-fixes` |
+| New specialist skills added for this task | `cwe-logic-correctness-fixes`, `cwe-api-contract-fixes`, `cwe-memory-safety-fixes`, `cwe-malware-indicators-fixes` |
 | Existing skills extended with SFP cross-references | `cwe-resource-management-fixes`, `cwe-miscellaneous-security-fixes`, `cwe-injection-attack-fixes`, `cwe-input-validation-fixes`, `cwe-authentication-authz-fixes`, `security-controller` |
 
 ## Special Handling Notes

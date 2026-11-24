@@ -49,8 +49,4 @@ Agent routes Azure work to one primary Azure skill.
 
 | Intent | Primary skill | Optional secondary |
 |---|---|---|
-| Azure Functions host or trigger work | `azure-functions` | `azure-storage` |
-| Entra ID or downstream token flow | `azure-ad-authentication` | `azure-keyvault` |
-| App Configuration or feature flags | `azure-app-configuration` | `azure-keyvault` |
-| Secret or certificate access | `azure-keyvault` | `azure-ad-authentication` |
-| Blob, Queue, or Table Storage | `azure-storage` | `azure-functions` |
+| Blob, Queue, or Table Storage | `azure-storage` | none |

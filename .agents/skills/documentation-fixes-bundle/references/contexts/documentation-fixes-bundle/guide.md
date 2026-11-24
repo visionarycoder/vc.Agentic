@@ -20,9 +20,9 @@ Agent uses this alias for documentation cleanup entry.
 
 | General documentation cleanup | `documentation-fixes` | Load targeted documentation skills as needed |
 
-| Link and front matter repair | `documentation-fixes` | `documentation-link-repair`, `documentation-frontmatter` |
+| Link repair | `documentation-fixes` | `documentation-link-repair` |
 
-| Instruction asset placement | `documentation-fixes` | `agent-instruction-governance` |
+| Instruction asset placement | `documentation-fixes` | Load targeted documentation skills as needed |
 
 ## Workflow
 

@@ -66,7 +66,6 @@ Use this reference when the controller detects overlapping `appliesTo` patterns 
 | User asks for a broad family outcome | Bundle or controller |
 | User asks for one concrete implementation task | Specialist |
 | User asks for ecosystem review across many skills | Controller |
-| User asks for scaffold creation only | `create-skill` |
 
 ## Recommendation Patterns
 
