@@ -65,7 +65,7 @@ Common patterns:
 
 - gene or protein: `bio-ncbi-clinicaltables-skill`, `bio-uniprot-skill`
 - disease or phenotype: `bio-opentargets-skill`
-- variant: `bio-clinvar-variation-skill`, cohort-specific PheWAS skills
+- variant: cohort-specific PheWAS skills
 - compound or metabolite: `bio-chebi-skill`, `bio-hmdb-skill`
 - pathway or function: `bio-string-skill`
 
@@ -80,15 +80,15 @@ Examples:
 - target or disease evidence review:
   `bio-opentargets-skill`, `bio-gwas-catalog-skill`, `bio-gtex-eqtl-skill`, `bio-human-protein-atlas-skill`
 - variant interpretation:
-  `bio-clinvar-variation-skill`, `bio-gnomad-graphql-skill`, one or more cohort PheWAS skills
+  `bio-gnomad-graphql-skill`, one or more cohort PheWAS skills
 - locus-to-gene mapping:
   `bio-locus-to-gene-mapper-skill`, or its component genetics skills when the user wants a custom workflow
 - structure and mechanism:
-  `bio-rcsb-pdb-skill`, `bio-uniprot-skill`
+  `bio-uniprot-skill`
 - clinical and translational:
   `bio-clinicaltrials-skill`, `bio-civic-skill`
 - literature and dataset discovery:
-  `bio-ncbi-entrez-skill`, `bio-biorxiv-skill`
+  `bio-ncbi-entrez-skill`
 
 Prefer direct lookups before expensive multi-step chains.
 

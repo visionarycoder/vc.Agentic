@@ -22,7 +22,7 @@ Agent uses this bundle for Microsoft Fabric requests that span data movement, On
 | Copy, orchestration, ETL, or pipeline authoring | `fabric-pipeline-diagnostics` |
 | Lakehouse landing, open-table storage, or ingestion flow | `fabric-lakehouse-ingestion` |
 | Warehouse SQL serving, semantic objects, or report models | `fabric-semantic-model-builder` or `semantic-layer-fabric` |
-| Streaming, KQL, alerting, or incident diagnosis | `fabric-realtime-analytics` or `fabric-kql-diagnostics` |
+| Streaming, KQL, alerting, or incident diagnosis | `fabric-kql-diagnostics` |
 | Data science, notebooks, Power BI, Copilot, or IQ-style ontology alignment | `fabric-powerbi-integration` or `semantic-layer-fabric` |
 
 ## Coverage Matrix
@@ -31,7 +31,6 @@ Agent uses this bundle for Microsoft Fabric requests that span data movement, On
 |---|---|
 | `fabric-powerbi-integration` | Dashboards, metrics, report consumption |
 | `fabric-lakehouse-ingestion` | Landing, bronze intake, and ingestion reliability |
-| `fabric-realtime-analytics` | Event streams, KQL, and low-latency analytics |
 | `fabric-kql-diagnostics` | KQL issue diagnosis and investigation |
 | `fabric-pipeline-diagnostics` | Pipeline failure triage and correction |
 | `fabric-semantic-model-builder` | Model assembly and semantic-object authoring |

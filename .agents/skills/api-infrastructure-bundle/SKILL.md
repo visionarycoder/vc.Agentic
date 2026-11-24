@@ -20,9 +20,7 @@ Agent uses this bundle for ASP.NET Core infrastructure setup including health ch
 | Prompt Scope | Use This Bundle | Route Detail |
 |---|---|---|
 | Configure health checks for Kubernetes | Yes | Agent uses health-checks-aspnetcore |
-| Add rate limiting to API | Yes | Agent uses rate-limiting-aspnetcore |
 | Configure CORS policies | Yes | Agent uses cors-configuration-aspnetcore |
-| Add API versioning | Yes | Agent uses api-versioning-aspnetcore |
 | Create custom middleware | Yes | Agent uses middleware-authoring-aspnetcore |
 | Implement business logic | No | Agent routes to appropriate domain skill |
 
@@ -31,9 +29,7 @@ Agent uses this bundle for ASP.NET Core infrastructure setup including health ch
 | Track | Specialist Skill | Agent Uses When |
 |---|---|---|
 | Health checks | `health-checks-aspnetcore` | Liveness/readiness probes, dependency checks in scope |
-| Rate limiting | `rate-limiting-aspnetcore` | Request throttling, quota management in scope |
 | CORS | `cors-configuration-aspnetcore` | Cross-origin resource sharing in scope |
-| API versioning | `api-versioning-aspnetcore` | Endpoint versioning, deprecation in scope |
 | Middleware | `middleware-authoring-aspnetcore` | Custom request/response pipeline logic in scope |
 
 ## Decision Order
@@ -41,7 +37,7 @@ Agent uses this bundle for ASP.NET Core infrastructure setup including health ch
 | Decision | Agent Action |
 |---|---|
 | Multiple infrastructure concerns in one prompt | Agent applies all relevant specialist skills |
-| Health checks + rate limiting requested | Agent uses health-checks-aspnetcore and rate-limiting-aspnetcore |
+| Health checks + CORS requested | Agent uses health-checks-aspnetcore and cors-configuration-aspnetcore |
 | Unclear which infrastructure component | Agent clarifies with user before proceeding |
 
 ## Workflow

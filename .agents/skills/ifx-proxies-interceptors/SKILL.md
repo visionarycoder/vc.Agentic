@@ -27,7 +27,7 @@ Agent checks this table before writing new cross-cutting logic in `AzureAPI/src/
 | Condition | Route |
 |---|---|
 | Target type is not registered through `AddBoundaryInterceptedScoped` and adding that registration is out of scope | Implement the concern directly with the matching generic skill in `related_skills` |
-| Concern is HTTP-request-level rather than method-call-level | Use `rate-limiting-aspnetcore`, `cors-configuration-aspnetcore`, or `health-checks-aspnetcore` |
+| Concern is HTTP-request-level rather than method-call-level | Use `health-checks-aspnetcore` or `cors-configuration-aspnetcore` |
 | Concern needs a wholly new interceptor category | Add the new interceptor under `src\ifx\Ifx\Proxies\Interceptors\<Concern>\`, then update this table |
 
 ## Required Inputs

@@ -65,7 +65,7 @@ Agent routes ambiguous prompts to the smallest skill set that covers the work.
 | Cross-stack platform or architecture choice | `technology-selection` | `critical-infrastructure-bundle` |
 | Desktop MVVM, WPF, WinUI, or MAUI | `mvvm-toolkit-bundle` | `wpf-mvvm-implementation` |
 | Fabric, semantic models, or analytics integration | `fabric-integration-bundle` | `semantic-data-bundle` |
-| Mainframe copybooks or fixed-width migration | `mainframe-integration-bundle` | `copybook-to-dotnet` |
+| Mainframe copybooks or fixed-width migration | `mainframe-integration-bundle` | — |
 
 ## Pattern Matrix
 

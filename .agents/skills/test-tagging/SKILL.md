@@ -37,7 +37,7 @@ Agent classifies tests with consistent traits so teams can filter and reason abo
 |---|---|---|
 | Test scope | Yes | Agent needs files, directories, projects, or named tests. |
 | Mode | No | Agent uses `tag`, `audit`, or `both`. |
-| Framework | No | Agent infers it, then reads `test-analysis-extensions`. |
+| Framework | No | Agent infers it from the test code. |
 
 ## Workflow
 

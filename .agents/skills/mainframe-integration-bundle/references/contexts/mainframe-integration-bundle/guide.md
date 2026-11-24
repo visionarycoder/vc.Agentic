@@ -21,12 +21,6 @@ Agent uses this bundle for legacy mainframe file integration spanning copybook s
 | Large fixed-width batch integration request | Yes |
 | Single narrow copybook parse task with no routing need | No |
 
-## When Not to Use
-
-| Prompt Pattern | Agent Route |
-|---|---|
-| C# type generation only | `copybook-to-dotnet` |
-
 ## Required Inputs
 
 | Input | Required | Notes |
@@ -35,25 +29,6 @@ Agent uses this bundle for legacy mainframe file integration spanning copybook s
 | Record strategy | Yes | Single record, multi-record, or REDEFINES-heavy layout |
 | Target integration | Yes | C# classes, parser pipeline, ETL, or API ingestion |
 | File scale | No | Daily batch size, record length, and throughput target |
-
-## Activation
-
-| Request Signal | Use Bundle | Route Detail |
-|---|---|---|
-| Generate C# classes, enums, or typed readers | Yes | Agent routes to `copybook-to-dotnet` |
-
-## Coverage Matrix
-
-| Track | Specialist Skill | Primary Outcome |
-|---|---|---|
-| Model generation | `copybook-to-dotnet` | C# types aligned to field shape and nullability |
-
-## Decision Matrix: Parse Copybooks vs Manual Mapping
-
-| Condition | Preferred Path | Decision Signal |
-|---|---|---|
-| One-off file with short lifespan and few fields | Manual mapping | Parse investment outweighs reuse value |
-| C# ingestion pipeline is the output | `copybook-to-dotnet` | Typed model generation reduces drift |
 
 ## Performance Considerations for Large Mainframe Files
 
@@ -78,7 +53,6 @@ Agent uses this bundle for legacy mainframe file integration spanning copybook s
 
 | Decision | Agent Action |
 |---|---|
-| Generated .NET types are the target | Agent routes to `copybook-to-dotnet`. |
 | Manual mapping remains simpler | Agent records manual mapping rationale and skips generation. |
 | Large-file throughput risk appears | Agent applies streaming and metadata-caching patterns before implementation. |
 

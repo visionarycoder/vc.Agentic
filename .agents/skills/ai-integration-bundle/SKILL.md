@@ -28,7 +28,6 @@ Agent uses this bundle for AI requests that span Windows on-device inference, Fo
 
 | Prompt Pattern | Agent Route |
 |---|---|
-| Direct Windows inference API work only | `windows-ai-apis` |
 | Foundry Local, Windows connector, or ODR discovery flow only | `windows-ai-mcp-integration` |
 
 ## Required Inputs
@@ -44,16 +43,14 @@ Agent uses this bundle for AI requests that span Windows on-device inference, Fo
 
 | Request Signal | Use Bundle | Route Detail |
 |---|---|---|
-| Need WinML, DirectML, ONNX Runtime, or local model sessions | Yes | Agent routes to `windows-ai-apis` |
 | Need Foundry Local model catalog, prompt loop, or local LLM setup | Yes | Agent routes to `windows-ai-mcp-integration` |
 | Need MCP tool exposure, registry discovery, or connector-mediated file access | Yes | Agent routes to `windows-ai-mcp-integration` |
-| Need offline-first local inference | Yes | Agent routes to `windows-ai-apis` or `windows-ai-mcp-integration` |
+| Need offline-first local inference | Yes | Agent routes to `windows-ai-mcp-integration` |
 
 ## Coverage Matrix
 
 | Need | Primary Skill | Primary Outcome |
 |---|---|---|
-| Local inference runtime selection | `windows-ai-apis` | Explicit WinML, DirectML, or ONNX execution path |
 | Foundry Local setup and local model catalog use | `windows-ai-mcp-integration` | Alias-based local model workflow with on-device execution |
 | MCP connector, registry, and tool-contract wiring | `windows-ai-mcp-integration` | Stable tool surface across host and local AI runtime |
 | Hybrid AI architecture | This bundle | Local and cloud tasks split by latency, privacy, and scale |
@@ -62,7 +59,7 @@ Agent uses this bundle for AI requests that span Windows on-device inference, Fo
 
 | Decision | Agent Action |
 |---|---|
-| Offline execution, local privacy, or device latency dominates | Agent selects `windows-ai-apis` or `windows-ai-mcp-integration` first. |
+| Offline execution, local privacy, or device latency dominates | Agent selects `windows-ai-mcp-integration` first. |
 | Foundry Local model lifecycle or connector discovery dominates | Agent selects `windows-ai-mcp-integration` first. |
 | Tool interoperability matters | Agent adds MCP after the runtime choice is explicit. |
 | Hybrid execution remains in scope | Agent assigns each task to one local or cloud owner before implementation. |

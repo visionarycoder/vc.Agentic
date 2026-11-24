@@ -133,7 +133,7 @@ Use these skills in order. Skip only when an earlier step is not needed by provi
    - Retrieve single-tissue eQTL support for anchor variants.
 5. `bio-genebass-gene-burden-skill`
    - Retrieve rare-variant burden support for candidate genes.
-6. `bio-clinvar-variation-skill` (when `include_clinvar=true`)
+6. Built-in ClinVar annotation (when `include_clinvar=true`)
    - Add variant clinical/coding annotations.
 7. `bio-gnomad-graphql-skill` (when `include_gnomad_context=true`)
    - Add frequency and gene-level constraint context.

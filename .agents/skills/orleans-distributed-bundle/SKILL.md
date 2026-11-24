@@ -19,7 +19,6 @@ Agent uses this bundle for Orleans requests that span grain modeling, collaborat
 
 | Request Signal | Use Bundle | Route Detail |
 |---|---|---|
-| Need streams, observers, reminders, or coordinator patterns | Yes | Agent routes to `orleans-patterns` |
 | Need Aspire resource integrations inside Orleans services | Yes | Agent routes to `aspire-components` |
 | Need AppHost topology, service discovery, or dashboard wiring | Yes | Agent routes to `aspire-orchestration` |
 | Need one narrow Orleans concern with no routing choice | No | Agent uses the direct specialist skill |
@@ -28,7 +27,6 @@ Agent uses this bundle for Orleans requests that span grain modeling, collaborat
 
 | Need | Primary Skill | Primary Outcome |
 |---|---|---|
-| Streams, observers, reminders, and coordination | `orleans-patterns` | Explicit collaboration pattern |
 | Dependency components | `aspire-components` | Typed resource clients and health wiring |
 | AppHost topology | `aspire-orchestration` | Local distributed run path |
 | Architecture alignment | `dotnet-aspire-vbd-development` | Boundary-aware distributed design |

@@ -53,7 +53,6 @@ Use this at the start of broad requests or whenever a user mixes chart choice, i
 
 - `../SKILL.md`
 - `../../gantt-chart-visualization/SKILL.md`
-- `../../node-link-and-diagram-layout/SKILL.md`
 - `../../uml-and-software-architecture-visualization/SKILL.md`
 - `../../visualization-strategy-and-critique/SKILL.md`
 - `../../scrollytelling-and-parallax-data-visualization/SKILL.md`

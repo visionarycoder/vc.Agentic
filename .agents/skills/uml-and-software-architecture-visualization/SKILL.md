@@ -19,8 +19,6 @@ Use this skill when the visualization is about system structure, behavior, proce
 
 Default assumption: use formal UML when notation precision, methodology alignment, or model interchange matters. Use a UML-like diagram such as C4, ERD, BPMN, flowchart, swimlane, dependency graph, or architecture map when that communicates the user's actual question with less ceremony.
 
-When the main challenge is automatic placement, crossing reduction, routing style, overlap removal, or layout stability rather than notation selection, route through `../node-link-and-diagram-layout/SKILL.md` before locking in a renderer.
-
 For browser or app diagrams, use `../../references/foundations/mobile-first-responsive-visualization.md` so mobile portrait, optional landscape, touch, keyboard, search, and main-diagram visibility are planned before implementation.
 
 For architecture consoles, schema explorers, state-machine inspectors, dependency maps, or other dense repeated-use diagram products, also use `../../references/foundations/operational-visualization-workspaces.md` so the shell, outline, inspector, command bar, mobile panels, URL state, and pan/zoom behavior are designed as part of the diagram.
@@ -47,7 +45,7 @@ For architecture consoles, schema explorers, state-machine inspectors, dependenc
    - PlantUML, Mermaid, DOT, D2, Structurizr DSL, DBML, or BPMN XML for source-backed documentation and CI
    - JSON graph models when building a product renderer or interactive editor
 6. Choose the layout strategy when automatic arrangement matters:
-   - route to `../node-link-and-diagram-layout/SKILL.md` for layered, tree, force, radial, planarization, routing, overlap, and stability decisions
+   - use layered, tree, force, radial, planarization, routing, overlap, and stability choices that fit the graph family
    - preserve source order, port order, and grouping constraints when they are semantically meaningful
 7. Choose the renderer or editor stack:
    - static image generation, documentation embed, notebook/script, web component, interactive explorer, or editable diagramming product
@@ -88,12 +86,11 @@ For architecture consoles, schema explorers, state-machine inspectors, dependenc
 - Diagram source rendering: use Mermaid, PlantUML, D2, Graphviz DOT, Structurizr DSL, DBML, BPMN XML, or Kroki when text DSL rendering is needed.
 - TypeScript or web rendering: use Mermaid for simple docs, React Flow for editable node-edge UIs, Cytoscape.js for graph analysis and larger networks, Sprotty for model-driven diagram tools, JointJS or GoJS for full-featured diagram editors, and ELK or Dagre for auto-layout.
 - Bespoke SVG/D3: use only when the diagram needs custom annotation, visual polish, or product-specific composition that diagram DSLs cannot express cleanly.
-- For dense topology, ERD, or state-machine explorers, route layout choice through `../node-link-and-diagram-layout/SKILL.md`, then prefer ELK or Dagre when adding a dependency is acceptable; if staying bespoke, implement an explicit layered layout, stable ranks, non-overlap spacing, routed edges, and focus-state filtering instead of relying on hand-placed nodes.
+- For dense topology, ERD, or state-machine explorers, prefer ELK or Dagre when adding a dependency is acceptable; if staying bespoke, implement an explicit layered layout, stable ranks, non-overlap spacing, routed edges, and focus-state filtering instead of relying on hand-placed nodes.
 
 ## Reference Guide
 
 - Read `references/uml-diagram-types-and-selection.md` for formal UML diagram types, alternatives, and selection heuristics.
-- Read `../node-link-and-diagram-layout/SKILL.md` when the main issue is node placement, crossing reduction, routing style, or overlap management.
 - Read `references/formats-and-interchange.md` before reading, writing, converting, or round-tripping diagram formats.
 - Read `references/typescript-web-rendering.md` for browser, TypeScript, React, and interactive renderer choices.
 - Read `references/interactive-diagram-patterns.md` before designing interactive explorers or diagram editors.
@@ -116,7 +113,6 @@ For architecture consoles, schema explorers, state-machine inspectors, dependenc
 ## Adjacent Skills
 
 - Use `../visualization-strategy-and-critique/SKILL.md` when deciding whether a UML-like diagram is the right visual form.
-- Use `../node-link-and-diagram-layout/SKILL.md` for graph-family classification, layout algorithms, routing, overlap removal, and stability.
 - Use `../typescript-data-visualization-engineering/SKILL.md` for typed graph models, renderer contracts, and browser architecture.
 - Use `../react-and-nextjs-data-visualization/SKILL.md` for React or Next.js integration.
 - Use `../d3-data-visualization/SKILL.md` for bespoke SVG geometry, annotation, and polish.

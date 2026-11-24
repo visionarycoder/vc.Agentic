@@ -30,7 +30,6 @@ Agent uses this bundle for MVVM requests that require routing across manual MVVM
 |---|---|
 | Only WPF Fluent UI composition or styling | `wpf-fluent-ui` |
 | Only platform shell, deployment, or native UI structure | `winui3-patterns` |
-| Only one MVVM testing task | `mstest-mvvm-testing-patterns` |
 
 ## Required Inputs
 
@@ -52,7 +51,6 @@ Agent uses this bundle for MVVM requests that require routing across manual MVVM
 | Region composition, event aggregation, or Prism navigation | Yes | `prism-framework-patterns` |
 | Custom Roslyn generation for MVVM plumbing | Yes | `roslyn-mvvm-source-generators` |
 | Errors, editable forms, or validation summaries | Yes | `validation-mvvm` |
-| View-model unit tests, command tests, or notification tests | Yes | `mstest-mvvm-testing-patterns` |
 
 ## Decision Matrix: Manual MVVM vs CommunityToolkit vs Prism
 

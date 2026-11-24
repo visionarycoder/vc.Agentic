@@ -22,7 +22,7 @@ This matrix defines the routed-suite model for repository skills.
 | Suite | Router | Primary execution skills | Secondary specialists |
 |---|---|---|---|
 | VBD | `vbd-intake-router` | `vbd-system-design`, `vbd-component-construction`, `vbd-access-components`, `vbd-engine-components`, `vbd-manager-components` | `vbd-dto-authoring`, `vbd-boundary-contract-mapping`, `vbd-architecture-conformance`, `vbd-advanced-design`, `vbd-change-simulation` |
-| WebAPI | — | `webapi-fixes-bundle` | `webapi-rest-route-standardization`, `webapi-input-validation`, `webapi-authz-hardening`, `webapi-error-contract-hardening`, `webapi-compatibility-migration` |
+| WebAPI | — | `webapi-fixes-bundle` | `webapi-input-validation`, `webapi-authz-hardening`, `webapi-error-contract-hardening`, `webapi-compatibility-migration` |
 | Documentation | `documentation-intake-router` | `documentation-fixes`, `documentation-fixes-bundle` | `documentation-link-repair`, `documentation-frontmatter`, `documentation-file-placement`, `documentation-governance`, `agent-instruction-governance` |
 | Testing | `testing-intake-router` | `test-fixes`, `test-fixes-bundle` | `assertion-quality`, `test-smell-detection`, `grade-tests` |
 | Security | `security-intake-router` | `cwe-fixes` | `cwe-input-validation-fixes`, `cwe-authentication-authz-fixes`, `cwe-injection-attack-fixes`, `cwe-resource-management-fixes`, `cwe-miscellaneous-security-fixes`, `cwe-format-external-fixes` |
@@ -30,7 +30,7 @@ This matrix defines the routed-suite model for repository skills.
 | Azure | `azure-intake-router` | `azure-functions`, `azure-ad-authentication`, `azure-app-configuration`, `azure-keyvault`, `azure-storage` | `aspnetcore-identity-setup`, `configuration-options-pattern` |
 | EF Core | `efcore-intake-router` | `efcore-dbcontext-design`, `efcore-migrations`, `efcore-testing-patterns` | `optimizing-ef-core-queries`, `vbd-access-components`, `dotnet-mapping-standards` |
 | Frontend | `frontend-intake-router` | `vue3-webapp-setup`, `webapp-consolidation-strategy`, `wpf-project-setup` | `angular-anti-patterns`, `angular-to-vue3-migration`, `vue3-pinia-state-management`, `vue3-e2e-testing-playwright`, `wpf-mvvm-implementation` |
-| Roslyn/Ifx | `roslyn-intake-router` | `roslyn-codefix-authoring`, `roslyn-source-generator-authoring` | `roslyn-ca-design-quality-fixes`, `roslyn-ca-perf-reliability-fixes`, `mcp-csharp-test` |
+| Roslyn/Ifx | `roslyn-intake-router` | `roslyn-codefix-authoring`, `roslyn-source-generator-authoring` | `mcp-csharp-test` |
 | Data/Fabric | `data-intake-router` | `fabric-kql-diagnostics`, `fabric-lakehouse-ingestion`, `fabric-pipeline-diagnostics`, `fabric-semantic-model-builder` | `data-contract-frontmatter`, `data-lineage`, `data-quality-reporting`, `data-window-validation` |
 | Generic .NET | `dotnet-intake-router` | `dotnet-code-review`, `dotnet-dependency-injection-standards`, `dotnet-validation-standards`, `dotnet-logging-standards`, `dotnet-performance-standards` | `dotnet-dto-standards`, `dotnet-mapping-standards`, `dotnet-namespace-standards`, `dotnet-value-object-standards`, `dotnet-caching-patterns`, `dotnet-channels-patterns` |
 

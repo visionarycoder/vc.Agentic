@@ -18,7 +18,6 @@ metadata:
 - Use explicit `endpoint` values such as `esearch`, `esummary`, `efetch`, `elink`, or `einfo`.
 - Search-style Entrez calls are better with `retmax=10` and `max_items=10`.
 - GEO is nested under this skill. Use `db=gds` or `db=geoprofiles` for GEO metadata and load `references/geo.md` only when the user is specifically asking about GEO.
-- BLAST workflows belong in `bio-ncbi-blast-skill`.
 - Re-run requests in long conversations instead of relying on older tool output.
 - Treat displayed `...` in tool previews as UI truncation, not literal request content.
 

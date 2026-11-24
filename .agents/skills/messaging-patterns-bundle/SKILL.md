@@ -13,13 +13,12 @@ metadata:
 
 # Messaging Patterns Bundle
 
-Agent uses this bundle for message-based integration including Azure Service Bus, RabbitMQ, idempotency patterns, and Redis pub/sub.
+Agent uses this bundle for message-based integration including RabbitMQ, idempotency patterns, and Redis pub/sub.
 
 ## Activation
 
 | Prompt Scope | Use This Bundle | Route Detail |
 |---|---|---|
-| Integrate Azure Service Bus | Yes | Agent uses azure-service-bus-patterns |
 | Integrate RabbitMQ | Yes | Agent uses rabbitmq-patterns |
 | Implement message patterns (pub/sub, idempotency, outbox) | Yes | Agent uses message-patterns-dotnet |
 | Use Redis for messaging | Yes | Agent uses redis-patterns-dotnet |
@@ -29,7 +28,6 @@ Agent uses this bundle for message-based integration including Azure Service Bus
 
 | Track | Specialist Skill | Agent Uses When |
 |---|---|---|
-| Azure Service Bus | `azure-service-bus-patterns` | Queues, topics, sessions, dead-letter in scope |
 | RabbitMQ | `rabbitmq-patterns` | Exchanges, bindings, consumers in scope |
 | Message patterns | `message-patterns-dotnet` | Pub/sub, idempotency, outbox, saga in scope |
 | Redis messaging | `redis-patterns-dotnet` | Redis pub/sub, streams in scope |
@@ -38,7 +36,6 @@ Agent uses this bundle for message-based integration including Azure Service Bus
 
 | Decision | Agent Action |
 |---|---|
-| Azure cloud deployment | Agent prefers azure-service-bus-patterns |
 | On-premises or multi-cloud | Agent uses rabbitmq-patterns |
 | Lightweight pub/sub without durability | Agent uses redis-patterns-dotnet |
 | Idempotency or outbox pattern | Agent uses message-patterns-dotnet |

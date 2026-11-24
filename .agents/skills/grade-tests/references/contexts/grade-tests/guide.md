@@ -49,7 +49,7 @@ Agent grades named tests one by one and generates a compact score table.
 | Step | Agent action | Test | Pass |
 |---|---|---|---|
 | 1 | Agent verifies the grading scope is explicit. | Read the prompt. | Each target test is named or discoverable from one file scope. |
-| 2 | Agent reads framework-specific guidance from `test-analysis-extensions`. | Read the matching extension file. | Guidance matches the language and framework in scope. |
+| 2 | Agent identifies the language and framework in scope. | Read the test files. | Framework conventions match the tests in scope. |
 | 3 | Agent reads each requested test body. | Read the source file or symbol. | Each requested test is found or marked missing. |
 | 4 | Agent scores each test on assertions, focus, and hygiene. | Read the score table. | Each test has one grade and one note. |
 | 5 | Agent caps the overall grade at the weakest trust-breaking dimension. | Compare subscores to final score. | Final grade never exceeds the weakest critical dimension. |

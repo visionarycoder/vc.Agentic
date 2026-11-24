@@ -28,7 +28,7 @@ Implement transport-agnostic messaging patterns with explicit contracts, durable
 
 | Condition | Route |
 |---|---|
-| Need is broker-specific topology or settlement | Use `azure-service-bus-patterns` or `rabbitmq-patterns` |
+| Need is broker-specific topology or settlement | Use `rabbitmq-patterns` |
 | Work is in-process request orchestration only | Use direct method calls or channels |
 | Task asks for MediatR mediator pipeline | Use explicit application services instead |
 | Requirement is distributed cache or Redis pub/sub details | Use `redis-patterns-dotnet` |

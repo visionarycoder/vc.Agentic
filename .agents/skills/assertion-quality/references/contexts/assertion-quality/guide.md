@@ -32,7 +32,7 @@ Agent evaluates whether tests prove behavior with meaningful and varied assertio
 |---|---|---|
 | Test scope | Yes | Agent needs files, classes, projects, or named tests. |
 | Production context | No | Agent reads it when business significance is unclear. |
-| Framework | No | Agent infers it, then reads `test-analysis-extensions`. |
+| Framework | No | Agent infers it from the test files. |
 
 ## Assertion Category Table
 

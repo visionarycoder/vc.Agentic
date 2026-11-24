@@ -28,7 +28,7 @@ Agent implements Redis access with singleton connection multiplexing, explicit c
 
 | Condition | Route |
 |---|---|
-| Requirement is durable enterprise broker semantics | Use `azure-service-bus-patterns` or `rabbitmq-patterns` |
+| Requirement is durable enterprise broker semantics | Use `rabbitmq-patterns` |
 | Need is process-local cache only | Use `IMemoryCache` guidance |
 | Need is transport-agnostic outbox or saga design | Use `message-patterns-dotnet` |
 | Query pattern depends on relational filtering | Use database-native storage |

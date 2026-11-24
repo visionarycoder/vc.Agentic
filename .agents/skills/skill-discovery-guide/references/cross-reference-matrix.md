@@ -16,7 +16,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 
 | Source Skill | Related Skill | Relationship |
 |---|---|---|
-| `ai-integration-bundle` | `windows-ai-apis` | Declared related skill |
 | `ai-integration-bundle` | `windows-ai-mcp-integration` | Declared related skill |
 | `analyzing-dotnet-performance` | `dotnet-performance-standards` | Declared related skill |
 | `analyzing-dotnet-performance` | `exp-simd-vectorization` | Declared related skill |
@@ -31,16 +30,10 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `api-gateway-patterns` | `cors-configuration-aspnetcore` | Declared related skill |
 | `api-gateway-patterns` | `dotnet-api-client-resilience` | Declared related skill |
 | `api-gateway-patterns` | `middleware-authoring-aspnetcore` | Declared related skill |
-| `api-gateway-patterns` | `rate-limiting-aspnetcore` | Declared related skill |
 | `api-gateway-patterns` | `webapi-hardening-controller` | Declared related skill |
-| `api-infrastructure-bundle` | `api-versioning-aspnetcore` | Declared related skill |
 | `api-infrastructure-bundle` | `cors-configuration-aspnetcore` | Declared related skill |
 | `api-infrastructure-bundle` | `health-checks-aspnetcore` | Declared related skill |
 | `api-infrastructure-bundle` | `middleware-authoring-aspnetcore` | Declared related skill |
-| `api-infrastructure-bundle` | `rate-limiting-aspnetcore` | Declared related skill |
-| `api-versioning-aspnetcore` | `api-infrastructure-bundle` | Declared related skill |
-| `api-versioning-aspnetcore` | `middleware-authoring-aspnetcore` | Declared related skill |
-| `api-versioning-aspnetcore` | `webapi-hardening-controller` | Declared related skill |
 | `azure-application-insights-dotnet` | `configuring-opentelemetry-dotnet` | Declared related skill |
 | `architectural-decision-debate` | `antipattern-detection-bundle` | Declared related skill |
 | `architectural-decision-debate` | `dotnet-architectural-layers` | Declared related skill |
@@ -50,7 +43,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `architectural-pattern-tipping-point` | `architectural-decision-debate` | Declared related skill |
 | `architectural-pattern-tipping-point` | `design-smell-detection` | Declared related skill |
 | `architectural-pattern-tipping-point` | `dotnet-architectural-layers` | Declared related skill |
-| `aspire-components` | `azure-service-bus-patterns` | Declared related skill |
 | `aspire-components` | `configuring-opentelemetry-dotnet` | Declared related skill |
 | `aspire-components` | `redis-patterns-dotnet` | Declared related skill |
 | `aspire-orchestration` | `aspire-components` | Declared related skill |
@@ -58,13 +50,9 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `aspire-orchestration` | `dotnet-aspire-vbd-development` | Declared related skill |
 | `aspnetcore-identity-setup` | `webapi-hardening-controller` | Declared related skill |
 | `assertion-quality` | `grade-tests` | Declared related skill |
-| `assertion-quality` | `test-analysis-extensions` | Declared related skill |
-| `audit-trail-compliance` | `cqrs-patterns-dotnet` | Declared related skill |
 | `audit-trail-compliance` | `accounting-journal-entry-patterns` | Declared related skill |
 | `azure-app-configuration-dotnet` | `configuration-options-pattern` | Declared related skill |
 | `azure-functions-dotnet` | `azure-app-configuration-dotnet` | Declared related skill |
-| `azure-service-bus-patterns` | `background-services-channels` | Declared related skill |
-| `azure-service-bus-patterns` | `message-patterns-dotnet` | Declared related skill |
 | `background-services-channels` | `api-infrastructure-bundle` | Declared related skill |
 | `background-services-channels` | `long-running-job-patterns` | Declared related skill |
 | `background-services-channels` | `message-patterns-dotnet` | Declared related skill |
@@ -98,10 +86,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `business-glossary-metadata` | `data-lineage` | Declared related skill |
 | `business-glossary-metadata` | `semantic-layer-fabric` | Declared related skill |
 | `business-glossary-metadata` | `terminology-normalization` | Declared related skill |
-| `roslyn-ca-design-quality-fixes` | `roslyn-ca-perf-reliability-fixes` | Declared related skill |
-| `roslyn-ca-design-quality-fixes` | `roslyn-cs8794-fix` | Declared related skill |
-| `roslyn-ca-perf-reliability-fixes` | `analyzing-dotnet-performance` | Declared related skill |
-| `roslyn-ca-perf-reliability-fixes` | `roslyn-ca-design-quality-fixes` | Declared related skill |
 | `caching-patterns-dotnet` | `azure-app-configuration-dotnet` | Declared related skill |
 | `caching-patterns-dotnet` | `configuration-options-pattern` | Declared related skill |
 | `caching-patterns-dotnet` | `dotnet-api-client-resilience` | Declared related skill |
@@ -132,16 +116,12 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `convert-blazor-server-to-webapp` | `webapi-hardening-controller` | Declared related skill |
 | `convert-blazor-server-to-webapp` | `webapp-cutover-strategy` | Declared related skill |
 | `msbuild-convert-to-cpm` | `msbuild-performance-baseline` | Declared related skill |
-| `copybook-to-dotnet` | `roslyn-source-generator-authoring` | Declared related skill |
 | `cors-configuration-aspnetcore` | `api-infrastructure-bundle` | Declared related skill |
 | `cors-configuration-aspnetcore` | `middleware-authoring-aspnetcore` | Declared related skill |
 | `cors-configuration-aspnetcore` | `webapp-frontend-security` | Declared related skill |
-| `cqrs-patterns-dotnet` | `dotnet-validation-standards` | Declared related skill |
-| `cqrs-patterns-dotnet` | `vbd-system-design` | Declared related skill |
 | `crap-score` | `code-testing-agent` | Declared related skill |
 | `critical-infrastructure-bundle` | `api-gateway-patterns` | Declared related skill |
 | `critical-infrastructure-bundle` | `blazor-patterns` | Declared related skill |
-| `critical-infrastructure-bundle` | `event-sourcing-patterns` | Declared related skill |
 | `critical-infrastructure-bundle` | `graphql-dotnet` | Declared related skill |
 | `roslyn-cs8794-fix` | `msbuild-property-patterns` | Declared related skill |
 | `csharp-scripts` | `run-tests` | Declared related skill |
@@ -255,7 +235,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `dotnet-validation-standards` | `dotnet-code-quality-standards` | Declared related skill |
 | `dotnet-validation-standards` | `dotnet-dto-standards` | Declared related skill |
 | `dotnet-value-object-standards` | `dotnet-performance-standards` | Declared related skill |
-| `accounting-double-entry` | `cqrs-patterns-dotnet` | Declared related skill |
 | `accounting-double-entry` | `accounting-ledger-balance-anomaly` | Declared related skill |
 | `efcore-dbcontext-design` | `efcore-migrations` | Declared related skill |
 | `efcore-dbcontext-design` | `efcore-testing-patterns` | Declared related skill |
@@ -267,8 +246,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `env-provider-skill` | `configuration-options-pattern` | Declared related skill |
 | `msbuild-evaluation-performance` | `msbuild-performance-diagnostics` | Declared related skill |
 | `msbuild-evaluation-performance` | `msbuild-directory-build-organization` | Declared related skill |
-| `event-sourcing-patterns` | `dotnet-dto-standards` | Declared related skill |
-| `event-sourcing-patterns` | `long-running-job-patterns` | Declared related skill |
 | `exp-simd-vectorization` | `msbuild-evaluation-performance` | Declared related skill |
 | `msbuild-extension-points` | `msbuild-directory-build-organization` | Declared related skill |
 | `msbuild-extension-points` | `msbuild-target-authoring` | Declared related skill |
@@ -276,7 +253,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `fabric-integration-bundle` | `fabric-lakehouse-ingestion` | Declared related skill |
 | `fabric-integration-bundle` | `fabric-pipeline-diagnostics` | Declared related skill |
 | `fabric-integration-bundle` | `fabric-powerbi-integration` | Declared related skill |
-| `fabric-integration-bundle` | `fabric-realtime-analytics` | Declared related skill |
 | `fabric-integration-bundle` | `fabric-semantic-model-builder` | Declared related skill |
 | `fabric-integration-bundle` | `semantic-layer-fabric` | Declared related skill |
 | `fabric-kql-diagnostics` | `fabric-lakehouse-ingestion` | Declared related skill |
@@ -285,7 +261,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `fabric-lakehouse-ingestion` | `fabric-pipeline-diagnostics` | Declared related skill |
 | `fabric-pipeline-diagnostics` | `fabric-kql-diagnostics` | Declared related skill |
 | `fabric-pipeline-diagnostics` | `fabric-lakehouse-ingestion` | Declared related skill |
-| `fabric-realtime-analytics` | `fabric-powerbi-integration` | Declared related skill |
 | `fabric-semantic-model-builder` | `fabric-kql-diagnostics` | Declared related skill |
 | `fabric-semantic-model-builder` | `fabric-lakehouse-ingestion` | Declared related skill |
 | `filter-syntax` | `mtp-hot-reload` | Declared related skill |
@@ -302,7 +277,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `global-error-log-library` | `configuring-opentelemetry-dotnet` | Declared related skill |
 | `global-error-log-library` | `dotnet-code-quality-standards` | Declared related skill |
 | `grade-tests` | `assertion-quality` | Declared related skill |
-| `grade-tests` | `test-analysis-extensions` | Declared related skill |
 | `graphql-dotnet` | `configuring-opentelemetry-dotnet` | Declared related skill |
 | `graphql-dotnet` | `dotnet-api-client-generation` | Declared related skill |
 | `graphql-dotnet` | `dotnet-api-client-resilience` | Declared related skill |
@@ -322,7 +296,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `msbuild-item-management` | `msbuild-generated-files` | Declared related skill |
 | `msbuild-item-management` | `msbuild-property-patterns` | Declared related skill |
 | `accounting-journal-entry-patterns` | `audit-trail-compliance` | Declared related skill |
-| `accounting-journal-entry-patterns` | `cqrs-patterns-dotnet` | Declared related skill |
 | `accounting-journal-entry-patterns` | `accounting-double-entry` | Declared related skill |
 | `jwt-authentication-dotnet` | `configuration-options-pattern` | Declared related skill |
 | `jwt-authentication-dotnet` | `webapi-hardening-controller` | Declared related skill |
@@ -333,7 +306,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `long-running-job-patterns` | `azure-application-insights-dotnet` | Declared related skill |
 | `long-running-job-patterns` | `azure-webjobs-authoring` | Declared related skill |
 | `magic-strings` | `breaking-primitive-obsession` | Declared related skill |
-| `mainframe-integration-bundle` | `copybook-to-dotnet` | Declared related skill |
 | `mcp-csharp-create` | `mcp-csharp-debug` | Declared related skill |
 | `mcp-csharp-create` | `mcp-csharp-publish` | Declared related skill |
 | `mcp-csharp-create` | `mcp-csharp-test` | Declared related skill |
@@ -351,17 +323,14 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `mcp-integration-patterns` | `mcp-csharp-publish` | Declared related skill |
 | `mcp-integration-patterns` | `mcp-csharp-test` | Declared related skill |
 | `mcp-integration-patterns` | `windows-ai-mcp-integration` | Declared related skill |
-| `message-patterns-dotnet` | `azure-service-bus-patterns` | Declared related skill |
 | `message-patterns-dotnet` | `background-services-channels` | Declared related skill |
 | `message-patterns-dotnet` | `rabbitmq-patterns` | Declared related skill |
-| `messaging-patterns-bundle` | `azure-service-bus-patterns` | Declared related skill |
 | `messaging-patterns-bundle` | `background-services-channels` | Declared related skill |
 | `messaging-patterns-bundle` | `message-patterns-dotnet` | Declared related skill |
 | `messaging-patterns-bundle` | `rabbitmq-patterns` | Declared related skill |
 | `messaging-patterns-bundle` | `redis-patterns-dotnet` | Declared related skill |
 | `method-signature-conventions` | `dotnet-async-await-standards` | Declared related skill |
 | `middleware-authoring-aspnetcore` | `api-infrastructure-bundle` | Declared related skill |
-| `middleware-authoring-aspnetcore` | `rate-limiting-aspnetcore` | Declared related skill |
 | `migrate-nullable-references` | `roslyn-cs8794-fix` | Declared related skill |
 | `migrate-static-to-wrapper` | `detect-static-dependencies` | Declared related skill |
 | `migrate-static-to-wrapper` | `generate-testability-wrappers` | Declared related skill |
@@ -383,13 +352,10 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `roslyn-mvvm-source-generators` | `roslyn-source-generator-authoring` | Declared related skill |
 | `roslyn-mvvm-source-generators` | `winui3-patterns` | Declared related skill |
 | `roslyn-mvvm-source-generators` | `wpf-mvvm-implementation` | Declared related skill |
-| `mstest-mvvm-testing-patterns` | `validation-mvvm` | Declared related skill |
-| `mstest-mvvm-testing-patterns` | `mstest-wpf-testing-patterns` | Declared related skill |
 | `mvvm-toolkit-bundle` | `commands-behaviors-patterns` | Declared related skill |
 | `mvvm-toolkit-bundle` | `communitytoolkit-mvvm` | Declared related skill |
 | `mvvm-toolkit-bundle` | `databinding-patterns` | Declared related skill |
 | `mvvm-toolkit-bundle` | `roslyn-mvvm-source-generators` | Declared related skill |
-| `mvvm-toolkit-bundle` | `mstest-mvvm-testing-patterns` | Declared related skill |
 | `mvvm-toolkit-bundle` | `prism-framework-patterns` | Declared related skill |
 | `mvvm-toolkit-bundle` | `validation-mvvm` | Declared related skill |
 | `mvvm-toolkit-bundle` | `viewmodel-lifecycle` | Declared related skill |
@@ -403,8 +369,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `orleans-distributed-bundle` | `aspire-components` | Declared related skill |
 | `orleans-distributed-bundle` | `aspire-orchestration` | Declared related skill |
 | `orleans-distributed-bundle` | `dotnet-aspire-vbd-development` | Declared related skill |
-| `orleans-distributed-bundle` | `orleans-patterns` | Declared related skill |
-| `orleans-patterns` | `long-running-job-patterns` | Declared related skill |
 | `azure-performance-antipatterns` | `analyzing-dotnet-performance` | Declared related skill |
 | `azure-performance-antipatterns` | `antipattern-detection-bundle` | Declared related skill |
 | `azure-performance-antipatterns` | `caching-patterns-dotnet` | Declared related skill |
@@ -419,22 +383,16 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `msbuild-property-patterns` | `msbuild-item-management` | Declared related skill |
 | `rabbitmq-patterns` | `background-services-channels` | Declared related skill |
 | `rabbitmq-patterns` | `message-patterns-dotnet` | Declared related skill |
-| `rate-limiting-aspnetcore` | `api-infrastructure-bundle` | Declared related skill |
-| `rate-limiting-aspnetcore` | `middleware-authoring-aspnetcore` | Declared related skill |
-| `rate-limiting-aspnetcore` | `webapi-hardening-controller` | Declared related skill |
 | `redis-patterns-dotnet` | `caching-patterns-dotnet` | Declared related skill |
 | `redis-patterns-dotnet` | `dotnet-api-client-resilience` | Declared related skill |
 | `redis-patterns-dotnet` | `message-patterns-dotnet` | Declared related skill |
 | `msbuild-resolve-project-references` | `msbuild-performance-diagnostics` | Declared related skill |
 | `roslyn-codefix-authoring` | `mcp-csharp-test` | Declared related skill |
-| `roslyn-codegen-patterns` | `mcp-csharp-test` | Declared related skill |
-| `roslyn-codegen-patterns` | `roslyn-source-generator-authoring` | Declared related skill |
 | `roslyn-source-generator-authoring` | `mcp-csharp-test` | Declared related skill |
 | `roslyn-source-generator-authoring` | `roslyn-codefix-authoring` | Declared related skill |
 | `run-tests` | `filter-syntax` | Declared related skill |
 | `run-tests` | `mtp-hot-reload` | Declared related skill |
 | `run-tests` | `platform-detection` | Declared related skill |
-| `scalar-openapi-integration` | `rfc-fixes-bundle` | Declared related skill |
 | `security-controller` | `cwe-authentication-authz-fixes` | Declared related skill |
 | `security-controller` | `cwe-format-external-fixes` | Declared related skill |
 | `security-controller` | `cwe-injection-attack-fixes` | Declared related skill |
@@ -458,7 +416,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `roslyn-sidecar-patterns` | `configuring-opentelemetry-dotnet` | Declared related skill |
 | `roslyn-sidecar-patterns` | `dotnet-api-client-generation` | Declared related skill |
 | `roslyn-sidecar-patterns` | `dotnet-api-client-resilience` | Declared related skill |
-| `roslyn-sidecar-patterns` | `roslyn-codegen-patterns` | Declared related skill |
 | `roslyn-sidecar-patterns` | `roslyn-source-generator-authoring` | Declared related skill |
 | `skill-discovery-guide` | `documentation-fixes` | Declared related skill |
 | `skill-discovery-guide` | `rfc-fixes-bundle` | Declared related skill |
@@ -475,9 +432,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `skill-suite-optimization` | `documentation-governance` | Declared related skill |
 | `skill-suite-optimization` | `solution-markdown-sync` | Declared related skill |
 | `solution-markdown-sync` | `documentation-governance` | Declared related skill |
-| `specification-pattern-dotnet` | `cqrs-patterns-dotnet` | Declared related skill |
-| `specification-pattern-dotnet` | `optimizing-ef-core-queries` | Declared related skill |
-| `specification-pattern-dotnet` | `vbd-system-design` | Declared related skill |
 | `subagent-orchestration` | `run-tests` | Declared related skill |
 | `accounting-subledger-reconciliation-patterns` | `audit-trail-compliance` | Declared related skill |
 | `accounting-subledger-reconciliation-patterns` | `accounting-double-entry` | Declared related skill |
@@ -488,10 +442,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `technology-selection` | `webapi-hardening-controller` | Declared related skill |
 | `terminology-normalization` | `business-glossary-metadata` | Declared related skill |
 | `terminology-normalization` | `semantic-layer-fabric` | Declared related skill |
-| `test-analysis-extensions` | `assertion-quality` | Declared related skill |
-| `test-analysis-extensions` | `grade-tests` | Declared related skill |
-| `test-analysis-extensions` | `test-smell-detection` | Declared related skill |
-| `test-analysis-extensions` | `test-tagging` | Declared related skill |
 | `test-fixes` | `grade-tests` | Declared related skill |
 | `test-fixes` | `run-tests` | Declared related skill |
 | `test-fixes-bundle` | `assertion-quality` | Declared related skill |
@@ -500,10 +450,8 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `mstest-modernization-controller` | `run-tests` | Declared related skill |
 | `mstest-modernization-controller` | `test-fixes` | Declared related skill |
 | `test-smell-detection` | `assertion-quality` | Declared related skill |
-| `test-smell-detection` | `test-analysis-extensions` | Declared related skill |
 | `test-tagging` | `grade-tests` | Declared related skill |
 | `test-tagging` | `run-tests` | Declared related skill |
-| `test-tagging` | `test-analysis-extensions` | Declared related skill |
 | `thread-abort-migration` | `dotnet-async-await-standards` | Declared related skill |
 | `thread-abort-migration` | `dotnet-cancellation-token-standards` | Declared related skill |
 | `transaction-duplication-detection` | `accounting-ledger-balance-anomaly` | Declared related skill |
@@ -515,7 +463,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `vbd-advanced-design` | `vbd-change-simulation` | Declared related skill |
 | `vbd-architecture-conformance` | `vbd-boundary-contract-mapping` | Declared related skill |
 | `vbd-architecture-conformance` | `roslyn-vbd-drift-analyzer-design` | Declared related skill |
-| `vbd-architecture-conformance` | `vbd-use-case-migration` | Declared related skill |
 | `vbd-artifact-automation` | `solution-markdown-sync` | Declared related skill |
 | `vbd-artifact-automation` | `vbd-change-simulation` | Declared related skill |
 | `vbd-artifact-automation` | `vbd-cutover-migration` | Declared related skill |
@@ -531,7 +478,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `vbd-contract-first-construction` | `vbd-cutover-migration` | Declared related skill |
 | `vbd-contract-first-construction` | `vbd-modernization-portfolio` | Declared related skill |
 | `vbd-cutover-migration` | `roslyn-vbd-drift-analyzer-design` | Declared related skill |
-| `vbd-cutover-migration` | `vbd-use-case-migration` | Declared related skill |
 | `roslyn-vbd-drift-analyzer-design` | `vbd-architecture-conformance` | Declared related skill |
 | `roslyn-vbd-drift-analyzer-design` | `vbd-boundary-contract-mapping` | Declared related skill |
 | `vbd-evidence-quality` | `vbd-artifact-automation` | Declared related skill |
@@ -541,7 +487,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `vbd-modernization-portfolio` | `vbd-phased-modernization` | Declared related skill |
 | `vbd-operational-contracts` | `vbd-architecture-conformance` | Declared related skill |
 | `vbd-operational-contracts` | `vbd-boundary-contract-mapping` | Declared related skill |
-| `vbd-operational-contracts` | `vbd-use-case-migration` | Declared related skill |
 | `vbd-phased-modernization` | `dotnet-aspire-vbd-development` | Declared related skill |
 | `vbd-phased-modernization` | `ifx-component-communication` | Declared related skill |
 | `vbd-phased-modernization` | `vbd-artifact-automation` | Declared related skill |
@@ -551,11 +496,7 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `vbd-system-design` | `vbd-advanced-design` | Declared related skill |
 | `vbd-system-design` | `vbd-boundary-contract-mapping` | Declared related skill |
 | `vbd-system-design` | `vbd-symbolic-mapping` | Declared related skill |
-| `vbd-use-case-migration` | `vbd-architecture-conformance` | Declared related skill |
-| `vbd-use-case-migration` | `vbd-change-simulation` | Declared related skill |
-| `vbd-use-case-migration` | `vbd-operational-contracts` | Declared related skill |
 | `vbd-use-case-reconstruction` | `vbd-evidence-quality` | Declared related skill |
-| `vbd-use-case-reconstruction` | `vbd-use-case-migration` | Declared related skill |
 | `viewmodel-lifecycle` | `commands-behaviors-patterns` | Declared related skill |
 | `viewmodel-lifecycle` | `winui3-patterns` | Declared related skill |
 | `webapi-module-consolidation` | `webapi-hardening-controller` | Declared related skill |
@@ -568,12 +509,8 @@ This matrix is generated from related_skills declarations. It lists only routes 
 | `webapp-to-wpf-migration` | `wpf-screen-generation` | Declared related skill |
 | `azure-webjobs-authoring` | `azure-application-insights-dotnet` | Declared related skill |
 | `azure-webjobs-authoring` | `long-running-job-patterns` | Declared related skill |
-| `windows-ai-apis` | `dotnet-pinvoke` | Declared related skill |
-| `windows-ai-apis` | `platform-detection` | Declared related skill |
-| `windows-ai-apis` | `windows-ai-mcp-integration` | Declared related skill |
 | `windows-ai-mcp-integration` | `mcp-csharp-create` | Declared related skill |
 | `windows-ai-mcp-integration` | `mcp-integration-patterns` | Declared related skill |
-| `windows-ai-mcp-integration` | `windows-ai-apis` | Declared related skill |
 | `winui3-patterns` | `fluent2-design-comprehensive` | Declared related skill |
 | `winui3-patterns` | `ui-accessibility-standards` | Declared related skill |
 | `wpf-fluent-ui` | `ui-accessibility-standards` | Declared related skill |

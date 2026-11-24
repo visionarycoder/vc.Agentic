@@ -33,7 +33,7 @@ Agent runs a formal smell audit and reports citable, location-backed findings.
 | Input | Required | Description |
 |---|---|---|
 | Test files | Yes | Agent needs test code or a test project scope. |
-| Framework | No | Agent infers it, then reads `test-analysis-extensions`. |
+| Framework | No | Agent infers it from the test code. |
 | Production context | No | Agent reads it when a smell depends on collaboration boundaries. |
 
 ## Workflow

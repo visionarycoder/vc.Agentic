@@ -12,8 +12,6 @@ updated: "2026-11-08"
 
 Deep formal audit of test code in any supported language using an academic test smell taxonomy. Detects symptoms of bad design or implementation decisions that make tests harder to understand, more fragile, less effective at catching bugs, or more expensive to maintain. Produces a severity-ranked report with specific locations and actionable fixes.
 
-> **Language-specific guidance**: Call the `test-analysis-extensions` skill to discover available extension files, then read the file matching the target codebase. The extension file documents test markers, sleep / time / random APIs, skip annotations, setup/teardown, mystery-guest indicators (file/database/network/env), integration markers, and language-specific calibration notes that drive the smell detectors below.
-
 ## Why Test Smells Matter
 
 Test smells erode confidence in a test suite and inflate maintenance costs:
@@ -53,9 +51,9 @@ Test smells erode confidence in a test suite and inflate maintenance costs:
 
 ## Workflow
 
-### Step 1: Detect language and load extension
+### Step 1: Detect language and test framework
 
-Identify the target codebase's language and test framework. Call the `test-analysis-extensions` skill and read the matching extension file (e.g., `extensions/dotnet.md`, `extensions/python.md`, `extensions/typescript.md`, `extensions/go.md`). The extension file lists the framework-specific test markers, sleep / wait APIs, skip / ignore attributes, mystery-guest indicators, and integration-test markers that the smell detectors below need.
+Identify the target codebase's language and test framework, including its test markers, sleep / wait APIs, skip / ignore attributes, mystery-guest indicators, and integration-test markers that the smell detectors below need.
 
 ### Step 2: Gather the test code
 

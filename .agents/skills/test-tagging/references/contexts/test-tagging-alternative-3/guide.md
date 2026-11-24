@@ -12,8 +12,6 @@ updated: "2026-11-08"
 
 Analyze an existing test suite in any supported language and apply a standardized set of trait tags to each test method, giving teams visibility into their test distribution (positive vs. negative, critical-path coverage, smoke tests, etc.).
 
-> **Language-specific guidance**: Call the `test-analysis-extensions` skill to discover available extension files, then read the file matching the target codebase. The extension file documents framework-specific tag attributes and a "tag-support capability" (auto-edit, report-only, or convention-based) that drives whether this skill modifies source files or only emits a report.
-
 ## When to Use
 
 - Auditing a test project to understand the mix of test types
@@ -63,7 +61,7 @@ A single test may have **multiple traits** (e.g., both `negative` and `boundary`
 
 ### Step 1: Detect the language, framework, and tagging capability
 
-Identify the codebase's language and test framework. Call the `test-analysis-extensions` skill and read the matching extension file. The extension file declares a **tag-support capability** for each framework:
+Identify the codebase's language and test framework. Determine the **tag-support capability** for the framework:
 
 - **`auto-edit`** — framework has canonical tag syntax this skill can safely insert (.NET `[TestCategory]` / `[Trait]` / `[Category]` / `[Property]`, pytest `@pytest.mark.<name>`, JUnit 5 `@Tag("...")`, TestNG `groups = {"..."}`, RSpec metadata `it "..." , :tag => true`, Pester `-Tag '...'`, Kotest `@Tags(...)`, Swift Testing `@Tag(.tagName)`, Catch2 `[tag]`, doctest `* doctest::test_suite("tag")` decorator).
 - **`report-only`** — framework has no canonical, agreed-upon tag attribute; report tags in a Markdown table only and do not edit source (Go standard `testing` without build-tag conventions, Jest/Vitest without consistent describe-prefix convention, Rust without project-specific cfg conventions, XCTest without a test plan, GoogleTest without test-name prefix conventions, Mocha without describe-prefix conventions).

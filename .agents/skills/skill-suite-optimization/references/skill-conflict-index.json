@@ -53,7 +53,6 @@
         "code-testing-agent",
         "code-testing-extensions",
         "mstest-test-authoring",
-        "test-analysis-extensions",
         "test-tagging",
         "coverage-analysis",
         "crap-score",
@@ -123,8 +122,7 @@
         "msbuild-resolve-project-references",
         "msbuild-target-authoring",
         "msbuild-convert-to-cpm",
-        "platform-detection",
-        "msbuild-copy-to-output-directory"
+        "platform-detection"
       ],
       "mixed_entry_bundles": [],
       "forbidden_overlaps": [
@@ -202,8 +200,6 @@
         "roslyn-codefix-authoring",
         "roslyn-source-generator-authoring",
         "roslyn-ca-code-quality-fixes",
-        "roslyn-ca-design-quality-fixes",
-        "roslyn-ca-perf-reliability-fixes",
         "roslyn-cs8794-fix",
         "mcp-csharp-create",
         "mcp-csharp-debug",
@@ -245,7 +241,6 @@
       "router": "webapi-intake-router",
       "primary_execution": [
         "dotnet-webapi",
-        "webapi-rest-route-standardization",
         "webapi-input-validation",
         "webapi-error-contract-hardening",
         "webapi-compatibility-migration",
@@ -292,7 +287,6 @@
         "vbd-operational-contracts",
         "vbd-phased-modernization",
         "vbd-symbolic-mapping",
-        "vbd-use-case-migration",
         "vbd-use-case-reconstruction",
         "refactor",
         "post-implementation-cleanup",

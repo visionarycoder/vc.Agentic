@@ -48,7 +48,7 @@ Agent uses this controller to decode MITRE CWE organizer entries, then route to 
 |---|---|---|---|---|
 | 701 | Weaknesses Introduced During Design | Category | Request names a design-phase weakness or CWE-701. | `security-controller`, then the owning family. |
 | 702 | Weaknesses Introduced During Implementation | Category | Request names an implementation-phase weakness or CWE-702. | `security-controller`, then the owning family. |
-| 1008 | Architectural Concepts | View | Request names a security architecture tactic, such as auth, access control, encryption, or communications. | `security-controller`, then `cwe-authentication-authz-fixes`, `cwe-cryptography-fixes`, or `cwe-channel-fixes`. |
+| 1008 | Architectural Concepts | View | Request names a security architecture tactic, such as auth, access control, encryption, or communications. | `security-controller`, then `cwe-authentication-authz-fixes`. |
 | 1040 | Quality Weaknesses with Indirect Security Impacts | Category | Request names indirect security impact, quality weakness, or CWE-1040. | `security-controller`, then `cwe-resource-management-fixes`, `cwe-exception-management-fixes`, `cwe-api-contract-fixes`, or `cwe-logic-correctness-fixes`. |
 | 1400 | Comprehensive Categorization for Software Assurance Trends | View | Request needs software assurance trend slicing or CWE-1400. | `security-controller` for reporting, then the member family. |
 | 1450 | Weaknesses in OWASP Top Ten RC1 (2025) | View | Request names OWASP Top Ten 2025 or CWE-1450. | `security-controller`, then the OWASP 2025 routing matrix. |
@@ -64,7 +64,6 @@ Agent uses this controller to decode MITRE CWE organizer entries, then route to 
 | A01:2025 - Broken Access Control | Authentication and authorization | `cwe-authentication-authz-fixes` |
 | A02:2025 - Security Misconfiguration | Deployment and control-surface hardening | `cwe-miscellaneous-security-fixes` |
 | A03:2025 - Software Supply Chain Failures | External control and hostile artifact indicators | `cwe-format-external-fixes`, `cwe-malware-indicators-fixes` |
-| A04:2025 - Cryptographic Failures | Cryptography and secret protection | `cwe-cryptography-fixes` |
 | A05:2025 - Injection | Injection and untrusted command or query construction | `cwe-injection-attack-fixes`, `cwe-input-validation-fixes` |
 | A06:2025 - Insecure Design | Trust-boundary and security-design flaws | `security-controller`, then the owning family |
 | A07:2025 - Authentication Failures | Identity, session, and authorization control failures | `cwe-authentication-authz-fixes` |

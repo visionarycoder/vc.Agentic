@@ -29,14 +29,6 @@ Agent connects Fabric data items to Power BI semantic and reporting experiences.
 
 | User asks for application-facing report delivery from Fabric-backed models | Use this skill |
 
-## When Not to Use
-
-| User prompt | Route |
-
-|---|---|
-
-| User asks for real-time event routing only | Use `fabric-realtime-analytics` |
-
 ## Required Inputs
 
 | Input | Required | Description |
