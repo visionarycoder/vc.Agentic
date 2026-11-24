@@ -24,7 +24,7 @@ Agent integrates Azure App Configuration for centralized settings, labels, refre
 
 | User prompt | Route |
 |---|---|
-| User asks to store secrets directly | Use `azure-keyvault-dotnet` |
+| User asks to store secrets directly | Use `azure-key-vault-dotnet` |
 | User asks for simple local-only settings | Use local configuration |
 | User asks for large binary payload storage | Use storage skills |
 

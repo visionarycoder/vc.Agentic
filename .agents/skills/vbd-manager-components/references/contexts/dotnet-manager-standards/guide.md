@@ -25,8 +25,8 @@ Agent keeps Managers orchestration-focused, stateless, and explicit about workfl
 
 | Condition | Use |
 |---|---|
-| Rule is pure calculation or verification | Route to `dotnet-engine-standards` |
-| Code talks directly to storage or ORM details | Route to `dotnet-access-standards` |
+| Rule is pure calculation or verification | Route to `vbd-engine-components` |
+| Code talks directly to storage or ORM details | Route to `vbd-access-components` |
 | Workflow is long-lived scheduler or state machine | Use domain-specific workflow abstraction |
 
 ## Required Inputs

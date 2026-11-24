@@ -22,7 +22,7 @@ Agent generates tests by matching project conventions, proving the tests compile
 
 | Existing tests only need execution | Use `run-tests` |
 
-| Coverage report analysis is the main task | Use `coverage-analysis` or `crap-score` |
+| Coverage report analysis is the main task | Use `crap-score` |
 
 ## Strategy Matrix
 

@@ -26,9 +26,9 @@ Agent optimizes governed guidance files for deterministic parsing, lower token c
 | Condition | Route |
 |---|---|
 | One skill needs a small wording update | Edit that skill directly |
-| Only front matter is wrong | Use `documentation-frontmatter` |
+| Only front matter is wrong | Use `markdown-frontmatter` |
 | Only links or placement are wrong | Use `documentation-governance` |
-| A new skill is needed | Use `create-skill` |
+| A new skill is needed | Use `skill-authoring` |
 
 ## Required Inputs
 

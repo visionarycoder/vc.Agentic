@@ -24,7 +24,7 @@ Use when sponsors, developers, and operations need one shared dashboard.
 ## When Not to Use
 
 Do not use when the prompt asks for raw candidate estimates only. Use `vbd-candidate-estimation`.
-Do not use when the prompt asks for narrative candidate comparison only. Use `vbd-candidate-synthesis`.
+Do not use when the prompt asks for narrative candidate comparison only.
 Do not use when the prompt asks for automatic candidate selection. This skill never selects.
 
 ## Workflow

@@ -28,7 +28,7 @@ Agent builds a cheap source-to-test pairing map before slower coverage work begi
 
 | User prompt | Route |
 |---|---|
-| User asks for executed line or branch coverage | Use `coverage-analysis` |
+| User asks for executed line or branch coverage | Use `crap-score` |
 | User asks whether current tests are strong | Use `assertion-quality` |
 | User asks for CRAP scores | Use `crap-score` |
 

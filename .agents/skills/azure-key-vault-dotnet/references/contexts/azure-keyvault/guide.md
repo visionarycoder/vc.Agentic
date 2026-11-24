@@ -24,7 +24,7 @@ Agent uses this skill to add or review secure secret and certificate retrieval i
 
 | User prompt | Route |
 |---|---|
-| User asks for non-sensitive feature or app settings | Use `azure-app-configuration` |
+| User asks for non-sensitive feature or app settings | Use `azure-app-configuration-dotnet` |
 | User asks for large file storage | Use storage skills |
 | User asks for client-side secret storage | Use a different design |
 

@@ -37,7 +37,7 @@ Agent calculates CRAP scores for a targeted .NET scope.
 
 | User prompt | Route |
 |---|---|
-| User asks for project-wide coverage triage | Use `coverage-analysis` |
+| User asks for project-wide coverage triage | Use `code-testing-agent` |
 | User asks to write tests | Use a test-writing skill |
 | User asks to run tests only | Use `run-tests` |
 

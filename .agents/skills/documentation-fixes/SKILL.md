@@ -29,7 +29,7 @@ Agent acts as the primary execution skill after `documentation-intake-router` se
 
 | User prompt | Route |
 |---|---|
-| User only needs front matter normalization | Use `documentation-frontmatter` |
+| User only needs front matter normalization | Use `markdown-frontmatter` |
 | User only needs link repair | Use `documentation-link-repair` |
 | User only needs file placement guidance | Use `documentation-file-placement` |
 | User is authoring a new documentation workflow rather than fixing docs | Use the matching authoring or governance skill |

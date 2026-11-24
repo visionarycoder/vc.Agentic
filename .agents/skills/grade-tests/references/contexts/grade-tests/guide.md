@@ -25,7 +25,7 @@ Agent grades named tests one by one and generates a compact score table.
 | User prompt | Route |
 |---|---|
 | User asks to write or fix tests | Use a test-writing skill |
-| User asks for coverage or CRAP numbers | Use `coverage-analysis` or `crap-score` |
+| User asks for coverage or CRAP numbers | Use `crap-score` |
 
 ## Required Inputs
 

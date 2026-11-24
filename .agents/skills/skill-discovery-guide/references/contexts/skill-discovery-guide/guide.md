@@ -28,7 +28,7 @@ Agent routes ambiguous prompts to the smallest skill set that covers the work.
 | The exact skill is already named | Use the named skill |
 | One specialist is already obvious | Use the direct specialist |
 | Suite cleanup is requested | Use `skill-suite-optimization` |
-| A new skill scaffold is requested | Use `create-skill` |
+| A new skill scaffold is requested | Use `skill-authoring` |
 
 ## Required Inputs
 
@@ -53,7 +53,7 @@ Agent routes ambiguous prompts to the smallest skill set that covers the work.
 
 | Prompt Shape | First Route | Second Route |
 |---|---|---|
-| Skill creation, review, optimization, or ecosystem audit | `skill-lifecycle-controller` | `create-skill` |
+| Skill creation, review, optimization, or ecosystem audit | `skill-lifecycle-controller` | `skill-authoring` |
 | Markdown, links, front matter, guidance drift | `documentation-fixes` | `documentation-governance` |
 | Test failures, MSTest warnings, or test modernization | `mstest-modernization-controller` | `test-fixes` |
 | xUnit test creation or maintenance | `xunit-test-generation` | `code-testing-agent` |
