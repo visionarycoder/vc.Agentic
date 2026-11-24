@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -57,8 +57,6 @@ Agent analyzes whether current tests would detect plausible code defects.
 
 | Pitfall | Agent fix |
 |---|---|
-| Agent analyzes trivial accessors | Agent skips boilerplate and trivial getters. |
-| Agent reports equivalent mutations as gaps | Agent marks them `Equivalent` and excludes them from scoring. |
 | Agent ignores helper call chains | Agent traces tests through helpers and setup code. |
 | Agent writes one new test per mutation blindly | Agent groups mutations when one test kills several. |
 
@@ -75,7 +73,7 @@ Agent reads `references/mutation-catalog.md` when the user asks for full categor
 | Return | Null, default, empty, or wrong scalar |
 | Exception | Missing guard or swallowed error |
 | Arithmetic | Sign, operator, or increment flip |
-| Null | Removed null guard or coalescing path |
+| Null | Removed null guard or coalescing path (`unwrap_or` to `unwrap`, `x ?? fallback` to `x`, `x?.M()` to `x.M()`) |
 
 ## Verdict Matrix
 
@@ -84,7 +82,7 @@ Agent reads `references/mutation-catalog.md` when the user asks for full categor
 | Killed | At least one test would fail |
 | Survived | No covering test would fail |
 | No coverage | No test reaches the code path |
-| Equivalent | Mutation does not change behavior |
+| Equivalent | Mutation does not change behavior; exclude from scoring |
 
 ## Required Report
 
