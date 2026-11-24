@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "optional"
 ---
 
@@ -39,13 +39,7 @@ If Aspire markers are present but this skill was not automatically invoked, swit
 Before adding target packages, editing the AppHost, or using an unfamiliar deployment API, use Aspire docs:
 
 ```bash
-aspire docs search "deploy with Aspire"
-aspire docs search "Docker Compose deployment"
-aspire docs search "Kubernetes deployment"
-aspire docs search "Azure Container Apps deployment"
-aspire docs search "Azure App Service deployment"
-aspire docs search "Azure Kubernetes Service deployment"
-aspire docs get "deploy-to-azure-kubernetes-service-aks"
+aspire docs search "<target> deployment"
 aspire docs get "<slug-from-search-results>"
 ```
 
@@ -72,12 +66,7 @@ aspire destroy
 aspire do <step>
 ```
 
-Use target-specific tooling only after Aspire has generated artifacts or when the target docs call for it:
-
-- Docker Compose: inspect generated `aspire-output/docker-compose.yaml` and `.env*`; Aspire can also run `docker compose up` through `aspire deploy`.
-- Kubernetes: inspect generated Helm chart output; use Helm/kubectl when applying published artifacts yourself.
-- Azure: use `aspire add <azure-target>`, `aspire publish`, and `aspire deploy` through the AppHost deployment environment.
-- AWS: use `aspire add aws` to add the integration, inspect generated CDK/CloudFormation output, and follow the AWS integrations repository guidance.
+Use target-specific tooling only after Aspire has generated artifacts or when the target docs call for it (Compose: `aspire-output/docker-compose.yaml` and `.env*`; Kubernetes: Helm chart output; AWS: CDK/CloudFormation output).
 
 ### Ask where to deploy only when ambiguous
 
@@ -163,18 +152,7 @@ The Azure deployment path in this skill is `aspire add <azure-target>`, AppHost 
 
 ## AppHost target detection
 
-Search the AppHost for deployment environment resources:
-
-| Target | Aspire add command | Integration | AppHost environment concept |
-|--------|--------------------|-------------|-----------------------------|
-| Docker Compose | `aspire add docker` | Docker hosting | Docker Compose environment |
-| Kubernetes | `aspire add kubernetes` | Kubernetes hosting | Kubernetes environment |
-| Azure Container Apps | `aspire add azure-appcontainers` | Azure Container Apps hosting | Azure Container Apps environment |
-| Azure App Service | `aspire add azure-appservice` | Azure App Service hosting | Azure App Service environment |
-| Azure Kubernetes Service (AKS) | `aspire add azure-kubernetes` | Azure Kubernetes hosting | Azure Kubernetes Service (AKS) environment |
-| AWS | `aspire add aws` | AWS hosting | AWS CDK environment |
-
-Use this table only for orientation. Before editing code, verify the current API in Aspire docs for the AppHost language.
+Search the AppHost for the deployment environment resource of each target in the choices table. Before editing code, verify the current API in Aspire docs for the AppHost language.
 
 ## Parameter and secret preflight
 
