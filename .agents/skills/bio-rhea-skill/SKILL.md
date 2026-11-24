@@ -7,23 +7,14 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "biology"
 ---
 
 # Bio Rhea Skill
 
-## Operating rules
-- Use `scripts/rest_request.py` for all Rhea calls.
-- Use `base_url=https://www.rhea-db.org`.
-- Start with the `rhea` search endpoint plus `format=json`.
-- Keep queries narrow by reaction ID, compound name, EC number, or free-text reaction term.
-- Re-run requests in long conversations instead of relying on older tool output.
-
-## Execution behavior
-- Return concise markdown summaries from the script JSON by default.
-- Return raw JSON only if the user explicitly asks for machine-readable output.
-- Prefer these patterns: reaction search by `query`, targeted ID search via `query=RHEA:<id>`, and small result windows.
+Use `scripts/rest_request.py` for all Rhea calls with `base_url=https://www.rhea-db.org`, path `rhea`, `format=json`, `record_path=results`.
+- Search by `query` (compound, EC number, text) or `query=RHEA:<id>`; keep `max_items` at 5-10.
 
 ## Input
 - Read one JSON object from stdin.
@@ -38,10 +29,4 @@ metadata:
 - Use `raw_output_path` when `save_raw=true`.
 - Failure returns `ok=false` with `error.code` and `error.message`.
 
-## Execution
-```bash
-echo '{"base_url":"https://www.rhea-db.org","path":"rhea","params":{"query":"caffeine","format":"json"},"record_path":"results","max_items":10}' | python scripts/rest_request.py
-```
-
-## References
-- No additional runtime references are required; keep the import package limited to this file and `scripts/rest_request.py`.
+Run: pipe the JSON to `python scripts/rest_request.py`.

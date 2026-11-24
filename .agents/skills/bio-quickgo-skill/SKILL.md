@@ -7,25 +7,16 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "biology"
 ---
 
 # Bio Quickgo Skill
 
-## Operating rules
-- Use `scripts/rest_request.py` for all QuickGO API calls.
-- Use `base_url=https://www.ebi.ac.uk/QuickGO/services`.
-- GO term lookups usually do not need `max_items`; annotation and traversal endpoints are better with `limit=10` and `max_items=10`.
-- Send `Accept: application/json` in `headers`.
-- Re-run requests in long conversations instead of relying on older tool output.
-- Treat displayed `...` in tool previews as UI truncation, not literal request content.
-
-## Execution behavior
-- Return concise markdown summaries from the script JSON by default.
-- Prefer these paths: `ontology/go/terms/<id>`, `annotation/search`, and ontology child or ancestor endpoints.
-- Treat `annotation/search` as upstream-fragile when QuickGO's annotation Solr backend is unavailable; fall back to ontology term lookup or UniProt GO annotations when appropriate.
-- If the user needs the full payload, set `save_raw=true` and report the saved file path.
+Use `scripts/rest_request.py` for all QuickGO calls with `base_url=https://www.ebi.ac.uk/QuickGO/services` and header `Accept: application/json`.
+- Paths: `ontology/go/terms/<id>`, `annotation/search` (use `limit=10`), ontology child or ancestor endpoints.
+- `annotation/search` is upstream-fragile when the Solr backend is unavailable; fall back to ontology term lookup or UniProt GO annotations.
+- For the full payload, set `save_raw=true` and report the saved file path.
 
 ## Input
 - Read one JSON object from stdin.
@@ -40,10 +31,4 @@ metadata:
 - Use `raw_output_path` when `save_raw=true`.
 - Failure returns `ok=false` with `error.code` and `error.message`.
 
-## Execution
-```bash
-echo '{"base_url":"https://www.ebi.ac.uk/QuickGO/services","path":"ontology/go/terms/GO:0006915","headers":{"Accept":"application/json"},"record_path":"results","max_items":10}' | python scripts/rest_request.py
-```
-
-## References
-- No additional runtime references are required; keep the import package limited to this file and `scripts/rest_request.py`.
+Run: pipe the JSON to `python scripts/rest_request.py`.

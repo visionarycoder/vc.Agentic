@@ -7,24 +7,15 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "biology"
 ---
 
 # Bio Reactome Skill
 
-## Operating rules
-- Use `scripts/rest_request.py` for all Reactome ContentService calls.
-- Use `base_url=https://reactome.org/ContentService`.
-- Single pathway or event lookups usually do not need `max_items`; list-style pathway membership calls are better with `max_items=10`.
-- Send `Accept: application/json` in `headers` when requesting JSON.
-- Re-run requests in long conversations instead of relying on older tool output.
-- Treat displayed `...` in tool previews as UI truncation, not literal request content.
-
-## Execution behavior
-- Return concise markdown summaries from the script JSON by default.
-- Prefer these paths: `data/query/<eventId>`, `data/pathways/low/entity/<identifier>`, `data/participants/<eventId>`, and search endpoints.
-- If the user needs the full payload, set `save_raw=true` and report the saved file path.
+Use `scripts/rest_request.py` for all Reactome calls with `base_url=https://reactome.org/ContentService` and header `Accept: application/json`.
+- Paths: `data/query/<eventId>`, `data/pathways/low/entity/<identifier>` (with `species`), `data/participants/<eventId>`, search endpoints.
+- For the full payload, set `save_raw=true` and report the saved file path.
 
 ## Input
 - Read one JSON object from stdin.
@@ -40,10 +31,4 @@ metadata:
 - Use `raw_output_path` when `save_raw=true`.
 - Failure returns `ok=false` with `error.code` and `error.message`.
 
-## Execution
-```bash
-echo '{"base_url":"https://reactome.org/ContentService","path":"data/query/R-HSA-199420","headers":{"Accept":"application/json"}}' | python scripts/rest_request.py
-```
-
-## References
-- No additional runtime references are required; keep the import package limited to this file and `scripts/rest_request.py`.
+Run: pipe the JSON to `python scripts/rest_request.py`.

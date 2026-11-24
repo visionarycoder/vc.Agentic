@@ -7,23 +7,15 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "biology"
 ---
 
 # Bio Pubchem Pug Skill
 
-## Operating rules
-- Use `scripts/rest_request.py` for all PubChem PUG calls.
-- Use `base_url=https://pubchem.ncbi.nlm.nih.gov/rest/pug`.
-- Property and description endpoints usually return a single focused record; assay or broader list endpoints are better with `max_items=10`.
-- Re-run requests in long conversations instead of relying on older tool output.
-- Treat displayed `...` in tool previews as UI truncation, not literal request content.
-
-## Execution behavior
-- Return concise markdown summaries from the script JSON by default.
-- Prefer property, description, assay summary, and substance paths instead of broad record dumps.
-- If the user needs the full payload, set `save_raw=true` and report the saved file path.
+Use `scripts/rest_request.py` for all PubChem PUG calls with `base_url=https://pubchem.ncbi.nlm.nih.gov/rest/pug`.
+- Prefer property, description, assay summary, and substance paths over broad record dumps.
+- For the full payload, set `save_raw=true` and report the saved file path.
 
 ## Input
 - Read one JSON object from stdin.
@@ -39,10 +31,4 @@ metadata:
 - Use `raw_output_path` when `save_raw=true`.
 - Failure returns `ok=false` with `error.code` and `error.message`.
 
-## Execution
-```bash
-echo '{"base_url":"https://pubchem.ncbi.nlm.nih.gov/rest/pug","path":"compound/name/aspirin/property/MolecularFormula,MolecularWeight/JSON","record_path":"PropertyTable.Properties"}' | python scripts/rest_request.py
-```
-
-## References
-- No additional runtime references are required; keep the import package limited to this file and `scripts/rest_request.py`.
+Run: pipe the JSON to `python scripts/rest_request.py`.
