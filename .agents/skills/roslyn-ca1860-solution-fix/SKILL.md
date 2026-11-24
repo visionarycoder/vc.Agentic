@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "dotnet"
 ---
 
@@ -29,32 +29,9 @@ Apply replacements only when semantics are equivalent and the receiver has a dir
 - `!array.Any()` -> `array.Length == 0`
 - `immutableArray.Any()` -> `immutableArray.Length > 0`
 - `!immutableArray.Any()` -> `immutableArray.Length == 0`
-- For types with `IsEmpty`, prefer `!x.IsEmpty` / `x.IsEmpty` where this is the native idiom.
-
 ## Do Not Rewrite
 
-Do not rewrite `Any()` when any of the following is true:
-
-- `Any(predicate)` overload is used.
-- The receiver is a deferred `IEnumerable<T>` without a direct size member.
-- The expression has side effects that would be duplicated by a rewrite.
-- Null semantics would change (for example null-conditional or nullable flow differences).
-
-## Execution Workflow
-
-1. Build the solution and capture CA1860 locations.
-2. Search for parameterless `.Any()` usages.
-3. Filter to safe call sites with direct size members.
-4. Apply minimal deterministic replacements.
-5. Rebuild the solution.
-6. Re-run tests relevant to touched projects.
-
-## Validation Checklist
-
-- No behavioral change beyond CA1860 compliance.
-- No new nullable warnings or analyzer regressions.
-- Build succeeds for the full solution.
-- Touched tests pass.
+Do not rewrite `Any()` when the expression has side effects that a rewrite would duplicate, or when null semantics would change.
 
 ## Notes for Roslyn Projects
 

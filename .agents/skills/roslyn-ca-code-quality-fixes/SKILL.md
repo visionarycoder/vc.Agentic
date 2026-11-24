@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "dotnet"
 ---
 
@@ -78,17 +78,6 @@ Pass: All tests pass.
 - [ ] Public renames have `[Obsolete]` shims
 - [ ] Commit per rule
 
-## Common Pitfalls
-
-| Rule or Area | Pitfall | Fix |
-|---|---|---|
-| CA1704 / CA1707 | Rename public APIs without migration plan | Use shims or coordinated API updates when compatibility matters |
-| CA1801 | Add `_ = param;` everywhere | Remove parameter when signature can change safely |
-| CA1806 | Discard results that carry behavior | Review API contract before using `_ =` |
-| CA1812 / CA1823 | Delete members activated through reflection or DI | Verify runtime activation before removal |
-| CA1819 | Replace arrays without considering callers | Use owner review for public API changes |
-| Future rules | Spin up another micro-skill | Extend this bundle instead |
-
 See `references/naming-quality-rules.md` for extended guidance on CA1711, CA1716, CA1720, CA1725, CA1727, CA2201, CS0108, CS0168-CS0414, CS1717, CS9113.
 
 ## References
@@ -110,11 +99,8 @@ Agent handles:
 
 ## Critical Rules
 
-1. **Renames of public identifiers (CA1704, CA1707) are breaking.** Add `[Obsolete]` shim for existing callers.
-2. **CA1819 refactor changes public API.** Verify with owner before switching `T[]` return to `IReadOnlyList<T>`.
-3. **CA1812/CA1823 removals are semantic.** Verify zero reflection/serializer/DI activation before deleting.
-4. **Never blanket-suppress.** Every `#pragma warning disable` has inline justification comment.
-5. **Build + test after each rule. One commit per rule.**
+1. **Never blanket-suppress.** Every `#pragma warning disable` has inline `// CAxxxx: <reason>` comment.
+2. **Build + test after each rule. One commit per rule.**
 
 ## Rules Coverage
 
@@ -154,14 +140,6 @@ Agent performs:
 3. Agent updates `Inventory` regex, `dotnet format analyzers` examples when new rule is auto-fixable
 4. Agent adds breaking-change notes to **Critical Rules** or **Common Pitfalls**
 5. Agent keeps this bundle as sole code-quality CA entry point. Agent does not add separate diagnostic skill.
-
-## Verification Checklist
-
-Agent verifies:
-- [ ] Targeted code-quality CA warnings removed or intentionally suppressed with justification
-- [ ] Public renames keep compatibility requirements explicit
-- [ ] Reflection, serializer, DI activation paths work after removals
-- [ ] Touched projects build, tests pass
 
 ## Inputs
 
