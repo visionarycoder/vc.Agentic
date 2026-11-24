@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "dotnet"
 ---
 
@@ -68,221 +68,29 @@ You can omit intermediate wrappers. Shell auto-wraps:
 
 ## Workflow: Set Up AppShell
 
-1. Define `AppShell.xaml` inheriting from `Shell`
-2. Add `FlyoutItem` or `TabBar` elements for top-level navigation
-3. Add `Tab` elements for bottom tabs; nest multiple `ShellContent` for top tabs
-4. **Always use `ContentTemplate`** with `DataTemplate` so pages load on demand
-5. Register detail-page routes in the `AppShell` constructor
-
-```xml
-<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:views="clr-namespace:MyApp.Views"
-       x:Class="MyApp.AppShell"
-       FlyoutBehavior="Flyout">
-
-    <FlyoutItem Title="Animals" Icon="animals.png">
-        <Tab Title="Cats">
-            <ShellContent Title="Domestic"
-                          ContentTemplate="{DataTemplate views:DomesticCatsPage}" />
-            <ShellContent Title="Wild"
-                          ContentTemplate="{DataTemplate views:WildCatsPage}" />
-        </Tab>
-        <Tab Title="Dogs" Icon="dogs.png">
-            <ShellContent ContentTemplate="{DataTemplate views:DogsPage}" />
-        </Tab>
-    </FlyoutItem>
-
-    <TabBar>
-        <ShellContent Title="Home" Icon="home.png"
-                      ContentTemplate="{DataTemplate views:HomePage}" />
-        <ShellContent Title="Settings" Icon="settings.png"
-                      ContentTemplate="{DataTemplate views:SettingsPage}" />
-    </TabBar>
-</Shell>
-```
+Use `ContentTemplate` with `DataTemplate` on every `ShellContent` so pages load on demand. Register detail-page routes in the `AppShell` constructor:
 
 ```csharp
-// AppShell.xaml.cs
-public partial class AppShell : Shell
+public AppShell()
 {
-    public AppShell()
-    {
-        InitializeComponent();
-        Routing.RegisterRoute("animaldetails", typeof(AnimalDetailsPage));
-        Routing.RegisterRoute("editanimal", typeof(EditAnimalPage));
-    }
+    InitializeComponent();
+    Routing.RegisterRoute("animaldetails", typeof(AnimalDetailsPage));
+    Routing.RegisterRoute("editanimal", typeof(EditAnimalPage));
 }
 ```
 
-## Workflow: Navigate with GoToAsync
-
-All programmatic navigation uses `Shell.Current.GoToAsync`. Always `await` the call.
-
-### Route Prefixes
-
-| Prefix | Meaning                                     |
-|--------|---------------------------------------------|
-| `//`   | Absolute route from Shell root              |
-| (none) | Relative; pushes onto the current nav stack |
-| `..`   | Go back one level                           |
-| `../`  | Go back then navigate forward               |
-
-### Navigation Examples
-
-```csharp
-// 1. Absolute — switch to a specific hierarchy location
-await Shell.Current.GoToAsync("//animals/cats/domestic");
-
-// 2. Relative — push a registered detail page
-await Shell.Current.GoToAsync("animaldetails");
-
-// 3. With query string parameters
-await Shell.Current.GoToAsync($"animaldetails?id={animal.Id}");
-
-// 4. Go back one page
-await Shell.Current.GoToAsync("..");
-
-// 5. Go back two pages
-await Shell.Current.GoToAsync("../..");
-
-// 6. Go back one page, then push a different page
-await Shell.Current.GoToAsync("../editanimal");
-```
+Route names must be unique, including against visual hierarchy routes; a duplicate throws `ArgumentException`. Always `await Shell.Current.GoToAsync(...)`. Use `//` for absolute hierarchy routes, and `../editanimal` to go back then push.
 
 ## Workflow: Pass Data Between Pages
 
-### Option 1: IQueryAttributable (Preferred)
-
-Implement on ViewModels to receive all parameters in one call:
+Prefer `IQueryAttributable.ApplyQueryAttributes` on view models; `[QueryProperty]` is the alternative. Pass complex objects without string serialization through `ShellNavigationQueryParameters`:
 
 ```csharp
-public class AnimalDetailsViewModel : ObservableObject, IQueryAttributable
-{
-    public void ApplyQueryAttributes(IDictionary<string, object> query)
-    {
-        if (query.TryGetValue("id", out var id))
-            AnimalId = id.ToString();
-    }
-}
+await Shell.Current.GoToAsync("animaldetails",
+    new ShellNavigationQueryParameters { { "animal", selectedAnimal } });
 ```
 
-### Option 2: QueryProperty Attribute
-
-Apply directly on the page class:
-
-```csharp
-[QueryProperty(nameof(AnimalId), "id")]
-public partial class AnimalDetailsPage : ContentPage
-{
-    public string AnimalId { get; set; }
-}
-```
-
-### Option 3: Complex Objects via ShellNavigationQueryParameters
-
-Pass objects without serializing to strings:
-
-```csharp
-var parameters = new ShellNavigationQueryParameters
-{
-    { "animal", selectedAnimal }
-};
-await Shell.Current.GoToAsync("animaldetails", parameters);
-```
-
-Receive via `IQueryAttributable`:
-
-```csharp
-public void ApplyQueryAttributes(IDictionary<string, object> query)
-{
-    Animal = query["animal"] as Animal;
-}
-```
-
-## Workflow: Guard Navigation
-
-Use `GetDeferral()` in `OnNavigating` for async checks (e.g., "save unsaved changes?"):
-
-```csharp
-// In AppShell.xaml.cs
-protected override async void OnNavigating(ShellNavigatingEventArgs args)
-{
-    base.OnNavigating(args);
-    if (hasUnsavedChanges && args.Source == ShellNavigationSource.Pop)
-    {
-        var deferral = args.GetDeferral();
-        bool discard = await ShowConfirmationDialog();
-        if (!discard)
-            args.Cancel();
-        deferral.Complete();
-    }
-}
-```
-
-## Tab Configuration
-
-### Bottom Tabs
-
-Multiple `ShellContent` (or `Tab`) children inside a `TabBar` or `FlyoutItem` produce bottom tabs.
-
-### Top Tabs
-
-Multiple `ShellContent` children inside a single `Tab` produce top tabs:
-
-```xml
-<Tab Title="Photos">
-    <ShellContent Title="Recent"    ContentTemplate="{DataTemplate views:RecentPage}" />
-    <ShellContent Title="Favorites" ContentTemplate="{DataTemplate views:FavoritesPage}" />
-</Tab>
-```
-
-### Tab Bar Appearance
-
-| Attached Property              | Type    | Purpose                        |
-|--------------------------------|---------|--------------------------------|
-| `Shell.TabBarBackgroundColor`  | `Color` | Tab bar background             |
-| `Shell.TabBarForegroundColor`  | `Color` | Selected icon color            |
-| `Shell.TabBarTitleColor`       | `Color` | Selected tab title color       |
-| `Shell.TabBarUnselectedColor`  | `Color` | Unselected tab icon/title      |
-| `Shell.TabBarIsVisible`        | `bool`  | Show/hide the tab bar          |
-
-```xml
-<!-- Hide the tab bar on a specific page -->
-<ContentPage Shell.TabBarIsVisible="False" ... />
-```
-
-## Flyout Configuration
-
-### FlyoutBehavior
-
-Set on `Shell`: `Disabled`, `Flyout`, or `Locked`.
-
-```xml
-<Shell FlyoutBehavior="Flyout"> ... </Shell>
-```
-
-### FlyoutDisplayOptions
-
-Controls how children appear in the flyout:
-
-- `AsSingleItem` (default) — one flyout entry for the group
-- `AsMultipleItems` — each child `Tab` gets its own entry
-
-```xml
-<FlyoutItem Title="Animals" FlyoutDisplayOptions="AsMultipleItems">
-    <Tab Title="Cats" ... />
-    <Tab Title="Dogs" ... />
-</FlyoutItem>
-```
-
-### MenuItem (Non-Navigation Flyout Entries)
-
-```xml
-<MenuItem Text="Log Out"
-          Command="{Binding LogOutCommand}"
-          IconImageSource="logout.png" />
-```
+Receive via `ApplyQueryAttributes` (`query["animal"] as Animal`). Guard async navigation with `args.GetDeferral()` in `OnNavigating`, then `args.Cancel()` if declined and `deferral.Complete()`.
 
 ## Back Button Behavior
 
@@ -299,42 +107,11 @@ Customize the back button per page:
 
 Properties: `Command`, `CommandParameter`, `IconOverride`, `TextOverride`, `IsVisible`, `IsEnabled`.
 
-## Inspecting Navigation State
-
-```csharp
-// Current URI location
-string location = Shell.Current.CurrentState.Location.ToString();
-
-// Current page
-Page page = Shell.Current.CurrentPage;
-
-// Navigation stack of the current tab
-IReadOnlyList<Page> stack = Shell.Current.Navigation.NavigationStack;
-```
-
-## Navigation Events
-
-Override in `AppShell`:
-
-```csharp
-protected override void OnNavigated(ShellNavigatedEventArgs args)
-{
-    base.OnNavigated(args);
-    // args.Current, args.Previous, args.Source
-}
-```
-
-`ShellNavigationSource` values: `Push`, `Pop`, `PopToRoot`, `Insert`, `Remove`, `ShellItemChanged`, `ShellSectionChanged`, `ShellContentChanged`, `Unknown`.
-
 ## Common Pitfalls
 
-- **Eager page creation**: Using `Content` directly instead of `ContentTemplate` with `DataTemplate` creates all pages at Shell init, hurting startup time. Always use `ContentTemplate`.
-- **Duplicate route names**: `Routing.RegisterRoute` throws `ArgumentException` if a route name matches an existing route or a visual hierarchy route. Every route must be unique across the app.
-- **Relative routes without registration**: You cannot `GoToAsync("somepage")` unless `somepage` was registered with `Routing.RegisterRoute`. Visual hierarchy pages use absolute `//` routes.
-- **Fire-and-forget GoToAsync**: Not awaiting `GoToAsync` causes race conditions and silent failures. Always `await` the call.
-- **Wrong absolute route path**: Absolute routes must match the full path through the visual hierarchy (`//FlyoutItem/Tab/ShellContent`). Wrong paths produce silent no-ops, not exceptions.
-- **Manipulating Tab.Stack directly**: The navigation stack is read-only. Use `GoToAsync` for all navigation changes.
-- **Forgetting `GetDeferral()` for async guards**: Synchronous cancellation in `OnNavigating` works, but async checks require `GetDeferral()` / `deferral.Complete()` to avoid race conditions.
+- **Relative routes without registration**: `GoToAsync("somepage")` requires `Routing.RegisterRoute`. Visual hierarchy pages use absolute `//` routes.
+- **Wrong absolute route path**: Wrong paths produce silent no-ops, not exceptions.
+- **Manipulating Tab.Stack directly**: The navigation stack is read-only. Use `GoToAsync`.
 
 ## References
 

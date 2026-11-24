@@ -7,7 +7,7 @@ metadata:
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-23"
   collection: "dotnet"
 ---
 
@@ -39,61 +39,9 @@ metadata:
 - Target platforms: Android, iOS, Mac Catalyst (Windows does not have system bar insets)
 - UI approach: XAML/C#, Blazor Hybrid, or MauiReactor
 
-## SafeAreaRegions Enum
+## SafeAreaRegions and SafeAreaEdges
 
-```csharp
-[Flags]
-public enum SafeAreaRegions
-{
-    None      = 0,       // Edge-to-edge — no safe area padding
-    SoftInput = 1 << 0,  // Pad to avoid the on-screen keyboard
-    Container = 1 << 1,  // Stay inside status bar, notch, home indicator
-    Default   = -1,      // Use the platform default for the control type
-    All       = 1 << 15  // Respect all safe area insets (most restrictive)
-}
-```
-
-`SoftInput` and `Container` are combinable flags:
-`SafeAreaRegions.Container | SafeAreaRegions.SoftInput` = respect system bars **and** keyboard.
-
-## SafeAreaEdges Struct
-
-```csharp
-public readonly struct SafeAreaEdges
-{
-    public SafeAreaRegions Left { get; }
-    public SafeAreaRegions Top { get; }
-    public SafeAreaRegions Right { get; }
-    public SafeAreaRegions Bottom { get; }
-
-    // Uniform — same value for all four edges
-    public SafeAreaEdges(SafeAreaRegions uniformValue)
-
-    // Horizontal / Vertical
-    public SafeAreaEdges(SafeAreaRegions horizontal, SafeAreaRegions vertical)
-
-    // Per-edge
-    public SafeAreaEdges(SafeAreaRegions left, SafeAreaRegions top,
-                         SafeAreaRegions right, SafeAreaRegions bottom)
-}
-```
-
-Static presets: `SafeAreaEdges.None`, `SafeAreaEdges.All`, `SafeAreaEdges.Default`.
-
-### XAML Type Converter
-
-Follows Thickness-like comma-separated syntax:
-
-```xaml
-<!-- Uniform -->
-SafeAreaEdges="Container"
-
-<!-- Horizontal, Vertical -->
-SafeAreaEdges="Container, SoftInput"
-
-<!-- Left, Top, Right, Bottom -->
-SafeAreaEdges="Container, Container, Container, SoftInput"
-```
+`SafeAreaRegions` values: `None`, `SoftInput`, `Container`, `Default`, `All`. Only `SoftInput` and `Container` combine as flags. `SafeAreaEdges` accepts uniform, horizontal/vertical, or Left/Top/Right/Bottom comma-separated values, for example `SafeAreaEdges="Container, Container, Container, SoftInput"` for a keyboard-aware chat bottom.
 
 ## Control Defaults
 
@@ -105,73 +53,9 @@ SafeAreaEdges="Container, Container, Container, SoftInput"
 | `ContentView` | `None` | Inherits parent behavior |
 | `Border` | `None` | Inherits parent behavior |
 
-## Breaking Changes from .NET 9
-
-### ContentPage default changed to `None`
-
-In .NET 9, Android `ContentPage` behaved like `Container`. In .NET 10, the default is `None` on **all platforms**. If your Android content goes behind the status bar after upgrading:
-
-```xaml
-<!-- .NET 10 default — content extends under status bar -->
-<ContentPage>
-
-<!-- Restore .NET 9 Android behavior -->
-<ContentPage SafeAreaEdges="Container">
-```
-
-### WindowSoftInputModeAdjust.Resize removed
-
-If you used `WindowSoftInputModeAdjust.Resize` in .NET 9, replace it with `SafeAreaEdges="All"` on the ContentPage for equivalent keyboard avoidance.
+After upgrading from .NET 9, Android `ContentPage` content goes under the status bar; set `SafeAreaEdges="Container"` to restore the old behavior.
 
 ## Usage Patterns
-
-### Edge-to-edge immersive content
-
-Set `None` on **both** page and layout — layouts default to `Container`:
-
-```xaml
-<ContentPage SafeAreaEdges="None">
-    <Grid SafeAreaEdges="None">
-        <Image Source="background.jpg" Aspect="AspectFill" />
-        <VerticalStackLayout Padding="20" VerticalOptions="End">
-            <Label Text="Overlay text" TextColor="White" FontSize="24" />
-        </VerticalStackLayout>
-    </Grid>
-</ContentPage>
-```
-
-### Forms and critical content
-
-```xaml
-<ContentPage SafeAreaEdges="All">
-    <VerticalStackLayout Padding="20">
-        <Label Text="Safe content" FontSize="18" />
-        <Entry Placeholder="Enter text" />
-        <Button Text="Submit" />
-    </VerticalStackLayout>
-</ContentPage>
-```
-
-### Keyboard-aware chat layout
-
-```xaml
-<ContentPage>
-    <Grid RowDefinitions="*,Auto"
-          SafeAreaEdges="Container, Container, Container, SoftInput">
-        <ScrollView Grid.Row="0">
-            <VerticalStackLayout Padding="20" Spacing="10">
-                <Label Text="Messages" FontSize="24" />
-            </VerticalStackLayout>
-        </ScrollView>
-        <Border Grid.Row="1" BackgroundColor="LightGray" Padding="20">
-            <Grid ColumnDefinitions="*,Auto" Spacing="10">
-                <Entry Placeholder="Type a message..." />
-                <Button Grid.Column="1" Text="Send" />
-            </Grid>
-        </Border>
-    </Grid>
-</ContentPage>
-```
 
 ### Mixed: edge-to-edge header + safe body + keyboard footer
 
@@ -225,39 +109,7 @@ var grid = new Grid
 
 ## Blazor Hybrid Integration
 
-For Blazor Hybrid apps, let CSS handle safe areas to avoid double-padding.
-
-1. **Page stays edge-to-edge** (default in .NET 10):
-
-```xaml
-<ContentPage SafeAreaEdges="None">
-    <BlazorWebView HostPage="wwwroot/index.html">
-        <BlazorWebView.RootComponents>
-            <RootComponent Selector="#app" ComponentType="{x:Type local:Routes}" />
-        </BlazorWebView.RootComponents>
-    </BlazorWebView>
-</ContentPage>
-```
-
-2. **Add `viewport-fit=cover`** in `index.html`:
-
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0,
-      maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-```
-
-3. **Use CSS `env()` functions**:
-
-```css
-body {
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-}
-```
-
-Available CSS environment variables: `env(safe-area-inset-top)`, `env(safe-area-inset-bottom)`, `env(safe-area-inset-left)`, `env(safe-area-inset-right)`.
+Set page `SafeAreaEdges="None"`, add `viewport-fit=cover` to the `index.html` viewport meta tag (otherwise iOS `env(safe-area-inset-*)` is zero), and pad with CSS `env()`. Do not also set XAML `Container`; insets double.
 
 ## Migration from Legacy APIs
 
@@ -267,60 +119,11 @@ Available CSS environment variables: `env(safe-area-inset-top)`, `env(safe-area-
 | `Layout.IgnoreSafeArea="True"` | `SafeAreaEdges="None"` |
 | `WindowSoftInputModeAdjust.Resize` | `SafeAreaEdges="All"` on ContentPage |
 
-The legacy properties still compile but are marked obsolete. `IgnoreSafeArea="True"` maps internally to `SafeAreaRegions.None`.
-
-```xaml
-<!-- .NET 9 (legacy, iOS-only) -->
-<ContentPage xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-             ios:Page.UseSafeArea="True">
-
-<!-- .NET 10+ (cross-platform) -->
-<ContentPage SafeAreaEdges="Container">
-```
-
-## Platform-Specific Behavior
-
-### iOS & Mac Catalyst
-
-- Safe area insets cover: status bar, navigation bar, tab bar, notch/Dynamic Island, home indicator
-- `SoftInput` includes the keyboard when visible
-- Insets update automatically on rotation and UI visibility changes
-- `ScrollView` with `Default` maps to `UIScrollViewContentInsetAdjustmentBehavior.Automatic`
-
-Transparent navigation bar for content behind the nav bar:
-
-```xaml
-<Shell Shell.BackgroundColor="#80000000" Shell.NavBarHasShadow="False" />
-```
-
-### Android
-
-- Safe area insets cover: system bars (status/navigation) and display cutouts
-- `SoftInput` includes the soft keyboard
-- MAUI uses `WindowInsetsCompat` and `WindowInsetsAnimationCompat` internally
-- Behavior varies by Android version and OEM edge-to-edge settings
+The legacy properties still compile but are obsolete. `IgnoreSafeArea="True"` maps internally to `SafeAreaRegions.None`.
 
 ## Common Pitfalls
 
-1. **Forgetting to set `None` on the layout too.** `ContentPage SafeAreaEdges="None"` makes the page edge-to-edge, but child layouts default to `Container` and still pad inward. Set `None` on both page and layout for truly immersive content.
-
-2. **Using `SoftInput` directly on ScrollView.** ScrollView manages its own content insets and ignores `SoftInput`. Wrap the ScrollView in a Grid or StackLayout and apply `SoftInput` there.
-
-3. **Confusing `Default` with `None`.** `Default` means "platform default for this control type" — on ScrollView (iOS) this enables automatic content insets. `None` means "no safe area padding at all."
-
-4. **Double-padding in Blazor Hybrid.** Setting `SafeAreaEdges="Container"` on the page **and** using CSS `env(safe-area-inset-*)` results in doubled insets. Pick one approach — CSS is recommended for Blazor.
-
-5. **Missing `viewport-fit=cover` in Blazor.** Without this meta tag, CSS `env(safe-area-inset-*)` values are always zero on iOS.
-
-6. **Assuming .NET 9 behavior on Android.** After upgrading to .NET 10, Android `ContentPage` defaults to `None` (was effectively `Container`). Add `SafeAreaEdges="Container"` to restore the previous behavior.
-
-7. **Using legacy `ios:Page.UseSafeArea` in new code.** The old API is iOS-only and obsolete. Always use `SafeAreaEdges` for cross-platform safe area management.
-
-## Checklist
-
-- [ ] Android upgrade: `SafeAreaEdges="Container"` added if content goes under status bar
-- [ ] Edge-to-edge: `None` set on **both** page and layout
-- [ ] ScrollView keyboard avoidance uses wrapper Grid, not ScrollView's own `SafeAreaEdges`
-- [ ] Blazor Hybrid: using either XAML or CSS safe areas, not both
-- [ ] `viewport-fit=cover` in Blazor's `index.html` `<meta viewport>` tag
-- [ ] Legacy `UseSafeArea` / `IgnoreSafeArea` migrated to `SafeAreaEdges`
+1. **Layout not set to `None`.** Child layouts default to `Container`; set `None` on both page and layout for immersive content.
+2. **`SoftInput` on ScrollView.** ScrollView honors only `Container` and `None`. Wrap it in a Grid or StackLayout and apply `SoftInput` there.
+3. **`Default` is not `None`.** `Default` is the platform default for the control type; on iOS ScrollView it enables automatic content insets.
+4. **New code using legacy `ios:Page.UseSafeArea`.** Use `SafeAreaEdges`.
