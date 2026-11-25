@@ -36,6 +36,10 @@ You can also browse the [catalog](.agents/README.md) or [inventory CSV](.agents/
 
 The hooks run [tools/agent_entry.py](tools/agent_entry.py), which prints the "Start here" section of `AGENTS.md`, so the purpose and entry point have a single source. The hooks need Python on the path.
 
+## Version
+
+Current version: **1.0.0**. See [VERSION.md](VERSION.md) for versioning rules and change history.
+
 ## Skills
 
 All skills live in [.agents/skills](.agents/README.md). Skills for volatility-based decomposition use the `vbd-` prefix.
