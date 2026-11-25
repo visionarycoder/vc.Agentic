@@ -18,7 +18,6 @@ This matrix is generated from related_skills declarations. It lists only routes 
 |---|---|---|
 | `code-testing-agent` | `assertion-quality` | Declared related skill |
 | `code-testing-agent` | `run-tests` | Declared related skill |
-| `code-testing-extensions` | `code-testing-agent` | Declared related skill |
 | `crap-score` | `code-testing-agent` | Declared related skill |
 | `documentation-file-placement` | `documentation-governance` | Declared related skill |
 | `documentation-file-placement` | `documentation-link-repair` | Declared related skill |

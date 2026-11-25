@@ -33,7 +33,7 @@ This skill helps you scaffold evaluation tests (`eval.yaml`) for agent skills, e
 | Input | Required | Description |
 |-------|----------|-------------|
 | Skill name | Yes | The skill being tested (must match a skill under `plugins/<plugin>/skills/`) |
-| Plugin name | Yes | The plugin the skill belongs to (e.g., `dotnet-msbuild`) |
+| Plugin name | Yes | The plugin the skill belongs to (e.g., `my-plugin`) |
 | Skill content | Recommended | The SKILL.md content to understand what the skill teaches |
 | Scenario descriptions | Recommended | What situations the agent should be tested on |
 

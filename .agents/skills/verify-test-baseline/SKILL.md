@@ -32,11 +32,7 @@ When the baseline decision table includes `testcontainer` rows, verification MUS
 
 ## TestContainer References
 
-When any dependency is marked `testcontainer`, read and apply these references before writing tests:
-
-- [azure-auth-strategies.md](../modernization-integration-tests/references/azure-auth-strategies.md)
-- [azure-servicebus-testcontainers.md](../modernization-integration-tests/references/azure-servicebus-testcontainers.md)
-- [azure-storage-testcontainers.md](../modernization-integration-tests/references/azure-storage-testcontainers.md)
+When any dependency is marked `testcontainer`, use the project's Testcontainers stack and the vendor's emulator image for that dependency.
 
 ## Principles
 

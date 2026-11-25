@@ -10,29 +10,24 @@ updated: "2026-11-24"
 
 # Skill catalog
 
-The library contains **225 skills**. All entrypoints are under `skills/<name>/SKILL.md`. [Inventory](inventory.csv) records current metadata and hashes. [Collections](collections.md) distinguish the recommended core from optional capabilities. [Maintenance](../tools/README.md) describes validation and safe changes.
+The library contains **208 skills**. All entrypoints are under `skills/<name>/SKILL.md`. [Inventory](inventory.csv) records current metadata and hashes. [Collections](collections.md) distinguish the recommended core from optional capabilities. [Maintenance](../tools/README.md) describes validation and safe changes.
 
 | Collection | Skills |
 | --- | --- |
 | Recommended development core | 15 |
-| .NET, C#, MSBuild, and WPF | 0 |
 | Volatility-based decomposition architecture | 27 |
-| Security engineering and weakness remediation | 0 |
 | Data analysis and visualization | 4 |
-| Accounting systems and controls | 0 |
-| Additional workflows, integrations, and specialist utilities | 179 |
+| Additional workflows, integrations, and specialist utilities | 162 |
 
 | Skill | Collection | Purpose |
 | --- | --- | --- |
 | [adr](skills/adr/SKILL.md) | core | Record an architectural decision with context, alternatives, consequences, and the actual project approval status. |
 | [agent-instruction-maintenance](skills/agent-instruction-maintenance/SKILL.md) | optional | Inventory, consolidate, rename, and repair repository agent instructions, prompts, roles, and skills using repository and client conventions; does not define governance authority. |
 | [analyze-data-quality](skills/analyze-data-quality/SKILL.md) | data | Assess whether structured data, query results, dashboards, or analytical evidence are trustworthy enough to use. Use when the task is to check data quality, reconcile conflicting sources or metric ... |
-| [analyze-repo](skills/analyze-repo/SKILL.md) | optional | Detect languages, frameworks, build systems, dependencies, databases, and environment variables in a repository **for the purpose of containerization or cloud deployment**. Use BEFORE generating a ... |
 | [analyzing-architecture](skills/analyzing-architecture/SKILL.md) | optional | Architect analysis for rewrite/migration: produces structured architecture artifacts plus global prose research views (project-structure, tech-stack, data-model) for planning, implementation, featu... |
 | [architecture-diagram](skills/architecture-diagram/SKILL.md) | optional | Generate architecture diagram with component relationship details from project analysis |
 | [ask-matt](skills/ask-matt/SKILL.md) | optional | Ask which skill or flow fits your situation. A router over the skills in this repo. |
 | [assertion-quality](skills/assertion-quality/SKILL.md) | core | Analyze whether tests use meaningful, varied assertions and identify missing, trivial, or single-style verification patterns. |
-| [assessment](skills/assessment/SKILL.md) | optional | Run application assessment for a single repository |
 | [authoring-github-workflows](skills/authoring-github-workflows/SKILL.md) | optional | Author and review GitHub Actions YAML for valid structure, expression quoting, and workflow loading, using the target repository conventions. |
 | [blog-post-writer](skills/blog-post-writer/SKILL.md) | optional | Writes on-brand blog posts with a strong hook, scannable subheadings, short paragraphs, and a clear call to action. Use when drafting a blog post, article, or long-form content, or when the user as... |
 | [caching-patterns](skills/caching-patterns/SKILL.md) | optional | Choose cache scope, expiration, invalidation, two-tier layering, and stampede control so caching improves latency or load without hiding correctness defects. |
@@ -41,7 +36,6 @@ The library contains **225 skills**. All entrypoints are under `skills/<name>/SK
 | [code-review](skills/code-review/SKILL.md) | core | Review code changes for correctness, security, maintainability, and project conventions using the relevant language or review mode. |
 | [code-smell-detection](skills/code-smell-detection/SKILL.md) | optional | Detect code smells that indicate design or implementation quality issues requiring refactoring. |
 | [code-testing-agent](skills/code-testing-agent/SKILL.md) | optional | Generate workable unit tests by using a research, planning, implementation, and verification pipeline that matches repository test conventions. |
-| [code-testing-extensions](skills/code-testing-extensions/SKILL.md) | optional | Routes code-testing agents to the correct language extension and example reference files. |
 | [collect-files-with-request](skills/collect-files-with-request/SKILL.md) | optional | Create, inspect, and manage Dropbox file requests for collecting uploads from other people. Use when the user asks to collect files, request uploads, create an upload portal, check a file request, ... |
 | [computer-use](skills/computer-use/SKILL.md) | optional | Control Windows apps from ChatGPT |
 | [configuration-inventory](skills/configuration-inventory/SKILL.md) | optional | Generate comprehensive configuration and externalized settings inventory |
@@ -85,12 +79,10 @@ The library contains **225 skills**. All entrypoints are under `skills/<name>/SK
 | [evaluate-plugin](skills/evaluate-plugin/SKILL.md) | optional | Evaluate a local Codex plugin in engineer-friendly language. Use when the user says "evaluate this plugin", "audit this plugin", "why did this score that way", "what should I fix first", "help me b... |
 | [evaluate-skill](skills/evaluate-skill/SKILL.md) | optional | Evaluate a local Codex skill in engineer-friendly terms. Use when the user says "evaluate this skill", "give me an analysis of the game dev skill", "audit this skill", "why did this score that way"... |
 | [executing-plans](skills/executing-plans/SKILL.md) | core | Implement an assigned plan in bounded steps with dependency checks, verification, and progress reporting. |
-| [faceless-channel](skills/faceless-channel/SKILL.md) | optional | Use only when the user asks to produce a finished multi-scene narrator-led video and explicitly requests a faceless channel, YouTube automation, narrated explainer/story/education, documentary, sto... |
 | [feature-inventory](skills/feature-inventory/SKILL.md) | optional | Catalogs existing features from a codebase (API endpoints, user flows, UI screens, observable behaviors) and generates structured feature specs with REQ-XXX IDs, user scenarios, and success criteri... |
 | [fetch-and-send-data](skills/fetch-and-send-data/SKILL.md) | optional | Call APIs, load data into components, and handle the async lifecycle in Blazor. USE FOR fetching data from a backend, submitting data to an API, displaying loading/error states, registering HttpCli... |
 | [finding-discovery](skills/finding-discovery/SKILL.md) | optional | Use when Codex is already in the finding-discovery phase of a security scan or the user explicitly asks to discover candidate security findings in a repository or code change. Do not use as the pri... |
 | [finishing-a-development-branch](skills/finishing-a-development-branch/SKILL.md) | optional | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work |
-| [fix-dockerfile](skills/fix-dockerfile/SKILL.md) | optional | Validate and remediate an existing Dockerfile against security, performance, and best-practice rules. Use AFTER a Dockerfile exists (either user-authored or produced by generate-dockerfile) and BEF... |
 | [fix-finding](skills/fix-finding/SKILL.md) | optional | Use when the user explicitly asks to fix and verify a validated or plausible security finding. Do not use as the primary trigger for full PR, commit, branch, patch, or repository scans. |
 | [framework-migration](skills/framework-migration/SKILL.md) | optional | Replace one application or tooling framework with another while preserving behavior, contracts, build workflows, and validation evidence. Use for full framework replacement, not same-framework vers... |
 | [framework-migration-guidelines](skills/framework-migration-guidelines/SKILL.md) | optional | Collection of framework-to-framework migration rules and transformation patterns (e.g., Struts→Spring MVC, JSP→Thymeleaf, EJB→Spring Boot). Triggers: "check migration guidelines", "look up transfor... |
@@ -99,7 +91,6 @@ The library contains **225 skills**. All entrypoints are under `skills/<name>/SK
 | [frontend-testing-debugging](skills/frontend-testing-debugging/SKILL.md) | optional | Use when testing, debugging, or making targeted improvements to rendered frontend apps through the Build Web Apps or web dev plugin: local dev servers, UI regressions, interaction bugs, console err... |
 | [gantt-chart-visualization](skills/gantt-chart-visualization/SKILL.md) | optional | Design, critique, route, and implement Gantt charts and schedule visualizations. Use when the user mentions Gantt charts, project schedules, roadmaps with task spans, milestones, dependencies, pred... |
 | [gather-business-context](skills/gather-business-context/SKILL.md) | optional | Gather business context from connected or provided sources so downstream analysis starts with the right framing. Use when an analytical question depends on missing context, such as what a metric me... |
-| [generate-dockerfile](skills/generate-dockerfile/SKILL.md) | optional | Generate or enhance a Dockerfile for a containerized application using curated base-image recommendations and security best practices. Use AFTER analyze-repo (or after the user has told you the lan... |
 | [geospatial-and-cartographic-visualization](skills/geospatial-and-cartographic-visualization/SKILL.md) | optional | Design geospatial and cartographic visualizations. Use when the user needs help deciding whether to use a map, choosing projections or basemaps, building choropleths or symbol maps, or implementing... |
 | [grammar-of-graphics-and-declarative-visualization](skills/grammar-of-graphics-and-declarative-visualization/SKILL.md) | optional | Build data visualizations with declarative grammars. Use when the user needs Vega-Lite, Vega, Observable Plot, or grammar-of-graphics reasoning, especially for tabular charts that do not require be... |
 | [grilling](skills/grilling/SKILL.md) | optional | Stress-test a plan or design through focused interview rounds, with optional ADR and glossary drafts when requested. |
@@ -107,7 +98,6 @@ The library contains **225 skills**. All entrypoints are under `skills/<name>/SK
 | [implement](skills/implement/SKILL.md) | optional | Implement a piece of work based on a spec or set of tickets. |
 | [improve-skill](skills/improve-skill/SKILL.md) | optional | Turn plugin-eval findings into a concrete rewrite brief for a Codex skill. Use when the user already evaluated a skill and now wants Codex to improve it, especially after asking what to fix first. |
 | [incident-response](skills/incident-response/SKILL.md) | optional | Detect, stabilize, diagnose, and learn from production incidents with severity, rollback-first mitigation, and follow-up work items. |
-| [intake](skills/intake/SKILL.md) | optional | Use when Creative Production is explicitly invoked or mentioned without a concrete request, when the user asks what Creative Production can do, or when the user wants help getting started without e... |
 | [integration-testing](skills/integration-testing/SKILL.md) | optional | Write technology-neutral integration tests that exercise components together across layers against real or emulated resources. |
 | [kpi-reporting](skills/kpi-reporting/SKILL.md) | optional | Prepare KPI readouts, scorecards, WBR/MBR/QBR updates, and executive summaries from quantitative business or product metrics; use when the task is to report status, compare against targets, explain... |
 | [list-plans](skills/list-plans/SKILL.md) | optional | Discovers valid migration plans in the workspace and returns the selected plan path. A valid plan is a subdirectory of .github/modernize/ that contains plan.md AND tasks.json (tasks.json may be in ... |
@@ -120,15 +110,12 @@ The library contains **225 skills**. All entrypoints are under `skills/<name>/SK
 | [metric-diagnostics](skills/metric-diagnostics/SKILL.md) | data | Diagnose why a metric changed or differs from expectation. Use when the task is to identify likely drivers of a metric movement, anomaly, gap, or discrepancy. |
 | [migrate-customizations](skills/migrate-customizations/SKILL.md) | optional | Guide a safe, reversible migration of VS Code agent customizations when launched from the Agent Customizations Migrations page with VS Code-generated migration context. |
 | [minimal-code-rules](skills/minimal-code-rules/SKILL.md) | optional | Apply Karpathy's coding rules (think before coding, simplicity first, surgical changes, goal-driven execution) to design and code so the team writes the minimum that fulfills the requirements and n... |
-| [modernization-integration-tests](skills/modernization-integration-tests/SKILL.md) | optional | Run multi-layer integration tests for modernized Java applications. Supports 4 layers - Layer 1 (TestContainers), Layer 2 (Smoke Tests), Layer 3 (Azure Integration), Layer 4 (Behavioral Comparison)... |
-| [narrator](skills/narrator/SKILL.md) | optional | Activate when the user explicitly names the narrator skill or requests production-ready narration in either case: (1) numbered takes fitted to fixed video windows, or (2) one continuous long-form s... |
 | [performance-load-testing](skills/performance-load-testing/SKILL.md) | optional | Write load, stress, and soak tests that verify non-functional thresholds, and benchmark hot paths with evidence. |
 | [plan-ui-change](skills/plan-ui-change/SKILL.md) | optional | When asked to build a complex UI feature, **plan the component decomposition first, then immediately implement it**. A single monolithic page component is almost never the right answer — break the ... |
 | [plugin-creator](skills/plugin-creator/SKILL.md) | optional | Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, and baseline placeholders you can edit before publishing or testing. Use... |
 | [plugin-eval](skills/plugin-eval/SKILL.md) | optional | Help engineers evaluate a local skill or plugin, explain why it scored that way, show what to fix first, measure real token usage, benchmark starter scenarios, or decide what to run next. Use when ... |
 | [post-implementation-cleanup](skills/post-implementation-cleanup/SKILL.md) | optional | Cleans up low-value agent artifacts after implementation while preserving durable documentation and operational knowledge. |
 | [prepare-task-handoff](skills/prepare-task-handoff/SKILL.md) | core | Prepare a concise, evidence-backed handoff of assigned work, current state, verification, and the next actionable step. |
-| [produce](skills/produce/SKILL.md) | optional | Use when the user wants to create, explore, adapt, refine, polish, or review visual creative such as campaigns, ads, social posts, product imagery, scenes, offers, logos, brand systems, styles, cha... |
 | [product-business-analysis](skills/product-business-analysis/SKILL.md) | optional | Analyze product or business data to support a decision or recommendation. Use when a decision depends on metric-backed evidence, such as choosing a direction, prioritizing an opportunity, evaluatin... |
 | [project-decomposition](skills/project-decomposition/SKILL.md) | optional | Single-source codebase decomposition: scans a project scope, builds the module dependency graph, counts LOC by language, computes skip patterns (caller-supplied ∪ .gitignore ∪ baseline), and (when ... |
 | [project-recon](skills/project-recon/SKILL.md) | optional | Zero-dependency shell recon for any code repository — detect languages, count LOC, and report project scale. Pure POSIX find/wc or PowerShell, no Python or third-party tools required. Triggers: "ho... |
@@ -170,16 +157,10 @@ The library contains **225 skills**. All entrypoints are under `skills/<name>/SK
 | [statistical-and-uncertainty-visualization](skills/statistical-and-uncertainty-visualization/SKILL.md) | optional | Design statistically honest and uncertainty-aware visualizations. Use when the user needs help showing distributions, intervals, confidence, missingness, sampling effects, or analytical rigor in ch... |
 | [subagent-driven-development](skills/subagent-driven-development/SKILL.md) | optional | Execute an accepted implementation plan with authorized delegated implementation and review when those capabilities are available. |
 | [subagent-orchestration](skills/subagent-orchestration/SKILL.md) | optional | Designs multi-agent workflows with explicit delegation boundaries, coordination rules, and result aggregation. |
-| [subtitles](skills/subtitles/SKILL.md) | optional | Burn timed subtitles onto a finished video or configure Whisper-timed caption burning during faceless-video assembly. Takes video/audio generation jobs or a local finished video, optionally with au... |
 | [support-prerendering](skills/support-prerendering/SKILL.md) | optional | Make interactive Blazor components work correctly with prerendering. USE FOR fixing duplicate data loads, UI flicker during prerender-to-interactive handoff, null references during prerender, persi... |
 | [systematic-debugging](skills/systematic-debugging/SKILL.md) | core | 4-phase root cause debugging: understand bugs before fixing. |
 | [teach](skills/teach/SKILL.md) | optional | Teach the user a new skill or concept, within this workspace. |
 | [technology-selection](skills/technology-selection/SKILL.md) | optional | Maps common .NET AI and ML scenarios to the smallest viable stack with guardrails and validation. |
-| [template-authoring](skills/template-authoring/SKILL.md) | optional | Guides creation and validation of custom dotnet new templates from existing projects. Generates a .template.config/template.json that preserves the source project's conventions. USE FOR: creating a... |
-| [template-comparison](skills/template-comparison/SKILL.md) | optional | Compares two or more dotnet new templates side by side to help users choose between them based on parameters, feature support, frameworks, and classifications. USE FOR: deciding between similar tem... |
-| [template-discovery](skills/template-discovery/SKILL.md) | optional | Helps find, inspect, and compare (at a high level) .NET project templates. Resolves natural-language project descriptions to ranked template matches with pre-filled parameters. USE FOR: finding the... |
-| [template-smart-defaults](skills/template-smart-defaults/SKILL.md) | optional | Applies cross-parameter default rules when creating .NET projects with dotnet new, filling gaps consistently without overriding values the user set explicitly. USE FOR: choosing which target framew... |
-| [template-validation](skills/template-validation/SKILL.md) | optional | Validates custom dotnet new templates for correctness before publishing. Catches missing fields, parameter bugs, shortName conflicts, constraint issues, and common authoring mistakes that cause tem... |
 | [test-driven-development](skills/test-driven-development/SKILL.md) | core | Implement assigned behavior through a meaningful failing test, minimal passing code, and refactoring when a test-first workflow is requested or appropriate. |
 | [test-infrastructure-harness](skills/test-infrastructure-harness/SKILL.md) | optional | Build the shared test harness, fixtures, fakes, builders, disposable resources, and synthetic data that every test tier consumes. |
 | [test-smell-detection](skills/test-smell-detection/SKILL.md) | optional | Detect literature-backed test smells and produce a location-based remediation report with severity, snippet, and fix guidance. |
@@ -232,7 +213,6 @@ The library contains **225 skills**. All entrypoints are under `skills/<name>/SK
 | [verify-test-baseline](skills/verify-test-baseline/SKILL.md) | optional | Generate and run post-migration tests from the frozen baseline specification. |
 | [viewmodel-lifecycle](skills/viewmodel-lifecycle/SKILL.md) | optional | Manage initialization, navigation state, cleanup, and memory-safety boundaries when agent implements or reviews presentation-model lifecycles in UI applications. |
 | [visualization-strategy-and-critique](skills/visualization-strategy-and-critique/SKILL.md) | optional | Choose, lay out, critique, and explain data visualizations. Use when the user asks what visualization fits a dataset or goal, how a chart, dashboard, operational workspace, UML-like diagram, or sof... |
-| [visualize](skills/visualize/SKILL.md) | optional | Create visualizations and interactive tools directly in conversation. Proactively use to show how something works; explore 'what happens when', 'what changes', or 'help me understand'; compare or i... |
 | [visualize-data](skills/visualize-data/SKILL.md) | data | Design, build, revise, or QA quantitative charts and figures. Use when an analytical answer needs visual judgment, whether for an inline answer, report, dashboard, notebook, or artifact. |
 | [wait-what](skills/wait-what/SKILL.md) | optional | Stop. That last message did not land — re-pitch it. |
 | [wayfinder](skills/wayfinder/SKILL.md) | optional | Plan a huge chunk of work — more than one agent session can hold — as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear. |

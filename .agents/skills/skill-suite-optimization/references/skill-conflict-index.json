@@ -45,7 +45,6 @@
         "test-smell-detection",
         "run-tests",
         "code-testing-agent",
-        "code-testing-extensions",
         "test-tagging",
         "crap-score"
       ],

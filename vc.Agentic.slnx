@@ -16,7 +16,6 @@
     <File Path=".agents/verification.md" />
   </Folder>
   <Folder Name="/.agents/shared/">
-    <File Path=".agents/shared/deliverable-intake-policy.md" />
     <File Path=".agents/shared/html-artifact-standard.md" />
     <File Path=".agents/shared/workbook-artifact-standard.md" />
   </Folder>
@@ -28,9 +27,6 @@
   </Folder>
   <Folder Name="/.agents/skills/analyze-data-quality/">
     <File Path=".agents/skills/analyze-data-quality/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/analyze-repo/">
-    <File Path=".agents/skills/analyze-repo/SKILL.md" />
   </Folder>
   <Folder Name="/.agents/skills/analyzing-architecture/">
     <File Path=".agents/skills/analyzing-architecture/SKILL.md" />
@@ -70,9 +66,6 @@
   </Folder>
   <Folder Name="/.agents/skills/assertion-quality/references/contexts/assertion-quality/">
     <File Path=".agents/skills/assertion-quality/references/contexts/assertion-quality/guide.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/assessment/">
-    <File Path=".agents/skills/assessment/SKILL.md" />
   </Folder>
   <Folder Name="/.agents/skills/authoring-github-workflows/">
     <File Path=".agents/skills/authoring-github-workflows/SKILL.md" />
@@ -142,35 +135,6 @@
   </Folder>
   <Folder Name="/.agents/skills/code-testing-agent/references/contexts/code-testing-agent/">
     <File Path=".agents/skills/code-testing-agent/references/contexts/code-testing-agent/guide.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/code-testing-extensions/">
-    <File Path=".agents/skills/code-testing-extensions/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/code-testing-extensions/extensions/">
-    <File Path=".agents/skills/code-testing-extensions/extensions/cpp-examples.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/cpp.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/dotnet-examples.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/dotnet.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/go-examples.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/go.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/java-examples.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/java.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/kotlin-examples.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/kotlin.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/powershell-examples.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/powershell.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/python-examples.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/python.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/ruby-examples.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/ruby.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/rust-examples.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/rust.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/swift.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/typescript-examples.md" />
-    <File Path=".agents/skills/code-testing-extensions/extensions/typescript.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/code-testing-extensions/references/contexts/code-testing-extensions/">
-    <File Path=".agents/skills/code-testing-extensions/references/contexts/code-testing-extensions/guide.md" />
   </Folder>
   <Folder Name="/.agents/skills/collect-files-with-request/">
     <File Path=".agents/skills/collect-files-with-request/SKILL.md" />
@@ -440,26 +404,6 @@
   <Folder Name="/.agents/skills/executing-plans/">
     <File Path=".agents/skills/executing-plans/SKILL.md" />
   </Folder>
-  <Folder Name="/.agents/skills/faceless-channel/">
-    <File Path=".agents/skills/faceless-channel/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/faceless-channel/assets/">
-    <File Path=".agents/skills/faceless-channel/assets/icon.svg" />
-  </Folder>
-  <Folder Name="/.agents/skills/faceless-channel/references/">
-    <File Path=".agents/skills/faceless-channel/references/generation-and-delivery.md" />
-    <File Path=".agents/skills/faceless-channel/references/history-longform.md" />
-    <File Path=".agents/skills/faceless-channel/references/intake-and-dispatch.md" />
-    <File Path=".agents/skills/faceless-channel/references/kids-song.md" />
-    <File Path=".agents/skills/faceless-channel/references/kids-styles.md" />
-    <File Path=".agents/skills/faceless-channel/references/picture-flow.md" />
-    <File Path=".agents/skills/faceless-channel/references/prompts.md" />
-    <File Path=".agents/skills/faceless-channel/references/style-cinematic-storybook.md" />
-    <File Path=".agents/skills/faceless-channel/references/style-editorial-collage.md" />
-    <File Path=".agents/skills/faceless-channel/references/style-mannequin.md" />
-    <File Path=".agents/skills/faceless-channel/references/style-paper-diorama.md" />
-    <File Path=".agents/skills/faceless-channel/references/vo_and_captions.md" />
-  </Folder>
   <Folder Name="/.agents/skills/feature-inventory/">
     <File Path=".agents/skills/feature-inventory/SKILL.md" />
   </Folder>
@@ -474,9 +418,6 @@
   </Folder>
   <Folder Name="/.agents/skills/finishing-a-development-branch/">
     <File Path=".agents/skills/finishing-a-development-branch/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/fix-dockerfile/">
-    <File Path=".agents/skills/fix-dockerfile/SKILL.md" />
   </Folder>
   <Folder Name="/.agents/skills/fix-finding/">
     <File Path=".agents/skills/fix-finding/SKILL.md" />
@@ -525,9 +466,6 @@
   <Folder Name="/.agents/skills/gather-business-context/">
     <File Path=".agents/skills/gather-business-context/SKILL.md" />
   </Folder>
-  <Folder Name="/.agents/skills/generate-dockerfile/">
-    <File Path=".agents/skills/generate-dockerfile/SKILL.md" />
-  </Folder>
   <Folder Name="/.agents/skills/geospatial-and-cartographic-visualization/">
     <File Path=".agents/skills/geospatial-and-cartographic-visualization/SKILL.md" />
   </Folder>
@@ -564,9 +502,6 @@
   </Folder>
   <Folder Name="/.agents/skills/incident-response/">
     <File Path=".agents/skills/incident-response/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/intake/">
-    <File Path=".agents/skills/intake/SKILL.md" />
   </Folder>
   <Folder Name="/.agents/skills/integration-testing/">
     <File Path=".agents/skills/integration-testing/SKILL.md" />
@@ -610,28 +545,6 @@
   <Folder Name="/.agents/skills/minimal-code-rules/">
     <File Path=".agents/skills/minimal-code-rules/SKILL.md" />
   </Folder>
-  <Folder Name="/.agents/skills/modernization-integration-tests/">
-    <File Path=".agents/skills/modernization-integration-tests/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/modernization-integration-tests/references/">
-    <File Path=".agents/skills/modernization-integration-tests/references/azure-auth-strategies.md" />
-    <File Path=".agents/skills/modernization-integration-tests/references/azure-servicebus-testcontainers.md" />
-    <File Path=".agents/skills/modernization-integration-tests/references/azure-storage-testcontainers.md" />
-    <File Path=".agents/skills/modernization-integration-tests/references/layer1-local-integration.md" />
-    <File Path=".agents/skills/modernization-integration-tests/references/layer2-runner-script-templates.md" />
-    <File Path=".agents/skills/modernization-integration-tests/references/layer2-smoke-tests.md" />
-    <File Path=".agents/skills/modernization-integration-tests/references/layer3-azure-integration.md" />
-    <File Path=".agents/skills/modernization-integration-tests/references/layer4-behavioral-comparison.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/narrator/">
-    <File Path=".agents/skills/narrator/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/narrator/assets/">
-    <File Path=".agents/skills/narrator/assets/icon.svg" />
-  </Folder>
-  <Folder Name="/.agents/skills/narrator/scripts/">
-    <File Path=".agents/skills/narrator/scripts/speech_metrics.sh" />
-  </Folder>
   <Folder Name="/.agents/skills/performance-load-testing/">
     <File Path=".agents/skills/performance-load-testing/SKILL.md" />
   </Folder>
@@ -658,123 +571,6 @@
   </Folder>
   <Folder Name="/.agents/skills/prepare-task-handoff/">
     <File Path=".agents/skills/prepare-task-handoff/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/">
-    <File Path=".agents/skills/produce/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/">
-    <File Path=".agents/skills/produce/helpers/README.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/ads/scripts/">
-    <File Path=".agents/skills/produce/helpers/ads/scripts/build_ads_explorer.py" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/logos/assets/logo-explorer-app/">
-    <File Path=".agents/skills/produce/helpers/logos/assets/logo-explorer-app/app.js" />
-    <File Path=".agents/skills/produce/helpers/logos/assets/logo-explorer-app/index.html" />
-    <File Path=".agents/skills/produce/helpers/logos/assets/logo-explorer-app/server.mjs" />
-    <File Path=".agents/skills/produce/helpers/logos/assets/logo-explorer-app/styles.css" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/logos/scripts/">
-    <File Path=".agents/skills/produce/helpers/logos/scripts/create_logo_explorer.py" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/moodboards/assets/mood-board-app/">
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/app.js" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/codex-theme.css" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/generation-halftone-runtime.js" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/index.html" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/platform-icons.js" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/server.mjs" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-intake-runtime.js" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/styles.css" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/theme.js" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/">
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/empty-state-grid.css" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/empty-state-grid.js" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/">
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-campaign-ideas-01.svg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-campaign-ideas-01.webp" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-images-in-a-style-01.svg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-images-in-a-style-01.webp" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-make-logo-from-scratch-01.svg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-make-logo-from-scratch-01.webp" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-place-in-screen-01.webp" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-place-product-01.svg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-place-product-01.webp" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-product-detail-images-01.svg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-product-detail-images-01.webp" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-social-ads-01.svg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-social-ads-01.webp" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-social-post-series-01.svg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-social-post-series-01.webp" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-template-assets-01.svg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-template-assets-01.webp" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/generation-tile-state/">
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/generation-tile-state/generation-tile-state.css" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/generation-tile-state/generation-tile-state.js" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/starter-intake/">
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/starter-intake/starter-intake.css" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/starter-intake/starter-intake.js" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/">
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-all-social-source-asset.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-anvil-logo.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-boutique-product-staged-photo.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-cowboy-hat-phone-photo.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-device-staged-photo.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-multilingual-social-ad.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-place-in-screen-hero.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-place-in-screen-laptop.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-place-in-screen-phone.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-product-swap-social-ad.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-seasonal-social-ad.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-square-launch-graphic.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-suit-phone-photo.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-waterslide-product-phone-photo.jpg" />
-    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-youtube-banner-source-asset.jpg" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/offers/references/packs/">
-    <File Path=".agents/skills/produce/helpers/offers/references/packs/digital-product-placements.json" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/offers/scripts/">
-    <File Path=".agents/skills/produce/helpers/offers/scripts/build_offer_explorer.py" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/shots/scripts/">
-    <File Path=".agents/skills/produce/helpers/shots/scripts/create_shot_explorer.py" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/styles/assets/style-explorer-app/">
-    <File Path=".agents/skills/produce/helpers/styles/assets/style-explorer-app/app.js" />
-    <File Path=".agents/skills/produce/helpers/styles/assets/style-explorer-app/index.html" />
-    <File Path=".agents/skills/produce/helpers/styles/assets/style-explorer-app/server.mjs" />
-    <File Path=".agents/skills/produce/helpers/styles/assets/style-explorer-app/styles.css" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/helpers/styles/scripts/">
-    <File Path=".agents/skills/produce/helpers/styles/scripts/create_style_explorer.py" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/references/">
-    <File Path=".agents/skills/produce/references/board-runtime.md" />
-    <File Path=".agents/skills/produce/references/review-renderer.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/references/contracts/">
-    <File Path=".agents/skills/produce/references/contracts/deterministic-exports.md" />
-    <File Path=".agents/skills/produce/references/contracts/exact-content.md" />
-    <File Path=".agents/skills/produce/references/contracts/source-preservation.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/references/generation/">
-    <File Path=".agents/skills/produce/references/generation/image-building-strategy.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/produce/references/modes/">
-    <File Path=".agents/skills/produce/references/modes/ads.md" />
-    <File Path=".agents/skills/produce/references/modes/charts.md" />
-    <File Path=".agents/skills/produce/references/modes/logos.md" />
-    <File Path=".agents/skills/produce/references/modes/offers.md" />
-    <File Path=".agents/skills/produce/references/modes/positioning.md" />
-    <File Path=".agents/skills/produce/references/modes/scenes.md" />
-    <File Path=".agents/skills/produce/references/modes/shots.md" />
-    <File Path=".agents/skills/produce/references/modes/styles.md" />
   </Folder>
   <Folder Name="/.agents/skills/product-business-analysis/">
     <File Path=".agents/skills/product-business-analysis/SKILL.md" />
@@ -1056,17 +852,6 @@
   <Folder Name="/.agents/skills/subagent-orchestration/references/contexts/subagent-orchestration/">
     <File Path=".agents/skills/subagent-orchestration/references/contexts/subagent-orchestration/guide.md" />
   </Folder>
-  <Folder Name="/.agents/skills/subtitles/">
-    <File Path=".agents/skills/subtitles/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/subtitles/assets/">
-    <File Path=".agents/skills/subtitles/assets/icon.svg" />
-  </Folder>
-  <Folder Name="/.agents/skills/subtitles/scripts/">
-    <File Path=".agents/skills/subtitles/scripts/audio_to_captions.py" />
-    <File Path=".agents/skills/subtitles/scripts/burn_caps_clean.sh" />
-    <File Path=".agents/skills/subtitles/scripts/subtitle_paper_burn.py" />
-  </Folder>
   <Folder Name="/.agents/skills/support-prerendering/">
     <File Path=".agents/skills/support-prerendering/SKILL.md" />
   </Folder>
@@ -1098,36 +883,6 @@
   </Folder>
   <Folder Name="/.agents/skills/technology-selection/references/contexts/technology-selection/">
     <File Path=".agents/skills/technology-selection/references/contexts/technology-selection/guide.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/template-authoring/">
-    <File Path=".agents/skills/template-authoring/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/template-authoring/references/contexts/template-authoring/">
-    <File Path=".agents/skills/template-authoring/references/contexts/template-authoring/guide.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/template-comparison/">
-    <File Path=".agents/skills/template-comparison/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/template-comparison/references/contexts/template-comparison/">
-    <File Path=".agents/skills/template-comparison/references/contexts/template-comparison/guide.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/template-discovery/">
-    <File Path=".agents/skills/template-discovery/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/template-discovery/references/contexts/template-discovery/">
-    <File Path=".agents/skills/template-discovery/references/contexts/template-discovery/guide.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/template-smart-defaults/">
-    <File Path=".agents/skills/template-smart-defaults/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/template-smart-defaults/references/contexts/template-smart-defaults/">
-    <File Path=".agents/skills/template-smart-defaults/references/contexts/template-smart-defaults/guide.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/template-validation/">
-    <File Path=".agents/skills/template-validation/SKILL.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/template-validation/references/contexts/template-validation/">
-    <File Path=".agents/skills/template-validation/references/contexts/template-validation/guide.md" />
   </Folder>
   <Folder Name="/.agents/skills/test-driven-development/">
     <File Path=".agents/skills/test-driven-development/SKILL.md" />
@@ -1516,34 +1271,11 @@
     <File Path=".agents/skills/visualization-strategy-and-critique/references/decision-framing.md" />
     <File Path=".agents/skills/visualization-strategy-and-critique/references/tufte-munzner-cairo-synthesis.md" />
   </Folder>
-  <Folder Name="/.agents/skills/visualize/">
-    <File Path=".agents/skills/visualize/SKILL.md" />
-    <File Path=".agents/skills/visualize/technical-illustrations.md" />
-    <File Path=".agents/skills/visualize/tweak.md" />
-  </Folder>
   <Folder Name="/.agents/skills/visualize-data/">
     <File Path=".agents/skills/visualize-data/SKILL.md" />
   </Folder>
   <Folder Name="/.agents/skills/visualize-data/references/">
     <File Path=".agents/skills/visualize-data/references/native-inline-visualizations.md" />
-  </Folder>
-  <Folder Name="/.agents/skills/visualize/assets/">
-    <File Path=".agents/skills/visualize/assets/calendar.js" />
-    <File Path=".agents/skills/visualize/assets/share-shell.css" />
-    <File Path=".agents/skills/visualize/assets/share-shell.js" />
-    <File Path=".agents/skills/visualize/assets/standalone-host-bridge.js" />
-    <File Path=".agents/skills/visualize/assets/standalone-shell.js" />
-    <File Path=".agents/skills/visualize/assets/visualize.css" />
-    <File Path=".agents/skills/visualize/assets/visualize.html" />
-  </Folder>
-  <Folder Name="/.agents/skills/visualize/scripts/">
-    <File Path=".agents/skills/visualize/scripts/render.py" />
-  </Folder>
-  <Folder Name="/.agents/skills/visualize/widgets/">
-    <File Path=".agents/skills/visualize/widgets/calendar.md" />
-    <File Path=".agents/skills/visualize/widgets/flamechart.md" />
-    <File Path=".agents/skills/visualize/widgets/stacktrace.md" />
-    <File Path=".agents/skills/visualize/widgets/waterfall.md" />
   </Folder>
   <Folder Name="/.agents/skills/wait-what/">
     <File Path=".agents/skills/wait-what/SKILL.md" />

@@ -38,7 +38,7 @@ The hooks run [tools/agent_entry.py](tools/agent_entry.py), which prints the "St
 
 ## Version
 
-Current version: **1.0.0**. See [VERSION.md](VERSION.md) for versioning rules and change history.
+Current version: **1.1.0**. See [VERSION.md](VERSION.md) for versioning rules and change history.
 
 ## Skills
 

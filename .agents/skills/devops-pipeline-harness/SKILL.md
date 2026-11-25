@@ -13,7 +13,7 @@ metadata:
 
 # DevOps Pipeline Harness
 
-Load this skill when the `developer` agent works in layer `devops` (write scope `.devops/**` and `azure-pipelines.yml`).
+Load this skill when the `developer` agent works in layer `devops` (write scope `.devops/**` and the pipeline definition file).
 
 ## Harnesses To Verify
 

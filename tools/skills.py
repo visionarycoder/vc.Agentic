@@ -20,11 +20,8 @@ FIELDS = ['name', 'description', 'collection', 'path', 'updated', 'files', 'sha2
 META = ['metadata-version', 'title', 'document-type', 'repository', 'language', 'updated', 'collection']
 COLLECTIONS = {
     'core': 'Recommended development core',
-    'dotnet': '.NET, C#, MSBuild, and WPF',
     'vbd': 'Volatility-based decomposition architecture',
-    'security': 'Security engineering and weakness remediation',
     'data': 'Data analysis and visualization',
-    'accounting': 'Accounting systems and controls',
     'optional': 'Additional workflows, integrations, and specialist utilities',
 }
 CORE = {
@@ -92,21 +89,15 @@ def render(data: dict, body: str) -> str:
 
 
 def title(name: str) -> str:
-    acronyms = {'api': 'API', 'adr': 'ADR', 'vbd': 'VBD', 'mstest': 'MSTest',
-                'msbuild': 'MSBuild', 'dotnet': '.NET', 'csharp': 'C#', 'ui': 'UI'}
+    acronyms = {'api': 'API', 'adr': 'ADR', 'vbd': 'VBD', 'ui': 'UI'}
     return ' '.join(acronyms.get(word, word.capitalize()) for word in name.split('-'))
 
 
 def classify(name: str) -> str:
     if name in CORE:
         return 'core'
-    for prefix, group in [('accounting-', 'accounting'), ('vbd-', 'vbd'),
-                          ('cwe-', 'security')]:
-        if name.startswith(prefix):
-            return group
-    if name.startswith(('dotnet-', 'msbuild-', 'wpf-', 'maui-',
-                        'aspnet', 'efcore-', 'blazor-', 'winui', 'windows-ai-')):
-        return 'dotnet'
+    if name.startswith('vbd-'):
+        return 'vbd'
     if name in {'analyze-data-quality', 'metric-diagnostics', 'visualize-data'}:
         return 'data'
     return 'optional'
