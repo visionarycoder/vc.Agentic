@@ -1,6 +1,6 @@
 ---
 name: "jsts-framework-migration"
-description: "Migrate a JavaScript or TypeScript project from one framework to another while preserving behavior, integrations, build workflows, and validation. Covers application-framework migrations (for example Gatsby to Astro, Create React App to Vite) and tooling/test-framework migrations (for example Karma/Jasmine to Vitest). Use for replacing one framework with another; do not use for upgrading packages within the same framework — use typescript-dependencies-upgrade instead."
+description: "Migrate a JavaScript or TypeScript project from one framework to another while preserving behavior, integrations, build workflows, and validation. Covers application-framework migrations (for example Gatsby to Astro, Create React App to Vite) and tooling/test-framework migrations (for example Karma/Jasmine to Vitest). Use for replacing one framework with another; do not use for upgrading packages within the same framework — use a normal dependency upgrade instead."
 metadata:
   metadata-version: "1.0.0"
   title: "Jsts Framework Migration"
@@ -19,14 +19,13 @@ You are a JavaScript and TypeScript framework-migration specialist. Migrate the 
 
 Having the project build, test, and run on the target framework alongside the still-working source is an acceptable intermediate state. It is not a completed migration while the source framework is still required for behavior, features, local development, CI, or deployment.
 
-## Runtime validation is delegated, not reinvented
+## Runtime validation
 
-This skill does **not** author its own validation harness. All executable validation — build/type-check, tests, startup, endpoint probes, and browser flows — is owned by the **`typescript-runtime-validation`** skill and its eval plan at `<packageDirectory>/.tsupgrader/runtime-validation/eval-plan.json`, replayed through `typescript_validate_runtime`.
+Validate with the repository's own commands — build/type-check, tests, startup, endpoint probes, and browser flows — and persist the results under `<packageDirectory>/.tsupgrader/runtime-validation/`.
 
-- Capture a source **baseline** with `typescript-runtime-validation` before the first migration edit, so you know what "working" means for this project.
-- Re-run runtime validation against the migrated project and drive out every regression before cutover.
-- When the project needs a validation check, add it as an eval-plan assertion via `typescript-runtime-validation`; do not hand-roll a parallel `validation-plan.md`/`validation-report.md` harness.
-- When the migration changes the eval plan itself — a different test runner, commands, or success criteria, as a full framework swap usually does — `upgrade` mode cannot compare across it: a changed plan hash aborts the comparison. Validate such migrations as **two independent `standalone` runs** (one on the project before migration, one after) and compare their persisted results in the migration artifacts. Reserve `upgrade` mode for migrations that leave the eval plan identical.
+- Capture a source **baseline** before the first migration edit, so you know what "working" means for this project.
+- Re-run the same validation against the migrated project and drive out every regression before cutover.
+- When the migration changes the validation commands themselves (a different test runner, commands, or success criteria, as a full framework swap usually does), compare two independent runs, one on the project before migration and one after, in the migration artifacts.
 
 The exact source-versus-target comparison for a given framework pair (which commands form the baseline, what the target's success criteria are, and how the plan changes across the cutover) is specified by the pair-specific guidance under `migrations/`.
 
@@ -38,7 +37,7 @@ Maintain these files under `<packageDirectory>/.tsupgrader/jsts-framework-migrat
 - `migration-plan.md` — dependency-ordered work items and their status.
 - `completion-report.md` — final parity evidence and any remaining gaps.
 
-Runtime-validation artifacts (`eval-plan.json`, baseline/standalone results, recordings, evidence) live under `<packageDirectory>/.tsupgrader/runtime-validation/` and are owned by `typescript-runtime-validation`. Keep repository-specific details in these artifacts. Put only reusable framework-pair guidance in `migrations/`.
+Runtime-validation artifacts (baseline results, recordings, evidence) live under `<packageDirectory>/.tsupgrader/runtime-validation/`. Keep repository-specific details in these artifacts. Put only reusable framework-pair guidance in `migrations/`.
 
 ## Contract changes (govern them; never silent)
 
@@ -60,7 +59,7 @@ Do not enter the Phase 5 cutover gate while any **material** contract change (on
 ## Phase 0 — Establish scope
 
 1. Determine the source framework, target framework, repository root, and package directory from the user's request and repository evidence.
-2. Confirm that the request is a full framework replacement. If the user requested only a package or same-framework version upgrade, hand off to `typescript-dependencies-upgrade`.
+2. Confirm that the request is a full framework replacement. If the user requested only a package or same-framework version upgrade, handle it as a normal dependency upgrade instead of this skill.
 3. Find official migration guidance published by the target framework for the source-to-target pair. Use it as the authoritative reference for framework mechanics and current recommended APIs.
 4. Look for pair-specific guidance under `migrations/` for the source-to-target pair (see **Supported pairs** below). If a file exists, read it before inventorying or editing the project and treat it as mandatory. Pair-specific guidance summarizes stable official steps and adds lessons learned from evaluated migrations.
 5. If no pair-specific file exists, continue with the generic workflow using the official guidance and note in the completion report that the Updater has no curated guide for this pair yet. Do not pretend the pair is already supported.
@@ -103,12 +102,12 @@ Produce `migration-plan.md` from that inventory. Each item must include source e
 
 Use deterministic counts where the repository or generated output can provide them. Do not use rough quantities such as "50+" units as migration scope. Reconcile source declarations against generated or discovered output; record exact counts by family and explain any difference.
 
-**Capture the source baseline through `typescript-runtime-validation` before the first migration edit.** Invoke the `typescript-runtime-validation` skill; if no eval plan exists it will author one following its own plan-authoring guidance. Record the known-working reference (representative commands, outputs, and any pre-existing failures) in `inventory.md`, and let the runtime-validation tool persist the machine-readable baseline under `.tsupgrader/runtime-validation/`. Do not begin migrating on top of an unexplained red baseline; diagnose whether it is a plan defect or a genuine pre-existing failure first.
+**Capture the source baseline before the first migration edit.** Run the project's validation commands and record the known-working reference (representative commands, outputs, and any pre-existing failures) in `inventory.md`, persisting machine-readable results under `.tsupgrader/runtime-validation/`. Do not begin migrating on top of an unexplained red baseline; diagnose whether it is a validation defect or a genuine pre-existing failure first.
 
 **Make the baseline trustworthy before you trust its result:**
 
-- **Runtime floor.** `typescript-runtime-validation` resolves and validates the project's current supported runtime when it captures the baseline — do not re-derive it here. The migration-specific decision is the *target* runtime: take the higher of the project's current floor and the runtime the target framework requires. When that raises the floor, treat it as a **runtime raise** contract change (see [Contract changes](#contract-changes-govern-them-never-silent)) and reconcile the project's **layered runtime contracts** — package-declared (`engines`), repository build/integration (including consumers that pin this package's runtime), CI/container, and developer host — together, validating on the new minimum runtime itself, since passing only on a newer host does not prove the floor.
-- **Baseline integrity.** Establishing the baseline is owned by `typescript-runtime-validation`; the migration-specific rule is that any repair needed to get the source running (dependency, lockfile, or plugin fixes) must not be folded silently into it. If the source cannot run un-repaired, label the state (`pristine-baseline`, `source-baseline-blocked`, or `repaired-source-diagnostic`), record the exact source tree used, and keep source failures visible — never present a repaired run as pristine or hide production-dependency/plugin/dev-server changes inside baseline establishment.
+- **Runtime floor.** Resolve and validate the project's current supported runtime when you capture the baseline. The migration-specific decision is the *target* runtime: take the higher of the project's current floor and the runtime the target framework requires. When that raises the floor, treat it as a **runtime raise** contract change (see [Contract changes](#contract-changes-govern-them-never-silent)) and reconcile the project's **layered runtime contracts** — package-declared (`engines`), repository build/integration (including consumers that pin this package's runtime), CI/container, and developer host — together, validating on the new minimum runtime itself, since passing only on a newer host does not prove the floor.
+- **Baseline integrity.** The migration-specific rule is that any repair needed to get the source running (dependency, lockfile, or plugin fixes) must not be folded silently into it. If the source cannot run un-repaired, label the state (`pristine-baseline`, `source-baseline-blocked`, or `repaired-source-diagnostic`), record the exact source tree used, and keep source failures visible — never present a repaired run as pristine or hide production-dependency/plugin/dev-server changes inside baseline establishment.
 - Run a read-only dependency and lockfile preflight before the full install: check `package.json`-versus-lockfile (`package-lock.json`/`yarn.lock`/`pnpm-lock.yaml`) drift, reachability of non-registry (git/url/file/workspace) sources, and native or lifecycle-sensitive packages (native addons, packages with `postinstall`/lifecycle scripts). Record a non-reproducible source graph as a baseline limitation; never paper over it with `--force`, `--legacy-peer-deps`, `--ignore-engines`, or an uncommitted lockfile rewrite. Keep independent checks (type-check, lint, build) available even when one install layer is blocked.
 - If baseline measurement needs an isolated source checkout or worktree on Windows (not a clone for building the target — see Decision policy), place it under a short, tool-owned path (for example a temp root) to avoid path-length failures, and remove it during cleanup.
 - Classify each failure as a plan/harness defect, an environment blocker, or a genuine project failure, and keep those statuses distinct. Fixing the validation harness must not be recorded as a project failure or consume the project-diagnosis budget, and a malformed command or missing executable is a plan defect — not a failing suite.
@@ -136,7 +135,7 @@ For each family:
 
 1. Migrate every unit and behavior in the family.
 2. Reuse framework-independent code and target-framework integrations where appropriate.
-3. Re-run the relevant `typescript-runtime-validation` assertions whose prerequisites are now satisfied.
+3. Re-run the relevant validation checks whose prerequisites are now satisfied.
 4. Reopen or add migration-plan items for every regression and fix them before continuing.
 5. Update the plan with completed, partial, blocked, and missing items.
 6. Do not move to the next family while its validation has unexplained failures.
@@ -154,7 +153,7 @@ Treat every discovered difference as a pending migration-plan item and attempt t
 
 Drive Phase 4 from the runtime-validation results and `migration-plan.md`:
 
-1. Re-run `typescript-runtime-validation` against the target and list every regression.
+1. Re-run the runtime validation against the target and list every regression.
 2. For each regression, reopen or create a migration-plan item, fix the project or the eval-plan assertion, and rerun.
 3. Repeat until every check that passed on the source baseline passes on the target, or an intentional difference is explicitly approved by the user.
 
@@ -192,7 +191,7 @@ Remove the source framework only after:
 
 ## Phase 7 — Final validation and handoff
 
-1. Run the target's full runtime validation through `typescript-runtime-validation` one final time and confirm it produces a **fresh passing result recorded after the last migration edit** whose persisted plan hash matches the final eval plan. A by-hand rerun of the same commands is not a substitute for the tool's persisted result; if the tool times out or cannot produce a current result, the migration is incomplete.
+1. Run the target's full runtime validation one final time and confirm it produces a **fresh passing result recorded after the last migration edit**. A stale or partial result is not a substitute; if validation times out or cannot produce a current result, the migration is incomplete.
 2. From a clean terminal, verify the exact install, build, test, and (for an application) run/preview commands.
 3. Derive `completion-report.md` from explicit gates against the persisted result, not narrative judgment: runtime contract reconciled, source-baseline state classified, target runtime validation passed (plan hash matches, every mandatory assertion green, expected test/skip counts), integration and repository-level consumers run or explicitly blocked (not merely updated), every retained command validated on the minimum runtime, contract changes approved, source runner removed. If any mandatory gate is false, title the report **Migration incomplete** and list the blockers. A stale or plan-mismatched persisted result cannot substantiate completion.
 

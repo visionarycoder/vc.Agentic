@@ -25,7 +25,6 @@ Pair this skill with:
 - [../vbd-rules/SKILL.md](../../../../vbd-rules/SKILL.md) for boundary and volatility rules.
 - [../vbd-manager-vault/SKILL.md](../../../../vbd-manager-components/SKILL.md), [../vbd-engine-vault/SKILL.md](../../../../vbd-engine-components/SKILL.md), or [../vbd-access-vault/SKILL.md](../../../../vbd-access-components/SKILL.md) for vault-specific shape.
 - [../token-efficient-implementation/SKILL.md](../../../../token-efficient-implementation/SKILL.md) when the task is a focused implementation slice.
-- [../roslyn-analyzer-rule-composition/SKILL.md](../../../../roslyn-analyzer-rule-composition/SKILL.md) and [../roslyn-codefix-rule-composition/SKILL.md](../../../../roslyn-codefix-rule-composition/SKILL.md) when adding guardrails.
 
 ## Workflow
 

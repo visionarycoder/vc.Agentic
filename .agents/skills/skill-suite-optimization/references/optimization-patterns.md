@@ -134,7 +134,6 @@ The following skills were actively used during the 2026-08-22 optimization cycle
 | `testing-intake-router` | Classify testing-related skills |
 | `security-intake-router` | Classify security/CWE skills |
 | `vbd-intake-router` | Classify VBD architecture skills |
-| `azure-intake-router` | Classify Azure-specific skills |
 
 These routers enable deterministic skill discovery and prevent routing conflicts.
 

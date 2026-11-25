@@ -25,7 +25,6 @@ Use this when the user is unsure what deserves unit coverage, how to test a char
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../typescript-data-visualization-engineering/SKILL.md`
 
 ## Source Links
 

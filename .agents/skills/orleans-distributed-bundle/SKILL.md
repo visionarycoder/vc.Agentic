@@ -1,6 +1,6 @@
 ---
 name: "orleans-distributed-bundle"
-description: "Routes Orleans distributed-system work across virtual actors, collaboration patterns, Aspire components, and Aspire orchestration."
+description: "Routes Orleans distributed-system work across virtual actors, collaboration patterns, and distributed architecture boundaries."
 metadata:
   metadata-version: "1.0.0"
   title: "Orleans Distributed Bundle"
@@ -13,22 +13,19 @@ metadata:
 
 # Orleans Distributed Bundle
 
-Agent uses this bundle for Orleans requests that span grain modeling, collaboration patterns, and Aspire-hosted local orchestration.
+Agent uses this bundle for Orleans requests that span grain modeling, collaboration patterns, and distributed architecture boundaries.
 
 ## Activation
 
 | Request Signal | Use Bundle | Route Detail |
 |---|---|---|
-| Need Aspire resource integrations inside Orleans services | Yes | Agent routes to `aspire-components` |
-| Need AppHost topology, service discovery, or dashboard wiring | Yes | Agent routes to `aspire-orchestration` |
+| Need AppHost topology or distributed boundary alignment for Orleans services | Yes | Agent routes to `dotnet-aspire-vbd-development` |
 | Need one narrow Orleans concern with no routing choice | No | Agent uses the direct specialist skill |
 
 ## Coverage Matrix
 
 | Need | Primary Skill | Primary Outcome |
 |---|---|---|
-| Dependency components | `aspire-components` | Typed resource clients and health wiring |
-| AppHost topology | `aspire-orchestration` | Local distributed run path |
 | Architecture alignment | `dotnet-aspire-vbd-development` | Boundary-aware distributed design |
 
 ## Decision Order
@@ -37,8 +34,7 @@ Agent uses this bundle for Orleans requests that span grain modeling, collaborat
 |---|---|
 | Grain identity and state come first | Agent chooses the virtual-actor model before collaboration details. |
 | Collaboration pattern comes second | Agent selects direct calls, streams, observers, timers, or reminders next. |
-| Resource integration comes third | Agent adds Aspire components after grain contracts are stable. |
-| Local orchestration comes fourth | Agent wires AppHost, discovery, and dashboard last. |
+| Local orchestration comes third | Agent wires AppHost, discovery, and dashboard after grain contracts are stable. |
 | Cross-boundary architecture review stays active | Agent keeps service and grain boundaries explicit throughout routing. |
 
 ## Workflow

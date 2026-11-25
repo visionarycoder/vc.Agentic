@@ -22,7 +22,6 @@ Use this when a JavaScript or TypeScript workflow needs quick, readable charts w
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../typescript-data-visualization-engineering/SKILL.md`
 
 ## Source Links
 

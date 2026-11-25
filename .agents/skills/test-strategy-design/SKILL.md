@@ -35,7 +35,7 @@ Place a test at the lowest tier that can fail for the right reason. Use a higher
 3. Allocate each ID to one primary tier and record the reason. Add a second tier only for risk, such as a security or financial-control requirement.
 4. Write the test specification per feature using the table below.
 5. Identify infrastructure needs: databases, emulators, fakes, data sets, secrets, and environments. Send them to the `test-infrastructure-harness` work.
-6. Publish the plan and suites through the `azure-ado-test-plans` skill by way of `scribe`.
+6. Publish the plan and suites by way of `scribe`.
 7. Before Gate 4, build the traceability report.
 
 ## Specification Row

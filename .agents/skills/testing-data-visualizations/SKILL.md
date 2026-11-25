@@ -142,7 +142,6 @@ Default assumption: use the smallest test mix that catches wrong numbers, broken
   - `../scrollytelling-and-parallax-data-visualization/SKILL.md`
   - `../uml-and-software-architecture-visualization/SKILL.md`
   - `../react-and-nextjs-data-visualization/SKILL.md`
-  - `../typescript-data-visualization-engineering/SKILL.md`
   - `../../references/foundations/fictional-data-story-simulation.md`
   - `../dashboards-and-real-time-visualization/SKILL.md`
   

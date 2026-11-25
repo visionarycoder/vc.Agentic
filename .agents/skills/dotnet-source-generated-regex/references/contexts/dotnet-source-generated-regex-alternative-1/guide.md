@@ -106,4 +106,3 @@ public static Match? ParseDecimalPicture(string input)
 ## Related Skills
 
 - `dotnet-compiled-regex-patterns` — Traditional `RegexOptions.Compiled` approach
-- `roslyn-source-generator-authoring` — Writing custom source generators

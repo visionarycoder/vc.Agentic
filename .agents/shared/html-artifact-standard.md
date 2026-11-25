@@ -72,6 +72,5 @@ Before handing off, confirm:
 2. Numbers, dates, and labels match the underlying analysis or workbook.
 3. Citations are visible for load-bearing claims.
 4. Mobile width, keyboard navigation, and print output were checked.
-5. For circulation or client use, route through `trading-deck-report-qc` first.
 
 Provide the file path and a short summary of the first-read takeaway and any open limitations.

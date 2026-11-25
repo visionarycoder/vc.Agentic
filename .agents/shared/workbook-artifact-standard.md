@@ -63,4 +63,3 @@ If a workbook carries credit-instrument data, mark `route_to_credit_markets` on 
 2. Totals, tie-outs, and balance checks pass or are flagged on the cover.
 3. The cover matches the underlying tabs.
 4. Source IDs resolve and no unsourced load-bearing input remains.
-5. For circulation, run `trading-model-audit-tieout` or `trading-deck-report-qc` as the workflow requires.

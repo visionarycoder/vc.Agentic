@@ -27,7 +27,6 @@ Agent uses this bundle for culture-sensitive string and formatting operations. W
 
 | User prompt | Route |
 |---|---|
-| Request is broader than this skill and suite routing is still unclear | Use `roslyn-intake-router` first |
 | Request belongs to a narrower specialist than this skill | Use that narrower specialist |
 | Request is outside this skill's suite or concern | Use the correct suite router or execution skill |
 

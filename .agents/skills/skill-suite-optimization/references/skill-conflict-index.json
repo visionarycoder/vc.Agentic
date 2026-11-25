@@ -47,10 +47,7 @@
         "code-testing-agent",
         "code-testing-extensions",
         "test-tagging",
-        "crap-score",
-        "find-untested-sources",
-        "mstest-fixes-bundle",
-        "mtp-hot-reload"
+        "crap-score"
       ],
       "mixed_entry_bundles": [],
       "forbidden_overlaps": [
@@ -93,19 +90,6 @@
       ]
     },
     {
-      "suite": "azure",
-      "router": "azure-intake-router",
-      "primary_execution": [
-        "azure-storage"
-      ],
-      "mixed_entry_bundles": [],
-      "forbidden_overlaps": [
-        "Broad intake does not belong to execution skills.",
-        "Generic dotnet ownership does not override narrower suite ownership.",
-        "Mixed-entry bundles exist only when they reduce intake ambiguity."
-      ]
-    },
-    {
       "suite": "frontend",
       "router": "frontend-intake-router",
       "primary_execution": [
@@ -114,20 +98,6 @@
         "angular-vue-migration-orchestrator",
         "webapp-consolidation-strategy",
         "webapp-cutover-strategy"
-      ],
-      "mixed_entry_bundles": [],
-      "forbidden_overlaps": [
-        "Broad intake does not belong to execution skills.",
-        "Generic dotnet ownership does not override narrower suite ownership.",
-        "Mixed-entry bundles exist only when they reduce intake ambiguity."
-      ]
-    },
-    {
-      "suite": "roslyn",
-      "router": "roslyn-intake-router",
-      "primary_execution": [
-        "roslyn-codefix-authoring",
-        "roslyn-source-generator-authoring"
       ],
       "mixed_entry_bundles": [],
       "forbidden_overlaps": [
@@ -156,16 +126,11 @@
       "suite": "webapi",
       "router": null,
       "primary_execution": [
-        "webapi-input-validation",
-        "webapi-error-contract-hardening",
-        "webapi-compatibility-migration",
         "rfc-8259-compliance",
         "rfc-fixes-bundle",
         "aspnet-rest-openapi-controller"
       ],
-      "mixed_entry_bundles": [
-        "webapi-fixes-bundle"
-      ],
+      "mixed_entry_bundles": [],
       "forbidden_overlaps": [
         "Broad intake does not belong to execution skills.",
         "Generic dotnet ownership does not override narrower suite ownership.",
@@ -190,7 +155,6 @@
         "vbd-change-simulation",
         "vbd-contract-first-construction",
         "vbd-cutover-migration",
-        "roslyn-vbd-drift-analyzer-design",
         "vbd-evidence-quality",
         "vbd-modernization-portfolio",
         "vbd-operational-contracts",
@@ -211,14 +175,12 @@
       "suite": "dotnet",
       "router": "dotnet-intake-router",
       "primary_execution": [
-        "azure-application-insights-dotnet",
         "csharp-scripts",
         "dotnet-aot-compat",
         "dotnet-aspire-vbd-development",
         "dotnet-code-quality-standards",
         "dotnet-trace-collect",
         "env-provider-skill",
-        "migrate-dotnet9-to-dotnet10",
         "migrate-nullable-references",
         "subagent-orchestration",
         "dotnet-channels-patterns"

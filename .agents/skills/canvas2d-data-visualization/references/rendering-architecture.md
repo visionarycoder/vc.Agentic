@@ -138,7 +138,6 @@ Use `CanvasRenderingContext2D.drawFocusIfNeeded()` only when a Canvas-drawn affo
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../typescript-data-visualization-engineering/SKILL.md`
 
 ## Source Links
 

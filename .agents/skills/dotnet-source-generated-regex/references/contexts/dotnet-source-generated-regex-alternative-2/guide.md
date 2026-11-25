@@ -316,5 +316,4 @@ See companion reference: `.github/skills/dotnet-source-generated-regex/reference
 ## Related Skills
 
 - `.github/skills/dotnet-compiled-regex-patterns/` — Traditional `RegexOptions.Compiled` approach
-- `.github/skills/roslyn-source-generator-authoring/` — Writing custom source generators
 - `https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-source-generators` — Official MS documentation

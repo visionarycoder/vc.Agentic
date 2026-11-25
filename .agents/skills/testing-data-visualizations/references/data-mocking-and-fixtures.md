@@ -26,7 +26,6 @@ Use this when the user is deciding whether to mock fetches, loaders, hooks, or c
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../typescript-data-visualization-engineering/SKILL.md`
 - `../../dashboards-and-real-time-visualization/SKILL.md`
 
 ## Source Links

@@ -288,5 +288,4 @@ public static partial Regex DateRegex();
 
 - `.github/skills/dotnet-source-generated-regex/` — Main source-generated regex skill
 - `.github/skills/dotnet-compiled-regex-patterns/` — Runtime-compiled regex skill
-- `.github/skills/roslyn-source-generator-authoring/` — Custom source generators
 - https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-source-generators — Official MS documentation

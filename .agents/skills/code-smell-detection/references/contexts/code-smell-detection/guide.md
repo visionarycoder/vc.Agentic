@@ -25,7 +25,6 @@ Agent detects code smells—characteristics in source code that hint at deeper d
 
 | Condition | Alternative |
 |---|---|
-| Performance anti-patterns | Use `azure-performance-antipatterns` |
 | Architecture-level design issues | Use `design-smell-detection` |
 
 ## Code Smell Catalog

@@ -18,14 +18,11 @@ FIELDS = ['name', 'description', 'collection', 'path', 'updated', 'files', 'sha2
 META = ['metadata-version', 'title', 'document-type', 'repository', 'language', 'updated', 'collection']
 COLLECTIONS = {
     'core': 'Recommended development core',
-    'dotnet': '.NET, C#, MSBuild, MSTest, and Roslyn',
-    'azure': 'Azure platform and service workflows',
+    'dotnet': '.NET, C#, MSBuild, and WPF',
     'vbd': 'Volatility-based decomposition architecture',
     'security': 'Security engineering and weakness remediation',
-    'data': 'Data analysis and Microsoft Fabric',
-    'biology': 'Biology and life-sciences research',
+    'data': 'Data analysis and visualization',
     'accounting': 'Accounting systems and controls',
-    'trading': 'Financial trading and investment research',
     'optional': 'Additional workflows, integrations, and specialist utilities',
 }
 CORE = {
@@ -101,12 +98,11 @@ def title(name: str) -> str:
 def classify(name: str) -> str:
     if name in CORE:
         return 'core'
-    for prefix, group in [('accounting-', 'accounting'), ('bio-', 'biology'),
-                          ('trading-', 'trading'), ('azure-', 'azure'), ('vbd-', 'vbd'),
-                          ('cwe-', 'security'), ('fabric-', 'data')]:
+    for prefix, group in [('accounting-', 'accounting'), ('vbd-', 'vbd'),
+                          ('cwe-', 'security')]:
         if name.startswith(prefix):
             return group
-    if name.startswith(('dotnet-', 'msbuild-', 'mstest-', 'roslyn-', 'wpf-', 'maui-',
+    if name.startswith(('dotnet-', 'msbuild-', 'wpf-', 'maui-',
                         'aspnet', 'efcore-', 'blazor-', 'winui', 'windows-ai-')):
         return 'dotnet'
     if name in {'build-report', 'build-dashboard',

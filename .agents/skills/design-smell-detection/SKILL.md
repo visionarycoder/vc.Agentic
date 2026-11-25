@@ -29,7 +29,6 @@ Agent detects design smells—structural quality issues at module, namespace, an
 | Condition | Alternative |
 |---|---|
 | Method or class-level issues | Use `code-smell-detection` |
-| Performance issues | Use `azure-performance-antipatterns` |
 
 ## Design Smell Catalog
 

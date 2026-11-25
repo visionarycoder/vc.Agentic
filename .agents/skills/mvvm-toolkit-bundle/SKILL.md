@@ -46,7 +46,6 @@ Agent uses this bundle for MVVM requests that require routing across manual MVVM
 |---|---|---|
 | Activation, navigation, disposal, or message cleanup | Yes | `viewmodel-lifecycle` |
 | Region composition, event aggregation, or Prism navigation | Yes | `prism-framework-patterns` |
-| Source-generated observable properties, relay commands, or custom Roslyn generation | Yes | `roslyn-mvvm-source-generators` |
 
 ## Decision Matrix: Manual MVVM vs CommunityToolkit vs Prism
 
@@ -57,15 +56,6 @@ Agent uses this bundle for MVVM requests that require routing across manual MVVM
 | Region composition and modular shell | Weak fit | Partial fit | Best fit |
 | Existing team familiarity with raw `INotifyPropertyChanged` | Best fit | Good fit | Good fit |
 | Large desktop shell with dialogs and navigation infrastructure | Partial fit | Partial fit | Best fit |
-
-## Decision Matrix: When to Use Source Generators
-
-| Condition | Use Generators | Route |
-|---|---|---|
-| Repeated property notification and command plumbing | Yes | `roslyn-mvvm-source-generators` |
-| Team needs standard MVVM patterns with low custom infrastructure | Yes | `roslyn-mvvm-source-generators` |
-| Project needs custom generated attributes, wrappers, or diagnostics | Yes | `roslyn-mvvm-source-generators` |
-| Roslyn complexity outweighs boilerplate savings | No | Manual MVVM |
 
 ## Decision Matrix: Platform Selection
 
@@ -84,7 +74,6 @@ Agent uses this bundle for MVVM requests that require routing across manual MVVM
 | Platform selection | Agent selects `wpf-fluent-ui` or `winui3-patterns` first when a matching skill exists. |
 | Framework selection | Agent chooses manual MVVM, CommunityToolkit, or Prism from app size, shell complexity, and boilerplate targets. |
 | Implementation approach | Agent adds binding, commands, lifecycle, validation, and testing skills after framework selection. |
-| Generator choice | Agent applies `roslyn-mvvm-source-generators` only when generated plumbing is justified; otherwise manual MVVM. |
 | Final verification | Agent verifies platform behavior and view-model tests before closing the task. |
 
 ## Workflow
@@ -112,7 +101,6 @@ Agent uses this bundle for MVVM requests that require routing across manual MVVM
 | Pitfall | Agent Fix |
 |---|---|
 | Mixing Prism navigation with ad hoc page state ownership | Agent chooses one navigation owner and routes lifecycle through `viewmodel-lifecycle`. |
-| Handwriting repetitive property and command plumbing in generator-friendly projects | Agent routes to `roslyn-mvvm-source-generators`. |
-| Introducing custom generators before standard toolkit patterns | Agent starts with standard toolkit generators and adds custom generation via `roslyn-mvvm-source-generators` only for gaps. |
+| Introducing custom generators before standard toolkit patterns | Agent starts with standard toolkit generators before adding custom generation. |
 | Letting code-behind own validation or command logic | Agent moves behavior into the view model and bindings. |
 | Choosing a platform before checking deployment and device scope | Agent resolves platform fit before framework details. |

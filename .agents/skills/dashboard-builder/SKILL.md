@@ -8,12 +8,10 @@ metadata:
   repository: "vc.Agentic"
   language: "Standard Technical English"
   updated: "2026-11-23"
-  collection: "trading"
+  collection: "data"
 ---
 
 # Dashboard Builder
-
-> Support skill for the `trading-*` workflows. See `../trading-public-equity-investing/internal-support/policy.md` for the support-lane rules.
 
 ## Deliverable Intake
 
@@ -26,7 +24,7 @@ Build standardized, responsive, source-visible Public Equity Investing dashboard
 - This skill owns the dashboard shell, module contract, responsive layout, validation, and HTML rendering.
 - Visible producer skills may create bespoke HTML artifacts directly under `shared/html-artifact-standard.md`; they do not need to map every report into this schema.
 - Credit Markets dashboards, credit-security dashboards, recovery dashboards, covenant dashboards, and distressed debt dashboards belong in the Credit Markets plugin. Use Credit Markets for credit instruments, creditworthiness, restructuring, distressed, recovery, spreads, yields, covenants, and debt security analysis.
-- The primary Public Equity Investing workflow owns the finance logic. For example, `trading-earnings-preview` owns the pre-print bar and KPIs; `trading-earnings-deep-dive` owns beat/miss and EPS quality; `trading-long-short-pitch` owns trade expression and variant perception.
+- The primary Public Equity Investing workflow owns the finance logic, such as the pre-print bar and KPIs, beat/miss and EPS quality, and trade expression and variant perception.
 - Do not duplicate finance reasoning inside the renderer. Convert the primary skill's final analysis into a `public_equity_investing_dashboard.v1` payload. The JSON payload is an internal handoff contract, not the final user-facing artifact.
 - Use generic issuer identity tiles by default. Do not require logos; use sourced or user-provided logos only when available and safe. The ticker badge should use a sourced or reasonable brand color when available, but prefer a darker brand shade so the white ticker text remains readable.
 
@@ -99,7 +97,7 @@ Load the relevant model-output map whenever a dashboard cites workbook cells, mo
 - Prefer subtle numeric citation links for actual metric values. When a sourced value is numeric, the rendered number itself should link to the source ledger/source URL and show the hover/focus preview; avoid placing a separate citation chip beside every metric.
 - When every line in a section depends on the same source set, use a compact section-level source note rather than repeating identical chips after each sentence. Keep point-of-use citations for specific numbers, quotes, dates, and claims that need their own source.
 - The bottom source ledger remains mandatory, but it is not sufficient by itself. The reader should be able to audit a number or claim from the module where they see it.
-- Workbook-backed dashboards may include `model_citations` or `model_citations_path` from DCF, three-statement, comps, or trading-equity-model-update workflows. These records are rendered as source-ledger rows and citation popovers with workbook, sheet, range, value, and formula details. Keep the citation JSON and any Markdown `support_note.md` sidecar as support material; do not expose them as the lead artifact.
+- Workbook-backed dashboards may include `model_citations` or `model_citations_path` from DCF, three-statement, comps, or equity model update workflows. These records are rendered as source-ledger rows and citation popovers with workbook, sheet, range, value, and formula details. Keep the citation JSON and any Markdown `support_note.md` sidecar as support material; do not expose them as the lead artifact.
 - Citation links/chips must support click-through to the source ledger or source URL and hover/focus previews with source title, type/status, date, and excerpt/pinpoint when available. Citation links should inherit normal text color rather than using default bright-blue hyperlink styling.
 - Preserve GAAP/non-GAAP, period, units, scale, estimate `as_of`, and source posture labels from the producer skill.
 - The quarter/period belongs in the hero headline, dek, or metadata. Do not spend a snapshot/highlight tile on the quarter when it is already in the headline.
@@ -108,7 +106,7 @@ Load the relevant model-output map whenever a dashboard cites workbook cells, mo
 - Keep PM dashboards information dense by default: avoid decorative whitespace, keep section spacing compact, and use dense table mode for analyst-facing KPI, guide, beat/miss, transcript, and read-through modules.
 - Keep typography consistent across modules. Use the shared dashboard font scale and fixed responsive breakpoints rather than ad hoc viewport-scaled heading sizes.
 - Include `market_events` when recent news, market structure, macro, regulatory, litigation, product, management, peer, or forward-catalyst context could affect the investment decision. The dashboard renders the event table; the producer skill owns event selection, sourcing, and impact analysis.
-- For trading-earnings-preview and trading-earnings-deep-dive dashboards, include the earnings visualization pack only when complete source-backed data exists:
+- For earnings preview and earnings deep-dive dashboards, include the earnings visualization pack only when complete source-backed data exists:
   - `financial_trend_chart` for the last several reported quarters with revenue, gross profit, net income, and the best source-backed profitability margin line for the issuer and quarter. Default to net margin only when it is a fair recurring-profitability proxy. Use operating margin, adjusted operating margin, EBITDA margin, FCF margin, or another explicitly labeled margin when net income is distorted by below-the-line gains/losses, tax, FX, mark-to-market, equity-investment gains, restructuring, impairments, litigation, asset sales, or other non-recurring items.
   - `eps_actual_vs_estimate_chart` for the past five quarters of estimated EPS versus actual EPS, or fewer only when the visible module states the available window.
   - `equity_price_event_chart` only when the price tape is substantive: source-backed daily data needs at least 10 distinct price points over at least 7 calendar days, hourly data needs at least 24 time-stamped price points over at least 6 hours, and minute/intraday data needs at least 60 time-stamped price points over at least 45 minutes. A sparse reaction tape, quote-card trio, or a few article-reported closes is not enough; use `market_events` plus `missing_evidence` instead.

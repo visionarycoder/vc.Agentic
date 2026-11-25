@@ -5,10 +5,7 @@ Use this when converting user feedback on a pre- or post-earnings dashboard into
 ## Where Feedback Lives
 
 - `dashboard-builder` owns reusable presentation capabilities: single-page vs tabbed layout, sticky table of contents, responsive tables, issuer identity tiles, module rendering, module validation, and source/missing-evidence visibility.
-- `trading-earnings-deep-dive` owns post-print analytical depth: executive summary, beat/miss versus consensus, EPS quality and normalization, guidance deep dive, quarterly key metrics, growth trajectory, transcript Q&A quality, read-throughs, catalysts, contradictions, and filing/transcript/interview evidence.
-- `trading-earnings-preview` owns pre-print analytical depth: expectation bar, consensus/guide/whisper posture, last-quarter KPI baseline, quarterly key metrics, growth trajectory, guide credibility, peer/sector read-throughs, scenarios, and call-prep questions.
 - `sector-context-overlay` should be used by the producer skill to pick nuanced company-specific KPIs, read-through relationships, and sector accounting conventions. It should not render dashboards.
-- `financial-source-of-truth` owns evidence conflicts, source hierarchy, stale data flags, and precise absence labels when sources disagree or a value cannot be verified.
 
 ## Feedback Structure
 

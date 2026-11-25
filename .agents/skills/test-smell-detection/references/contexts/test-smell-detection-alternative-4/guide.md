@@ -25,7 +25,6 @@ Agent runs a formal smell audit and reports citable, location-backed findings.
 | User prompt | Route |
 |---|---|
 | User asks for assertion diversity only | Use `assertion-quality` |
-| User asks where tests are missing | Use `find-untested-sources` |
 | User asks to write tests | Use a test-writing skill |
 
 ## Required Inputs

@@ -25,7 +25,7 @@ Agent uses this bundle for requests that choose, combine, or implement core plat
 | User prompt | Route |
 |---|---|
 | User asks for one narrow implementation detail inside an existing chosen stack | Route to the named specialist skill |
-| User asks for generic Web API hardening or endpoint cleanup | Route to `webapi-hardening-controller` or matching Web API skill |
+| User asks for generic Web API hardening or endpoint cleanup | Route to the matching Web API skill |
 | User asks for non-.NET infrastructure outside this bundle scope | Route to the matching platform skill |
 
 ## Required Inputs

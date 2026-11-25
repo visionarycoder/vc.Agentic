@@ -5,9 +5,7 @@ Vitest. It supplements the generic [framework-migration](../SKILL.md) workflow.
 
 This is a **test-runner migration**: it replaces the runner, its configuration, and — where semantics
 differ — spy behavior, matchers, async style, and browser environment. It must **not** change the
-application's runtime behavior. Upgrading Karma/Jasmine *within* the same runner is a different task,
-covered by [typescript-dependencies-upgrade/karma-jasmine.md](../../typescript-dependencies-upgrade/karma-jasmine.md);
-that guide explicitly defers runner *replacement* to this migration.
+application's runtime behavior. Upgrading Karma/Jasmine *within* the same runner is a different task.
 
 **Core principle:** Preserve observable behavior and every project contract (runtime, install, test
 semantics, types, coverage, build, CI), prove each from a clean supported environment, and disclose
@@ -46,7 +44,7 @@ Record in `inventory.md`:
 - **Runtime contract**, from `engines`, version files, CI images, containers, and deployment config —
   not from the developer machine.
 - **Test baseline**: exact test-file count, test count, skipped count, runner exit status, and where
-  coverage artifacts are written. Capture this via `typescript-runtime-validation` (see below).
+  coverage artifacts are written. Capture this via the runtime validation runs (see below).
 - **Karma/Jasmine config**: `karma.conf.js` (frameworks, browsers, preprocessors, reporters,
   `karma-*` plugins, coverage (provider, reporters, thresholds, exclusions, output dir/filenames),
   `proxies`, `customLaunchers`, `client`), the bootstrap entry
@@ -299,27 +297,25 @@ Do not apply to modern projects by default; each is a compatibility mechanism, n
 
 ## Runtime validation (this pair)
 
-All executable validation is delegated to the
-[`typescript-runtime-validation`](../../typescript-runtime-validation/SKILL.md) skill and its eval
-plan; do not author a parallel harness. Because the test command itself changes (Karma → Vitest), this
-is a **migration**, not an in-place upgrade replay — use two independent `standalone` runs and let this
-skill own the comparison (do not try to mutate one plan between runs; `upgrade` mode aborts on a
-plan-hash change).
+All executable validation uses one persisted, plan-driven validation harness; do not author a parallel
+one. Because the test command itself changes (Karma → Vitest), this is a **migration**, not an in-place
+upgrade replay — use two independent standalone runs and let this skill own the comparison (do not
+mutate one plan between runs).
 
-1. **Source run (before edits):** invoke `typescript-runtime-validation` in `standalone` mode against
+1. **Source run (before edits):** run the validation plan in standalone mode against
    the source project. Its plan should cover the Karma/Jasmine suite plus type-check, lint, coverage,
    and the production build. Record the results and the exact test-file/test/skip counts in
    `inventory.md`. Do not migrate on top of an unexplained red run — first decide plan defect vs.
    genuine pre-existing failure.
 2. **Target run (after migrating):** author a fresh eval plan for the migrated project whose
    `tests-pass` assertion is the Vitest command (`vitest run`, or `ng test` once the builder is
-   switched), and run `standalone` mode again.
+   switched), and run standalone mode again.
 3. **Compare:** the target must match the source run — same passing test count (unless a change is
    intentional and documented), coverage generated, production build green, and any server/integration
    tests green. Fix an invalid assertion as a plan defect; fix a real failure in the migrated
    config/spec. Never weaken a check to force a pass.
 
-You must validate with the persisted `typescript-runtime-validation` result; a hand-run of the same
+You must validate with the persisted validation result; a hand-run of the same
 commands does **not** satisfy the gate. If the tool times out or cannot produce a fresh result whose
 plan hash matches the final plan, the migration is incomplete — fix the plan/tool, do not backfill
 validation by hand. Keep the plan efficient so it can finish within the tool's budget: don't repeat the

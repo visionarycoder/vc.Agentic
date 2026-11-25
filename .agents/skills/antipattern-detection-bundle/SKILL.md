@@ -29,7 +29,6 @@ Agent uses this skill to identify, challenge, and remediate anti-patterns before
 
 | Condition | Alternative |
 |---|---|
-| Specific Azure anti-pattern already identified | Use `azure-performance-antipatterns` directly |
 | Code smell analysis only | Use `code-smell-detection` directly |
 | Design debate without anti-pattern context | Use `architectural-decision-debate` directly |
 
@@ -49,12 +48,11 @@ Agent applies layered anti-pattern detection by delegating to specialized skills
 
 | Layer | Skill | Token Cost | Coverage |
 |---|---|---|---|
-| Performance & Scalability | `azure-performance-antipatterns` | ~1200 | 10 Azure anti-patterns with references |
 | Code Quality | `code-smell-detection` | ~1100 | 10 code smells with references |
 | Structural Design | `design-smell-detection` | ~900 | 7 design smells |
 | Architectural Decisions | `architectural-decision-debate` | ~3200 | 3-position debate framework |
 
-**Total bundle token cost:** ~6400 tokens (excluding reference files)
+**Total bundle token cost:** ~5200 tokens (excluding reference files)
 
 ### When to Use Sub-Skills Directly
 
@@ -63,11 +61,6 @@ Agent applies layered anti-pattern detection by delegating to specialized skills
 - **Decision debate needed:** Use `architectural-decision-debate`
 
 ## Quick Reference
-
-**Azure Performance Anti-Patterns:**
-- Busy Database, Busy Front End, Chatty I/O, Extraneous Fetching
-- Improper Instantiation, Monolithic Persistence, No Caching
-- Noisy Neighbor, Retry Storm, Synchronous I/O
 
 **Code Smells:**
 - Duplicated Code, Long Method, Large Class, Too Many Parameters
@@ -84,7 +77,6 @@ Agent applies layered anti-pattern detection by delegating to specialized skills
 
 1. Agent identifies scope (new code, existing code, design proposal).
 2. Agent routes to appropriate detection skill(s):
-   - Performance concerns → `azure-performance-antipatterns`
    - Code quality concerns → `code-smell-detection`
    - Structural concerns → `design-smell-detection`
    - Decision debate → `architectural-decision-debate`
@@ -155,7 +147,6 @@ When anti-pattern detected:
 
 | Anti-Pattern Type | Primary Skill | Secondary Skills |
 |---|---|---|
-| Azure performance anti-patterns | `azure-performance-antipatterns` | None |
 | Code smells | `code-smell-detection` | `refactor`, `dotnet-code-quality-standards` |
 | Design smells | `design-smell-detection` | None |
 | Architectural decisions | `architectural-decision-debate` | `technology-selection`, `api-gateway-patterns` |

@@ -113,7 +113,6 @@ For architecture consoles, schema explorers, state-machine inspectors, dependenc
 ## Adjacent Skills
 
 - Use `../visualization-strategy-and-critique/SKILL.md` when deciding whether a UML-like diagram is the right visual form.
-- Use `../typescript-data-visualization-engineering/SKILL.md` for typed graph models, renderer contracts, and browser architecture.
 - Use `../react-and-nextjs-data-visualization/SKILL.md` for React or Next.js integration.
 - Use `../d3-data-visualization/SKILL.md` for bespoke SVG geometry, annotation, and polish.
 - Use `../testing-data-visualizations/SKILL.md` for visual regression, interaction, and export test strategy.

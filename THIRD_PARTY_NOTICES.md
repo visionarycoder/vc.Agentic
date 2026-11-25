@@ -14,11 +14,4 @@ The root [MIT license](LICENSE) covers original repository material. It does not
 
 ## Bundled license files
 
-| Package | Recorded license | Notice |
-| --- | --- | --- |
-| Azure Application Insights instrumentation | MIT; Microsoft Corporation notice | [LICENSE.txt](.agents/skills/azure-appinsights-instrumentation/LICENSE.txt) |
-| PostHog | MIT; PostHog, Inc. notice | [LICENSE.txt](.agents/skills/posthog/LICENSE.txt) |
-| Sentry | Apache-2.0 | [LICENSE.txt](.agents/skills/sentry/LICENSE.txt) |
-| Wrangler | Apache-2.0 | [LICENSE.txt](.agents/skills/wrangler/LICENSE.txt) |
-
-This table records bundled evidence. An absent local license is not evidence that imported content is original, unlicensed, or covered by the root MIT license. Do not remove existing notices or assign MIT to imported material without a basis for that statement. Referenced external publications retain their own rights and are not relicensed by this repository.
+No third-party licensed skills are currently bundled. When imported content with its own license is added, record its notice here. An absent local license is not evidence that imported content is original, unlicensed, or covered by the root MIT license. Do not remove existing notices or assign MIT to imported material without a basis for that statement. Referenced external publications retain their own rights and are not relicensed by this repository.

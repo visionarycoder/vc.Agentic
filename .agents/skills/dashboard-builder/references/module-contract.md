@@ -245,7 +245,7 @@ Data keys:
 
 ### `financial_trend_chart`
 
-Use for trading-earnings-preview and trading-earnings-deep-dive dashboards when source-backed quarterly financial history is available. It renders grouped bars for revenue, gross profit, and net income by quarter, with a selected profitability-margin line overlay. Omit the module when any required metric is missing, stale, non-comparable, not parseable, or on an inconsistent basis. Strict QA requires at least two chart-ready rows after renderer field requirements are applied.
+Use for earnings dashboards when source-backed quarterly financial history is available. It renders grouped bars for revenue, gross profit, and net income by quarter, with a selected profitability-margin line overlay. Omit the module when any required metric is missing, stale, non-comparable, not parseable, or on an inconsistent basis. Strict QA requires at least two chart-ready rows after renderer field requirements are applied.
 
 Data keys:
 

@@ -28,7 +28,6 @@ Convert runtime regex patterns to compile-time generated patterns for lower star
 | Condition | Route |
 |---|---|
 | Project targets earlier than .NET 7 | Use `.github/skills/dotnet-compiled-regex-patterns/` |
-| Request is about authoring custom source generators | Use `.github/skills/roslyn-source-generator-authoring/` |
 | Pattern is one-off and performance is irrelevant | Keep existing code unless standards require change |
 
 ## Decision Table
@@ -129,7 +128,6 @@ Agent stores extended examples and migration walkthroughs in `.github/skills/dot
 ## Related Skills
 
 - `.github/skills/dotnet-compiled-regex-patterns/`
-- `.github/skills/roslyn-source-generator-authoring/`
 
 ## Additional source coverage
 

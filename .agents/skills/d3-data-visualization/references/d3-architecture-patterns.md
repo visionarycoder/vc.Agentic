@@ -22,7 +22,6 @@ Use this when integrating D3 with React, Svelte, or any other framework-owned UI
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../typescript-data-visualization-engineering/SKILL.md`
 
 ## Source Links
 
