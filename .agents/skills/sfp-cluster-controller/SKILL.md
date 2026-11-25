@@ -39,7 +39,7 @@ Agent uses this controller to route a CWE-888 Software Fault Pattern (SFP) Prima
 | 1 | Risky Values (885) | Glitch in Computation (998) | `cwe-logic-correctness-fixes` |
 | 2 | Unused entities (886) | — | `cwe-logic-correctness-fixes` |
 | 3 | API (887) | Use of an Improper API (1001) | `cwe-api-contract-fixes` |
-| 4 | Entry Points (897) | — | No dedicated skill. Route case-by-case to `dotnet-code-quality-standards` or `refactor`. Cluster is mostly Java/J2EE-specific entry-point patterns with limited direct applicability to managed C#. |
+| 4 | Entry Points (897) | — | No dedicated skill. Route case-by-case to `refactor`. Cluster is mostly Java/J2EE-specific entry-point patterns with limited direct applicability to managed C#. |
 | 5 | Exception Management (889) | Ambiguous Exception Type (960), Incorrect Exception Behavior (961), Unchecked Status Condition (962) | No dedicated skill. |
 | 6 | Memory Access (890) | Faulty Buffer Access (970), Faulty Pointer Use (971), Faulty String Expansion (972), Improper NULL Termination (973), Incorrect Buffer Length Computation (974) | `cwe-memory-safety-fixes` |
 | 7 | Memory Management (891) | Faulty Memory Release (969) | `cwe-memory-safety-fixes` |
@@ -58,7 +58,7 @@ Agent uses this controller to route a CWE-888 Software Fault Pattern (SFP) Prima
 | 20 | Malware (904) | includes Covert Channel (968) | `cwe-malware-indicators-fixes` |
 | 21 | Predictability (905) | — | No dedicated skill. |
 | 22 | UI (906) | Feature (995), Security (996), Information Loss (997) | No dedicated skill. |
-| 23 | Other (907) | — | No dedicated skill. Broad code-quality catch-all. Route case-by-case to `dotnet-code-quality-standards` or `refactor`. |
+| 23 | Other (907) | — | No dedicated skill. Broad code-quality catch-all. Route case-by-case to `refactor`. |
 
 ## CWE-to-Cluster Lookup
 

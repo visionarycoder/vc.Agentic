@@ -42,7 +42,6 @@ Agent uses this bundle for requests that choose, combine, or implement core plat
 | Signal | Use Bundle | Route Detail |
 |---|---|---|
 | API contract choice is open | Yes | Classify `api-gateway-patterns` |
-| .NET UI stack choice is open | Yes | Classify `blazor-patterns` |
 | Request spans two or more listed technologies | Yes | Coordinate order and integration edges |
 | Technology set is fixed and only bug fixing is needed | No | Use the active specialist skill directly |
 
@@ -51,14 +50,13 @@ Agent uses this bundle for requests that choose, combine, or implement core plat
 | Specialist Skill | Primary Scope | Entry Trigger | Key Output |
 |---|---|---|---|
 | `api-gateway-patterns` | YARP, Ocelot, API Management | Edge routing, aggregation, auth, policy, throttling | Gateway topology and route policy |
-| `blazor-patterns` | Blazor Server, WASM, Web App | .NET-first UI delivery and component reuse | Hosting mode and component pattern |
 
 ## Decision Order
 
 | Order | Decision | Agent Checks First | Primary Route |
 |---|---|---|---|
 | 1 | Client contract model | Query flexibility, endpoint count, client ownership | REST baseline |
-| 3 | UI stack | .NET reuse, interactivity, SPA investment | `blazor-patterns` or existing Angular/Vue path |
+| 3 | UI stack | .NET reuse, interactivity, SPA investment | Existing Angular/Vue path or .NET-first UI |
 | 6 | Edge topology | Cross-service ingress, policy centralization | `api-gateway-patterns` |
 
 ## Technology Selection Matrix

@@ -24,8 +24,8 @@ Agent consolidates multiple web applications into one modular web app by definin
 
 | Condition | Use |
 |---|---|
-| Agent migrates one application without consolidating multiple application boundaries. | Agent uses `angular-vue-migration-orchestrator`. |
-| Agent extracts only shared UI components. | Agent uses `vue3-component-library-design`. |
+| Agent migrates one application without consolidating multiple application boundaries. | Agent handles it as a single-application migration. |
+| Agent extracts only shared UI components. | Agent handles it as a component library extraction. |
 
 ## Required Inputs
 

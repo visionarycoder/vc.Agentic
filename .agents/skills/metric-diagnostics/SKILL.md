@@ -68,7 +68,7 @@ Treat current context, named semantic layers, and familiar table names as source
 
 Use $analyze-data-quality when freshness, grain, joins, missingness, schema drift, outliers, unexpected categories, or distribution shifts could affect trust.
 
-Use $jupyter-notebooks when fresh SQL, Python, statistical modeling, reusable calculations, or multi-step decomposition need an inspectable analytical record.
+Use $reproducible-notebooks when fresh SQL, Python, statistical modeling, reusable calculations, or multi-step decomposition need an inspectable analytical record.
 
 ### 3. Establish The Metric Pattern
 

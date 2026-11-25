@@ -114,7 +114,6 @@ For architecture consoles, schema explorers, state-machine inspectors, dependenc
 
 - Use `../visualization-strategy-and-critique/SKILL.md` when deciding whether a UML-like diagram is the right visual form.
 - Use `../react-and-nextjs-data-visualization/SKILL.md` for React or Next.js integration.
-- Use `../d3-data-visualization/SKILL.md` for bespoke SVG geometry, annotation, and polish.
 - Use `../testing-data-visualizations/SKILL.md` for visual regression, interaction, and export test strategy.
 - Use `../reports-pdfs-and-slide-automation/SKILL.md` for PDFs, decks, and document embedding.
 - Use `../../references/foundations/mobile-first-responsive-visualization.md` for mobile diagram layout, touch, keyboard, and responsive QA.

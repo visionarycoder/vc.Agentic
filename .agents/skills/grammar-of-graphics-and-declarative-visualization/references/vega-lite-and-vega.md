@@ -22,7 +22,6 @@ Use this when you need layered, transformed, faceted, or embedded specs that sho
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../d3-data-visualization/SKILL.md`
 
 ## Source Links
 

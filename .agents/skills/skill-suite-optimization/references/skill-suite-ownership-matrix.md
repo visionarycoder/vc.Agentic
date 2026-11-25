@@ -25,10 +25,8 @@ This matrix defines the routed-suite model for repository skills.
 | Documentation | `documentation-intake-router` | `documentation-fixes`, `documentation-fixes-bundle` | `documentation-link-repair`, `documentation-file-placement`, `documentation-governance` |
 | Testing | `testing-intake-router` | — | `assertion-quality`, `test-smell-detection` |
 | Security | `security-intake-router` | `cwe-fixes` | `cwe-input-validation-fixes`, `cwe-authentication-authz-fixes`, `cwe-injection-attack-fixes`, `cwe-resource-management-fixes`, `cwe-miscellaneous-security-fixes` |
-| MSBuild | `msbuild-intake-router` | — | `check-bin-obj-clash` |
-| Frontend | `frontend-intake-router` | `webapp-consolidation-strategy` | `angular-anti-patterns`, `angular-to-vue3-migration` |
+| Frontend | `frontend-intake-router` | `webapp-consolidation-strategy` | — |
 | Data/Fabric | `data-intake-router` | — | `data-contract-frontmatter`, `data-lineage`, `data-quality-reporting` |
-| Generic .NET | `dotnet-intake-router` | — | `dotnet-channels-patterns` |
 
 ## Ownership Notes
 

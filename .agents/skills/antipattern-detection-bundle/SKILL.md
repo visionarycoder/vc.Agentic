@@ -147,7 +147,7 @@ When anti-pattern detected:
 
 | Anti-Pattern Type | Primary Skill | Secondary Skills |
 |---|---|---|
-| Code smells | `code-smell-detection` | `refactor`, `dotnet-code-quality-standards` |
+| Code smells | `code-smell-detection` | `refactor` |
 | Design smells | `design-smell-detection` | None |
 | Architectural decisions | `architectural-decision-debate` | `technology-selection`, `api-gateway-patterns` |
 

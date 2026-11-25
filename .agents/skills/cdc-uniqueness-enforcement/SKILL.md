@@ -1,91 +1,60 @@
 ---
 name: "cdc-uniqueness-enforcement"
-description: "Enforce idempotent CDC imports by normalizing and comparing the composite key built from start LSN and sequence value."
+description: "Enforce idempotent change-data-capture imports with a normalized composite key of log position and sequence value, in-memory duplicate detection, and database-level uniqueness."
 metadata:
   metadata-version: "1.0.0"
   title: "CDC Uniqueness Enforcement"
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-24"
   collection: "optional"
 ---
 
 # CDC Uniqueness Enforcement
 
-Agent enforces CDC idempotency with the composite key `(StartLsn, SequenceValue)`. Agent normalizes key values, detects duplicates in memory, and preserves database-level uniqueness.
-
-## When to Use
-
-| Condition | Use |
-|---|---|
-| Agent imports CDC rows into cost-accounting tables | Use this skill |
-| Agent implements duplicate detection for repeated CDC packages or replayed rows | Use this skill |
-| Agent compares `byte[]` CDC keys from SQL entities and CSV hex values | Use this skill |
-| Agent designs unique database constraints for CDC-backed tables | Use this skill |
-
-## When Not to Use
-
-| Condition | Route |
-|---|---|
-| Agent tunes batch size, transaction scope, or progress reporting | Use `cdc-batch-import-patterns` |
-| Agent reviews one-off generic hash-key logic outside CDC import | Use direct code review or repository-specific patterns |
+Enforce CDC idempotency with the composite key `(start position, sequence value)`. Normalize key values, detect duplicates in memory, and keep a database-level unique constraint. Batch size, transactions, and progress belong to `cdc-batch-import-patterns`.
 
 ## Required Inputs
 
-| Input | Required | Notes |
-|---|---|---|
-| Start LSN source | Yes | Agent reads `__$start_lsn` from CSV or `StartLsn` from entity bytes. |
-| Sequence value source | Yes | Agent reads `__$seqval` from CSV or `SequenceValue` from entity bytes. |
-| Duplicate policy | Yes | Agent records skip, reject, or overwrite behavior per call path. |
-| In-memory store scope | Yes | Agent selects `ConcurrentDictionary` or equivalent concurrent key store. |
-| Database model | Yes | Agent verifies the unique key at the table layer. |
-
-## Workflow
-
-| Step | Agent Action | Test | Pass |
-|---|---|---|---|
-| 1 | Agent normalizes CSV hex values and entity byte arrays into one stable representation. Agent uses `CdcCompositeKey.FromHex` and `CdcCompositeKey.FromBytes` patterns. | Convert the same logical key from CSV and from entity bytes. | Both paths produce one identical storage key string. |
-| 2 | Agent validates key completeness before duplicate checks. | Read the normalized `StartLsn` and `SequenceValue` values. | `IsValid` equals `true` for import candidates and invalid-key count is recorded separately. |
-| 3 | Agent constructs the composite uniqueness key from `StartLsn` and `SequenceValue` only. | Review key creation code. | Key includes exactly two parts and key order stays stable. |
-| 4 | Agent preloads existing keys from the target table when the import path supports lookups. | Query existing rows and extract `StartLsn` plus `SequenceValue`. | Existing-key set contains every already imported CDC key in normalized form. |
-| 5 | Agent detects in-batch duplicates with a concurrent key store. | Insert repeated keys through the in-memory detection path. | First `TryAdd` succeeds and repeated `TryAdd` calls fail for the same storage key. |
-| 6 | Agent applies duplicate disposition rules. | Replay the same record across the configured policy modes. | Skip mode increments `RecordsSkipped`, reject mode emits a failure record, and overwrite mode appears only on an explicit replace path. |
-| 7 | Agent preserves database uniqueness with a unique index or equivalent constraint on `(StartLsn, SequenceValue)`. | Inspect the ORM mapping or generated schema. | Database enforces one row per normalized key pair. |
-| 8 | Agent logs duplicate outcomes with table, composite key, source file, and disposition. | Review duplicate log records. | Every duplicate entry includes enough data for replay analysis and idempotency auditing. |
-
-## Pattern Matrix
-
-| Concern | Pattern |
+| Input | Notes |
 |---|---|
-| Key helper | Agent uses the existing `CdcCompositeKey` helper in `Ifx.JournalLoader` instead of ad hoc string concatenation. |
-| Hex normalization | Agent strips the `0x` prefix, uppercases hex, and preserves deterministic ordering as `StartLsn|SequenceValue`. |
-| Byte-array equality | Agent avoids `byte[]` reference equality and converts bytes to normalized hex before comparison. |
-| In-memory duplicate detection | Agent uses `ConcurrentDictionary<string, byte>` or `ConcurrentDictionary<string, object>` with `TryAdd` for thread-safe key admission. |
-| Existing-row lookup | Agent loads existing keys once per import scope and compares normalized storage keys in a `HashSet<string>`. |
-| Skip logic | Agent skips replays of already imported keys and records the skip as an idempotent outcome, not as a data-loss defect. |
-| Reject logic | Agent rejects rows with missing or malformed CDC keys and writes a failed-record entry with the correlation context. |
-| Database uniqueness | Agent aligns the ORM and migration model to a unique index on `StartLsn` and `SequenceValue`. |
-| Logging | Agent logs duplicate count, table name, composite key, and disposition at information level for skips and at error level for malformed keys. |
+| Start position source | CSV column or entity bytes |
+| Sequence value source | CSV column or entity bytes |
+| Duplicate policy | Skip, reject, or overwrite, per call path |
+| In-memory store scope | Concurrent key store |
+| Database model | Unique key at the table layer |
 
-## Verification Matrix
+## Rules
 
-| Check | Test | Pass |
-|---|---|---|
-| Hex normalization parity | Build one key from CSV hex and one key from entity bytes. | Storage key strings match exactly. |
-| In-batch duplicate detection | Feed two rows with the same `(__$start_lsn, __$seqval)` through the same batch. | First row admits once and duplicate row increments the skip or reject counter. |
-| Cross-run idempotency | Replay an already imported file. | New insert count for repeated keys equals `0` and duplicate count matches the replayed key count. |
-| Database constraint | Inspect schema or migration output for the unique key pair. | Unique key covers `StartLsn` and `SequenceValue` together. |
-| Malformed-key handling | Feed rows with null, empty, or invalid key values. | Rows do not reach the insert path and failure output includes the composite-key defect. |
-| Duplicate logging | Review logs or failed-record storage. | Every duplicate event includes table name, key, and disposition. |
-
-## Common Pitfalls
-
-| Pitfall | Agent Fix |
+| Concern | Rule |
 |---|---|
-| Agent compares `byte[]` values by reference | Agent converts bytes to normalized hex before equality checks. |
-| Agent uses only `StartLsn` as the uniqueness key | Agent includes both `StartLsn` and `SequenceValue` in the composite key. |
-| Agent treats duplicate replays as hard errors in the idempotent path | Agent records the event as a skip unless the configured policy is reject. |
-| Agent loads existing rows and batch keys with different normalization rules | Agent routes both paths through `CdcCompositeKey`. |
-| Agent enforces uniqueness only in memory | Agent adds a database unique constraint so parallel imports stay safe. |
-| Agent overwrites an existing row on duplicate detection without explicit policy | Agent keeps overwrite behavior on explicit replace-only paths. |
+| Key helper | Use one shared composite-key helper for every path; no ad hoc concatenation |
+| Normalization | Strip the hex prefix, uppercase, and join as `StartPosition\|SequenceValue` in stable order; CSV hex and entity bytes must yield an identical key string |
+| Byte arrays | Never compare by reference; convert to normalized hex first |
+| Key shape | Exactly two parts, in stable order; the start position alone is not unique |
+| Validity | Validate completeness before duplicate checks; count invalid keys separately and reject them with correlation context |
+| Existing rows | Load existing keys once per import scope into a set of normalized strings |
+| In-batch duplicates | Use a concurrent map; the first add succeeds and repeats fail |
+| Dispositions | Skip increments the skipped counter and is an idempotent outcome, not data loss; reject emits a failure record; overwrite only on an explicit replace path |
+| Database | Unique index or constraint on both key parts, so parallel imports stay safe |
+| Logging | Log table, composite key, source file, and disposition; information level for skips, error level for malformed keys |
+
+## Verification
+
+| Check | Pass |
+|---|---|
+| Same key from CSV hex and entity bytes | Storage key strings match exactly |
+| Two rows with the same key in one batch | First is admitted; second increments skip or reject |
+| Replay an already imported file | New inserts equal `0`; duplicate count equals replayed keys |
+| Inspect schema or migration | Unique key covers both parts together |
+| Null, empty, or invalid key values | Rows never reach insert; failure output names the key defect |
+
+## Pitfalls
+
+| Pitfall | Fix |
+|---|---|
+| Only the start position is the key | Include the sequence value |
+| Existing rows and batch keys normalized differently | Route both through the shared helper |
+| Uniqueness enforced only in memory | Add the database constraint |
+| Overwrite on duplicate without policy | Restrict overwrite to explicit replace paths |

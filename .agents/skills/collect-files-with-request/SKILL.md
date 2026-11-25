@@ -75,6 +75,5 @@ Do not create folders or file requests without explicit confirmation. Do not ass
 
 ## Do Not Use When
 
-- The user wants to share existing content. Use `share-dropbox-content`.
-- The user wants to organize existing files. Use `organize-dropbox-folder`.
+- The user wants to share or organize existing content. Explain that this skill only handles file requests.
 - The user wants to recover deleted files. Explain that recovery is unavailable until the Dropbox restore tool is exposed.

@@ -76,8 +76,6 @@ Avoid scrollytelling when the story is clearer as a static chart, direct-label s
 
 - Use `../visualization-strategy-and-critique/SKILL.md` first when deciding whether the story should be scrollytelling, a stepper, small multiples, or a static editorial chart.
 - Use `../react-and-nextjs-data-visualization/SKILL.md` when the implementation is a React or Next.js story surface, especially with hydration, client-only libraries, dynamic imports, or route-level asset loading.
-- Use `../d3-data-visualization/SKILL.md` when SVG data marks, labels, annotations, and scene-state transitions are the core work.
-- Use `../canvas2d-data-visualization/SKILL.md` when dense flat marks or custom hit testing make SVG too heavy.
 - Use `../threejs-data-visualization/SKILL.md` when WebGL, GPU layers, particles, flow, or camera-led 3D are necessary.
 - Use `../geospatial-and-cartographic-visualization/SKILL.md` for map scrollytelling, fly-to sequences, route stories, or pan/zoom geography.
 - Use `../testing-data-visualizations/SKILL.md` when validating scroll states, visual regression, render readiness, media loading, or reduced-motion behavior.

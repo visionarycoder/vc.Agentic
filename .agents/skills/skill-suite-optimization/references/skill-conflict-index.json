@@ -66,21 +66,7 @@
         "cwe-injection-attack-fixes",
         "cwe-resource-management-fixes",
         "cwe-miscellaneous-security-fixes",
-        "angular-security-hardening",
         "webapp-frontend-security"
-      ],
-      "mixed_entry_bundles": [],
-      "forbidden_overlaps": [
-        "Broad intake does not belong to execution skills.",
-        "Generic dotnet ownership does not override narrower suite ownership.",
-        "Mixed-entry bundles exist only when they reduce intake ambiguity."
-      ]
-    },
-    {
-      "suite": "msbuild",
-      "router": "msbuild-intake-router",
-      "primary_execution": [
-        "check-bin-obj-clash"
       ],
       "mixed_entry_bundles": [],
       "forbidden_overlaps": [
@@ -93,9 +79,6 @@
       "suite": "frontend",
       "router": "frontend-intake-router",
       "primary_execution": [
-        "angular-anti-patterns",
-        "angular-to-vue3-migration",
-        "angular-vue-migration-orchestrator",
         "webapp-consolidation-strategy",
         "webapp-cutover-strategy"
       ],
@@ -127,8 +110,7 @@
       "router": null,
       "primary_execution": [
         "rfc-8259-compliance",
-        "rfc-fixes-bundle",
-        "aspnet-rest-openapi-controller"
+        "rfc-fixes-bundle"
       ],
       "mixed_entry_bundles": [],
       "forbidden_overlaps": [
@@ -173,17 +155,10 @@
     },
     {
       "suite": "dotnet",
-      "router": "dotnet-intake-router",
+      "router": null,
       "primary_execution": [
-        "csharp-scripts",
-        "dotnet-aot-compat",
-        "dotnet-aspire-vbd-development",
-        "dotnet-code-quality-standards",
-        "dotnet-trace-collect",
         "env-provider-skill",
-        "migrate-nullable-references",
-        "subagent-orchestration",
-        "dotnet-channels-patterns"
+        "subagent-orchestration"
       ],
       "mixed_entry_bundles": [],
       "forbidden_overlaps": [

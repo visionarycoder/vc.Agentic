@@ -25,7 +25,6 @@ Use this when designing or triaging performance-sensitive dashboards.
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../canvas2d-data-visualization/SKILL.md`
 - `../../../references/foundations/mobile-first-responsive-visualization.md`
 
 ## Source Links

@@ -59,10 +59,8 @@ Agent chooses the smallest correct routing surface before loading execution skil
 | Markdown, instructions, prompts, skills, links, front matter | `documentation-intake-router` | Documentation governance and remediation |
 | Test quality, coverage, assertions, gaps, smells | `testing-intake-router` | Test analysis and remediation |
 | Broad hardening, CWE families, multi-theme vulnerability cleanup | `security-intake-router` | Security routing and remediation |
-| Project files, SDK-style migration, props/targets, build graph, binlogs | `msbuild-intake-router` | Build and MSBuild routing |
 | Angular, Vue, web app, or WPF work | `frontend-intake-router` | Frontend routing |
 | Fabric, KQL, Lakehouse, pipelines, semantic models, data quality | `data-intake-router` | Data and Fabric routing |
-| Narrow .NET implementation detail after domain is known | `dotnet-intake-router` | Generic .NET specialization |
 
 ## Load Rules
 

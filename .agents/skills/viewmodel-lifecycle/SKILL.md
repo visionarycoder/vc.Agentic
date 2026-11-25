@@ -1,88 +1,62 @@
 ---
 name: "viewmodel-lifecycle"
-description: "Manage initialization, navigation state, cleanup, and memory-safety boundaries when agent implements or reviews .NET view-model lifecycles."
+description: "Manage initialization, navigation state, cleanup, and memory-safety boundaries when agent implements or reviews presentation-model lifecycles in UI applications."
 metadata:
   metadata-version: "1.0.0"
   title: "View Model Lifecycle"
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-24"
   collection: "optional"
 ---
 
 # View Model Lifecycle
 
-Agent manages view-model creation, activation, navigation data, state preservation, and cleanup so long-lived screens stay correct and leak-free.
+Agent manages presentation-model creation, activation, navigation data, state preservation, and cleanup so long-lived screens stay correct and leak-free.
 
 ## When to Use
 
-| Condition | Use |
-|---|---|
-| Work initializes a view model from navigation, activation, or shell events | Use this skill |
-| Work preserves or restores screen state across navigation or suspension | Use this skill |
-| Work disposes subscriptions, messengers, timers, streams, or async resources | Use this skill |
-| Work investigates stale-event or memory-retention defects | Use this skill |
+- Work initializes a screen model from navigation, activation, or shell events.
+- Work preserves or restores screen state across navigation or suspension.
+- Work disposes subscriptions, message registrations, timers, streams, or async resources.
+- Work investigates stale-event or memory-retention defects.
 
-## When Not to Use
-
-| Condition | Route |
-|---|---|
-| Work edits stateless views with no retained resources or navigation state | Use the platform UI skill |
-| Work targets server-side request lifecycles | Use the matching service or API skill |
+Do not use for stateless views with no retained resources or for server-side request lifecycles.
 
 ## Required Inputs
 
-| Input | Required | Notes |
-|---|---|---|
-| Creation and navigation path | Yes | Record when the view model starts and receives parameters. |
-| State-preservation scope | Yes | Record which fields persist across navigation, suspension, or reload. |
-| Resource inventory | Yes | Record events, messengers, timers, streams, and disposables. |
-| Platform targets | Yes | Record WPF, MAUI, WinUI 3, or UWP lifecycle hooks. |
-| Caching policy | No | Record reuse, eviction, and recreation rules. |
-
-## Pattern Matrix
-
-| Concern | Preferred Pattern | Guardrail | Pass Target |
-|---|---|---|---|
-| Initial load | Explicit `InitializeAsync`, activation callback, or navigation-aware method | Avoid constructor-driven async work | Data loads once per intended lifecycle phase |
-| Navigation parameters | Compact records or identifiers | Avoid live service, control, or view references | Destination resolves the intended state without tight coupling |
-| Reentry | Distinguish first activation from resumed activation | Align reload behavior to cache policy | Navigate away and back with predictable behavior |
-| State restore | Restore only durable, user-meaningful state | Avoid restoring transient or unsafe state | Filters, selection, and form state return predictably |
-| Cleanup | `IDisposable`, `IAsyncDisposable`, weak events, or explicit unregistration | Release subscriptions on deactivation or disposal | Inactive view models stay detached |
-| Cached instances | Clear stale subscriptions and stale state on reuse or eviction | Avoid cached event roots | Reused screens stay correct and leak-free |
-
-## Workflow
-
-| Step | Agent Action | Test | Pass |
-|---|---|---|---|
-| 1 | Agent maps creation, activation, navigation, suspension, and disposal points. | Review the lifecycle map. | Every entry and exit point stays explicit. |
-| 2 | Agent implements initialization and parameter handling with compact payloads. | Open one route or activation path. | Initial state resolves without service-instance coupling. |
-| 3 | Agent selects recreate, cache-per-route, or shell-singleton behavior. | Navigate away and back through the touched path. | Reload behavior matches the selected policy. |
-| 4 | Agent preserves durable state and rejects unsafe restore paths. | Recreate or resume the screen in scope. | Only meaningful user state returns. |
-| 5 | Agent adds disposal, messenger cleanup, weak events, and cancellation handling. | Close the screen and trigger late activity. | Inactive view models stop receiving work. |
-| 6 | Agent validates memory safety through repeated lifecycle loops. | Repeat open-close or navigation cycles. | Resource counts and event activity stay stable. |
+Record the creation and navigation path, the state-preservation scope, the resource inventory (events, messengers, timers, streams, disposables), the platform lifecycle hooks, and any caching policy (reuse, eviction, recreation).
 
 ## Rules
 
 | Topic | Rule |
 |---|---|
-| Startup | Move load work out of constructors and into explicit lifecycle methods. |
-| Parameters | Pass stable identifiers or compact records. Resolve services through DI, not navigation payloads. |
+| Startup | Keep constructors free of async or I/O work. Load in an explicit initialization or activation method. |
+| Parameters | Pass stable identifiers or compact records. Never pass live services, controls, or views in navigation payloads. |
+| Reentry | Distinguish first activation from resumed activation and align reload behavior with the cache policy. |
+| Cache policy | Choose recreate, cache-per-route, or shell-singleton and record reuse, reset, and eviction before implementing state restore. |
+| State restore | Restore only durable, user-meaningful state such as filters, selection, and form input. Never restore transient or unsafe state. |
 | Cancellation | Link long-running initialization to screen lifetime and ignore late results after deactivation. |
-| Cleanup | Unregister messengers and event subscriptions unless the registration is weak by default. |
-| Cache policy | Record reuse, reset, and eviction behavior before implementing state restore. |
-| Platform hooks | Use the native lifecycle surface for the target platform and keep ownership explicit. |
+| Cleanup | Unsubscribe events and message registrations on deactivation or disposal unless the registration is weak by default. Avoid cached instances acting as event roots. |
+| Platform hooks | Use the native lifecycle surface of the target platform and keep ownership of each hook explicit. |
+
+## Workflow
+
+1. Map creation, activation, navigation, suspension, and disposal points.
+2. Implement initialization and parameter handling with compact payloads.
+3. Select the cache policy and navigate away and back to confirm the behavior.
+4. Preserve durable state and reject unsafe restore paths.
+5. Add disposal, message cleanup, weak events, and cancellation handling; close the screen and trigger late activity.
+6. Repeat open-close or navigation cycles and confirm resource counts and event activity stay stable.
 
 ## Verification Checklist
 
-| Check | Test | Pass |
-|---|---|---|
-| Initialization timing | Open, reuse, or recreate the screen. | No duplicate initial load occurs outside the selected policy. |
-| Parameter shape | Review payloads and navigate once. | Payloads avoid live control and service references. |
-| Durable restore | Resume or recreate the touched screen. | User-meaningful state returns predictably. |
-| Cleanup | Close the screen and trigger late events or messages. | Inactive view models stay detached. |
-| Cache safety | Cycle repeated navigation or tab activation. | Cached behavior stays stable across cycles. |
+- No duplicate initial load occurs outside the selected policy.
+- Payloads contain no live control or service references.
+- Resumed or recreated screens return only meaningful user state.
+- Closed screens receive no late events or messages.
+- Repeated navigation or tab activation leaves cached behavior stable.
 
 ## Outputs
 
@@ -91,7 +65,3 @@ Agent manages view-model creation, activation, navigation data, state preservati
 - State preservation and restoration plan
 - Cleanup plan for events, messengers, disposables, and weak references
 - Verification steps for lifecycle correctness and memory safety
-
-## Reference Files
-
-- [Platform hook reference](references/platform-hooks.md)

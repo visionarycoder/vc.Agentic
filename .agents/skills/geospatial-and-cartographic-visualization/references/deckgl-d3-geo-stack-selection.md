@@ -27,7 +27,6 @@ Use this when implementing geospatial visualization on the web.
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../d3-data-visualization/SKILL.md`
 - `./slippy-map-and-product-stack-selection.md`
 
 ## Source Links

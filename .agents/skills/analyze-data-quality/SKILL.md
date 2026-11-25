@@ -34,7 +34,7 @@ dashboards, experiments, or downstream pipelines. Start with the intended use an
 
 2. Choose an inspectable analysis path.
 
-   When checks require SQL or Python, default to a companion notebook so the user can inspect the exact code behind the findings. Use $jupyter-notebooks when a dedicated notebook scaffold or refactor workflow would help. For queryable tables, use `~~structured_data` to confirm schema, grain, sample rows, and query rules through the relevant source connector before heavier checks. Use `~~operations_logs` for freshness and lineage when those checks matter.
+   When checks require SQL or Python, default to a companion notebook so the user can inspect the exact code behind the findings. Use $reproducible-notebooks when a dedicated notebook scaffold or refactor workflow would help. For queryable tables, use `~~structured_data` to confirm schema, grain, sample rows, and query rules through the relevant source connector before heavier checks. Use `~~operations_logs` for freshness and lineage when those checks matter.
 
 3. Build a compact profile.
 

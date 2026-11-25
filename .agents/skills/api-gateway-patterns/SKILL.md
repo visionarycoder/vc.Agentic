@@ -1,95 +1,76 @@
 ---
 name: "api-gateway-patterns"
-description: "Design and implement API gateway layers with YARP, Ocelot, Azure API Management, and resilient .NET traffic-control patterns."
+description: "Design API gateway or edge layers with explicit routing, bounded transforms, ownership of cross-cutting policy, and observable traffic controls."
 metadata:
   metadata-version: "1.0.0"
   title: "API Gateway Patterns"
   document-type: "skill"
   repository: "vc.Agentic"
   language: "Standard Technical English"
-  updated: "2026-11-08"
+  updated: "2026-11-24"
   collection: "optional"
 ---
 
 # API Gateway Patterns
 
-Agent designs gateway layers with explicit routing, bounded transforms, and observable traffic controls.
+Design gateway layers with explicit routing, bounded transforms, and observable traffic controls.
 
 ## When to Use
 
-| Condition | Use |
-|---|---|
-| Work adds a reverse proxy, edge gateway, or BFF for multiple downstream APIs | Use this skill |
-| Work asks for YARP, Ocelot, or Azure API Management design | Use this skill |
-| Work centralizes auth delegation, throttling, transformation, or aggregation at ingress | Use this skill |
-| Work compares gateway and service-mesh responsibilities | Use this skill |
+- A reverse proxy, edge gateway, or backend-for-frontend fronts multiple downstream APIs.
+- Auth delegation, throttling, transformation, or aggregation is centralized at ingress.
+- Gateway and service-mesh responsibilities must be separated.
 
-## When Not to Use
-
-| Condition | Route |
-|---|---|
-| Work changes one API with no cross-service ingress layer | Edit the API directly |
-| Work needs east-west traffic policy inside the cluster only | Use service-mesh or platform networking guidance |
-| Work adds static-file or CDN rules with no API routing logic | Use the matching edge-configuration path |
+Do not use it for a single API without a cross-service ingress layer, east-west policy inside a cluster, or static-content and CDN rules.
 
 ## Required Inputs
 
-| Input | Required | Notes |
+| Input | Notes |
+|---|---|
+| Downstream inventory | Services, route groups, protocols, ownership |
+| Traffic goals | Routing, aggregation, throttling, auth delegation, transformation |
+| Deployment topology | Self-hosted, managed edge, container platform, or hybrid |
+| Failure posture | Timeout budget, breaker thresholds, retry ownership, fallback intent |
+| Consumer set | Web, mobile, partner, internal, admin (optional) |
+
+## Layering
+
+| Scenario | Pattern | Guardrail |
 |---|---|---|
-| Downstream inventory | Yes | Record services, route groups, protocols, and ownership boundaries. |
-| Traffic goals | Yes | Record routing, aggregation, throttling, auth delegation, or transformation goals. |
-| Deployment topology | Yes | Record self-hosted ASP.NET Core, Azure-hosted edge, container platform, or hybrid topology. |
-| Failure posture | Yes | Record timeout budget, breaker thresholds, retry ownership, and fallback intent. |
-| Consumer set | No | Record web, mobile, partner, internal, or admin clients. |
-
-## Pattern Matrix
-
-| Scenario | Preferred Pattern | Guardrail | Pass Target |
-|---|---|---|---|
-| In-process .NET reverse proxy with custom middleware | YARP | Keep policy code bounded and observable | Route and transform logic stay explicit in the gateway service |
-| Config-centric gateway with built-in aggregation conventions | Ocelot | Keep extension scope narrow | Route and aggregation config match the intended contract |
-| Managed external edge with subscriptions, products, and portal | Azure API Management | Keep platform and app responsibilities separate | Edge policies live in APIM with clear ownership |
-| Managed external edge plus internal BFF composition | APIM plus YARP | Record which layer owns auth, throttling, and transforms | Cross-layer policy stays non-duplicative |
-| Public ingress plus internal service policy | Gateway plus service mesh | Keep north-south and east-west ownership explicit | Gateway owns ingress and mesh owns service-to-service policy |
-
-## Workflow
-
-| Step | Agent Action | Test | Pass |
-|---|---|---|---|
-| 1 | Agent selects YARP, Ocelot, APIM, or a layered combination. | Review deployment and policy needs. | One explicit gateway stack exists for the scope. |
-| 2 | Agent defines route matching, destination clusters, health probes, and load balancing. | Review route and cluster configuration. | Ingress paths map to the intended downstream targets. |
-| 3 | Agent applies transforms, aggregation, and BFF composition only where the caller contract needs them. | Inspect transform and aggregator code or config. | Gateway logic stays contract-focused and bounded. |
-| 4 | Agent wires auth delegation, rate limiting, and resilience ownership intentionally. | Review auth, limiter, timeout, and breaker configuration. | Cross-cutting policies appear once in the chosen layer. |
-| 5 | Agent adds observability for route selection, latency, breaker state, and rejection outcomes. | Inspect logs, traces, metrics, and health endpoints. | Traffic and failure states remain observable. |
-| 6 | Agent validates routing, throttling, aggregation, and failure behavior. | Run targeted build and gateway tests. | Build passes and representative ingress flows pass. |
+| In-process proxy with custom middleware | Self-hosted gateway service | Keep policy code bounded and observable |
+| Configuration-driven gateway with built-in aggregation | Declarative gateway | Keep extension scope narrow |
+| Managed external edge with subscriptions and portal | Managed API management | Keep platform and application responsibilities separate |
+| Managed edge plus internal composition | Two layers | Record which layer owns auth, throttling, and transforms |
+| Public ingress plus internal service policy | Gateway plus service mesh | Gateway owns north-south traffic; mesh owns service-to-service |
 
 ## Rules
 
 | Topic | Rule |
 |---|---|
-| Boundary ownership | Keep business logic in downstream services. Keep ingress, composition, and cross-cutting policy in the gateway. |
-| Route transforms | Use request and response transforms only when the contract requires them. |
-| Retry safety | Avoid automatic retries for non-idempotent requests unless the design defines idempotency. |
-| Aggregation | Aggregate a small set of latency-related calls with explicit failure semantics. |
-| Policy duplication | Avoid conflicting auth or quota enforcement across APIM, YARP, and downstream APIs. |
-| Observability | Propagate correlation and capture downstream timing and failure classification. |
+| Boundary ownership | Business logic stays in downstream services; ingress, composition, and cross-cutting policy stay in the gateway |
+| Transforms | Use request and response transforms only when the caller contract requires them |
+| Retry safety | No automatic retries for non-idempotent requests unless idempotency is defined |
+| Aggregation | Aggregate a small set of latency-related calls with explicit failure semantics |
+| Policy duplication | Auth and quota are enforced once; never conflicting across layers |
+| Observability | Propagate correlation ids; capture downstream timing and failure class |
+| Route design | Define route matching, destination groups, health probes, and load-balancing policy explicitly |
 
-## Verification Checklist
+## Verification
 
-| Check | Test | Pass |
-|---|---|---|
-| Route coverage | Call representative upstream routes. | Requests reach the intended downstream service or cluster. |
-| Load balancing | Send repeated requests across healthy destinations. | Distribution follows the selected policy. |
-| Transform correctness | Inspect outbound headers, path, query, and body shape. | Downstream receives the intended transformed contract. |
-| Rate limiting | Exceed one client-facing quota path. | Excess requests return the intended rejection result. |
-| Auth delegation | Call protected routes with valid, missing, and insufficient credentials. | Gateway returns the intended auth outcome and forwards only intended identity context. |
-| Breaker and timeout behavior | Simulate slow or failed downstream responses. | Gateway short-circuits or rejects per configuration. |
-| Observability | Inspect logs, traces, metrics, and health signals. | Route selection, latency, and failures stay observable. |
+| Check | Pass |
+|---|---|
+| Call representative routes | Requests reach the intended downstream |
+| Repeated requests across healthy destinations | Distribution follows the selected policy |
+| Inspect outbound headers, path, query, body | Downstream receives the intended contract |
+| Exceed one client quota | Intended rejection result |
+| Valid, missing, and insufficient credentials | Intended auth outcome; only intended identity context is forwarded |
+| Slow or failing downstream | Gateway short-circuits or rejects per configuration |
+| Inspect logs, traces, metrics, health | Route selection, latency, and failures are visible |
 
 ## Outputs
 
-- Gateway stack selection for YARP, Ocelot, APIM, or a layered design
-- Route, cluster, and load-balancing plan
-- Transformation, aggregation, and BFF contract plan
-- Auth delegation, throttling, and resilience ownership plan
+- Gateway layering decision
+- Route, destination, and load-balancing plan
+- Transformation and aggregation contract plan
+- Auth, throttling, and resilience ownership plan
 - Verification evidence for routing, failure behavior, and observability

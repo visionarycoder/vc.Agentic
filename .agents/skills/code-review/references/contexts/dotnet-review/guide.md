@@ -40,7 +40,7 @@ Do not use when:
 
 Agent performs these steps:
 
-1. Agent loads governing baselines: `dotnet-code-quality-standards`, layer rules, relevant VBD skills when scope touches seams
+1. Agent loads governing baselines: code quality standards, layer rules, relevant VBD skills when scope touches seams
 2. Agent classifies review surface: diff vs full module, app code vs analyzer/tooling code, high-risk boundary vs local implementation
 3. Agent verifies dependency direction before local code style (architecture defects invalidate otherwise clean code)
 4. Agent applies specialist lenses in order: layer integrity, quality rules, security boundaries, performance and async, tests and API design
@@ -51,7 +51,7 @@ Agent performs these steps:
 | Area | Agent Verifies | Escalate When |
 |---|---|---|
 | Layering | Allowed project references, DTO ownership, contract-vs-service boundaries, VBD invariants | Lower layer leaks upward OR caller skips contract boundary |
-| Quality baseline | Naming, nullability, cancellation, async suffixes, suppressions, framework-specific rules | Issue conflicts with `dotnet-code-quality-standards` |
+| Quality baseline | Naming, nullability, cancellation, async suffixes, suppressions, framework-specific rules | Issue conflicts with the code quality standards |
 | Security | Validation, auth/authz, injection risk, secret handling, unsafe deserialization | Problem is exploitable OR crosses trust boundary |
 | Performance | Sync-over-async, avoidable allocations, poor query shape, hidden hot-path costs | Issue affects measured OR obvious hot path |
 | Tests and API fit | Coverage depth, assertion quality, error contracts, boundary semantics | Change weakens confidence OR breaks consumer expectations |

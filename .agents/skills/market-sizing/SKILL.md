@@ -90,7 +90,7 @@ For each major input, make the source path visible: structured data, context lan
 
 Keep derived values traceable to formulas or code rather than hardcoded outputs.
 
-Use $jupyter-notebooks when code is needed for source harmonization, calculations, sensitivity analysis, or reusable modeling logic. Keep formulas, inputs, intermediate calculations, and sensitivity logic inspectable.
+Use `reproducible-notebooks` when code is needed for source harmonization, calculations, sensitivity analysis, or reusable modeling logic. Keep formulas, inputs, intermediate calculations, and sensitivity logic inspectable.
 
 Use the `$Spreadsheets` skill when the user requests a spreadsheet, workbook, or Google Sheets deliverable, or when a market-sizing model would materially benefit from editable assumptions, sensitivity tables, charts, or polished workbook formatting.
 

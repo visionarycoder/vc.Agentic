@@ -94,7 +94,7 @@ Run enough quantitative analysis to support or reject the framed hypotheses and 
 
 - **Size the opportunities.** Estimate the magnitude of impact each important opportunity could have. State what is being compared, which metric represents impact, what denominator or population it uses, and whether the data is complete enough to trust. Keep material unknown or unclassified groups visible when they could change the interpretation.
 
-- **Keep quantitative work inspectable.** Use $jupyter-notebooks to record queries and analysis. Use $analyze-data-quality when source freshness, grain, joins, missingness, schema drift, or unexpected distributions could affect trust.
+- **Keep quantitative work inspectable.** Use $reproducible-notebooks to record queries and analysis. Use $analyze-data-quality when source freshness, grain, joins, missingness, schema drift, or unexpected distributions could affect trust.
 
 - **Validate before concluding.** Use $validate-data before sharing stakeholder-facing recommendations, high-impact claims, or surprising results. When dashboards and direct queries both exist, reconcile them or explain why they differ.
 

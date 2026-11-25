@@ -25,7 +25,6 @@ Use this when a chart is fed by append-only streams, polling, or bursty event tr
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../canvas2d-data-visualization/SKILL.md`
 - `../../../references/foundations/mobile-first-responsive-visualization.md`
 
 ## Source Links

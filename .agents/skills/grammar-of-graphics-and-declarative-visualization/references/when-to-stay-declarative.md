@@ -23,8 +23,6 @@ Use this when a declarative spec starts to feel strained or when the user asks w
 ## Adjacent Skills
 
 - `../SKILL.md`
-- `../../d3-data-visualization/SKILL.md`
-- `../../canvas2d-data-visualization/SKILL.md`
 - `../../threejs-data-visualization/SKILL.md`
 
 ## Source Links

@@ -60,8 +60,6 @@ Use this when a user asks which tool or library to choose.
 - `../../grammar-of-graphics-and-declarative-visualization/SKILL.md`
 - `../../gantt-chart-visualization/SKILL.md`
 - `../../uml-and-software-architecture-visualization/SKILL.md`
-- `../../d3-data-visualization/SKILL.md`
-- `../../canvas2d-data-visualization/SKILL.md`
 - `../../threejs-data-visualization/SKILL.md`
 - `../../geospatial-and-cartographic-visualization/SKILL.md`
 - `../../../references/foundations/mobile-first-responsive-visualization.md`

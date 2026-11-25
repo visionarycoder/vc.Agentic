@@ -45,7 +45,7 @@ duplicates, join coverage, or source mismatches, use $analyze-data-quality as a 
 
    Recompute the highest-impact numbers independently when possible. Check grain, subtotals, denominators, non-zero denominators, rate bases,
    period-over-period bases, weighted averages, units, currency, timezone handling, and whether mutually exclusive categories add to totals. For SQL,
-   inspect join types, group-by grain, filters, distinct counts, and row counts before and after joins. Use $jupyter-notebooks or `~~spreadsheet_workspace`
+   inspect join types, group-by grain, filters, distinct counts, and row counts before and after joins. Use `reproducible-notebooks` or `~~spreadsheet_workspace`
    when the artifact itself is a notebook or spreadsheet, or when reproducible spot checks need code or formulas.
 
 5. Test reasonableness and common analytical traps.

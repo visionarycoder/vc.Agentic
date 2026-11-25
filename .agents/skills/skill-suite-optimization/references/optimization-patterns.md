@@ -130,7 +130,6 @@ The following skills were actively used during the 2026-08-22 optimization cycle
 |---|---|
 | `skill-intake-router` | Route requests to correct domain suite |
 | `documentation-frontmatter` | Normalize metadata across skills |
-| `dotnet-intake-router` | Classify .NET-specific skills |
 | `testing-intake-router` | Classify testing-related skills |
 | `security-intake-router` | Classify security/CWE skills |
 | `vbd-intake-router` | Classify VBD architecture skills |
