@@ -124,7 +124,7 @@ If evidence conflicts, say so directly and explain which interpretation is bette
 
 ### 6. Hand Off The Recommendation
 
-End by handing the decision-ready recommendation to $build-report unless the user explicitly requests an inline, chat-only, brief/no-artifact answer, asks not to create a report/file/artifact, or selects another primary artifact. This handoff is mandatory when no explicit human waiver was given; do not infer a waiver because the user asked a direct question or did not use the word "report". This workflow owns the analytical conclusion; $build-report owns the reader-facing structure, visuals, evidence placement, and delivery surface.
+End by delivering the decision-ready recommendation as a report unless the user explicitly requests an inline, chat-only, brief/no-artifact answer, asks not to create a report/file/artifact, or selects another primary artifact. The report is mandatory when no explicit human waiver was given; do not infer a waiver because the user asked a direct question or did not use the word "report".
 
 Before handoff, make the recommendation explicit:
 

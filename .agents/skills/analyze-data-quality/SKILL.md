@@ -134,7 +134,7 @@ Do not dump raw profiling output without interpretation. Tie each finding to an 
 
 ### Output Standards
 
-For stakeholder-facing data-quality work, pass the completed findings to $build-report by default so the runtime produces an MCP app or HTML report. Do not stop at profiling output, a notebook, or chat-only findings unless the user explicitly requested a quick inline answer or another primary artifact. The structure below defines the report content.
+For stakeholder-facing data-quality work, produce a report artifact (for example HTML) by default. Do not stop at profiling output, a notebook, or chat-only findings unless the user explicitly requested a quick inline answer or another primary artifact. The structure below defines the report content.
 
 Structure the response with:
 

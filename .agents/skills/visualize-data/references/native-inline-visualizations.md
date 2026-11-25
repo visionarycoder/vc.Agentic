@@ -4,7 +4,7 @@ Use this reference only after the active workflow has already selected an inline
 
 `charts_widget_v2` and `app_block` are host-native Work Mode surfaces.
 
-Do not use this reference to waive or replace `$build-report`, downgrade a selected report or dashboard to an inline answer, replace selected HTML/notebook/BI/slide/document output, or change the plugin's default report routing. If a report, dashboard, or HTML surface was selected, keep that surface and follow its existing rendering contract.
+Do not use this reference to replace a selected report or dashboard with an inline answer, replace selected HTML/notebook/BI/slide/document output, or change the plugin's default report routing. If a report, dashboard, or HTML surface was selected, keep that surface and follow its existing rendering contract.
 
 Data Analytics MCP servers and other callable tools can still supply reviewed data, but their chart, table, and artifact widgets are not the web Work Mode delivery surface. Do not call `render_chart`, `render_table`, or `render_artifact` to deliver the inline visual in this runtime.
 

@@ -58,14 +58,8 @@
     },
     {
       "suite": "security",
-      "router": "security-intake-router",
+      "router": null,
       "primary_execution": [
-        "cwe-fixes",
-        "cwe-input-validation-fixes",
-        "cwe-authentication-authz-fixes",
-        "cwe-injection-attack-fixes",
-        "cwe-resource-management-fixes",
-        "cwe-miscellaneous-security-fixes",
         "webapp-frontend-security"
       ],
       "mixed_entry_bundles": [],
@@ -91,11 +85,9 @@
     },
     {
       "suite": "data",
-      "router": "data-intake-router",
+      "router": null,
       "primary_execution": [
         "data-contract-frontmatter",
-        "data-lineage",
-        "data-quality-reporting",
         "csv-ingestion-diagnostics"
       ],
       "mixed_entry_bundles": [],
@@ -109,7 +101,6 @@
       "suite": "webapi",
       "router": null,
       "primary_execution": [
-        "rfc-8259-compliance",
         "rfc-fixes-bundle"
       ],
       "mixed_entry_bundles": [],
@@ -143,8 +134,7 @@
         "vbd-phased-modernization",
         "vbd-symbolic-mapping",
         "vbd-use-case-reconstruction",
-        "post-implementation-cleanup",
-        "ifx-component-communication"
+        "post-implementation-cleanup"
       ],
       "mixed_entry_bundles": [],
       "forbidden_overlaps": [

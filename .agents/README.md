@@ -10,50 +10,32 @@ updated: "2026-11-24"
 
 # Skill catalog
 
-The library contains **275 skills**. All entrypoints are under `skills/<name>/SKILL.md`. [Inventory](inventory.csv) records current metadata and hashes. [Collections](collections.md) distinguish the recommended core from optional capabilities. [Maintenance](../tools/README.md) describes validation and safe changes.
+The library contains **225 skills**. All entrypoints are under `skills/<name>/SKILL.md`. [Inventory](inventory.csv) records current metadata and hashes. [Collections](collections.md) distinguish the recommended core from optional capabilities. [Maintenance](../tools/README.md) describes validation and safe changes.
 
 | Collection | Skills |
 | --- | --- |
 | Recommended development core | 15 |
 | .NET, C#, MSBuild, and WPF | 0 |
 | Volatility-based decomposition architecture | 27 |
-| Security engineering and weakness remediation | 13 |
-| Data analysis and visualization | 7 |
-| Accounting systems and controls | 3 |
-| Additional workflows, integrations, and specialist utilities | 210 |
+| Security engineering and weakness remediation | 0 |
+| Data analysis and visualization | 4 |
+| Accounting systems and controls | 0 |
+| Additional workflows, integrations, and specialist utilities | 179 |
 
 | Skill | Collection | Purpose |
 | --- | --- | --- |
-| [accounting-closing-cycle-patterns](skills/accounting-closing-cycle-patterns/SKILL.md) | accounting | Apply period-close and year-end close workflows, adjusting entry patterns, and .NET orchestration guidance when financial close processes are in scope. |
-| [accounting-subledger-reconciliation-patterns](skills/accounting-subledger-reconciliation-patterns/SKILL.md) | accounting | Reconcile subsidiary-ledger summaries to GL control accounts when AR, AP, payroll, or fixed-asset control validation is in scope. |
-| [accounting-systems-bundle](skills/accounting-systems-bundle/SKILL.md) | accounting | Routes accounting system implementation work to the correct accounting skill set for commercial, public sector, fund, close, control, and reporting scenarios. |
 | [adr](skills/adr/SKILL.md) | core | Record an architectural decision with context, alternatives, consequences, and the actual project approval status. |
 | [agent-instruction-maintenance](skills/agent-instruction-maintenance/SKILL.md) | optional | Inventory, consolidate, rename, and repair repository agent instructions, prompts, roles, and skills using repository and client conventions; does not define governance authority. |
 | [analyze-data-quality](skills/analyze-data-quality/SKILL.md) | data | Assess whether structured data, query results, dashboards, or analytical evidence are trustworthy enough to use. Use when the task is to check data quality, reconcile conflicting sources or metric ... |
 | [analyze-repo](skills/analyze-repo/SKILL.md) | optional | Detect languages, frameworks, build systems, dependencies, databases, and environment variables in a repository **for the purpose of containerization or cloud deployment**. Use BEFORE generating a ... |
 | [analyzing-architecture](skills/analyzing-architecture/SKILL.md) | optional | Architect analysis for rewrite/migration: produces structured architecture artifacts plus global prose research views (project-structure, tech-stack, data-model) for planning, implementation, featu... |
-| [antipattern-detection-bundle](skills/antipattern-detection-bundle/SKILL.md) | optional | Route anti-pattern detection to specialized skills (performance, code smell, design smell, architectural debate) and consolidate findings. |
-| [api-gateway-patterns](skills/api-gateway-patterns/SKILL.md) | optional | Design API gateway or edge layers with explicit routing, bounded transforms, ownership of cross-cutting policy, and observable traffic controls. |
-| [api-service-contracts](skills/api-service-contracts/SKILL.md) | optional | Generate API and service communication contracts with sequence diagram |
-| [appmod-hooks](skills/appmod-hooks/SKILL.md) | optional | Lifecycle hooks for the modernize-rearchitecture coordinator. Defines hook points, registered actions, and execution rules. |
-| [architectural-decision-debate](skills/architectural-decision-debate/SKILL.md) | optional | Debate architectural and design decisions by presenting three positions (adopt, reject, defer) with at least 3 options each, challenging assumptions and existing patterns. |
 | [architecture-diagram](skills/architecture-diagram/SKILL.md) | optional | Generate architecture diagram with component relationship details from project analysis |
 | [ask-matt](skills/ask-matt/SKILL.md) | optional | Ask which skill or flow fits your situation. A router over the skills in this repo. |
 | [assertion-quality](skills/assertion-quality/SKILL.md) | core | Analyze whether tests use meaningful, varied assertions and identify missing, trivial, or single-style verification patterns. |
 | [assessment](skills/assessment/SKILL.md) | optional | Run application assessment for a single repository |
-| [assessment-report-converter](skills/assessment-report-converter/SKILL.md) | optional | Convert an arbitrary CSV report (e.g. a Black Duck export or a custom migration-issue inventory) into a schema-valid assessment `report.json` the modernization pipeline can consume — so it appears ... |
-| [attack-path-analysis](skills/attack-path-analysis/SKILL.md) | optional | Use when Codex is already in the attack-path-analysis phase of a security scan or the user explicitly asks to trace a security finding from source to sink and calibrate severity. Do not use as the ... |
-| [audit-trail-compliance](skills/audit-trail-compliance/SKILL.md) | optional | Apply audit trail, control evidence, segregation, and event-sourced .NET patterns when financial-system compliance workflows are in scope. |
-| [author-component](skills/author-component/SKILL.md) | optional | - Data flows **down** via `[Parameter]`. Events flow **up** via `EventCallback(T)` (never `Action`/`Func`). |
 | [authoring-github-workflows](skills/authoring-github-workflows/SKILL.md) | optional | Author and review GitHub Actions YAML for valid structure, expression quoting, and workflow loading, using the target repository conventions. |
 | [blog-post-writer](skills/blog-post-writer/SKILL.md) | optional | Writes on-brand blog posts with a strong hook, scannable subheadings, short paragraphs, and a clear call to action. Use when drafting a blog post, article, or long-form content, or when the user as... |
-| [build-dashboard](skills/build-dashboard/SKILL.md) | data | Build source-backed dashboards for monitoring performance, exploring drivers, or acting on product and business metrics. Use when the task needs a dashboard, scorecard, or monitoring view with clea... |
-| [build-report](skills/build-report/SKILL.md) | data | Create an evidence-backed analytical report for a defined audience, decision, and requested delivery format. |
-| [business-glossary-metadata](skills/business-glossary-metadata/SKILL.md) | optional | Structure business glossaries, metadata catalogs, and data dictionaries when a prompt needs standardized terms, ownership, and asset mappings. |
-| [business-workflows](skills/business-workflows/SKILL.md) | optional | Generate core business workflow documentation with sequence diagram |
 | [caching-patterns](skills/caching-patterns/SKILL.md) | optional | Choose cache scope, expiration, invalidation, two-tier layering, and stampede control so caching improves latency or load without hiding correctness defects. |
-| [cdc-batch-import-patterns](skills/cdc-batch-import-patterns/SKILL.md) | optional | Import change-data-capture rows in bounded batches with duplicate-aware progress tracking, per-batch transactions, and failure accumulation. |
-| [cdc-uniqueness-enforcement](skills/cdc-uniqueness-enforcement/SKILL.md) | optional | Enforce idempotent change-data-capture imports with a normalized composite key of log position and sequence value, in-memory duplicate detection, and database-level uniqueness. |
 | [chaos-resilience-testing](skills/chaos-resilience-testing/SKILL.md) | optional | Write system-level fault-injection tests that verify degradation and recovery against stated hypotheses. |
 | [clarifying-scenarios](skills/clarifying-scenarios/SKILL.md) | optional | Evaluates whether a user's modernization/rewrite request provides enough scenario context to proceed (e.g., target component library, screenshots, design system for frontend; API contract policy, d... |
 | [code-review](skills/code-review/SKILL.md) | core | Review code changes for correctness, security, maintainability, and project conventions using the relevant language or review mode. |
@@ -75,35 +57,11 @@ The library contains **275 skills**. All entrypoints are under `skills/<name>/SK
 | [csv-data-analysis](skills/csv-data-analysis/SKILL.md) | optional | Combined csv data analysis guidance with task/provider-specific modes. Verify delimited files before ingestion and fix parse defects in a new file. |
 | [csv-ingestion-diagnostics](skills/csv-ingestion-diagnostics/SKILL.md) | data | Verify delimited files before ingestion and fix parse defects in a new file. |
 | [cve-remediation](skills/cve-remediation/SKILL.md) | optional | Scan dependency manifests against known CVEs and remediate by upgrading vulnerable dependencies to patched versions, then rebuild and re-scan to confirm. Self-contained scan→fix→verify loop for any... |
-| [cwe-ai-ml-security-fixes](skills/cwe-ai-ml-security-fixes/SKILL.md) | security | Consolidated guidance for AI and ML specific CWE fixes in .NET LLM, generative AI, and classifier integrations. |
-| [cwe-api-contract-fixes](skills/cwe-api-contract-fixes/SKILL.md) | security | Consolidated guidance for obsolete, contract, argument-mismatch, low-level, and implementation-defined API misuse CWEs with measurable verification. |
-| [cwe-authentication-authz-fixes](skills/cwe-authentication-authz-fixes/SKILL.md) | security | Consolidated guidance for authentication and authorization CWEs (CWE-287, CWE-288, CWE-306, CWE-352, CWE-862, CWE-863) with detection patterns, fix patterns, and measurable verification. |
-| [cwe-composite-chain-analysis](skills/cwe-composite-chain-analysis/SKILL.md) | security | Decompose composite and named-chain CWE findings into component weaknesses and route each component to the owning specialist skill. |
-| [cwe-fixes](skills/cwe-fixes/SKILL.md) | security | Route broad security hardening or CWE remediation requests to correct thematic bundle skills. Aggregate results into one verified report. |
-| [cwe-injection-attack-fixes](skills/cwe-injection-attack-fixes/SKILL.md) | security | Consolidated guidance for injection and code-execution CWEs (CWE-77, CWE-78, CWE-79, CWE-89, CWE-94, CWE-98) with sink patterns, fix patterns, and measurable verification. |
-| [cwe-input-validation-fixes](skills/cwe-input-validation-fixes/SKILL.md) | security | Consolidated guidance for input-verification and bounds CWEs (CWE-20, CWE-119, CWE-120, CWE-121, CWE-122, CWE-125, CWE-787) with detection patterns, fix patterns, and measurable verification. - Bui... |
-| [cwe-logic-correctness-fixes](skills/cwe-logic-correctness-fixes/SKILL.md) | security | Consolidated guidance for Risky Values and Unused entities CWEs with C#/.NET trigger, fix, and verification patterns. |
-| [cwe-malware-indicators-fixes](skills/cwe-malware-indicators-fixes/SKILL.md) | security | Code-review guidance for suspicious code in this .NET repo that can indicate supply-chain compromise, insider threat, or a backdoor. |
-| [cwe-memory-safety-fixes](skills/cwe-memory-safety-fixes/SKILL.md) | security | Guidance for CWE-888 memory-safety clusters in .NET interop, unsafe code, and managed bounds logic. |
-| [cwe-miscellaneous-security-fixes](skills/cwe-miscellaneous-security-fixes/SKILL.md) | security | Consolidated guidance for path traversal, privilege, upload, null, redirect, permission, resource-limit, SSRF, and model-state CWEs with fix patterns and measurable verification. |
-| [cwe-resource-management-fixes](skills/cwe-resource-management-fixes/SKILL.md) | security | Consolidated guidance for resource-related CWEs (CWE-117, CWE-190, CWE-269, CWE-276, CWE-284, CWE-400, CWE-416) with detection patterns, fix patterns, and measurable verification. |
-| [cwe-taxonomy-navigator](skills/cwe-taxonomy-navigator/SKILL.md) | security | Routes MITRE CWE taxonomy views and categories to the owning repository security skill when a request cites meta-level CWE organizers instead of a fixable weakness. |
 | [cyclomatic-complexity-limit](skills/cyclomatic-complexity-limit/SKILL.md) | optional | Limit new and edited methods to a cyclomatic complexity (CC) of 10 or less, per Thomas J. McCabe's original complexity measure. |
-| [dag-generation](skills/dag-generation/SKILL.md) | optional | Generate task DAGs for modernization projects — select fragments from task catalog, produce initial DAG (Stage 1), and execute/validate DAG from plan artifacts (Stage 2). |
-| [dashboard-builder](skills/dashboard-builder/SKILL.md) | data | Use when rendering, validating, or adapting standardized responsive Public Equity Investing HTML dashboards from structured analysis produced by visible Public Equity Investing skills. This capabil... |
-| [dashboard-expert](skills/dashboard-expert/SKILL.md) | optional | Full CRUD and analysis for Mixpanel dashboards. Use when the user asks to build, create, analyze, read, understand, explain, modify, update, enhance, or manage dashboards, or asks about dashboard l... |
-| [dashboards-and-real-time-visualization](skills/dashboards-and-real-time-visualization/SKILL.md) | optional | Design dashboards and live visualization systems. Use when the user needs monitoring views, streaming charts, coordinated interactions, downsampling, or performance-aware operational visualization. |
-| [data-architecture](skills/data-architecture/SKILL.md) | optional | Generate data architecture and persistence layer documentation with data model diagram |
 | [data-contract-frontmatter](skills/data-contract-frontmatter/SKILL.md) | optional | Generate and verify compact data contract frontmatter for datasets, tables, and APIs. |
-| [data-intake-router](skills/data-intake-router/SKILL.md) | optional | Route data and Fabric requests to the minimum correct data skill by separating KQL diagnostics, ingestion, pipeline issues, semantic models, and data-quality concerns. |
-| [data-lineage](skills/data-lineage/SKILL.md) | optional | Map upstream and downstream lineage paths and generate lineage artifacts with impact analysis. |
-| [data-quality-reporting](skills/data-quality-reporting/SKILL.md) | optional | Run data quality rules, score results, and generate concise reports and framework exports. |
-| [data-visualization](skills/data-visualization/SKILL.md) | optional | Route web data visualization work. Use when the user needs chart choice, visual critique, dashboards, maps or geospatial views, Gantt timelines, UML/software diagrams, scrollytelling, reports or ex... |
 | [database-design-standards](skills/database-design-standards/SKILL.md) | optional | Apply data modeling, naming, data type, dimensional model, data mart, and security rules when the developer layer is database. |
 | [debug-live](skills/debug-live/SKILL.md) | optional | Drive an interactive VS Code debugger to investigate bugs, failing tests, wrong/null variable values, unexpected runtime behavior, and other "it doesn't work" reports. Use this skill whenever specu... |
 | [deep-security-scan](skills/deep-security-scan/SKILL.md) | optional | Use when the user asks for a deep, exhaustive, multi-pass, or variance-reducing repository-wide or scoped-path Codex Security scan. Run repeated complete independent Standard scans with the Codex S... |
-| [define-security-policy](skills/define-security-policy/SKILL.md) | optional | Define, review, or update SECURITY.md guidance for a repository or component. Use when the user wants to clarify what Codex Security should review, what is out of scope, which security properties m... |
-| [dependency-maintenance](skills/dependency-maintenance/SKILL.md) | optional | Keep packages, frameworks, and licenses current with a scheduled work item, vulnerability triage, central package versions, and normal gate review. |
 | [dependency-map](skills/dependency-map/SKILL.md) | optional | Generate dependency map diagram from project build files |
 | [design-kpis](skills/design-kpis/SKILL.md) | optional | Design KPI frameworks, metric definitions, targets, guardrails, and measurement plans for product or business decisions. Use when success metrics, drivers, guardrails, targets, or the measurement a... |
 | [design-smell-detection](skills/design-smell-detection/SKILL.md) | optional | Detect structural and architectural design smells that indicate poor modularity, coupling, or separation of concerns. |
@@ -121,7 +79,6 @@ The library contains **275 skills**. All entrypoints are under `skills/<name>/SK
 | [documentation-style-collaboration](skills/documentation-style-collaboration/SKILL.md) | optional | Improve documentation wording with collaborative, clear, and direct language. |
 | [dogfood](skills/dogfood/SKILL.md) | optional | Exploratory QA of web apps: find bugs, evidence, reports. |
 | [domain-modeling](skills/domain-modeling/SKILL.md) | optional | Build and sharpen a project's domain model. Use when the user wants to pin down domain terminology or a ubiquitous language, record an architectural decision, or when another skill needs to maintai... |
-| [drop-python-version-support](skills/drop-python-version-support/SKILL.md) | optional | Guide changes required when a project drops one or more oldest supported Python versions and raises its minimum supported version. Use when asked to remove the oldest supported runtimes, raise the ... |
 | [dry-principles](skills/dry-principles/SKILL.md) | core | Apply DRY guidance when code repeats logic, rules, or structure and should be consolidated without overengineering. Use when refactoring duplication, extracting helpers, standardizing patterns, or ... |
 | [email-inbox-triage](skills/email-inbox-triage/SKILL.md) | optional | Triage an inbox: prioritize threads, draft replies safely. |
 | [env-provider-skill](skills/env-provider-skill/SKILL.md) | optional | Generates environment provider abstractions for configuration access, validation, and testability. |
@@ -147,8 +104,6 @@ The library contains **275 skills**. All entrypoints are under `skills/<name>/SK
 | [grammar-of-graphics-and-declarative-visualization](skills/grammar-of-graphics-and-declarative-visualization/SKILL.md) | optional | Build data visualizations with declarative grammars. Use when the user needs Vega-Lite, Vega, Observable Plot, or grammar-of-graphics reasoning, especially for tabular charts that do not require be... |
 | [grilling](skills/grilling/SKILL.md) | optional | Stress-test a plan or design through focused interview rounds, with optional ADR and glossary drafts when requested. |
 | [handoff](skills/handoff/SKILL.md) | optional | Compact the current conversation into a handoff document for another agent to pick up. |
-| [ifx-component-communication](skills/ifx-component-communication/SKILL.md) | optional | Designs VBD component communication with generic proxies, ordered interceptors, logical addressing, and manager bus patterns. |
-| [ifx-proxies-interceptors](skills/ifx-proxies-interceptors/SKILL.md) | optional | Route cross-cutting concern requests to existing Ifx.Proxies interceptors instead of hand-rolled code for boundary-intercepted services in this repository. |
 | [implement](skills/implement/SKILL.md) | optional | Implement a piece of work based on a spec or set of tickets. |
 | [improve-skill](skills/improve-skill/SKILL.md) | optional | Turn plugin-eval findings into a concrete rewrite brief for a Codex skill. Use when the user already evaluated a skill and now wants Codex to improve it, especially after asking what to fix first. |
 | [incident-response](skills/incident-response/SKILL.md) | optional | Detect, stabilize, diagnose, and learn from production incidents with severity, rollback-first mitigation, and follow-up work items. |
@@ -186,7 +141,6 @@ The library contains **275 skills**. All entrypoints are under `skills/<name>/SK
 | [reports-pdfs-and-slide-automation](skills/reports-pdfs-and-slide-automation/SKILL.md) | optional | Lay out and export data-rich reports and documents. Use when the user needs report structure, figure packaging, PDFs, PowerPoint or Google Slides automation, or programmatic insertion of visualizat... |
 | [reproducible-notebooks](skills/reproducible-notebooks/SKILL.md) | optional | Create, edit, or validate reproducible computational notebooks for analysis, experiments, diagnostics, or tutorials that are reviewable and rerunnable top to bottom. |
 | [resolving-merge-conflicts](skills/resolving-merge-conflicts/SKILL.md) | optional | Use when you need to resolve an in-progress git merge/rebase conflict. |
-| [rfc-8259-compliance](skills/rfc-8259-compliance/SKILL.md) | optional | Enforce interoperable JSON syntax, encoding, and serializer behavior for external contracts. |
 | [rfc-fixes-bundle](skills/rfc-fixes-bundle/SKILL.md) | optional | Routes RFC-focused fixes for Problem Details, JSON, JSON sequence, and JWT security by using RFC 9457, RFC 7807, RFC 8259, RFC 8091, and RFC 8725 references. |
 | [run-tests](skills/run-tests/SKILL.md) | optional | Detect the .NET test platform and generate or run the narrowest correct dotnet test command. |
 | [runtime-validation](skills/runtime-validation/SKILL.md) | optional | Runtime validation for migrated applications — covers testing strategy (planning phase) and test execution (validation phase): startup verification, integration testing, and end-to-end flow validat... |
@@ -195,11 +149,9 @@ The library contains **275 skills**. All entrypoints are under `skills/<name>/SK
 | [scrollytelling-and-parallax-data-visualization](skills/scrollytelling-and-parallax-data-visualization/SKILL.md) | optional | Design and implement parallax scrolling and scrollytelling data visualizations. Use when the user asks for parallax scrolling, scrollytelling, scroll-driven timelines, sticky graphics, Scrollama, S... |
 | [security-controller](skills/security-controller/SKILL.md) | optional | Manages security workflows with modes for scan, remediate, verify, and report. Executes SAST analysis, CWE remediation, and compliance reporting across injection, authentication, data protection, a... |
 | [security-diff-scan](skills/security-diff-scan/SKILL.md) | optional | Review a pull request, commit, branch diff, or working-tree patch for security vulnerabilities. |
-| [security-intake-router](skills/security-intake-router/SKILL.md) | optional | Route security requests to the minimum correct security skill by separating broad CWE sweeps from narrow vulnerability-family remediation. |
 | [security-scan](skills/security-scan/SKILL.md) | optional | Use for a standard, single-pass security audit of an entire repository or a scoped path, package, folder, or submodule with no diff to review. This is the default repository scan. Do not use for PR... |
 | [setting-up-constitution](skills/setting-up-constitution/SKILL.md) | optional | Creates or updates the project constitution that defines migration principles, constraints, and conventions. Triggers: "set up constitution", "define migration principles", "create project rules", ... |
 | [setup-matt-pocock-skills](skills/setup-matt-pocock-skills/SKILL.md) | optional | Configure this repo for the engineering skills — set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills. |
-| [sfp-cluster-controller](skills/sfp-cluster-controller/SKILL.md) | optional | Agent uses this controller to route a CWE-888 Software Fault Pattern (SFP) Primary Cluster or a raw CWE ID to the owning specialist skill, and to confirm full coverage of the MITRE CWE-888 taxonomy... |
 | [sharing-learnings](skills/sharing-learnings/SKILL.md) | optional | How to record project learnings so that later-phase workers and future agent runs can consume them. |
 | [simplified-technical-english](skills/simplified-technical-english/SKILL.md) | optional | Apply Simplified Technical English to every user response, document, and code comment that the agent writes or edits. |
 | [simplify-code](skills/simplify-code/SKILL.md) | optional | Parallel 4-agent cleanup of recent code changes. |
@@ -282,8 +234,6 @@ The library contains **275 skills**. All entrypoints are under `skills/<name>/SK
 | [visualization-strategy-and-critique](skills/visualization-strategy-and-critique/SKILL.md) | optional | Choose, lay out, critique, and explain data visualizations. Use when the user asks what visualization fits a dataset or goal, how a chart, dashboard, operational workspace, UML-like diagram, or sof... |
 | [visualize](skills/visualize/SKILL.md) | optional | Create visualizations and interactive tools directly in conversation. Proactively use to show how something works; explore 'what happens when', 'what changes', or 'help me understand'; compare or i... |
 | [visualize-data](skills/visualize-data/SKILL.md) | data | Design, build, revise, or QA quantitative charts and figures. Use when an analytical answer needs visual judgment, whether for an inline answer, report, dashboard, notebook, or artifact. |
-| [volatility-based-decomposition-dotnet](skills/volatility-based-decomposition-dotnet/SKILL.md) | optional | Volatility-based decomposition (VBD) organizes systems by _where change occurs_, not by functional domains. Components encapsulate areas of volatility—aspects likely to change together or frequentl... |
-| [vulnerability-writeup](skills/vulnerability-writeup/SKILL.md) | optional | Turn vulnerability notes, disclosure reports, PoCs, source code, or Codex Security findings into self-contained, sceptically validated, natural-sounding vulnerability reports. Use for one vulnerabi... |
 | [wait-what](skills/wait-what/SKILL.md) | optional | Stop. That last message did not land — re-pitch it. |
 | [wayfinder](skills/wayfinder/SKILL.md) | optional | Plan a huge chunk of work — more than one agent session can hold — as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear. |
 | [webapp-consolidation-strategy](skills/webapp-consolidation-strategy/SKILL.md) | optional | Plan consolidation of multiple web applications into one modular web app with shared infrastructure, bounded feature modules, staged migration, and measurable cutover readiness. |

@@ -24,8 +24,7 @@ Agent generates ODCS-aligned frontmatter and verifies required metadata, schema,
 
 | User prompt | Route |
 |---|---|
-| User asks for lineage mapping only | Use `data-lineage` |
-| User asks for rule scoring only | Use `data-quality-reporting` |
+| User asks for lineage mapping or rule scoring only | Use a focused data skill |
 | User asks for archive or file diagnostics | Use an ingestion skill |
 
 ## Required Inputs
@@ -44,8 +43,8 @@ Agent generates ODCS-aligned frontmatter and verifies required metadata, schema,
 | Schema file exists | Agent infers columns, types, and nullability |
 | Schema file missing | Agent reads User-supplied column list |
 | Existing contract exists | Agent preserves stable fields and bumps version |
-| Quality rules missing | Agent routes to `data-quality-reporting` for rule seeds |
-| Lineage block missing | Agent routes to `data-lineage` for lineage seeds |
+| Quality rules missing | Agent leaves the quality block as a documented placeholder |
+| Lineage block missing | Agent leaves the lineage block as a documented placeholder |
 
 ## Version Decision Table
 

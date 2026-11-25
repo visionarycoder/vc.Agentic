@@ -98,11 +98,11 @@ Translate the evidence, driver analysis, and business context into the operating
 
 After the analysis is assembled and before shaping the final readout, use $validate-data to review whether the numbers, methodology, caveats, and evidence support the claimed status, drivers, and implications. Resolve material issues before sharing; carry remaining limitations into the readout.
 
-### 9. Hand Off The Readout
+### 9. Deliver The Readout
 
-End by handing the validated KPI readout to $build-report unless the user explicitly requests an inline, chat-only, brief/no-artifact answer, asks not to create a report/file/artifact, or selects another primary artifact. A quick status update, brief readout, or findings-in-chat request is an inline output choice unless the user also asks for a report, document, deck, or durable artifact. When no explicit human waiver was given, the report handoff is mandatory; do not infer a waiver only because the user did not use the word "report".
+End by delivering the validated KPI readout as a report unless the user explicitly requests an inline, chat-only, brief/no-artifact answer, asks not to create a report/file/artifact, or selects another primary artifact. A quick status update, brief readout, or findings-in-chat request is an inline output choice unless the user also asks for a report, document, deck, or durable artifact. When no explicit human waiver was given, the report is mandatory; do not infer a waiver only because the user did not use the word "report".
 
-Before handoff, make the readout explicit:
+Before delivery, make the readout explicit:
 
 - headline status and operating implication
 - actuals, targets, pacing basis, and comparison periods
@@ -110,9 +110,9 @@ Before handoff, make the readout explicit:
 - audience, cadence, and requested delivery surface when known
 - charts or figures that would clarify the readout
 
-Load `references/report-templates.md` before handing off and use the matching pattern as source notes for $build-report. Tell $build-report this is a KPI readout and pass the status, pacing, driver, uncertainty, audience, cadence, surface, and visual guidance above. Do not render charts directly from this skill; pass visual intent and supporting evidence to $build-report so $visualize-data owns chart selection and QA.
+Load `references/report-templates.md` before delivery and use the matching pattern as source notes for the report. Include the status, pacing, driver, uncertainty, audience, cadence, surface, and visual guidance above. Use $visualize-data for chart selection and QA.
 
-For native slide or deck requests, use $build-report to create an HTML report first because `$report-to-google-slides` consumes an existing local HTML analytics report and does not convert live MCP app reports directly. Then invoke `$report-to-google-slides` on that HTML report. If only an MCP app report exists, build an HTML report from the same source evidence as a separate delivery mode before conversion.
+For native slide or deck requests, create an HTML report first because `$report-to-google-slides` consumes an existing local HTML analytics report and does not convert live MCP app reports directly. Then invoke `$report-to-google-slides` on that HTML report. If only an MCP app report exists, build an HTML report from the same source evidence as a separate delivery mode before conversion.
 
 ## Standards
 

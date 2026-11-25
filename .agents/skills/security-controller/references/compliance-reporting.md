@@ -10,7 +10,6 @@ prerequisites:
   - security-controller
 related_skills:
   - security-controller
-  - cwe-injection-attack-fixes
 appliesTo: '**/*.{md,json,cs}'
 tags:
   - security

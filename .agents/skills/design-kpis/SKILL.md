@@ -87,7 +87,7 @@ Compare aspirational targets with what the team can realistically influence thro
 
 ### 6. Deliver The Recommendation
 
-Keep the final recommendation concise and decision-oriented, and deliver it inline by default. Do not load `$build-report` merely because the KPI framework uses evidence, compares candidates, or contains several metrics. Use `$visualize-data` and `$build-report` when a data visual would materially improve the answer, such as by showing how a proposed target compares with historical performance or benchmarks, or by clarifying tradeoffs or candidate scoring. Honor an explicitly requested report, dashboard, notebook, spreadsheet, native document, or slide deck as the primary artifact. The recommendation should include:
+Keep the final recommendation concise and decision-oriented, and deliver it inline by default. Do not build a separate report merely because the KPI framework uses evidence, compares candidates, or contains several metrics. Use `$visualize-data` when a data visual would materially improve the answer, such as by showing how a proposed target compares with historical performance or benchmarks, or by clarifying tradeoffs or candidate scoring. Honor an explicitly requested report, dashboard, notebook, spreadsheet, native document, or slide deck as the primary artifact. The recommendation should include:
 
 1. initiative summary
 2. recommended metric candidates, with definition and rationale

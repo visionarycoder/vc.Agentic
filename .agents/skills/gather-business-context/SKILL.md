@@ -15,7 +15,7 @@ metadata:
 
 Use this skill to gather framing context, not to complete the downstream analysis.
 
-If the same request also asks for a diagnosis, recommendation, dashboard, report, or other analytical deliverable, return only the context needed for that next step and continue with the appropriate focused skill, such as $metric-diagnostics, $product-business-analysis, $build-dashboard, or $build-report.
+If the same request also asks for a diagnosis, recommendation, dashboard, report, or other analytical deliverable, return only the context needed for that next step and continue with the appropriate focused skill.
 
 # Gather Business Context
 

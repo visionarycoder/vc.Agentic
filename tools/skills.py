@@ -105,8 +105,7 @@ def classify(name: str) -> str:
     if name.startswith(('dotnet-', 'msbuild-', 'wpf-', 'maui-',
                         'aspnet', 'efcore-', 'blazor-', 'winui', 'windows-ai-')):
         return 'dotnet'
-    if name in {'build-report', 'build-dashboard',
-                'analyze-data-quality', 'metric-diagnostics', 'visualize-data'}:
+    if name in {'analyze-data-quality', 'metric-diagnostics', 'visualize-data'}:
         return 'data'
     return 'optional'
 

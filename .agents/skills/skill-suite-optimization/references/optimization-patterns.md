@@ -38,20 +38,16 @@ Proven patterns from the 2026-08-22 optimization cycle that optimized 237 skills
 
 **Example Trim:**
 ```yaml
-# Before (8 related skills)
+# Before (3 related skills)
 related_skills:
-  - security-intake-router
-  - cwe-input-validation-fixes
-  - cwe-injection-attack-fixes
-  - cwe-resource-management-fixes
-  - cwe-miscellaneous-security-fixes
-  - cwe-fixes
+  - security-controller
+  - security-scan
+  - security-diff-scan
 
-# After (5 related skills)
+# After (2 related skills)
 related_skills:
-  - security-intake-router
-  - cwe-fixes
-  - cwe-injection-attack-fixes
+  - security-controller
+  - security-scan
 ```
 
 ## Near-Limit Extraction Pattern
@@ -131,7 +127,6 @@ The following skills were actively used during the 2026-08-22 optimization cycle
 | `skill-intake-router` | Route requests to correct domain suite |
 | `documentation-frontmatter` | Normalize metadata across skills |
 | `testing-intake-router` | Classify testing-related skills |
-| `security-intake-router` | Classify security/CWE skills |
 | `vbd-intake-router` | Classify VBD architecture skills |
 
 These routers enable deterministic skill discovery and prevent routing conflicts.

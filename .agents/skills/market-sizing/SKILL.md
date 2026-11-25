@@ -15,7 +15,7 @@ metadata:
 
 Use $visualize-data when the sizing result needs a chart or figure.
 
-Use $build-report to package the final estimate, assumptions, sensitivity, caveats, and source context whenever this skill is selected, unless the user explicitly requests an inline, chat-only, brief/no-artifact answer, asks not to create a report/file/artifact, or selects another primary artifact.
+Package the final estimate, assumptions, sensitivity, caveats, and source context as a report unless the user explicitly requests an inline, chat-only, brief/no-artifact answer, asks not to create a report/file/artifact, or selects another primary artifact.
 
 # Market Sizing
 
@@ -104,7 +104,7 @@ Use ranges when uncertainty is material. Do not hide uncertainty behind a single
 
 ### 7. State The Estimate And Validation Priorities
 
-End by handing the estimate, method, key assumptions, uncertainty, and next validation priorities to $build-report unless the user explicitly waives report creation or selects another primary artifact. This handoff is mandatory when no explicit human waiver was given; do not infer a waiver because the user asked for an estimate or did not use the word "report". This workflow owns the sizing model and conclusion; $build-report owns the reader-facing structure, visuals, evidence placement, and delivery surface.
+End by handing the estimate, method, key assumptions, uncertainty, and next validation priorities into a report unless the user explicitly waives report creation or selects another primary artifact. A report is required when no explicit human waiver was given; do not infer a waiver because the user asked for an estimate or did not use the word "report". This workflow owns the sizing model and conclusion; the report owns the reader-facing structure, visuals, evidence placement, and delivery surface.
 
 Before handoff, make the market-sizing conclusion explicit:
 
@@ -119,4 +119,4 @@ If source coverage is thin, say which major inputs rely on proxy assumptions and
 
 Use $validate-data when methodology, calculations, assumptions, caveats, or source support need review before sharing.
 
-Do not render charts directly from this skill. If a sensitivity, scenario, funnel, or market-breakdown visual would clarify the estimate, pass that visual intent and supporting evidence to $build-report so $visualize-data owns chart selection and QA.
+Do not render charts directly from this skill. If a sensitivity, scenario, funnel, or market-breakdown visual would clarify the estimate, pass that visual intent and supporting evidence to $visualize-data, which owns chart selection and QA.

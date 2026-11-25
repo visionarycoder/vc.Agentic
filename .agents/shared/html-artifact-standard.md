@@ -18,7 +18,6 @@ Shared principles for polished, legible, evidence-aware standalone HTML artifact
 
 - Use when a workflow default, an explicit user request, or the intake preflight resolves the presentation surface to HTML.
 - Do not force a fixed module inventory or the standardized dashboard shell. The decision and the primary analytical object determine the layout.
-- Use the `dashboard-builder` skill only when the workflow asks for a standardized dashboard. A bespoke report follows this standard instead.
 
 ## Standalone Requirements
 

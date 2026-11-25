@@ -41,15 +41,8 @@ Agent uses this bundle for requests that choose, combine, or implement core plat
 
 | Signal | Use Bundle | Route Detail |
 |---|---|---|
-| API contract choice is open | Yes | Classify `api-gateway-patterns` |
 | Request spans two or more listed technologies | Yes | Coordinate order and integration edges |
 | Technology set is fixed and only bug fixing is needed | No | Use the active specialist skill directly |
-
-## Coverage Matrix
-
-| Specialist Skill | Primary Scope | Entry Trigger | Key Output |
-|---|---|---|---|
-| `api-gateway-patterns` | YARP, Ocelot, API Management | Edge routing, aggregation, auth, policy, throttling | Gateway topology and route policy |
 
 ## Decision Order
 
@@ -57,7 +50,6 @@ Agent uses this bundle for requests that choose, combine, or implement core plat
 |---|---|---|---|
 | 1 | Client contract model | Query flexibility, endpoint count, client ownership | REST baseline |
 | 3 | UI stack | .NET reuse, interactivity, SPA investment | Existing Angular/Vue path or .NET-first UI |
-| 6 | Edge topology | Cross-service ingress, policy centralization | `api-gateway-patterns` |
 
 ## Technology Selection Matrix
 

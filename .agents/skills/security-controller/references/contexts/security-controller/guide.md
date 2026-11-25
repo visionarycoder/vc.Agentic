@@ -71,14 +71,14 @@ Agent uses this controller for broad security workflows that need scanning, prio
 
 ## CWE Family Matrix
 
-| CWE Family | Trigger Patterns | Priority Bias | Remediate Route |
-|---|---|---|---|
-| Input validation | Bounds, overflow, model validation, trust-boundary validation gaps | Medium | `cwe-input-validation-fixes` |
-| Authentication and authorization | CSRF, access control, auth bypass, missing authorization, IDOR | Critical or High | `cwe-authentication-authz-fixes` |
-| Injection attacks | SQL injection, command injection, XSS, code execution, unsafe HTML sinks | Critical | `cwe-injection-attack-fixes` |
-| Resource management | DoS, allocation limits, logging injection, concurrency exhaustion, lifecycle misuse | Medium or Low | `cwe-resource-management-fixes` |
-| Miscellaneous security | Path traversal, SSRF, open redirect, null dereference, upload control gaps | High or Medium | `cwe-miscellaneous-security-fixes` |
-| Format and external control | Search-path control, DLL hijacking, format-string or external resolution flaws | High or Medium | `cwe-miscellaneous-security-fixes` |
+| CWE Family | Trigger Patterns | Priority Bias |
+|---|---|---|
+| Input validation | Bounds, overflow, model validation, trust-boundary validation gaps | Medium |
+| Authentication and authorization | CSRF, access control, auth bypass, missing authorization, IDOR | Critical or High |
+| Injection attacks | SQL injection, command injection, XSS, code execution, unsafe HTML sinks | Critical |
+| Resource management | DoS, allocation limits, logging injection, concurrency exhaustion, lifecycle misuse | Medium or Low |
+| Miscellaneous security | Path traversal, SSRF, open redirect, null dereference, upload control gaps | High or Medium |
+| Format and external control | Search-path control, DLL hijacking, format-string or external resolution flaws | High or Medium |
 
 ## Priority Matrix
 
@@ -89,23 +89,12 @@ Agent uses this controller for broad security workflows that need scanning, prio
 | Medium | Input validation defects, integer overflow, unrestricted upload, logging injection, open redirect |
 | Low | Resource cleanup gaps, null safety, defensive hardening findings with low exploitability |
 
-## Remediation Delegation Matrix
-
-| User Request Contains | Route To | Covers |
-|---|---|---|
-| "validation" / "bounds" / "buffer" / "overflow" | `cwe-input-validation-fixes` | Validation, bounds, memory-safety style input issues |
-| "authentication" / "authorization" / "CSRF" / "access control" | `cwe-authentication-authz-fixes` | Authentication, authorization, CSRF, access-control issues |
-| "injection" / "SQL" / "command" / "XSS" / "code execution" | `cwe-injection-attack-fixes` | Command, code, HTML, SQL, related injection issues |
-| "logging injection" / "DoS" / "resource" / "privilege" | `cwe-resource-management-fixes` | Logging injection, integer/resource misuse, privilege, DoS, lifecycle issues |
-| "path traversal" / "upload" / "redirect" / "SSRF" / "null pointer" | `cwe-miscellaneous-security-fixes` | Path traversal, upload, null-deref, open redirect, SSRF, filesystem permission issues |
-| "search path" / "DLL hijacking" / "format string" | `cwe-miscellaneous-security-fixes` | External search-path and format-specific issues |
-
 ## Remediation Execution Rules
 
 | Rule | Agent Action |
 |---|---|
 | Priority first | Agent processes Critical findings before High, Medium, and Low. |
-| Family ownership | Agent routes each finding to one primary CWE specialist. |
+| Family ownership | Agent handles each finding under one primary CWE family. |
 | File grouping | Agent batches file-local fixes together to reduce churn. |
 | Verification loop | Agent runs verification after each family or file batch. |
 | Evidence continuity | Agent keeps pre-fix finding, change, and post-fix verification together in the report. |

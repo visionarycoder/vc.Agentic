@@ -10,15 +10,15 @@ Use for a short chat, email, or memo-style update. Lead with the answer, then in
 
 ## Document Or Report
 
-Route document and report outputs through $build-report. Use this reference to shape the KPI content passed into that workflow: summary, KPI snapshot, driver analysis, business context, implications, caveats, and reader-relevant source or calculation notes.
+Route document and report outputs through a report artifact. Use this reference to shape the KPI content for that artifact: summary, KPI snapshot, driver analysis, business context, implications, caveats, and reader-relevant source or calculation notes.
 
 ## Single Slide
 
-Use for one concise readout. Follow the user's requested surface: $build-report for a report artifact or HTML, or the native presentation surface when the user needs a slide file. Ask which path they want when unclear. A single-slide story should have one main message, a compact view of the headline metrics, and only the driver, risk, or action detail needed to support that message.
+Use for one concise readout. Follow the user's requested surface: a report artifact or HTML, or the native presentation surface when the user needs a slide file. Ask which path they want when unclear. A single-slide story should have one main message, a compact view of the headline metrics, and only the driver, risk, or action detail needed to support that message.
 
 ## Executive Business Review Deck
 
-Use for larger executive readouts, such as weekly, monthly, or quarterly business reviews. Follow the user's requested surface: $build-report for a report artifact or HTML, or the native presentation surface when the user needs a deck file. Ask which path they want when unclear.
+Use for larger executive readouts, such as weekly, monthly, or quarterly business reviews. Follow the user's requested surface: a report artifact or HTML, or the native presentation surface when the user needs a deck file. Ask which path they want when unclear.
 
 - Give a concise executive summary of overall status, what changed, and what needs attention.
 - Use KPI cards, a scorecard, or another compact summary format that makes headline performance easy to scan; move dense detail into supporting sections.

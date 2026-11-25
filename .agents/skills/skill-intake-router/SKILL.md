@@ -58,9 +58,7 @@ Agent chooses the smallest correct routing surface before loading execution skil
 | Decomposition, Manager, Engine, Access, component boundaries | `vbd-intake-router` | VBD architecture and authoring |
 | Markdown, instructions, prompts, skills, links, front matter | `documentation-intake-router` | Documentation governance and remediation |
 | Test quality, coverage, assertions, gaps, smells | `testing-intake-router` | Test analysis and remediation |
-| Broad hardening, CWE families, multi-theme vulnerability cleanup | `security-intake-router` | Security routing and remediation |
 | Angular, Vue, web app, or WPF work | `frontend-intake-router` | Frontend routing |
-| Fabric, KQL, Lakehouse, pipelines, semantic models, data quality | `data-intake-router` | Data and Fabric routing |
 
 ## Load Rules
 

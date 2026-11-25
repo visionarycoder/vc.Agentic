@@ -25,7 +25,6 @@ Agent verifies delimited files before ingestion. Agent writes fixes to a new fil
 | User prompt | Route |
 |---|---|
 | User asks for archive inventory across many files | Use `zip-batch-analysis` |
-| User asks for business rule scoring after parse succeeds | Use `data-quality-reporting` |
 | User asks for schema contract authoring | Use `data-contract-frontmatter` |
 
 ## Required Inputs

@@ -24,9 +24,9 @@ This matrix defines the routed-suite model for repository skills.
 | VBD | `vbd-intake-router` | `vbd-system-design`, `vbd-component-construction`, `vbd-access-components`, `vbd-engine-components`, `vbd-manager-components` | `vbd-dto-authoring`, `vbd-boundary-contract-mapping`, `vbd-architecture-conformance`, `vbd-advanced-design`, `vbd-change-simulation` |
 | Documentation | `documentation-intake-router` | `documentation-fixes`, `documentation-fixes-bundle` | `documentation-link-repair`, `documentation-file-placement`, `documentation-governance` |
 | Testing | `testing-intake-router` | — | `assertion-quality`, `test-smell-detection` |
-| Security | `security-intake-router` | `cwe-fixes` | `cwe-input-validation-fixes`, `cwe-authentication-authz-fixes`, `cwe-injection-attack-fixes`, `cwe-resource-management-fixes`, `cwe-miscellaneous-security-fixes` |
+| Security | — | `webapp-frontend-security` | — |
 | Frontend | `frontend-intake-router` | `webapp-consolidation-strategy` | — |
-| Data/Fabric | `data-intake-router` | — | `data-contract-frontmatter`, `data-lineage`, `data-quality-reporting` |
+| Data/Fabric | — | — | `data-contract-frontmatter` |
 
 ## Ownership Notes
 

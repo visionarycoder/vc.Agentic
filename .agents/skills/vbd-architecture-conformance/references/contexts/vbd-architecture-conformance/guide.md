@@ -23,7 +23,7 @@ Use when analyzers, code fixes, or generators need reusable starter shapes.
 
 Do not use when the prompt asks for new logical design. Use `vbd-system-design` or `vbd-advanced-design`.
 Do not use when one DTO coupling finding is the only defect. Use `vbd-boundary-contract-mapping`.
-Do not use when the prompt asks for communication substrate design. Use `ifx-component-communication`.
+Do not use when the prompt asks for communication substrate design. Use the communication design guidance.
 
 ## Inputs
 

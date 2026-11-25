@@ -10,8 +10,6 @@ prerequisites:
   - security-controller
 related_skills:
   - security-controller
-  - cwe-input-validation-fixes
-  - cwe-injection-attack-fixes
 appliesTo: '**/*.{cs,csproj,json,yml,yaml,md}'
 tags:
   - security

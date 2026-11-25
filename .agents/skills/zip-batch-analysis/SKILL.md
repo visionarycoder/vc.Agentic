@@ -38,7 +38,7 @@ Select a skill that is actually available in the current environment. The follow
 | Input | Route |
 | --- | --- |
 | CSV or TSV | CSV ingestion and diagnostics, such as `csv-ingestion-diagnostics` when available |
-| JSON, Parquet, or another tabular dataset | Data-quality analysis, such as `data-quality-reporting` when available |
+| JSON, Parquet, or another tabular dataset | Data-quality analysis with an available skill |
 | YAML intended as a data contract | Contract authoring or validation, such as `data-contract-frontmatter` when available |
 | Nested archive | This workflow with the remaining depth and resource budget |
 | Unknown binary or unsupported input | Report its identity and limitations; do not execute it |

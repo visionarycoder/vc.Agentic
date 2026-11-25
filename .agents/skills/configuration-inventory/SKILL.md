@@ -26,10 +26,10 @@ Analyze the project to produce a comprehensive inventory of all configuration so
 This skill is part of a set of four complementary assessment skills. To avoid content duplication across their output documents, observe these scope rules:
 
 - **Introduction**: Write a 1-2 sentence intro focused on the configuration landscape (number of config sources, profiles, secrets approach). Do NOT restate the application's architecture type, business domain, or API surface.
-- **Database architecture details** (entity models, ER diagrams, ORM mappings, caching strategy rationale, repository methods) are owned by the `data-architecture` skill. In the Properties Inventory, list database-related property keys and values as raw configuration entries, but do NOT explain their behavioral implications (e.g., do not explain what `spring.jpa.open-in-view=false` means for lazy loading — that belongs in `data-architecture.md`).
-- **API endpoints** are owned by the `api-service-contracts` skill. Do NOT list HTTP endpoints, controller routes, or actuator paths.
-- **Business workflows and validation rules** are owned by the `business-workflows` skill. Do NOT describe business processes or entity validation constraints.
-- **Entity/domain model listings** are owned by `data-architecture` and `business-workflows`. Do NOT enumerate entity names, fields, or relationships.
+- **Database architecture details** (entity models, ER diagrams, ORM mappings, caching strategy rationale, repository methods) are out of scope. In the Properties Inventory, list database-related property keys and values as raw configuration entries, but do NOT explain their behavioral implications (e.g., do not explain what `spring.jpa.open-in-view=false` means for lazy loading — that belongs in a database architecture document).
+- **API endpoints** are out of scope. Do NOT list HTTP endpoints, controller routes, or actuator paths.
+- **Business workflows and validation rules** are out of scope. Do NOT describe business processes or entity validation constraints.
+- **Entity/domain model listings** are out of scope. Do NOT enumerate entity names, fields, or relationships.
 
 ## Execution Steps
 

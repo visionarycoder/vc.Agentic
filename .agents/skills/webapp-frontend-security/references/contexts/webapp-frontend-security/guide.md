@@ -24,7 +24,7 @@ Agent enforces defense-in-depth rules in `Client.Portal.WebApp` so that MSAL rem
 
 | Condition | Use |
 |---|---|
-| Agent works only on server-side authorization. | Agent uses `cwe-authentication-authz-fixes`. |
+| Agent works only on server-side authorization. | Agent performs server-side authorization review instead. |
 | Agent works outside `Client.Portal.WebApp`. | Agent applies the security rules for the relevant client. |
 | Agent edits presentation-only styling with no identity, route, or data implications. | Agent performs a narrower review. |
 
