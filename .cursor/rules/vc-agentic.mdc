@@ -1,0 +1,8 @@
+---
+description: Entry point for the vc.Agentic skill library
+alwaysApply: true
+---
+
+This repository is a library of reusable, agent-neutral skills, task templates, and component samples. It is not an application or an agent runtime.
+
+Read AGENTS.md first. Start with `.agents/skills/skill-discovery-guide/SKILL.md`, then `.agents/skills/skill-selection/SKILL.md`, and read only the skills the task needs.

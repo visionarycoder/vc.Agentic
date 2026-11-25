@@ -12,8 +12,10 @@ import re
 import shutil
 import sys
 from urllib.parse import unquote, urlsplit
+from xml.sax.saxutils import quoteattr
 
 VERSION = '1.0.0'
+SOLUTION = 'vc.Agentic.slnx'
 FIELDS = ['name', 'description', 'collection', 'path', 'updated', 'files', 'sha256']
 META = ['metadata-version', 'title', 'document-type', 'repository', 'language', 'updated', 'collection']
 COLLECTIONS = {
@@ -202,6 +204,26 @@ class Library:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(render(data, '# ' + heading + '\n\n' + body), encoding='utf-8', newline='\n')
 
+    def solution_text(self):
+        groups = {}
+        for path in sorted(self.root.rglob('*')):
+            relative = path.relative_to(self.root)
+            if (not path.is_file() or '.git' in relative.parts or '__pycache__' in relative.parts
+                    or relative.name == SOLUTION):
+                continue
+            groups.setdefault(relative.parent.as_posix(), []).append(relative.as_posix())
+        lines = ['<Solution>']
+        for folder in sorted(groups):
+            indent = '  '
+            if folder != '.':
+                lines.append(f'  <Folder Name={quoteattr("/" + folder + "/")}>')
+                indent = '    '
+            lines.extend(f'{indent}<File Path={quoteattr(file)} />' for file in groups[folder])
+            if folder != '.':
+                lines.append('  </Folder>')
+        lines.append('</Solution>')
+        return '\n'.join(lines) + '\n'
+
     def refresh(self):
         rows = self.rows()
         inventory = self.root / '.agents/inventory.csv'
@@ -238,6 +260,7 @@ class Library:
                  'and use actual host capabilities. Skills never grant operation or approval authority.\n')
         self.document(self.root / '.agents/collections.md', 'Skill collections',
                       'Select a small development core and optional stacks or domains.', body)
+        (self.root / SOLUTION).write_text(self.solution_text(), encoding='utf-8', newline='\n')
         return rows
 
     def local_target(self, source, raw):
@@ -335,6 +358,11 @@ class Library:
                     errors.append('Inventory is stale; run refresh')
             except OSError:
                 errors.append('Inventory is missing; run refresh')
+            try:
+                if (self.root / SOLUTION).read_text(encoding='utf-8') != self.solution_text():
+                    errors.append('Solution is stale; run refresh')
+            except OSError:
+                errors.append('Solution is missing; run refresh')
         return errors
 
     def _missing_links(self, path):

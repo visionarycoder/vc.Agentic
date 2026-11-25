@@ -2,3 +2,4 @@
 *.md text eol=lf
 *.markdown text eol=lf
 *.csv text eol=lf
+*.slnx text eol=lf

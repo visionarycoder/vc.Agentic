@@ -5,10 +5,19 @@ description: "Maintain reusable skills within repository ownership and task auth
 document-type: "index"
 repository: "vc.Agentic"
 language: "Standard Technical English"
-updated: "2026-11-08"
+updated: "2026-11-24"
 ---
 
 # Agent instructions
+
+## Start here
+
+vc.Agentic is a library of reusable, agent-neutral skills (`.agents/skills/<name>/SKILL.md`), task templates, and illustrative component samples. It is not an application, a production framework, or an agent runtime. Skills guide work; they do not grant authority.
+
+- To do a task using the library: read `.agents/skills/skill-discovery-guide/SKILL.md` when the right skill is unclear, then `.agents/skills/skill-selection/SKILL.md` to pick the smallest relevant set. Browse `.agents/README.md` or `.agents/inventory.csv` for the full catalog. Read only the skills the task needs.
+- To change the library itself: follow the maintenance rules below and `tools/README.md`.
+
+## Maintenance rules
 
 Keep reusable skills in `.agents/skills/<name>/SKILL.md`. This is the only skill source location in this repository. Keep the catalog in `.agents/README.md` and the current inventory in `.agents/inventory.csv` aligned with files on disk. Do not recreate owner-deleted skills or computer-wide collection snapshots. Maintain this canonical library with the tools documented in `tools/README.md`.
 

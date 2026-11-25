@@ -1,0 +1,1656 @@
+<Solution>
+  <File Path=".gitattributes" />
+  <File Path=".gitignore" />
+  <File Path="AGENTS.md" />
+  <File Path="CLAUDE.md" />
+  <File Path="GEMINI.md" />
+  <File Path="LICENSE" />
+  <File Path="README.md" />
+  <File Path="THIRD_PARTY_NOTICES.md" />
+  <Folder Name="/.agents/">
+    <File Path=".agents/collections.md" />
+    <File Path=".agents/host-requirements.md" />
+    <File Path=".agents/inventory.csv" />
+    <File Path=".agents/README.md" />
+    <File Path=".agents/verification.md" />
+  </Folder>
+  <Folder Name="/.agents/shared/">
+    <File Path=".agents/shared/deliverable-intake-policy.md" />
+    <File Path=".agents/shared/html-artifact-standard.md" />
+    <File Path=".agents/shared/workbook-artifact-standard.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/adr/">
+    <File Path=".agents/skills/adr/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/agent-instruction-maintenance/">
+    <File Path=".agents/skills/agent-instruction-maintenance/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/analyze-data-quality/">
+    <File Path=".agents/skills/analyze-data-quality/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/analyze-repo/">
+    <File Path=".agents/skills/analyze-repo/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/analyzing-architecture/">
+    <File Path=".agents/skills/analyzing-architecture/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/analyzing-architecture/references/">
+    <File Path=".agents/skills/analyzing-architecture/references/architecture-index.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/behavior.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/bindings.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/consumption-contract.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/cross-unit-state.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/data-model.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/extraction-signals.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/migration-boundary.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/project-structure.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/seams.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/shared-modules.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/tech-stack.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/unit-decomposition.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/unit-graph.md" />
+    <File Path=".agents/skills/analyzing-architecture/references/wire-contracts.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/architecture-diagram/">
+    <File Path=".agents/skills/architecture-diagram/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/architecture-diagram/references/contexts/architecture-diagram/">
+    <File Path=".agents/skills/architecture-diagram/references/contexts/architecture-diagram/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/architecture-diagram/templates/">
+    <File Path=".agents/skills/architecture-diagram/templates/template.html" />
+  </Folder>
+  <Folder Name="/.agents/skills/ask-matt/">
+    <File Path=".agents/skills/ask-matt/PHASE-BOUNDARIES.md" />
+    <File Path=".agents/skills/ask-matt/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/assertion-quality/">
+    <File Path=".agents/skills/assertion-quality/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/assertion-quality/references/contexts/assertion-quality/">
+    <File Path=".agents/skills/assertion-quality/references/contexts/assertion-quality/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/assessment/">
+    <File Path=".agents/skills/assessment/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/authoring-github-workflows/">
+    <File Path=".agents/skills/authoring-github-workflows/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/blog-post-writer/">
+    <File Path=".agents/skills/blog-post-writer/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/caching-patterns/">
+    <File Path=".agents/skills/caching-patterns/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/chaos-resilience-testing/">
+    <File Path=".agents/skills/chaos-resilience-testing/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/clarifying-scenarios/">
+    <File Path=".agents/skills/clarifying-scenarios/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/clarifying-scenarios/references/">
+    <File Path=".agents/skills/clarifying-scenarios/references/kit-backend.md" />
+    <File Path=".agents/skills/clarifying-scenarios/references/kit-frontend.md" />
+    <File Path=".agents/skills/clarifying-scenarios/references/kit-generic.md" />
+    <File Path=".agents/skills/clarifying-scenarios/references/scoring-rubric.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/clarifying-scenarios/templates/">
+    <File Path=".agents/skills/clarifying-scenarios/templates/clarification-form.md" />
+    <File Path=".agents/skills/clarifying-scenarios/templates/clarification.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-review/">
+    <File Path=".agents/skills/code-review/code-reviewer.md" />
+    <File Path=".agents/skills/code-review/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-review/references/contexts/code-review/">
+    <File Path=".agents/skills/code-review/references/contexts/code-review/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-review/references/contexts/coderabbit/">
+    <File Path=".agents/skills/code-review/references/contexts/coderabbit/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-review/references/contexts/dotnet-review/">
+    <File Path=".agents/skills/code-review/references/contexts/dotnet-review/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-review/references/contexts/general-review/">
+    <File Path=".agents/skills/code-review/references/contexts/general-review/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-review/references/contexts/respond-to-review/">
+    <File Path=".agents/skills/code-review/references/contexts/respond-to-review/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-smell-detection/">
+    <File Path=".agents/skills/code-smell-detection/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-smell-detection/references/">
+    <File Path=".agents/skills/code-smell-detection/references/data-clump.md" />
+    <File Path=".agents/skills/code-smell-detection/references/duplicated-code.md" />
+    <File Path=".agents/skills/code-smell-detection/references/feature-envy.md" />
+    <File Path=".agents/skills/code-smell-detection/references/large-class.md" />
+    <File Path=".agents/skills/code-smell-detection/references/long-method.md" />
+    <File Path=".agents/skills/code-smell-detection/references/magic-numbers.md" />
+    <File Path=".agents/skills/code-smell-detection/references/primitive-obsession.md" />
+    <File Path=".agents/skills/code-smell-detection/references/refused-bequest.md" />
+    <File Path=".agents/skills/code-smell-detection/references/shotgun-surgery.md" />
+    <File Path=".agents/skills/code-smell-detection/references/too-many-parameters.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-smell-detection/references/contexts/code-smell-detection/">
+    <File Path=".agents/skills/code-smell-detection/references/contexts/code-smell-detection/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-testing-agent/">
+    <File Path=".agents/skills/code-testing-agent/SKILL.md" />
+    <File Path=".agents/skills/code-testing-agent/unit-test-generation.prompt.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-testing-agent/references/contexts/code-testing-agent/">
+    <File Path=".agents/skills/code-testing-agent/references/contexts/code-testing-agent/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-testing-extensions/">
+    <File Path=".agents/skills/code-testing-extensions/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-testing-extensions/extensions/">
+    <File Path=".agents/skills/code-testing-extensions/extensions/cpp-examples.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/cpp.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/dotnet-examples.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/dotnet.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/go-examples.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/go.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/java-examples.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/java.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/kotlin-examples.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/kotlin.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/powershell-examples.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/powershell.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/python-examples.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/python.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/ruby-examples.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/ruby.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/rust-examples.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/rust.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/swift.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/typescript-examples.md" />
+    <File Path=".agents/skills/code-testing-extensions/extensions/typescript.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/code-testing-extensions/references/contexts/code-testing-extensions/">
+    <File Path=".agents/skills/code-testing-extensions/references/contexts/code-testing-extensions/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/collect-files-with-request/">
+    <File Path=".agents/skills/collect-files-with-request/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/computer-use/">
+    <File Path=".agents/skills/computer-use/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/computer-use/references/contexts/computer-use/">
+    <File Path=".agents/skills/computer-use/references/contexts/computer-use/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/configuration-inventory/">
+    <File Path=".agents/skills/configuration-inventory/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/configure-auth/">
+    <File Path=".agents/skills/configure-auth/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/conversation-intelligence/">
+    <File Path=".agents/skills/conversation-intelligence/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/crap-score/">
+    <File Path=".agents/skills/crap-score/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/crap-score/references/contexts/crap-score/">
+    <File Path=".agents/skills/crap-score/references/contexts/crap-score/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/create-canvas/">
+    <File Path=".agents/skills/create-canvas/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/create-data-context/">
+    <File Path=".agents/skills/create-data-context/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/create-data-context/plugin-author-config/">
+    <File Path=".agents/skills/create-data-context/plugin-author-config/automation-config.md" />
+    <File Path=".agents/skills/create-data-context/plugin-author-config/source-category-config.json" />
+  </Folder>
+  <Folder Name="/.agents/skills/create-data-context/references/">
+    <File Path=".agents/skills/create-data-context/references/automation.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/create-data-context/references/semantic-layer/">
+    <File Path=".agents/skills/create-data-context/references/semantic-layer/connector-playbook.md" />
+    <File Path=".agents/skills/create-data-context/references/semantic-layer/skill-template.md" />
+    <File Path=".agents/skills/create-data-context/references/semantic-layer/source-intake.md" />
+    <File Path=".agents/skills/create-data-context/references/semantic-layer/weekly-polling-automation.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/create-data-context/scripts/">
+    <File Path=".agents/skills/create-data-context/scripts/data_analytics_preflight.py" />
+    <File Path=".agents/skills/create-data-context/scripts/record_plugin_install_suppression.py" />
+    <File Path=".agents/skills/create-data-context/scripts/validate_data_context_contract.py" />
+  </Folder>
+  <Folder Name="/.agents/skills/create-data-context/tests/">
+    <File Path=".agents/skills/create-data-context/tests/test_state_helpers.py" />
+  </Folder>
+  <Folder Name="/.agents/skills/create-skill-test/">
+    <File Path=".agents/skills/create-skill-test/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/create-test-baseline/">
+    <File Path=".agents/skills/create-test-baseline/infra-decision-table-template.md" />
+    <File Path=".agents/skills/create-test-baseline/SKILL.md" />
+    <File Path=".agents/skills/create-test-baseline/test-cases-template.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/creating-implementation-plan/">
+    <File Path=".agents/skills/creating-implementation-plan/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/creating-implementation-plan/references/">
+    <File Path=".agents/skills/creating-implementation-plan/references/task-format.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/creating-implementation-plan/templates/">
+    <File Path=".agents/skills/creating-implementation-plan/templates/plan-template.md" />
+    <File Path=".agents/skills/creating-implementation-plan/templates/plan-to-tasks-checkpoint-template.yaml" />
+    <File Path=".agents/skills/creating-implementation-plan/templates/spec-to-plan-checkpoint-template.yaml" />
+    <File Path=".agents/skills/creating-implementation-plan/templates/tasks-template.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/critical-infrastructure-bundle/">
+    <File Path=".agents/skills/critical-infrastructure-bundle/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/critical-infrastructure-bundle/references/contexts/critical-infrastructure-bundle/">
+    <File Path=".agents/skills/critical-infrastructure-bundle/references/contexts/critical-infrastructure-bundle/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/csv-data-analysis/">
+    <File Path=".agents/skills/csv-data-analysis/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/csv-data-analysis/references/contexts/analysis-and-charts/">
+    <File Path=".agents/skills/csv-data-analysis/references/contexts/analysis-and-charts/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/csv-data-analysis/references/contexts/ingestion-diagnostics/">
+    <File Path=".agents/skills/csv-data-analysis/references/contexts/ingestion-diagnostics/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/csv-ingestion-diagnostics/">
+    <File Path=".agents/skills/csv-ingestion-diagnostics/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/cve-remediation/">
+    <File Path=".agents/skills/cve-remediation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/cyclomatic-complexity-limit/">
+    <File Path=".agents/skills/cyclomatic-complexity-limit/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/data-contract-frontmatter/">
+    <File Path=".agents/skills/data-contract-frontmatter/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/data-contract-frontmatter/references/contexts/data-contract-frontmatter/">
+    <File Path=".agents/skills/data-contract-frontmatter/references/contexts/data-contract-frontmatter/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/database-design-standards/">
+    <File Path=".agents/skills/database-design-standards/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/debug-live/">
+    <File Path=".agents/skills/debug-live/README.md" />
+    <File Path=".agents/skills/debug-live/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/debug-live/references/troubleshooting/">
+    <File Path=".agents/skills/debug-live/references/troubleshooting/cpp.md" />
+    <File Path=".agents/skills/debug-live/references/troubleshooting/csharp.md" />
+    <File Path=".agents/skills/debug-live/references/troubleshooting/go.md" />
+    <File Path=".agents/skills/debug-live/references/troubleshooting/java.md" />
+    <File Path=".agents/skills/debug-live/references/troubleshooting/javascript.md" />
+    <File Path=".agents/skills/debug-live/references/troubleshooting/python.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/deep-security-scan/">
+    <File Path=".agents/skills/deep-security-scan/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/dependency-map/">
+    <File Path=".agents/skills/dependency-map/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/design-kpis/">
+    <File Path=".agents/skills/design-kpis/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/design-smell-detection/">
+    <File Path=".agents/skills/design-smell-detection/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/devops-pipeline-harness/">
+    <File Path=".agents/skills/devops-pipeline-harness/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/dispatching-parallel-agents/">
+    <File Path=".agents/skills/dispatching-parallel-agents/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-authoring/">
+    <File Path=".agents/skills/documentation-authoring/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-file-placement/">
+    <File Path=".agents/skills/documentation-file-placement/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-file-placement/references/contexts/documentation-file-placement-alternative-1/">
+    <File Path=".agents/skills/documentation-file-placement/references/contexts/documentation-file-placement-alternative-1/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-file-placement/references/contexts/documentation-file-placement-alternative-2/">
+    <File Path=".agents/skills/documentation-file-placement/references/contexts/documentation-file-placement-alternative-2/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-file-placement/references/contexts/documentation-file-placement-alternative-3/">
+    <File Path=".agents/skills/documentation-file-placement/references/contexts/documentation-file-placement-alternative-3/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-fixes/">
+    <File Path=".agents/skills/documentation-fixes/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-fixes-bundle/">
+    <File Path=".agents/skills/documentation-fixes-bundle/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-fixes-bundle/references/contexts/documentation-fixes-bundle/">
+    <File Path=".agents/skills/documentation-fixes-bundle/references/contexts/documentation-fixes-bundle/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-fixes/references/">
+    <File Path=".agents/skills/documentation-fixes/references/add-and-maintain-docs.md" />
+    <File Path=".agents/skills/documentation-fixes/references/instruction-location-governance.md" />
+    <File Path=".agents/skills/documentation-fixes/references/post-implementation-cleanup-docs.md" />
+    <File Path=".agents/skills/documentation-fixes/references/refactor-and-consolidate-docs.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-fixes/references/contexts/documentation-fixes-alternative-1/">
+    <File Path=".agents/skills/documentation-fixes/references/contexts/documentation-fixes-alternative-1/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-governance/">
+    <File Path=".agents/skills/documentation-governance/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-governance/references/contexts/documentation-governance-alternative-1/">
+    <File Path=".agents/skills/documentation-governance/references/contexts/documentation-governance-alternative-1/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-governance/references/contexts/documentation-governance-alternative-2/">
+    <File Path=".agents/skills/documentation-governance/references/contexts/documentation-governance-alternative-2/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-governance/references/contexts/documentation-governance-alternative-3/">
+    <File Path=".agents/skills/documentation-governance/references/contexts/documentation-governance-alternative-3/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-governance/references/contexts/documentation-governance-alternative-4/">
+    <File Path=".agents/skills/documentation-governance/references/contexts/documentation-governance-alternative-4/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-governance/references/contexts/documentation-governance-alternative-5/">
+    <File Path=".agents/skills/documentation-governance/references/contexts/documentation-governance-alternative-5/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-governance/references/contexts/documentation-governance-alternative-6/">
+    <File Path=".agents/skills/documentation-governance/references/contexts/documentation-governance-alternative-6/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-intake-router/">
+    <File Path=".agents/skills/documentation-intake-router/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-link-repair/">
+    <File Path=".agents/skills/documentation-link-repair/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-link-repair/references/contexts/documentation-link-repair/">
+    <File Path=".agents/skills/documentation-link-repair/references/contexts/documentation-link-repair/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-maintenance/">
+    <File Path=".agents/skills/documentation-maintenance/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-maintenance/references/contexts/documentation-maintenance-alternative-1/">
+    <File Path=".agents/skills/documentation-maintenance/references/contexts/documentation-maintenance-alternative-1/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-maintenance/references/contexts/documentation-maintenance-alternative-2/">
+    <File Path=".agents/skills/documentation-maintenance/references/contexts/documentation-maintenance-alternative-2/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-maintenance/references/contexts/documentation-maintenance-alternative-3/">
+    <File Path=".agents/skills/documentation-maintenance/references/contexts/documentation-maintenance-alternative-3/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-maintenance/references/contexts/documentation-maintenance-alternative-4/">
+    <File Path=".agents/skills/documentation-maintenance/references/contexts/documentation-maintenance-alternative-4/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-maintenance/references/contexts/documentation-maintenance-alternative-5/">
+    <File Path=".agents/skills/documentation-maintenance/references/contexts/documentation-maintenance-alternative-5/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-refactor-review/">
+    <File Path=".agents/skills/documentation-refactor-review/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-refactor-review/references/contexts/documentation-refactor-review-alternative-1/">
+    <File Path=".agents/skills/documentation-refactor-review/references/contexts/documentation-refactor-review-alternative-1/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-refactor-review/references/contexts/documentation-refactor-review-alternative-2/">
+    <File Path=".agents/skills/documentation-refactor-review/references/contexts/documentation-refactor-review-alternative-2/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-refactor-review/references/contexts/documentation-refactor-review-alternative-3/">
+    <File Path=".agents/skills/documentation-refactor-review/references/contexts/documentation-refactor-review-alternative-3/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-style-collaboration/">
+    <File Path=".agents/skills/documentation-style-collaboration/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/documentation-style-collaboration/references/contexts/documentation-style-collaboration-alternative-1/">
+    <File Path=".agents/skills/documentation-style-collaboration/references/contexts/documentation-style-collaboration-alternative-1/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/dogfood/">
+    <File Path=".agents/skills/dogfood/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/dogfood/references/">
+    <File Path=".agents/skills/dogfood/references/issue-taxonomy.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/dogfood/templates/">
+    <File Path=".agents/skills/dogfood/templates/dogfood-report-template.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/domain-modeling/">
+    <File Path=".agents/skills/domain-modeling/ADR-FORMAT.md" />
+    <File Path=".agents/skills/domain-modeling/CONTEXT-FORMAT.md" />
+    <File Path=".agents/skills/domain-modeling/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/dry-principles/">
+    <File Path=".agents/skills/dry-principles/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/email-inbox-triage/">
+    <File Path=".agents/skills/email-inbox-triage/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/env-provider-skill/">
+    <File Path=".agents/skills/env-provider-skill/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/env-provider-skill/references/contexts/env-provider-skill/">
+    <File Path=".agents/skills/env-provider-skill/references/contexts/env-provider-skill/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/evaluate-plugin/">
+    <File Path=".agents/skills/evaluate-plugin/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/evaluate-skill/">
+    <File Path=".agents/skills/evaluate-skill/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/executing-plans/">
+    <File Path=".agents/skills/executing-plans/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/faceless-channel/">
+    <File Path=".agents/skills/faceless-channel/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/faceless-channel/assets/">
+    <File Path=".agents/skills/faceless-channel/assets/icon.svg" />
+  </Folder>
+  <Folder Name="/.agents/skills/faceless-channel/references/">
+    <File Path=".agents/skills/faceless-channel/references/generation-and-delivery.md" />
+    <File Path=".agents/skills/faceless-channel/references/history-longform.md" />
+    <File Path=".agents/skills/faceless-channel/references/intake-and-dispatch.md" />
+    <File Path=".agents/skills/faceless-channel/references/kids-song.md" />
+    <File Path=".agents/skills/faceless-channel/references/kids-styles.md" />
+    <File Path=".agents/skills/faceless-channel/references/picture-flow.md" />
+    <File Path=".agents/skills/faceless-channel/references/prompts.md" />
+    <File Path=".agents/skills/faceless-channel/references/style-cinematic-storybook.md" />
+    <File Path=".agents/skills/faceless-channel/references/style-editorial-collage.md" />
+    <File Path=".agents/skills/faceless-channel/references/style-mannequin.md" />
+    <File Path=".agents/skills/faceless-channel/references/style-paper-diorama.md" />
+    <File Path=".agents/skills/faceless-channel/references/vo_and_captions.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/feature-inventory/">
+    <File Path=".agents/skills/feature-inventory/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/feature-inventory/templates/">
+    <File Path=".agents/skills/feature-inventory/templates/spec-template.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/fetch-and-send-data/">
+    <File Path=".agents/skills/fetch-and-send-data/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/finding-discovery/">
+    <File Path=".agents/skills/finding-discovery/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/finishing-a-development-branch/">
+    <File Path=".agents/skills/finishing-a-development-branch/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/fix-dockerfile/">
+    <File Path=".agents/skills/fix-dockerfile/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/fix-finding/">
+    <File Path=".agents/skills/fix-finding/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/framework-migration/">
+    <File Path=".agents/skills/framework-migration/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/framework-migration-guidelines/">
+    <File Path=".agents/skills/framework-migration-guidelines/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/framework-migration-guidelines/spring-boot-scaffolding/">
+    <File Path=".agents/skills/framework-migration-guidelines/spring-boot-scaffolding/CONTEXT.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/framework-migration-guidelines/struts-to-spring/">
+    <File Path=".agents/skills/framework-migration-guidelines/struts-to-spring/CONTEXT.md" />
+    <File Path=".agents/skills/framework-migration-guidelines/struts-to-spring/SKILL-action.md" />
+    <File Path=".agents/skills/framework-migration-guidelines/struts-to-spring/SKILL-config.md" />
+    <File Path=".agents/skills/framework-migration-guidelines/struts-to-spring/SKILL-interceptor.md" />
+    <File Path=".agents/skills/framework-migration-guidelines/struts-to-spring/SKILL-test.md" />
+    <File Path=".agents/skills/framework-migration-guidelines/struts-to-spring/SKILL-view.md" />
+    <File Path=".agents/skills/framework-migration-guidelines/struts-to-spring/SKILL-xml.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/frontend-app-builder/">
+    <File Path=".agents/skills/frontend-app-builder/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/frontend-app-builder/references/">
+    <File Path=".agents/skills/frontend-app-builder/references/imagegen-website-concepts.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/frontend-intake-router/">
+    <File Path=".agents/skills/frontend-intake-router/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/frontend-testing-debugging/">
+    <File Path=".agents/skills/frontend-testing-debugging/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/gantt-chart-visualization/">
+    <File Path=".agents/skills/gantt-chart-visualization/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/gantt-chart-visualization/references/">
+    <File Path=".agents/skills/gantt-chart-visualization/references/gantt-accessibility-export-and-testing.md" />
+    <File Path=".agents/skills/gantt-chart-visualization/references/gantt-api-and-export-format-ingestion.md" />
+    <File Path=".agents/skills/gantt-chart-visualization/references/gantt-chart-design-and-use-cases.md" />
+    <File Path=".agents/skills/gantt-chart-visualization/references/gantt-data-contracts-and-integrations.md" />
+    <File Path=".agents/skills/gantt-chart-visualization/references/gantt-interaction-patterns.md" />
+    <File Path=".agents/skills/gantt-chart-visualization/references/gantt-performance-and-rendering.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/gather-business-context/">
+    <File Path=".agents/skills/gather-business-context/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/generate-dockerfile/">
+    <File Path=".agents/skills/generate-dockerfile/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/geospatial-and-cartographic-visualization/">
+    <File Path=".agents/skills/geospatial-and-cartographic-visualization/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/geospatial-and-cartographic-visualization/references/">
+    <File Path=".agents/skills/geospatial-and-cartographic-visualization/references/adaptive-basemaps-and-layer-stacks.md" />
+    <File Path=".agents/skills/geospatial-and-cartographic-visualization/references/choropleths-symbols-and-flows.md" />
+    <File Path=".agents/skills/geospatial-and-cartographic-visualization/references/deckgl-d3-geo-stack-selection.md" />
+    <File Path=".agents/skills/geospatial-and-cartographic-visualization/references/map-or-not.md" />
+    <File Path=".agents/skills/geospatial-and-cartographic-visualization/references/multiscale-symbols-and-zoom-behavior.md" />
+    <File Path=".agents/skills/geospatial-and-cartographic-visualization/references/point-overlap-strategies.md" />
+    <File Path=".agents/skills/geospatial-and-cartographic-visualization/references/projections-and-normalization.md" />
+    <File Path=".agents/skills/geospatial-and-cartographic-visualization/references/slippy-map-and-product-stack-selection.md" />
+    <File Path=".agents/skills/geospatial-and-cartographic-visualization/references/source-method-and-coordinate-ledger.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/grammar-of-graphics-and-declarative-visualization/">
+    <File Path=".agents/skills/grammar-of-graphics-and-declarative-visualization/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/grammar-of-graphics-and-declarative-visualization/references/">
+    <File Path=".agents/skills/grammar-of-graphics-and-declarative-visualization/references/observable-plot.md" />
+    <File Path=".agents/skills/grammar-of-graphics-and-declarative-visualization/references/vega-lite-and-vega.md" />
+    <File Path=".agents/skills/grammar-of-graphics-and-declarative-visualization/references/when-to-stay-declarative.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/grilling/">
+    <File Path=".agents/skills/grilling/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/handoff/">
+    <File Path=".agents/skills/handoff/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/implement/">
+    <File Path=".agents/skills/implement/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/improve-skill/">
+    <File Path=".agents/skills/improve-skill/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/incident-response/">
+    <File Path=".agents/skills/incident-response/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/intake/">
+    <File Path=".agents/skills/intake/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/integration-testing/">
+    <File Path=".agents/skills/integration-testing/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/kpi-reporting/">
+    <File Path=".agents/skills/kpi-reporting/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/kpi-reporting/references/">
+    <File Path=".agents/skills/kpi-reporting/references/report-templates.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/list-plans/">
+    <File Path=".agents/skills/list-plans/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/loop-me/">
+    <File Path=".agents/skills/loop-me/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/mapping-crosswalk-governance/">
+    <File Path=".agents/skills/mapping-crosswalk-governance/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/market-sizing/">
+    <File Path=".agents/skills/market-sizing/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/meeting-action-items/">
+    <File Path=".agents/skills/meeting-action-items/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/meeting-notes/">
+    <File Path=".agents/skills/meeting-notes/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/message-patterns/">
+    <File Path=".agents/skills/message-patterns/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/metric-diagnostics/">
+    <File Path=".agents/skills/metric-diagnostics/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/migrate-customizations/">
+    <File Path=".agents/skills/migrate-customizations/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/migrate-customizations/references/">
+    <File Path=".agents/skills/migrate-customizations/references/migration-techniques.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/minimal-code-rules/">
+    <File Path=".agents/skills/minimal-code-rules/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/modernization-integration-tests/">
+    <File Path=".agents/skills/modernization-integration-tests/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/modernization-integration-tests/references/">
+    <File Path=".agents/skills/modernization-integration-tests/references/azure-auth-strategies.md" />
+    <File Path=".agents/skills/modernization-integration-tests/references/azure-servicebus-testcontainers.md" />
+    <File Path=".agents/skills/modernization-integration-tests/references/azure-storage-testcontainers.md" />
+    <File Path=".agents/skills/modernization-integration-tests/references/layer1-local-integration.md" />
+    <File Path=".agents/skills/modernization-integration-tests/references/layer2-runner-script-templates.md" />
+    <File Path=".agents/skills/modernization-integration-tests/references/layer2-smoke-tests.md" />
+    <File Path=".agents/skills/modernization-integration-tests/references/layer3-azure-integration.md" />
+    <File Path=".agents/skills/modernization-integration-tests/references/layer4-behavioral-comparison.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/narrator/">
+    <File Path=".agents/skills/narrator/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/narrator/assets/">
+    <File Path=".agents/skills/narrator/assets/icon.svg" />
+  </Folder>
+  <Folder Name="/.agents/skills/narrator/scripts/">
+    <File Path=".agents/skills/narrator/scripts/speech_metrics.sh" />
+  </Folder>
+  <Folder Name="/.agents/skills/performance-load-testing/">
+    <File Path=".agents/skills/performance-load-testing/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/plan-ui-change/">
+    <File Path=".agents/skills/plan-ui-change/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/plugin-creator/">
+    <File Path=".agents/skills/plugin-creator/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/plugin-creator/references/">
+    <File Path=".agents/skills/plugin-creator/references/plugin-json-spec.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/plugin-creator/scripts/">
+    <File Path=".agents/skills/plugin-creator/scripts/create_basic_plugin.py" />
+  </Folder>
+  <Folder Name="/.agents/skills/plugin-eval/">
+    <File Path=".agents/skills/plugin-eval/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/post-implementation-cleanup/">
+    <File Path=".agents/skills/post-implementation-cleanup/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/post-implementation-cleanup/references/contexts/post-implementation-cleanup/">
+    <File Path=".agents/skills/post-implementation-cleanup/references/contexts/post-implementation-cleanup/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/prepare-task-handoff/">
+    <File Path=".agents/skills/prepare-task-handoff/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/">
+    <File Path=".agents/skills/produce/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/">
+    <File Path=".agents/skills/produce/helpers/README.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/ads/scripts/">
+    <File Path=".agents/skills/produce/helpers/ads/scripts/build_ads_explorer.py" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/logos/assets/logo-explorer-app/">
+    <File Path=".agents/skills/produce/helpers/logos/assets/logo-explorer-app/app.js" />
+    <File Path=".agents/skills/produce/helpers/logos/assets/logo-explorer-app/index.html" />
+    <File Path=".agents/skills/produce/helpers/logos/assets/logo-explorer-app/server.mjs" />
+    <File Path=".agents/skills/produce/helpers/logos/assets/logo-explorer-app/styles.css" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/logos/scripts/">
+    <File Path=".agents/skills/produce/helpers/logos/scripts/create_logo_explorer.py" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/moodboards/assets/mood-board-app/">
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/app.js" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/codex-theme.css" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/generation-halftone-runtime.js" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/index.html" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/platform-icons.js" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/server.mjs" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-intake-runtime.js" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/styles.css" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/theme.js" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/">
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/empty-state-grid.css" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/empty-state-grid.js" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/">
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-campaign-ideas-01.svg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-campaign-ideas-01.webp" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-images-in-a-style-01.svg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-images-in-a-style-01.webp" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-make-logo-from-scratch-01.svg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-make-logo-from-scratch-01.webp" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-place-in-screen-01.webp" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-place-product-01.svg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-place-product-01.webp" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-product-detail-images-01.svg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-product-detail-images-01.webp" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-social-ads-01.svg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-social-ads-01.webp" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-social-post-series-01.svg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-social-post-series-01.webp" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-template-assets-01.svg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-template-assets-01.webp" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/generation-tile-state/">
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/generation-tile-state/generation-tile-state.css" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/generation-tile-state/generation-tile-state.js" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/starter-intake/">
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/starter-intake/starter-intake.css" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/components/starter-intake/starter-intake.js" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/">
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-all-social-source-asset.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-anvil-logo.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-boutique-product-staged-photo.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-cowboy-hat-phone-photo.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-device-staged-photo.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-multilingual-social-ad.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-place-in-screen-hero.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-place-in-screen-laptop.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-place-in-screen-phone.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-product-swap-social-ad.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-seasonal-social-ad.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-square-launch-graphic.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-suit-phone-photo.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-waterslide-product-phone-photo.jpg" />
+    <File Path=".agents/skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-youtube-banner-source-asset.jpg" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/offers/references/packs/">
+    <File Path=".agents/skills/produce/helpers/offers/references/packs/digital-product-placements.json" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/offers/scripts/">
+    <File Path=".agents/skills/produce/helpers/offers/scripts/build_offer_explorer.py" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/shots/scripts/">
+    <File Path=".agents/skills/produce/helpers/shots/scripts/create_shot_explorer.py" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/styles/assets/style-explorer-app/">
+    <File Path=".agents/skills/produce/helpers/styles/assets/style-explorer-app/app.js" />
+    <File Path=".agents/skills/produce/helpers/styles/assets/style-explorer-app/index.html" />
+    <File Path=".agents/skills/produce/helpers/styles/assets/style-explorer-app/server.mjs" />
+    <File Path=".agents/skills/produce/helpers/styles/assets/style-explorer-app/styles.css" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/helpers/styles/scripts/">
+    <File Path=".agents/skills/produce/helpers/styles/scripts/create_style_explorer.py" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/references/">
+    <File Path=".agents/skills/produce/references/board-runtime.md" />
+    <File Path=".agents/skills/produce/references/review-renderer.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/references/contracts/">
+    <File Path=".agents/skills/produce/references/contracts/deterministic-exports.md" />
+    <File Path=".agents/skills/produce/references/contracts/exact-content.md" />
+    <File Path=".agents/skills/produce/references/contracts/source-preservation.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/references/generation/">
+    <File Path=".agents/skills/produce/references/generation/image-building-strategy.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/produce/references/modes/">
+    <File Path=".agents/skills/produce/references/modes/ads.md" />
+    <File Path=".agents/skills/produce/references/modes/charts.md" />
+    <File Path=".agents/skills/produce/references/modes/logos.md" />
+    <File Path=".agents/skills/produce/references/modes/offers.md" />
+    <File Path=".agents/skills/produce/references/modes/positioning.md" />
+    <File Path=".agents/skills/produce/references/modes/scenes.md" />
+    <File Path=".agents/skills/produce/references/modes/shots.md" />
+    <File Path=".agents/skills/produce/references/modes/styles.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/product-business-analysis/">
+    <File Path=".agents/skills/product-business-analysis/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/project-decomposition/">
+    <File Path=".agents/skills/project-decomposition/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/project-decomposition/references/">
+    <File Path=".agents/skills/project-decomposition/references/consume.md" />
+    <File Path=".agents/skills/project-decomposition/references/grouping.md" />
+    <File Path=".agents/skills/project-decomposition/references/manual-extraction.md" />
+    <File Path=".agents/skills/project-decomposition/references/topology-thresholds.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/project-decomposition/scripts/">
+    <File Path=".agents/skills/project-decomposition/scripts/decompose.py" />
+  </Folder>
+  <Folder Name="/.agents/skills/project-decomposition/templates/">
+    <File Path=".agents/skills/project-decomposition/templates/output-template.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/project-recon/">
+    <File Path=".agents/skills/project-recon/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/project-recon/references/">
+    <File Path=".agents/skills/project-recon/references/exclude-patterns.yaml" />
+    <File Path=".agents/skills/project-recon/references/language-extensions.yaml" />
+    <File Path=".agents/skills/project-recon/references/loc-shell.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/propose-security-hardening/">
+    <File Path=".agents/skills/propose-security-hardening/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/propose-security-hardening/references/">
+    <File Path=".agents/skills/propose-security-hardening/references/proposal-format.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/prototype/">
+    <File Path=".agents/skills/prototype/LOGIC.md" />
+    <File Path=".agents/skills/prototype/SKILL.md" />
+    <File Path=".agents/skills/prototype/UI.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/publish-artifact-to-sites/">
+    <File Path=".agents/skills/publish-artifact-to-sites/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/quality-gates/">
+    <File Path=".agents/skills/quality-gates/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/quality-gates/references/">
+    <File Path=".agents/skills/quality-gates/references/functional-equivalence.md" />
+    <File Path=".agents/skills/quality-gates/references/gate-completeness.md" />
+    <File Path=".agents/skills/quality-gates/references/gate-plan-to-tasks.md" />
+    <File Path=".agents/skills/quality-gates/references/gate-spec-quality.md" />
+    <File Path=".agents/skills/quality-gates/references/gate-spec-to-plan.md" />
+    <File Path=".agents/skills/quality-gates/references/upgrade-consistency.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/quality-gates/templates/">
+    <File Path=".agents/skills/quality-gates/templates/report-template.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/release-management/">
+    <File Path=".agents/skills/release-management/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/repo-reconciliation/">
+    <File Path=".agents/skills/repo-reconciliation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/reports-pdfs-and-slide-automation/">
+    <File Path=".agents/skills/reports-pdfs-and-slide-automation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/reports-pdfs-and-slide-automation/references/">
+    <File Path=".agents/skills/reports-pdfs-and-slide-automation/references/document-embedding-and-regeneration.md" />
+    <File Path=".agents/skills/reports-pdfs-and-slide-automation/references/pdf-generation-paths.md" />
+    <File Path=".agents/skills/reports-pdfs-and-slide-automation/references/powerpoint-and-google-slides.md" />
+    <File Path=".agents/skills/reports-pdfs-and-slide-automation/references/report-structure-and-figure-packaging.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/reproducible-notebooks/">
+    <File Path=".agents/skills/reproducible-notebooks/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/resolving-merge-conflicts/">
+    <File Path=".agents/skills/resolving-merge-conflicts/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/rfc-fixes-bundle/">
+    <File Path=".agents/skills/rfc-fixes-bundle/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/rfc-fixes-bundle/references/">
+    <File Path=".agents/skills/rfc-fixes-bundle/references/rfc-7807.md" />
+    <File Path=".agents/skills/rfc-fixes-bundle/references/rfc-8091.md" />
+    <File Path=".agents/skills/rfc-fixes-bundle/references/rfc-8259.md" />
+    <File Path=".agents/skills/rfc-fixes-bundle/references/rfc-8725.md" />
+    <File Path=".agents/skills/rfc-fixes-bundle/references/rfc-9457.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/rfc-fixes-bundle/references/contexts/rfc-fixes-bundle-alternative-1/">
+    <File Path=".agents/skills/rfc-fixes-bundle/references/contexts/rfc-fixes-bundle-alternative-1/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/run-tests/">
+    <File Path=".agents/skills/run-tests/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/run-tests/references/contexts/run-tests/">
+    <File Path=".agents/skills/run-tests/references/contexts/run-tests/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/runtime-validation/">
+    <File Path=".agents/skills/runtime-validation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/runtime-validation/references/">
+    <File Path=".agents/skills/runtime-validation/references/playwright.md" />
+    <File Path=".agents/skills/runtime-validation/references/rest-assured.md" />
+    <File Path=".agents/skills/runtime-validation/references/testcontainers.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/runtime-validation/templates/">
+    <File Path=".agents/skills/runtime-validation/templates/runtime-validation-config-template.yaml" />
+  </Folder>
+  <Folder Name="/.agents/skills/sample-feature-implementation/">
+    <File Path=".agents/skills/sample-feature-implementation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/scaffold-exercises/">
+    <File Path=".agents/skills/scaffold-exercises/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/scrollytelling-and-parallax-data-visualization/">
+    <File Path=".agents/skills/scrollytelling-and-parallax-data-visualization/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/scrollytelling-and-parallax-data-visualization/references/">
+    <File Path=".agents/skills/scrollytelling-and-parallax-data-visualization/references/accessibility-testing-and-review.md" />
+    <File Path=".agents/skills/scrollytelling-and-parallax-data-visualization/references/implementation-and-performance.md" />
+    <File Path=".agents/skills/scrollytelling-and-parallax-data-visualization/references/story-patterns-and-scene-contracts.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/security-controller/">
+    <File Path=".agents/skills/security-controller/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/security-controller/references/">
+    <File Path=".agents/skills/security-controller/references/compliance-reporting.md" />
+    <File Path=".agents/skills/security-controller/references/cwe-remediation-patterns.md" />
+    <File Path=".agents/skills/security-controller/references/sast-integration.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/security-controller/references/contexts/security-controller/">
+    <File Path=".agents/skills/security-controller/references/contexts/security-controller/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/security-diff-scan/">
+    <File Path=".agents/skills/security-diff-scan/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/security-scan/">
+    <File Path=".agents/skills/security-scan/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/security-scan/references/">
+    <File Path=".agents/skills/security-scan/references/desktop-scan.md" />
+    <File Path=".agents/skills/security-scan/references/scan-artifacts-and-ledger.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/setting-up-constitution/">
+    <File Path=".agents/skills/setting-up-constitution/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/setting-up-constitution/templates/">
+    <File Path=".agents/skills/setting-up-constitution/templates/constitution-template.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/setup-matt-pocock-skills/">
+    <File Path=".agents/skills/setup-matt-pocock-skills/domain.md" />
+    <File Path=".agents/skills/setup-matt-pocock-skills/issue-tracker-github.md" />
+    <File Path=".agents/skills/setup-matt-pocock-skills/issue-tracker-gitlab.md" />
+    <File Path=".agents/skills/setup-matt-pocock-skills/issue-tracker-local.md" />
+    <File Path=".agents/skills/setup-matt-pocock-skills/SKILL.md" />
+    <File Path=".agents/skills/setup-matt-pocock-skills/triage-labels.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/sharing-learnings/">
+    <File Path=".agents/skills/sharing-learnings/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/sharing-learnings/templates/">
+    <File Path=".agents/skills/sharing-learnings/templates/learning.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/simplified-technical-english/">
+    <File Path=".agents/skills/simplified-technical-english/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/simplify-code/">
+    <File Path=".agents/skills/simplify-code/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-authoring/">
+    <File Path=".agents/skills/skill-authoring/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-authoring/references/">
+    <File Path=".agents/skills/skill-authoring/references/templates.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-authoring/references/contexts/repository-skill-scaffolding/">
+    <File Path=".agents/skills/skill-authoring/references/contexts/repository-skill-scaffolding/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-behavior-testing/">
+    <File Path=".agents/skills/skill-behavior-testing/anthropic-best-practices.md" />
+    <File Path=".agents/skills/skill-behavior-testing/graphviz-conventions.dot" />
+    <File Path=".agents/skills/skill-behavior-testing/persuasion-principles.md" />
+    <File Path=".agents/skills/skill-behavior-testing/render-graphs.js" />
+    <File Path=".agents/skills/skill-behavior-testing/SKILL.md" />
+    <File Path=".agents/skills/skill-behavior-testing/testing-skills-with-subagents.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-behavior-testing/examples/">
+    <File Path=".agents/skills/skill-behavior-testing/examples/CLAUDE_MD_TESTING.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-discovery-guide/">
+    <File Path=".agents/skills/skill-discovery-guide/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-discovery-guide/references/">
+    <File Path=".agents/skills/skill-discovery-guide/references/bundle-router-index.md" />
+    <File Path=".agents/skills/skill-discovery-guide/references/complexity-index.md" />
+    <File Path=".agents/skills/skill-discovery-guide/references/cross-reference-matrix.md" />
+    <File Path=".agents/skills/skill-discovery-guide/references/inventory-by-category.md" />
+    <File Path=".agents/skills/skill-discovery-guide/references/skill-lookup.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-discovery-guide/references/contexts/skill-discovery-guide/">
+    <File Path=".agents/skills/skill-discovery-guide/references/contexts/skill-discovery-guide/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-intake-router/">
+    <File Path=".agents/skills/skill-intake-router/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-lifecycle-controller/">
+    <File Path=".agents/skills/skill-lifecycle-controller/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-lifecycle-controller/references/">
+    <File Path=".agents/skills/skill-lifecycle-controller/references/drift-detectors.md" />
+    <File Path=".agents/skills/skill-lifecycle-controller/references/routing-conflict-resolution.md" />
+    <File Path=".agents/skills/skill-lifecycle-controller/references/token-optimization-patterns.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-lifecycle-controller/references/contexts/skill-lifecycle-controller/">
+    <File Path=".agents/skills/skill-lifecycle-controller/references/contexts/skill-lifecycle-controller/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-novelty-audit/">
+    <File Path=".agents/skills/skill-novelty-audit/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-novelty-audit/references/">
+    <File Path=".agents/skills/skill-novelty-audit/references/method.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-novelty-audit/scripts/">
+    <File Path=".agents/skills/skill-novelty-audit/scripts/novelty.py" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-selection/">
+    <File Path=".agents/skills/skill-selection/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-suite-optimization/">
+    <File Path=".agents/skills/skill-suite-optimization/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-suite-optimization/references/">
+    <File Path=".agents/skills/skill-suite-optimization/references/audit-script.md" />
+    <File Path=".agents/skills/skill-suite-optimization/references/optimization-history.md" />
+    <File Path=".agents/skills/skill-suite-optimization/references/optimization-patterns.md" />
+    <File Path=".agents/skills/skill-suite-optimization/references/skill-conflict-index.json" />
+    <File Path=".agents/skills/skill-suite-optimization/references/skill-suite-ownership-matrix.md" />
+    <File Path=".agents/skills/skill-suite-optimization/references/ste-validation-script.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/skill-suite-optimization/references/contexts/skill-suite-optimization/">
+    <File Path=".agents/skills/skill-suite-optimization/references/contexts/skill-suite-optimization/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/social-media-repurposer/">
+    <File Path=".agents/skills/social-media-repurposer/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/solution-markdown-sync/">
+    <File Path=".agents/skills/solution-markdown-sync/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/solution-markdown-sync/references/contexts/solution-markdown-sync/">
+    <File Path=".agents/skills/solution-markdown-sync/references/contexts/solution-markdown-sync/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/source-grounded-research/">
+    <File Path=".agents/skills/source-grounded-research/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/sprite-pipeline/">
+    <File Path=".agents/skills/sprite-pipeline/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/statistical-and-uncertainty-visualization/">
+    <File Path=".agents/skills/statistical-and-uncertainty-visualization/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/statistical-and-uncertainty-visualization/references/">
+    <File Path=".agents/skills/statistical-and-uncertainty-visualization/references/distribution-and-summary-choices.md" />
+    <File Path=".agents/skills/statistical-and-uncertainty-visualization/references/experimental-and-analytical-pitfalls.md" />
+    <File Path=".agents/skills/statistical-and-uncertainty-visualization/references/missingness-and-confidence.md" />
+    <File Path=".agents/skills/statistical-and-uncertainty-visualization/references/uncertainty-encodings.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/subagent-driven-development/">
+    <File Path=".agents/skills/subagent-driven-development/implementer-prompt.md" />
+    <File Path=".agents/skills/subagent-driven-development/re-review-prompt.md" />
+    <File Path=".agents/skills/subagent-driven-development/SKILL.md" />
+    <File Path=".agents/skills/subagent-driven-development/task-reviewer-prompt.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/subagent-driven-development/scripts/">
+    <File Path=".agents/skills/subagent-driven-development/scripts/review-package" />
+    <File Path=".agents/skills/subagent-driven-development/scripts/sdd-workspace" />
+    <File Path=".agents/skills/subagent-driven-development/scripts/task-brief" />
+  </Folder>
+  <Folder Name="/.agents/skills/subagent-orchestration/">
+    <File Path=".agents/skills/subagent-orchestration/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/subagent-orchestration/references/contexts/subagent-orchestration/">
+    <File Path=".agents/skills/subagent-orchestration/references/contexts/subagent-orchestration/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/subtitles/">
+    <File Path=".agents/skills/subtitles/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/subtitles/assets/">
+    <File Path=".agents/skills/subtitles/assets/icon.svg" />
+  </Folder>
+  <Folder Name="/.agents/skills/subtitles/scripts/">
+    <File Path=".agents/skills/subtitles/scripts/audio_to_captions.py" />
+    <File Path=".agents/skills/subtitles/scripts/burn_caps_clean.sh" />
+    <File Path=".agents/skills/subtitles/scripts/subtitle_paper_burn.py" />
+  </Folder>
+  <Folder Name="/.agents/skills/support-prerendering/">
+    <File Path=".agents/skills/support-prerendering/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/systematic-debugging/">
+    <File Path=".agents/skills/systematic-debugging/condition-based-waiting-example.ts" />
+    <File Path=".agents/skills/systematic-debugging/condition-based-waiting.md" />
+    <File Path=".agents/skills/systematic-debugging/CREATION-LOG.md" />
+    <File Path=".agents/skills/systematic-debugging/defense-in-depth.md" />
+    <File Path=".agents/skills/systematic-debugging/find-polluter.sh" />
+    <File Path=".agents/skills/systematic-debugging/root-cause-tracing.md" />
+    <File Path=".agents/skills/systematic-debugging/SKILL.md" />
+    <File Path=".agents/skills/systematic-debugging/test-academic.md" />
+    <File Path=".agents/skills/systematic-debugging/test-pressure-1.md" />
+    <File Path=".agents/skills/systematic-debugging/test-pressure-2.md" />
+    <File Path=".agents/skills/systematic-debugging/test-pressure-3.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/systematic-debugging/references/contexts/systematic-debugging/">
+    <File Path=".agents/skills/systematic-debugging/references/contexts/systematic-debugging/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/teach/">
+    <File Path=".agents/skills/teach/GLOSSARY-FORMAT.md" />
+    <File Path=".agents/skills/teach/LEARNING-RECORD-FORMAT.md" />
+    <File Path=".agents/skills/teach/MISSION-FORMAT.md" />
+    <File Path=".agents/skills/teach/RESOURCES-FORMAT.md" />
+    <File Path=".agents/skills/teach/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/technology-selection/">
+    <File Path=".agents/skills/technology-selection/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/technology-selection/references/contexts/technology-selection/">
+    <File Path=".agents/skills/technology-selection/references/contexts/technology-selection/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/template-authoring/">
+    <File Path=".agents/skills/template-authoring/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/template-authoring/references/contexts/template-authoring/">
+    <File Path=".agents/skills/template-authoring/references/contexts/template-authoring/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/template-comparison/">
+    <File Path=".agents/skills/template-comparison/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/template-comparison/references/contexts/template-comparison/">
+    <File Path=".agents/skills/template-comparison/references/contexts/template-comparison/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/template-discovery/">
+    <File Path=".agents/skills/template-discovery/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/template-discovery/references/contexts/template-discovery/">
+    <File Path=".agents/skills/template-discovery/references/contexts/template-discovery/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/template-smart-defaults/">
+    <File Path=".agents/skills/template-smart-defaults/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/template-smart-defaults/references/contexts/template-smart-defaults/">
+    <File Path=".agents/skills/template-smart-defaults/references/contexts/template-smart-defaults/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/template-validation/">
+    <File Path=".agents/skills/template-validation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/template-validation/references/contexts/template-validation/">
+    <File Path=".agents/skills/template-validation/references/contexts/template-validation/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-driven-development/">
+    <File Path=".agents/skills/test-driven-development/SKILL.md" />
+    <File Path=".agents/skills/test-driven-development/writing-good-tests.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-driven-development/references/contexts/test-driven-development/">
+    <File Path=".agents/skills/test-driven-development/references/contexts/test-driven-development/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-infrastructure-harness/">
+    <File Path=".agents/skills/test-infrastructure-harness/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-smell-detection/">
+    <File Path=".agents/skills/test-smell-detection/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-smell-detection/references/">
+    <File Path=".agents/skills/test-smell-detection/references/test-smell-catalog.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-smell-detection/references/contexts/test-smell-detection-alternative-1/">
+    <File Path=".agents/skills/test-smell-detection/references/contexts/test-smell-detection-alternative-1/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-smell-detection/references/contexts/test-smell-detection-alternative-2/">
+    <File Path=".agents/skills/test-smell-detection/references/contexts/test-smell-detection-alternative-2/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-smell-detection/references/contexts/test-smell-detection-alternative-3/">
+    <File Path=".agents/skills/test-smell-detection/references/contexts/test-smell-detection-alternative-3/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-smell-detection/references/contexts/test-smell-detection-alternative-4/">
+    <File Path=".agents/skills/test-smell-detection/references/contexts/test-smell-detection-alternative-4/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-smell-detection/references/contexts/test-smell-detection-alternative-5/">
+    <File Path=".agents/skills/test-smell-detection/references/contexts/test-smell-detection-alternative-5/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-smell-detection/references/contexts/test-smell-detection-undated/resources/references/">
+    <File Path=".agents/skills/test-smell-detection/references/contexts/test-smell-detection-undated/resources/references/test-smell-catalog.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-strategy-design/">
+    <File Path=".agents/skills/test-strategy-design/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-tagging/">
+    <File Path=".agents/skills/test-tagging/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-tagging/references/contexts/test-tagging-alternative-1/">
+    <File Path=".agents/skills/test-tagging/references/contexts/test-tagging-alternative-1/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-tagging/references/contexts/test-tagging-alternative-2/">
+    <File Path=".agents/skills/test-tagging/references/contexts/test-tagging-alternative-2/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/test-tagging/references/contexts/test-tagging-alternative-3/">
+    <File Path=".agents/skills/test-tagging/references/contexts/test-tagging-alternative-3/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/testing-data-visualizations/">
+    <File Path=".agents/skills/testing-data-visualizations/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/testing-data-visualizations/references/">
+    <File Path=".agents/skills/testing-data-visualizations/references/avoiding-brittle-over-testing.md" />
+    <File Path=".agents/skills/testing-data-visualizations/references/data-mocking-and-fixtures.md" />
+    <File Path=".agents/skills/testing-data-visualizations/references/e2e-dashboard-and-export-strategies.md" />
+    <File Path=".agents/skills/testing-data-visualizations/references/test-level-selection.md" />
+    <File Path=".agents/skills/testing-data-visualizations/references/unit-and-component-tests.md" />
+    <File Path=".agents/skills/testing-data-visualizations/references/visual-regression-and-image-testing.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/testing-intake-router/">
+    <File Path=".agents/skills/testing-intake-router/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/threat-model/">
+    <File Path=".agents/skills/threat-model/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/to-questionnaire/">
+    <File Path=".agents/skills/to-questionnaire/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/to-tickets/">
+    <File Path=".agents/skills/to-tickets/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/todo-implementation/">
+    <File Path=".agents/skills/todo-implementation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/token-efficient-implementation/">
+    <File Path=".agents/skills/token-efficient-implementation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/track-findings/">
+    <File Path=".agents/skills/track-findings/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/track-findings/references/">
+    <File Path=".agents/skills/track-findings/references/github-security-advisories.md" />
+    <File Path=".agents/skills/track-findings/references/jira.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/triage/">
+    <File Path=".agents/skills/triage/AGENT-BRIEF.md" />
+    <File Path=".agents/skills/triage/OUT-OF-SCOPE.md" />
+    <File Path=".agents/skills/triage/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/triage-finding/">
+    <File Path=".agents/skills/triage-finding/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/triage-finding/references/">
+    <File Path=".agents/skills/triage-finding/references/github-rest-intake.md" />
+    <File Path=".agents/skills/triage-finding/references/ticket-intake.md" />
+    <File Path=".agents/skills/triage-finding/references/triage-result-contract.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/ui-acceptance-testing/">
+    <File Path=".agents/skills/ui-acceptance-testing/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/uml-and-software-architecture-visualization/">
+    <File Path=".agents/skills/uml-and-software-architecture-visualization/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/uml-and-software-architecture-visualization/references/">
+    <File Path=".agents/skills/uml-and-software-architecture-visualization/references/formats-and-interchange.md" />
+    <File Path=".agents/skills/uml-and-software-architecture-visualization/references/interactive-diagram-patterns.md" />
+    <File Path=".agents/skills/uml-and-software-architecture-visualization/references/quality-accessibility-export-testing.md" />
+    <File Path=".agents/skills/uml-and-software-architecture-visualization/references/typescript-web-rendering.md" />
+    <File Path=".agents/skills/uml-and-software-architecture-visualization/references/uml-diagram-types-and-selection.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/unit-test-hardening/">
+    <File Path=".agents/skills/unit-test-hardening/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/validate-data/">
+    <File Path=".agents/skills/validate-data/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/validation/">
+    <File Path=".agents/skills/validation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/validation/references/">
+    <File Path=".agents/skills/validation/references/validation-guidance.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-access-components/">
+    <File Path=".agents/skills/vbd-access-components/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-access-components/references/">
+    <File Path=".agents/skills/vbd-access-components/references/authoring.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-access-components/references/contexts/access-review-rules/">
+    <File Path=".agents/skills/vbd-access-components/references/contexts/access-review-rules/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-access-components/references/contexts/dotnet-access-standards/">
+    <File Path=".agents/skills/vbd-access-components/references/contexts/dotnet-access-standards/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-access-components/references/contexts/vbd-access-vault/">
+    <File Path=".agents/skills/vbd-access-components/references/contexts/vbd-access-vault/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-advanced-design/">
+    <File Path=".agents/skills/vbd-advanced-design/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-advanced-design/references/contexts/vbd-advanced-design/">
+    <File Path=".agents/skills/vbd-advanced-design/references/contexts/vbd-advanced-design/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-architecture-conformance/">
+    <File Path=".agents/skills/vbd-architecture-conformance/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-architecture-conformance/references/contexts/vbd-architecture-conformance/">
+    <File Path=".agents/skills/vbd-architecture-conformance/references/contexts/vbd-architecture-conformance/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-artifact-automation/">
+    <File Path=".agents/skills/vbd-artifact-automation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-artifact-automation/references/contexts/vbd-artifact-automation-alternative-1/">
+    <File Path=".agents/skills/vbd-artifact-automation/references/contexts/vbd-artifact-automation-alternative-1/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-boundary-contract-mapping/">
+    <File Path=".agents/skills/vbd-boundary-contract-mapping/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-boundary-contract-mapping/references/contexts/vbd-boundary-contract-mapping/">
+    <File Path=".agents/skills/vbd-boundary-contract-mapping/references/contexts/vbd-boundary-contract-mapping/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-boundary-design/">
+    <File Path=".agents/skills/vbd-boundary-design/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-boundary-design/references/">
+    <File Path=".agents/skills/vbd-boundary-design/references/contract-ownership.md" />
+    <File Path=".agents/skills/vbd-boundary-design/references/design-packet.md" />
+    <File Path=".agents/skills/vbd-boundary-design/references/relationship-policy.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-candidate-estimation/">
+    <File Path=".agents/skills/vbd-candidate-estimation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-candidate-estimation/references/contexts/vbd-candidate-estimation/">
+    <File Path=".agents/skills/vbd-candidate-estimation/references/contexts/vbd-candidate-estimation/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-change-simulation/">
+    <File Path=".agents/skills/vbd-change-simulation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-change-simulation/references/contexts/vbd-change-simulation/">
+    <File Path=".agents/skills/vbd-change-simulation/references/contexts/vbd-change-simulation/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-coding/">
+    <File Path=".agents/skills/vbd-coding/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-coding/references/">
+    <File Path=".agents/skills/vbd-coding/references/coding-checklist.md" />
+    <File Path=".agents/skills/vbd-coding/references/evidence.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-component-construction/">
+    <File Path=".agents/skills/vbd-component-construction/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-component-construction/assets/">
+    <File Path=".agents/skills/vbd-component-construction/assets/icon.svg" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-component-construction/references/">
+    <File Path=".agents/skills/vbd-component-construction/references/access.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/component-base.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/engine.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/generation-procedure.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/health-checks.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/host.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/manager.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/module-registration.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/naming.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/orm.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/project-topology.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/reconciliation.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/repository-discovery.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/substitutes.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/testing.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/validation.md" />
+    <File Path=".agents/skills/vbd-component-construction/references/vbd-rules.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-component-construction/references/contexts/vbd-component-construction/">
+    <File Path=".agents/skills/vbd-component-construction/references/contexts/vbd-component-construction/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-component-construction/templates/">
+    <File Path=".agents/skills/vbd-component-construction/templates/access-service-with-contexts.cs.tmpl" />
+    <File Path=".agents/skills/vbd-component-construction/templates/component-base.cs.tmpl" />
+    <File Path=".agents/skills/vbd-component-construction/templates/component-readme.md.tmpl" />
+    <File Path=".agents/skills/vbd-component-construction/templates/contract-interface.cs.tmpl" />
+    <File Path=".agents/skills/vbd-component-construction/templates/module.cs.tmpl" />
+    <File Path=".agents/skills/vbd-component-construction/templates/resource-context.cs.tmpl" />
+    <File Path=".agents/skills/vbd-component-construction/templates/service-implementation.cs.tmpl" />
+    <File Path=".agents/skills/vbd-component-construction/templates/substitute-implementation.cs.tmpl" />
+    <File Path=".agents/skills/vbd-component-construction/templates/substitute-module.cs.tmpl" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-component-construction/tools/">
+    <File Path=".agents/skills/vbd-component-construction/tools/validate-frontmatter.js" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-contract-first-construction/">
+    <File Path=".agents/skills/vbd-contract-first-construction/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-cutover-migration/">
+    <File Path=".agents/skills/vbd-cutover-migration/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-cutover-migration/references/contexts/vbd-cutover-migration-alternative-1/">
+    <File Path=".agents/skills/vbd-cutover-migration/references/contexts/vbd-cutover-migration-alternative-1/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-design-validation/">
+    <File Path=".agents/skills/vbd-design-validation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-design-validation/references/">
+    <File Path=".agents/skills/vbd-design-validation/references/change-simulations.md" />
+    <File Path=".agents/skills/vbd-design-validation/references/reviewer-qa-checks.md" />
+    <File Path=".agents/skills/vbd-design-validation/references/worked-examples.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-dto-authoring/">
+    <File Path=".agents/skills/vbd-dto-authoring/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-dto-authoring/references/">
+    <File Path=".agents/skills/vbd-dto-authoring/references/patterns.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-engine-components/">
+    <File Path=".agents/skills/vbd-engine-components/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-engine-components/references/">
+    <File Path=".agents/skills/vbd-engine-components/references/authoring.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-engine-components/references/contexts/dotnet-engine-standards/">
+    <File Path=".agents/skills/vbd-engine-components/references/contexts/dotnet-engine-standards/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-engine-components/references/contexts/engine-review-rules/">
+    <File Path=".agents/skills/vbd-engine-components/references/contexts/engine-review-rules/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-engine-components/references/contexts/vbd-engine-vault/">
+    <File Path=".agents/skills/vbd-engine-components/references/contexts/vbd-engine-vault/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-evidence-quality/">
+    <File Path=".agents/skills/vbd-evidence-quality/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-evidence-quality/references/contexts/vbd-evidence-quality/">
+    <File Path=".agents/skills/vbd-evidence-quality/references/contexts/vbd-evidence-quality/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-intake-router/">
+    <File Path=".agents/skills/vbd-intake-router/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-manager-components/">
+    <File Path=".agents/skills/vbd-manager-components/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-manager-components/references/">
+    <File Path=".agents/skills/vbd-manager-components/references/authoring.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-manager-components/references/contexts/dotnet-manager-standards/">
+    <File Path=".agents/skills/vbd-manager-components/references/contexts/dotnet-manager-standards/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-manager-components/references/contexts/manager-review-rules/">
+    <File Path=".agents/skills/vbd-manager-components/references/contexts/manager-review-rules/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-manager-components/references/contexts/vbd-manager-vault/">
+    <File Path=".agents/skills/vbd-manager-components/references/contexts/vbd-manager-vault/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-method/">
+    <File Path=".agents/skills/vbd-method/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-method/references/">
+    <File Path=".agents/skills/vbd-method/references/component-roles.md" />
+    <File Path=".agents/skills/vbd-method/references/source-register.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-modernization-portfolio/">
+    <File Path=".agents/skills/vbd-modernization-portfolio/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-modernization-portfolio/references/contexts/vbd-modernization-portfolio-alternative-1/">
+    <File Path=".agents/skills/vbd-modernization-portfolio/references/contexts/vbd-modernization-portfolio-alternative-1/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-operational-contracts/">
+    <File Path=".agents/skills/vbd-operational-contracts/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-operational-contracts/references/contexts/vbd-operational-contracts/">
+    <File Path=".agents/skills/vbd-operational-contracts/references/contexts/vbd-operational-contracts/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-phased-modernization/">
+    <File Path=".agents/skills/vbd-phased-modernization/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-phased-modernization/assets/schemas/">
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/architecture-conformance-report.schema.json" />
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/candidate-estimate.schema.json" />
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/change-simulation-result.schema.json" />
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/construction-checkpoint.schema.json" />
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/construction-task.schema.json" />
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/cutover-wave.schema.json" />
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/decision-record.schema.json" />
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/evidence-manifest.schema.json" />
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/evidence-quality-report.schema.json" />
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/migration-rehearsal.schema.json" />
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/operational-contract.schema.json" />
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/portfolio-record.schema.json" />
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/symbolic-record.schema.json" />
+    <File Path=".agents/skills/vbd-phased-modernization/assets/schemas/use-case.schema.json" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-rules/">
+    <File Path=".agents/skills/vbd-rules/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-rules/references/">
+    <File Path=".agents/skills/vbd-rules/references/service-model-default-path.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-service-contracts/">
+    <File Path=".agents/skills/vbd-service-contracts/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-service-contracts/references/">
+    <File Path=".agents/skills/vbd-service-contracts/references/cancellationtoken-patterns.md" />
+    <File Path=".agents/skills/vbd-service-contracts/references/problemdetails-mapping.md" />
+    <File Path=".agents/skills/vbd-service-contracts/references/service-model-vbd.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-service-contracts/references/contexts/vbd-service-model/">
+    <File Path=".agents/skills/vbd-service-contracts/references/contexts/vbd-service-model/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-service-contracts/references/contexts/vbd-servicemodel-architecture-alternative-1/">
+    <File Path=".agents/skills/vbd-service-contracts/references/contexts/vbd-servicemodel-architecture-alternative-1/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-symbolic-mapping/">
+    <File Path=".agents/skills/vbd-symbolic-mapping/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-symbolic-mapping/references/contexts/vbd-symbolic-mapping/">
+    <File Path=".agents/skills/vbd-symbolic-mapping/references/contexts/vbd-symbolic-mapping/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-system-design/">
+    <File Path=".agents/skills/vbd-system-design/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-use-case-reconstruction/">
+    <File Path=".agents/skills/vbd-use-case-reconstruction/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/vbd-use-case-reconstruction/references/contexts/vbd-use-case-reconstruction/">
+    <File Path=".agents/skills/vbd-use-case-reconstruction/references/contexts/vbd-use-case-reconstruction/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/verification-before-completion/">
+    <File Path=".agents/skills/verification-before-completion/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/verify-fix/">
+    <File Path=".agents/skills/verify-fix/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/verify-test-baseline/">
+    <File Path=".agents/skills/verify-test-baseline/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/viewmodel-lifecycle/">
+    <File Path=".agents/skills/viewmodel-lifecycle/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/visualization-strategy-and-critique/">
+    <File Path=".agents/skills/visualization-strategy-and-critique/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/visualization-strategy-and-critique/references/">
+    <File Path=".agents/skills/visualization-strategy-and-critique/references/chart-selection-patterns.md" />
+    <File Path=".agents/skills/visualization-strategy-and-critique/references/critique-lenses.md" />
+    <File Path=".agents/skills/visualization-strategy-and-critique/references/decision-framing.md" />
+    <File Path=".agents/skills/visualization-strategy-and-critique/references/tufte-munzner-cairo-synthesis.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/visualize/">
+    <File Path=".agents/skills/visualize/SKILL.md" />
+    <File Path=".agents/skills/visualize/technical-illustrations.md" />
+    <File Path=".agents/skills/visualize/tweak.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/visualize-data/">
+    <File Path=".agents/skills/visualize-data/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/visualize-data/references/">
+    <File Path=".agents/skills/visualize-data/references/native-inline-visualizations.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/visualize/assets/">
+    <File Path=".agents/skills/visualize/assets/calendar.js" />
+    <File Path=".agents/skills/visualize/assets/share-shell.css" />
+    <File Path=".agents/skills/visualize/assets/share-shell.js" />
+    <File Path=".agents/skills/visualize/assets/standalone-host-bridge.js" />
+    <File Path=".agents/skills/visualize/assets/standalone-shell.js" />
+    <File Path=".agents/skills/visualize/assets/visualize.css" />
+    <File Path=".agents/skills/visualize/assets/visualize.html" />
+  </Folder>
+  <Folder Name="/.agents/skills/visualize/scripts/">
+    <File Path=".agents/skills/visualize/scripts/render.py" />
+  </Folder>
+  <Folder Name="/.agents/skills/visualize/widgets/">
+    <File Path=".agents/skills/visualize/widgets/calendar.md" />
+    <File Path=".agents/skills/visualize/widgets/flamechart.md" />
+    <File Path=".agents/skills/visualize/widgets/stacktrace.md" />
+    <File Path=".agents/skills/visualize/widgets/waterfall.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/wait-what/">
+    <File Path=".agents/skills/wait-what/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/wayfinder/">
+    <File Path=".agents/skills/wayfinder/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/webapp-consolidation-strategy/">
+    <File Path=".agents/skills/webapp-consolidation-strategy/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/webapp-consolidation-strategy/references/contexts/webapp-consolidation-strategy/">
+    <File Path=".agents/skills/webapp-consolidation-strategy/references/contexts/webapp-consolidation-strategy/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/webapp-cutover-strategy/">
+    <File Path=".agents/skills/webapp-cutover-strategy/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/webapp-cutover-strategy/references/contexts/webapp-cutover-strategy/">
+    <File Path=".agents/skills/webapp-cutover-strategy/references/contexts/webapp-cutover-strategy/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/webapp-frontend-security/">
+    <File Path=".agents/skills/webapp-frontend-security/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/webapp-frontend-security/references/contexts/webapp-frontend-security/">
+    <File Path=".agents/skills/webapp-frontend-security/references/contexts/webapp-frontend-security/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/weekly-review-planning/">
+    <File Path=".agents/skills/weekly-review-planning/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/wizard/">
+    <File Path=".agents/skills/wizard/SKILL.md" />
+    <File Path=".agents/skills/wizard/template.sh" />
+  </Folder>
+  <Folder Name="/.agents/skills/writing-beats/">
+    <File Path=".agents/skills/writing-beats/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/writing-for-agents/">
+    <File Path=".agents/skills/writing-for-agents/SKILL-MECHANICS.md" />
+    <File Path=".agents/skills/writing-for-agents/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/writing-fragments/">
+    <File Path=".agents/skills/writing-fragments/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/writing-plans/">
+    <File Path=".agents/skills/writing-plans/plan-document-reviewer-prompt.md" />
+    <File Path=".agents/skills/writing-plans/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/writing-shape/">
+    <File Path=".agents/skills/writing-shape/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/xml-documentation/">
+    <File Path=".agents/skills/xml-documentation/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/xml-schema-inference/">
+    <File Path=".agents/skills/xml-schema-inference/SKILL.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/xml-schema-inference/references/contexts/xml-schema-inference/">
+    <File Path=".agents/skills/xml-schema-inference/references/contexts/xml-schema-inference/guide.md" />
+  </Folder>
+  <Folder Name="/.agents/skills/zip-batch-analysis/">
+    <File Path=".agents/skills/zip-batch-analysis/SKILL.md" />
+  </Folder>
+  <Folder Name="/.claude/">
+    <File Path=".claude/settings.json" />
+  </Folder>
+  <Folder Name="/.codex/">
+    <File Path=".codex/hooks.json" />
+  </Folder>
+  <Folder Name="/.cursor/rules/">
+    <File Path=".cursor/rules/vc-agentic.mdc" />
+  </Folder>
+  <Folder Name="/.github/">
+    <File Path=".github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/.vscode/">
+    <File Path=".vscode/settings.json" />
+  </Folder>
+  <Folder Name="/samples/components/">
+    <File Path="samples/components/README.md" />
+  </Folder>
+  <Folder Name="/samples/components/InventoryAccess/">
+    <File Path="samples/components/InventoryAccess/IInventoryAccess.cs" />
+    <File Path="samples/components/InventoryAccess/InventoryAccess.cs" />
+  </Folder>
+  <Folder Name="/samples/components/OrderManager/">
+    <File Path="samples/components/OrderManager/IOrderManager.cs" />
+    <File Path="samples/components/OrderManager/OrderManager.cs" />
+  </Folder>
+  <Folder Name="/samples/components/PricingEngine/">
+    <File Path="samples/components/PricingEngine/IPricingEngine.cs" />
+    <File Path="samples/components/PricingEngine/PricingEngine.cs" />
+  </Folder>
+  <Folder Name="/templates/">
+    <File Path="templates/README.md" />
+    <File Path="templates/task-brief.md" />
+    <File Path="templates/task-handoff.md" />
+  </Folder>
+  <Folder Name="/templates/components/">
+    <File Path="templates/components/component-initialization.md" />
+  </Folder>
+  <Folder Name="/tests/">
+    <File Path="tests/test_agent_entry.py" />
+    <File Path="tests/test_skill_maintenance.py" />
+    <File Path="tests/test_skill_novelty.py" />
+  </Folder>
+  <Folder Name="/tools/">
+    <File Path="tools/agent_entry.py" />
+    <File Path="tools/README.md" />
+    <File Path="tools/skills.py" />
+    <File Path="tools/validate_frontmatter.py" />
+  </Folder>
+</Solution>

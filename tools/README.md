@@ -75,9 +75,15 @@ It updates the maintenance date, makes the title explicit, and normalizes header
 and body formatting. It never invents a creation date or changes license files.
 Use `--date YYYY-MM-DD` before the subcommand for an explicit maintenance date.
 
-`refresh` rebuilds the inventory and both catalogs from current files. It does not
+`refresh` rebuilds the inventory, both catalogs, and `vc.Agentic.slnx` (every
+repository file listed under solution folders) from current files. `check` reports a
+stale inventory or solution. It does not
 scan the computer, recover deleted skills, rewrite skill instructions, or recreate
 collection snapshots. Review and commit generated catalog changes with the skills.
+
+`tools/agent_entry.py` prints the "Start here" section of `AGENTS.md`. The Claude Code
+(`.claude/settings.json`) and Codex (`.codex/hooks.json`) session-start hooks run it so
+agents learn the repository purpose and entry point.
 
 ## Rename, remove, and clean links
 
